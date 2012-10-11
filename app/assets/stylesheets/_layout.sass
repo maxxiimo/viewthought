@@ -1,0 +1,61 @@
+/*  Base
+  -----------------------
+
+html
+  /* This may cause problems in Firefox when combined with JS plugins (like modals or drag-and-drop UIs) that rely on viewport dimension calculations
+  overflow-y: scroll
+  -webkit-font-smoothing: antialiased
+
+body
+  margin: 0 auto
+  width: 960px
+  background: image-url("fixtures/XXX")
+  background-color: $bg-body
+
+/* adjustments
+
+@media all and (orientation:portrait)
+  // Style adjustments for portrait mode goes here
+
+@media all and (orientation:landscape)
+  // Style adjustments for landscape mode goes here
+
+
+/* Header
+  -----------------------
+
+header
+  height: 60px
+  margin-bottom: 10px
+  background-color: $bg-header
+
+#logo
+  float: left
+  margin: 10px 0 0 0
+
+nav
+  float: left
+  margin: 25px 0 0 250px
+
+
+/* Footer
+  -----------------------
+
+footer
+  height: 100px
+  margin-top: 30px
+  ul
+    margin-bottom: 5px
+    li
+      display: inline-block
+      padding: 0 10px
+      font-size: 85%
+    li:first-child
+      padding-left: 0
+    .icons
+      float: right
+      margin-top: -5px
+      padding: 0 0 0 5px
+  p
+    font-size: 75%
+    color: $font-gray
