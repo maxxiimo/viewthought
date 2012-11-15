@@ -21,6 +21,7 @@ end
 
 gem 'jquery-rails', '2.0.2'
 gem 'haml-rails'
+gem 'mobylette'
 
 # See https://github.com/ndbroadbent/turbo-sprockets-rails3
 # gem 'turbo-sprockets-rails3'
