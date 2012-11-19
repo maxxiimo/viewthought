@@ -10,12 +10,12 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '3.2.5'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
 end
 
-# Compass specific gems.
+# Compass/Sass specific gems.
+gem 'sass-rails', '3.2.5'
 gem 'compass-rails'
 gem 'oily_png'
 
