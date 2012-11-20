@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Mobvious::Rails::Helper
+
   def head
     render :partial => 'layouts/head'
   end

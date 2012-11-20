@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'mobvious'
+gem 'mobvious-rails'
 gem 'jquery-rails', '2.0.2'
 gem 'haml-rails'
 
