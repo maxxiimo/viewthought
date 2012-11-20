@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'mobylette'
+gem 'jquery-rails', '2.0.2'
+gem 'haml-rails'
+
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
@@ -18,10 +22,6 @@ end
 gem 'sass-rails', '3.2.5'
 gem 'compass-rails'
 gem 'oily_png'
-
-gem 'jquery-rails', '2.0.2'
-gem 'haml-rails'
-gem 'mobylette'
 
 # See https://github.com/ndbroadbent/turbo-sprockets-rails3
 # gem 'turbo-sprockets-rails3'
