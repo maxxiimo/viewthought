@@ -1,15 +1,2 @@
 %h1 Pages#home
 %p Find me in app/views/pages/home.html.haml
-
--# for_device_type :mobile do
-  %p I'm a mobile device.
-
-- if request.env['mobvious.device_type'] == :desktop
-  %p Desktop
-- else
-  %p Mobile
-
-%p= device
-
-= Viewthought::Application.config.middleware.inspect
-=# Mobvious.config.strategies.map {|strategy| strategy.class.name }.inspect
