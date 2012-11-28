@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   include Mobvious::Rails::Controller
-  before_filter :prepare_for_mobile
+  # before_filter :prepare_for_mobile
 
 
   private
