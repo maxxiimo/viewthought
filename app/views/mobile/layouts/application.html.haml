@@ -6,12 +6,13 @@
 
   = head
   %body
-    %header{:role => "banner"}
-      = render :partial => 'shared/navigation'
-      .header
-        = render :partial => 'shared/logo'
-        %h1 ViewThought
-    #main{:role => "main"}
-      = yield
-    = render :partial => 'shared/footer'
+    .container
+      %header{:role => "banner"}
+        = render :partial => 'shared/navigation'
+        .header
+          = render :partial => 'shared/logo'
+          %h1 ViewThought
+      #main{:role => "main"}
+        = yield
+      = render :partial => 'shared/footer'
     = scripts
