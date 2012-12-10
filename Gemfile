@@ -22,6 +22,7 @@ group :assets do
   # Compass specific gems.
   gem 'compass-rails'
   gem 'oily_png'
+  gem 'susy'
 end
 
 # See https://github.com/ndbroadbent/turbo-sprockets-rails3
