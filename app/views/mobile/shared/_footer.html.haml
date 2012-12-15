@@ -1,22 +1,25 @@
-%footer{:role => "contentinfo"}
-  %p 561.320.1117
-  %p info@viewthought.com
-  %div
-    %p ViewThought LLC
-    %p 9314 Forest Hill Blvd.
-    %p Suite 73
-    %p Wellington, FL 33411
-  %div
-    %ul#nav
-      %li
-        = link_to image_tag('fixtures/shim.gif', :alt => 'Facebook', :width => '16', :height => '16'), root_path, :title => ''
-      %li
-        = link_to image_tag('fixtures/shim.gif', :alt => 'Github', :width => '16', :height => '16'), root_path, :title => ''
-      %li
-        = link_to image_tag('fixtures/shim.gif', :alt => 'Twitter', :width => '16', :height => '16'), root_path, :title => ''
-      %li
-        = link_to image_tag('fixtures/shim.gif', :alt => 'LinkedIn', :width => '16', :height => '16'), root_path, :title => ''
-      %li
-        = link_to image_tag('fixtures/shim.gif', :alt => 'Flickr', :width => '16', :height => '16'), root_path, :title => ''
+%footer.vcard{:role => "contentinfo"}
+
+  %span.tel 561.320.1117
+  &#124;
+  %a.email{:href => "mailto:info@viewthought.com"} info@viewthought.com
+
+  .address
+    %h3.org ViewThought LLC
+    .adr
+      %p.street-address 9314 Forest Hill Blvd.
+      %p.extended-address Suite 73
+      %p
+        %span.locality> Wellington
+        ,
+        %span.region Florida
+        %span.postal-code 33414
+
+  %ul.social
+    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Facebook', :width => '25', :height => '25'), root_path, :title => ''
+    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Github', :width => '25', :height => '25'), root_path, :title => ''
+    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Twitter', :width => '25', :height => '25'), root_path, :title => ''
+    %li= link_to image_tag('fixtures/shim.gif', :alt => 'LinkedIn', :width => '25', :height => '25'), root_path, :title => ''
+    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Flickr', :width => '25', :height => '25'), root_path, :title => ''
 
   %p.copyright An Ojala Inc. company &copy; ViewThought 2012

@@ -8,12 +8,15 @@ body
   font-size: $base-font-size
   line-height: $base-line-height
 
-img
-  vertical-align: middle
+.container
+  +container
 
 
 /*  Header
   -----------------------
+
+header
+  margin-bottom: 1em
 
 .header
   +clearfix
@@ -25,14 +28,35 @@ img
 
 h1
   float: left
-  line-height: 25px
   margin: 0 0 0 5px
   font-size: 1em
+  line-height: 25px
 
 
 /*  Footer
   -----------------------
 
+footer
+  margin-top: 1em
+
+.address
+  clear: both
+  float: left
+  width: 50%
+  h3, p
+    margin: 0
+
+.social
+  float: right
+  width: 50%
+  +inline-block-list
+  line-height: 0
+  li
+    // FIXME ccm: DELETE!
+    background-color: green
+
 .copyright
+  clear: both
+  margin-top: 5px
   text-align: center
   font-size: 60%
