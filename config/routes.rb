@@ -1,15 +1,10 @@
 Viewthought::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/about"
-
-  get "pages/site_map"
-
-  get "pages/terms"
-
-  get "pages/privacy"
-
-  get "pages/contact"
+  match '/home',      :to => 'pages#home'
+  match '/portfolio', :to => 'pages#portfolio'
+  match '/team',      :to => 'pages#team'
+  match '/thoughts',  :to => 'pages#thoughts'
+  match '/labs',      :to => 'pages#labs'
+  match '/contact',   :to => 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

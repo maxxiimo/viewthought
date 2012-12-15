@@ -2,16 +2,16 @@ class PagesController < ApplicationController
   def home
   end
 
-  def about
+  def portfolio
   end
 
-  def site_map
+  def team
   end
 
-  def terms
+  def thoughts
   end
 
-  def privacy
+  def labs
   end
 
   def contact
