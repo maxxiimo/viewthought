@@ -1,7 +1,7 @@
 # Require any additional compass plugins here.
 project_type = :rails
 
-require "susy"
+# require "susy"
 
 # To allow compass to import partials from subdirectories per:
 # http://blog.55minutes.com/2012/01/getting-compass-to-work-with-rails-31-and-32/
