@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def portfolio
+  def work
   end
 
   def team
