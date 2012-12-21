@@ -1,7 +1,22 @@
 %nav{:role => "navigation"}
   %ul#nav
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Work', :width => '16', :height => '16'), work_path, :title => 'Work'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Team', :width => '16', :height => '16'), team_path, :title => 'Team'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Contact', :width => '16', :height => '16'), contact_path, :title => 'Contact'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Thoughts', :width => '16', :height => '16'), thoughts_path, :title => 'Thoughts'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Labs', :width => '16', :height => '16'), labs_path, :title => 'Labs'
+    %li
+      %a.icon-alone{:href => "/work", :title => 'Work'}
+        %span{"aria-hidden" => "true", "data-icon" => "\""}
+        %span.screen-reader-text Work
+    %li
+      %a.icon-alone{:href => "/team", :title => 'Team'}
+        %span{"aria-hidden" => "true", "data-icon" => "%"}
+        %span.screen-reader-text Team
+    %li
+      %a.icon-alone{:href => "/contact", :title => 'Contact'}
+        %span{"aria-hidden" => "true", "data-icon" => "&"}
+        %span.screen-reader-text Contact
+    %li
+      %a.icon-alone{:href => "/thoughts", :title => 'Thoughts'}
+        %span{"aria-hidden" => "true", "data-icon" => "$"}
+        %span.screen-reader-text Thoughts
+    %li
+      %a.icon-alone{:href => "/labs", :title => 'Labs'}
+        %span{"aria-hidden" => "true", "data-icon" => "!"}
+        %span.screen-reader-text Labs
