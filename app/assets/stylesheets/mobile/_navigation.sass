@@ -6,30 +6,12 @@ ul#nav
   line-height: 0
   margin: 3px 0
   border: none
-  font-size: 120%
-
-// icon fonts
-
-@font-face
-  font-family: 'icon-fonts'
-  src: font-url('icon-fonts.eot')
-  src: font-url('icon-fonts.eot?#iefix') format("embedded-opentype"), font-url('icon-fonts.svg#icon-fonts') format("svg"), font-url('icon-fonts.woff') format("woff"), font-url('icon-fonts.ttf') format("truetype")
-  font-weight: normal
-  font-style: normal
-
-[data-icon]:before
-  font-family: 'icon-fonts'
-  content: attr(data-icon)
-  speak: none
-  font-weight: normal
-  line-height: 1
-  -webkit-font-smoothing: antialiased
-
-.icon-alone
-  // Fix for clickability issue in WebKit
-  display: inline-block
-
-.screen-reader-text
-  position: absolute
-  top: -9999px
-  left: -9999px
+  a
+    font-size: 170%
+    color: #333
+    &:hover
+      text-decoration: none
+      color: green
+    span
+      // Fix for icon font clickability issue in WebKit
+      display: inline-block
