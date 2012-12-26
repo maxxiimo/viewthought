@@ -15,11 +15,6 @@
         %span.region Florida
         %span.postal-code 33414
 
-  %ul.social
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Facebook', :width => '25', :height => '25'), root_path, :title => 'Facebook'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Github', :width => '25', :height => '25'), root_path, :title => 'Github'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Twitter', :width => '25', :height => '25'), root_path, :title => 'Twitter'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'LinkedIn', :width => '25', :height => '25'), root_path, :title => 'LinkedIn'
-    %li= link_to image_tag('fixtures/shim.gif', :alt => 'Flickr', :width => '25', :height => '25'), root_path, :title => 'Flickr'
+  = render :partial => 'shared/social_links'
 
   %p.copyright An Ojala Inc. company &copy; ViewThought 2012

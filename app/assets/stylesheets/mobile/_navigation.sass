@@ -2,16 +2,14 @@
   -----------------------
 
 ul#nav
-  +inline-block-list
   line-height: 0
+  +inline-block-list
   margin: 3px 0
-  border: none
   a
     font-size: 170%
-    color: #333
+    +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
     &:hover
       text-decoration: none
-      color: green
     span
       // Fix for icon font clickability issue in WebKit
       display: inline-block
