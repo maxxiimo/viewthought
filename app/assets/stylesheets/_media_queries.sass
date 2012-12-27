@@ -1,10 +1,22 @@
 @mixin breakpoint($point)
-  @if $point == XXX
+  @if $point ==
     @media (max-width: 1600px) { @content; }
 
-  @if $point == XXX
+  @if $point ==
     @media (max-width: 1250px) { @content; }
 
-  @else if $point == XXX
+  @else if $point ==
     @media (max-width: 650px)  { @content; }
 
+
+
+
+// @include breakpoint(papa-bear) { width: 60%; }
+// @include breakpoint(mama-bear) { width: 80%; }
+// @include breakpoint(baby-bear) { width: 95%; }
+
+// @media screen and (min-width:480px) and (max-width:800px) { /* Target landscape smartphones, portrait tablets, narrow desktops  */ }
+// @media screen and (max-width:479px) { /* Target portrait smartphones */}
+
+// @media all and (orientation: landscape) { /* Target device in landscape mode */ }
+// @media all and (orientation: portrait) { /* Target device in portrait mode */ }
