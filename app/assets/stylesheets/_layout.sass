@@ -14,8 +14,9 @@ body
   width: 960px
   font-size: $base-font-size
   line-height: $base-line-height
-  background: image-url("fixtures/XXX")
   background-color: $bg-body
+  @include breakpoint(m)
+    background: image-url("flower-corner-768px.gif") 0 100% no-repeat
 
 img
   vertical-align: middle
