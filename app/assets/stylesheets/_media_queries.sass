@@ -1,30 +1,38 @@
 @mixin breakpoint($point)
-  @if $point == xs
-    @media (max-device-width: 130px)
+  @if $point == xxs
+    @media (max-width: 130px)
+      @content
+
+  @else if $point == xs
+    @media (min-width: 240px)
       @content
 
   @else if $point == s
-    @media (min-device-width: 260px)
+    @media (min-width: 320px)
       @content
 
   @else if $point == m
-    @media (min-device-width: 320px)
+    @media (min-width: 768px)
       @content
 
   @else if $point == l
-    @media (min-device-width: 768px)
+    @media (min-width: 1200px)
       @content
 
   @else if $point == xl
-    @media (min-device-width: 1280px)
+    @media (min-width: 1400px)
       @content
 
-  @else if $point == xxl
-    @media (min-device-width: 1366px)
-      @content
-
+// Tests...
+// @include breakpoint(xxs)
+//   background-color: red
+// @include breakpoint(xs)
+//   background-color: green
+// @include breakpoint(s)
+//   background-color: blue
 // @include breakpoint(m)
-//   width: 50%
+//   background-color: gray
 // @include breakpoint(l)
-//   width: 75%
-// etc.
+//   background-color: yellow
+// @include breakpoint(xl)
+//   background-color: orange
