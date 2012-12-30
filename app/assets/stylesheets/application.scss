@@ -1,9 +1,3 @@
-/*
- * Important! Do *not* use Sprockets "require" syntax.
- * Use @import to include other stylesheets and Compass mixins.
- */
-
-
 /* DEFINITIONS
   ============================================================================ */
 @import "define";
@@ -17,11 +11,7 @@
 
 /* RESETS
   ============================================================================ */
-@import "boilerplate/h5bp_normalize_v101";
-// @import "compass/reset";
-// The following can be found at https://github.com/maxxiimo/base-resets.
-// @import "normalize";
-// @import "reset_meyer";
+@import "boilerplate/h5bp_normalize_v102";
 
 // To counter normalize indentation of lists.
 ol, ul {
