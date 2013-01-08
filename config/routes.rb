@@ -1,10 +1,10 @@
 Viewthought::Application.routes.draw do
-  match '/home',      :to => 'pages#home'
-  match '/work',      :to => 'pages#work'
-  match '/team',      :to => 'pages#team'
-  match '/thoughts',  :to => 'pages#thoughts'
-  match '/labs',      :to => 'pages#labs'
-  match '/contact',   :to => 'pages#contact'
+  match 'home',      :to => 'pages#home'
+  match 'work',      :to => 'pages#work'
+  match 'team',      :to => 'pages#team'
+  match 'thoughts',  :to => 'pages#thoughts'
+  match 'labs',      :to => 'pages#labs'
+  match 'contact',   :to => 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
