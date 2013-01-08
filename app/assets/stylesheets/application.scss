@@ -22,34 +22,34 @@ ol, ul {
 
 /* BASIC STRUCTURE
   ============================================================================ */
-@import "layout";
+@import "desktop/layout";
 // @import "grids";
 
 
 /* TYPOGRAPHY
   ============================================================================ */
-@import "typography";
+@import "desktop/typography";
 
 
 /* MISCELLANEOUS
   ============================================================================ */
-@import "misc";
+@import "desktop/misc";
 @import "sprites";
 
 
 /* NAVIGATION
   ============================================================================ */
-@import "navigation";
+@import "desktop/navigation";
 
 
 /* FORMS
   ============================================================================ */
-@import "forms";
+@import "desktop/forms";
 
 
 /* PAGES
   ============================================================================ */
-@import "pages";
+@import "desktop/pages";
 
 
 /* STAGING - new styles belong here !!!DO NOT INTEGRATE!!!
