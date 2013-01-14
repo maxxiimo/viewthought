@@ -2,6 +2,7 @@
   -----------------------
 
 html, button, input, select, textarea
+  font-family: $base-font-family
   color: $base-font-color
 
 body
@@ -26,14 +27,23 @@ header
 
 .logo
   float: left
-  // FIXME ccm: DELETE!
+  // FIXME ccm: remove
   background-color: red
 
-h1
+.viewthought
   float: left
-  margin: 0 0 0 5px
-  font-size: 1em
-  line-height: 25px
+  margin: 0 0 0 10px
+  line-height: 30px
+  font-family: $quatro
+  text-transform: uppercase
+  font-size: 20px
+  .char1, .char5
+    font-size: 25px
+  // .char2, .char3, .char4, .char6, .char7, .char8, .char9, .char10, .char11
+
+.wf-loading .viewthought
+  visibility: hidden
+
 
 
 /*  Footer

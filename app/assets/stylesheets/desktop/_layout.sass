@@ -2,6 +2,7 @@
   -----------------------
 
 html, button, input, select, textarea
+  font-family: $base-font-family
   color: $base-font-color
 
 html
@@ -27,13 +28,27 @@ header
   height: 60px
   margin-bottom: 10px
 
-#logo
+.logo
   float: left
-  margin: 10px 0 0 0
+  margin-top: 10px
+
+.viewthought
+  float: left
+  margin: 21px 0 0 10px
+  line-height: 30px
+  font-family: $quatro
+  text-transform: uppercase
+  font-size: 30px
+  .char1, .char5
+    font-size: 35px
+  // .char2, .char3, .char4, .char6, .char7, .char8, .char9, .char10, .char11
+
+.wf-loading .viewthought
+  visibility: hidden
 
 nav
   float: left
-  margin: 25px 0 0 250px
+  margin: 25px 0 0 100px
 
 
 /* Footer
