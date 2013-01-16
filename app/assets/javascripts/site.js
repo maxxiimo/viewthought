@@ -4,6 +4,7 @@ $(document).ready(function() {
   $(".viewthought").lettering();
 });
 
+
 // Typekit
 
 $(function() {

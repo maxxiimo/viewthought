@@ -55,21 +55,35 @@ nav
   -----------------------
 
 footer
-  height: 100px
-  margin-top: 30px
-  ul
-    margin-bottom: 5px
-    li
+  margin-top: 1em
+
+.address
+  clear: both
+  float: left
+  width: 75%
+  h3, p
+    margin: 0
+
+.social
+  float: right
+  width: 25%
+  line-height: 0
+  +horizontal-list
+  li
+    width: 2em
+    padding: 0
+  a
+    font-size: 120%
+    +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
+    &:hover
+      text-decoration: none
+    span
+      // Fix for icon font clickability issue in WebKit
       display: inline-block
-      padding: 0 10px
-      font-size: 85%
-    li:first-child
-      padding-left: 0
-    .icons
-      float: right
-      margin-top: -5px
-      padding: 0 0 0 5px
-  p
-    margin-top: 0
-    font-size: 75%
-    color: $font-gray
+
+.copyright
+  clear: both
+  margin-top: 5px
+  // font-size: 60%
+  // color: $font-gray
+  // text-align: center
