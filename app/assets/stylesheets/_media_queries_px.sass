@@ -1,28 +1,26 @@
-// em's calculated from: 130, 240, 320, 768, 1200, 1400 / 16
-
 @mixin breakpoint($point)
   @if $point == xxs
-    @media (max-width: 8.125em)
+    @media (max-width: 130px)
       @content
 
   @else if $point == xs
-    @media (min-width: 15em)
+    @media (min-width: 240px)
       @content
 
   @else if $point == s
-    @media (min-width: 20em)
+    @media (min-width: 320px)
       @content
 
   @else if $point == m
-    @media (min-width: 48em)
+    @media (min-width: 768px)
       @content
 
   @else if $point == l
-    @media (min-width: 75em)
+    @media (min-width: 1200px)
       @content
 
   @else if $point == xl
-    @media (min-width: 87.5em)
+    @media (min-width: 1400px)
       @content
 
   @else if $point == retina
