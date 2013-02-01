@@ -1,3 +1,12 @@
+/*  Modular Scale
+  -----------------------
+
+// http://modularscale.com/scale/?px1=16&px2=30&ra1=1.618&ra2=0
+
+// 16px  @ 1:1.618 - base font size
+// 30px  @ 1:1.618 - logo font size
+
+
 /*  Fonts
   -----------------------
 
@@ -13,9 +22,13 @@ $georgia:           Georgia, Palatino, "Palatino Linotype", Times, "Times New Ro
 // typekit...
 
 $quatro:            quatro, "Arial Black", Verdana, "Droid Sans", sans-serif
-$web-pro:           ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, "Times New Roman", serif
+$facitweb:          "jaf-facitweb", Verdana, Geneva, Tahoma, sans-serif
+$rooney:            "rooney-web", Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif
+$camingodos:        "camingodos-web", sans-serif
 
-// google web fonts...
+// $web-pro:           ff-meta-serif-web-pro-1, ff-meta-serif-web-pro-2, Georgia, "Times New Roman", serif
+
+// google web fonts (combinations)...
 
 $cantata:           "Cantata One", Georgia, serif
 $imprima:           Imprima, Verdana, Helvetica, sans-serif
@@ -31,25 +44,23 @@ $droid-sans:        "Droid Sans", Helvetica, Arial, sans-serif
 
 // base definitions...
 
-// $base-font-family:  $arial       !default
-$base-font-family:  $droid-sans  !default
-// $base-font-family:  $droid-serif !default
-// $base-font-family:  $cantata     !default
-// $base-font-family:  $allerta     !default
-// $base-font-family:  $arvo        !default
-$base-font-size:    100%         !default
-$base-font-color:   #444         !default
-$base-line-height:  1.4          !default
+$base-font-family:  $rooney       !default
+$base-font-size:    100%          !default
+$base-font-color:   #444          !default
+$base-line-height:  1.618         !default
+
+// 1.618 - 0.105 = 1.513
+// 1.618 - 0.236 = 1.382
+// 1.618 - 0.382 = 1.236
 
 // header definitions...
 
-// $base-font-header:  $georgia     !default
-$base-header-font:  $droid-serif !default
-// $base-font-header:  $droid-sans  !default
-// $base-font-header:  $imprima     !default
-// $base-font-header:  $crimson     !default
-// $base-font-header:  $pt-sans     !default
-$base-header-color: #222         !default
+$base-header-font:  $camingodos   !default
+$base-header-color: #222          !default
+
+// navigation definitions...
+
+$base-nav-font:     $camingodos   !default
 
 // icon fonts...
 
@@ -123,12 +134,3 @@ $error-drk:         #cf3303
 // drk-oj
 // lgt-red
 // drk-red
-
-
-/*  Susy Grid
-  -----------------------
-
-$total-columns:     5
-$column-width:      4em
-$gutter-width:      1em
-$grid-padding:      $gutter-width
