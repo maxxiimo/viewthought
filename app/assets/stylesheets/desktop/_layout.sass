@@ -11,14 +11,13 @@ html
   -webkit-font-smoothing: antialiased
 
 body
-  margin: 0 auto
-  width: 960px
   font-size: $base-font-size
   line-height: $base-line-height
   background-color: $bg-body
 
 .container
   +container
+  +susy-grid-background
 
 img
   vertical-align: middle
@@ -28,30 +27,31 @@ img
   -----------------------
 
 header
-  height: 60px
-  margin-bottom: 10px
+  +clearfix
+  margin-bottom: 1em
 
 .logo
-  float: left
-  margin-top: 10px
-
-.viewthought
-  float: left
-  margin: 21px 0 0 10px
-  line-height: 30px
+  +span-columns(4, 12)
+  +prefix(1)
+  line-height: 1em
+  margin: .2em 0 0
   font-family: $quatro
+  font-size: 2em
   text-transform: uppercase
-  font-size: 30px
+  background: image-url("http://dummyimage.com/40x40/d4d4d4/fff.gif") 10px 0 no-repeat
+  +link-colors(#222, #222, #222, #222, #222)
+  &:hover
+    text-decoration: none
   .char1, .char5
-    font-size: 35px
+    font-size: 1.2em
   // .char2, .char3, .char4, .char6, .char7, .char8, .char9, .char10, .char11
 
-.wf-loading .viewthought
+.wf-loading .logo
   visibility: hidden
 
 nav
-  float: left
-  margin: 25px 0 0 100px
+  +span-columns(7 omega, 12)
+  margin: .8em 0 0 0
 
 
 /* Footer

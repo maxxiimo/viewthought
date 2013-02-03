@@ -1,14 +1,7 @@
-%nav{:role => "navigation"}
-  %ul#nav
-    %li
-      = link_to 'Home', home_path, :title => 'Home'
-    %li
-      = link_to 'Work', work_path, :title => 'Work'
-    %li
-      = link_to 'Team', team_path, :title => 'Team'
-    %li
-      = link_to 'Contact', contact_path, :title => 'Contact'
-    %li
-      = link_to 'Thoughts', thoughts_path, :title => 'Thoughts'
-    %li
-      = link_to 'Labs', labs_path, :title => 'Labs'
+%nav{:id => 'nav', :role => 'navigation'}
+  = link_to 'Home', home_path, :title => 'Home'
+  = link_to 'Work', work_path, :title => 'Work'
+  = link_to 'Team', team_path, :title => 'Team'
+  = link_to 'Contact', contact_path, :title => 'Contact'
+  = link_to 'Thoughts', thoughts_path, :title => 'Thoughts'
+  = link_to 'Labs', labs_path, :title => 'Labs'
