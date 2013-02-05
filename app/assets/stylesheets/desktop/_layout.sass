@@ -23,7 +23,7 @@ img
   vertical-align: middle
 
 
-/* Header
+/*  Header
   -----------------------
 
 header
@@ -54,29 +54,31 @@ nav
   margin: .8em 0 0 0
 
 
-/* Footer
+/*  Footer
   -----------------------
 
 footer
-  margin-top: 1em
-
-.address
   clear: both
-  float: left
-  width: 75%
+  +clearfix
+  padding-top: 1em
   h3, p
     margin: 0
 
-.social
-  float: right
-  width: 25%
-  line-height: 0
+.address
+  +span-columns(3, 12)
+
+.connect
+  +span-columns(4, 12)
+
+.social-links
+  width: auto
   +horizontal-list
+  // margin-bottom: .25em
   li
     width: 2em
     padding: 0
   a
-    font-size: 120%
+    font-size: 1.5em
     +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
     &:hover
       text-decoration: none
@@ -84,9 +86,14 @@ footer
       // Fix for icon font clickability issue in WebKit
       display: inline-block
 
+.related
+  +span-columns(5 omega, 12)
+  ul
+    margin: 0
+
 .copyright
-  clear: both
-  margin-top: 5px
-  // font-size: 60%
-  // color: $font-gray
+  +span-columns(12 omega, 12)
+  margin: .75em 0 1em
+  font-size: .85em
+  color: $font-gray
   // text-align: center

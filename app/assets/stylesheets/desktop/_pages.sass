@@ -1,18 +1,37 @@
 /*  Home
   -----------------------
 
-.book
-  // +clearfix
+.hero
+  +span-columns(12 omega, 12)
+  margin-bottom: 1em
+.start-project
+  +span-columns(6, 12)
+  margin-top: 6em
+  text-align: center
+  button
+    margin: 0 auto
   a
-    // float: left
-  img
-    // FIXME ccm: DELETE!
-    background-color: gray
+    display: block
+.tagline
+  +span-columns(5, 12)
+  h1
+    margin: 0
+    font-size: 1.5em
+
+.testimonial
+  +span-columns(6, 12)
+  blockquote
+    margin: 0
+
+.book
+  +span-columns(6 omega, 12)
+  a
+    +span-columns(1, 6)
   h3, p
-    // float: left
-    // margin: 0
-  p
-    // width: 200px
+    +span-columns(5 omega, 6)
+    margin: 0
+  h3
+    margin-bottom: .5em
 
 
 /*  Work

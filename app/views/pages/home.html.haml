@@ -1,12 +1,17 @@
-%h2 Builders of Mobile and Desktop Web Solutions
-%p We specialize in developing well thought out user experiences and beautiful design. We would be happy to design and build your site from scratch, or augment your existing team.
-%p Nothing beats the involvement of a well-seasoned, front-end developer that understands the semantics of what you're trying to pull off.
-%button Start A Project
-%p 561-320-1117
-%blockquote Testimonial from someone about how great we are!
-%p - Someone Awesome
+.hero
+  .start-project
+    %button Start A Project
+    %a{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
+  .tagline
+    %h1 Builders of Mobile and Desktop Web Solutions
+    %p We would be happy to design and build your site from scratch, improve on what you have, or augment your existing team.
+.testimonial
+  %blockquote We like to think ourselves as the handshake between logic and design. Our goal: to develop well thought out user experiences and beautiful design.
+  %p - Chris Maxwell, founder of ViewThought
 .book
-  = link_to image_tag('fixtures/shim.gif', :alt => '', :width => '75', :height => '75'), root_path, :title => ''
+  = link_to image_tag('http://dummyimage.com/65x65/d4d4d4/fff.gif', :alt => '', :width => '65', :height => '65'), root_path, :title => ''
   %h3 The Front End Manifesto
   -# %p The view layer, what your customers see, is vital to any business with presence on the Web. Explosions in smart phone adaption, significant advances in HTML and CSS, widespread adoption of specialized JavaScript libraries and frameworks for UI delivery, have all contributed to the rise in demand for experienced front end engineers, and at the same time have added complexity to the art of view coding.
   %p The Front End Manifesto, a freely available e-book written by the engineers at View Thought, provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile and desktop, Front End Code: From a Ruby on Rails perspective.
+
+-# %p Nothing beats the involvement of a well-seasoned, front-end developer that understands the semantics of what you're trying to pull off.

@@ -1,26 +1,19 @@
-%nav{:role => "navigation"}
-  %ul#nav
-    %li
-      %a{:href => "/", :title => 'Home'}
-        %span{"aria-hidden" => "true", "data-icon" => "&#xe00c;".html_safe}
-        %span.ir Home
-    %li
-      %a{:href => "/team", :title => 'Team'}
-        %span{"aria-hidden" => "true", "data-icon" => "&#xe029;".html_safe}
-        %span.ir Team
-    %li
-      %a{:href => "/work", :title => 'Work'}
-        %span{"aria-hidden" => "true", "data-icon" => "&#x27;".html_safe}
-        %span.ir Work
-    %li
-      %a{:href => "/contact", :title => 'Contact'}
-        %span{"aria-hidden" => "true", "data-icon" => "&#xe006;".html_safe}
-        %span.ir Contact
-    %li
-      %a{:href => "/thoughts", :title => 'Thoughts'}
-        %span{"aria-hidden" => "true", "data-icon" => "&#xe005;".html_safe}
-        %span.ir Thoughts
-    %li
-      %a{:href => "/labs", :title => 'Labs'}
-        %span{"aria-hidden" => "true", "data-icon" => "l".html_safe}
-        %span.ir Labs
+%nav{:id => 'nav', :role => 'navigation'}
+  %a{:href => "/", :title => 'Home'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#xe00c;".html_safe}
+    %span.screen-reader-text Home
+  %a{:href => "/work", :title => 'Work'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27;".html_safe}
+    %span.screen-reader-text Work
+  %a{:href => "/team", :title => 'Team'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#xe029;".html_safe}
+    %span.screen-reader-text Team
+  %a{:href => "/contact", :title => 'Contact'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#xe006;".html_safe}
+    %span.screen-reader-text Contact
+  %a{:href => "/thoughts", :title => 'Thoughts'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#xe005;".html_safe}
+    %span.screen-reader-text Thoughts
+  %a{:href => "/labs", :title => 'Labs'}
+    %span{"aria-hidden" => "true", "data-icon" => "l".html_safe}
+    %span.screen-reader-text Labs

@@ -2,20 +2,19 @@
   ============================================================================ */
 @import "define";
 
-/*  Susy Grid
-  -----------------------
+// Susy Grid
 
-$total-columns:     5
-$column-width:      4em
-$gutter-width:      1em
-$grid-padding:      $gutter-width
+$total-columns:     5;
+$column-width:      4em;
+$gutter-width:      1em;
+$grid-padding:      $gutter-width;
 
 
 /* MIXINS
   ============================================================================ */
 @import "compass";
 @import "media_queries";
-@import "mixin";
+@import "mixins";
 
 
 /* RESETS
@@ -67,6 +66,12 @@ ol, ul {
 
 /* APPLICATION - ad hoc code under this line
   ============================================================================ */
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
 
 
 /* LAST

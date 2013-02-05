@@ -8,9 +8,11 @@ html, button, input, select, textarea
 body
   font-size: $base-font-size
   line-height: $base-line-height
+  background-color: $bg-body
 
 .container
   +container
+  +susy-grid-background
 
 img
   vertical-align: middle
@@ -20,25 +22,22 @@ img
   -----------------------
 
 header
+  +clearfix
   margin-bottom: 1em
 
-.header
-  +clearfix
-
 .logo
-  float: left
-  // FIXME ccm: remove
-  background-color: red
-
-.viewthought
-  float: left
-  margin: 0 0 0 10px
-  line-height: 30px
+  +span-columns(4.4 omega, 5)
+  +prefix(.6)
+  line-height: 1.3em
   font-family: $quatro
+  font-size: 1.3em
   text-transform: uppercase
-  font-size: 20px
+  background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
+  +link-colors(#222, #222, #222, #222, #222)
+  &:hover
+    text-decoration: none
   .char1, .char5
-    font-size: 25px
+    font-size: 1.2em
   // .char2, .char3, .char4, .char6, .char7, .char8, .char9, .char10, .char11
 
 .wf-loading .viewthought
@@ -49,24 +48,29 @@ header
   -----------------------
 
 footer
-  margin-top: 1em
-
-.address
   clear: both
-  float: left
-  width: 50%
+  margin-top: 1em
   h3, p
     margin: 0
 
-.social
-  float: right
-  width: 50%
-  line-height: 0
+.address
+  +span-columns(3, 5)
+
+.connect
+  +span-columns(2 omega, 5)
+  // h3, .social-links, .tel, .email
+    // margin-left: -$gutter-width
+
+.email
+  display: block
+
+.social-links
+  width: auto
   +horizontal-list
   li
-    padding: 0
+    // width: 1.5em
+    // padding: 0
   a
-    font-size: 120%
     +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
     &:hover
       text-decoration: none
@@ -75,7 +79,10 @@ footer
       display: inline-block
 
 .copyright
-  clear: both
-  margin-top: 5px
-  // text-align: center
-  // font-size: 60%
+  +span-columns(5 omega, 5)
+  color: $font-gray
+  text-align: center
+
+.copyright, .adr, .tel, .email
+  font-size: .85em
+
