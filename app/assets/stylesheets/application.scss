@@ -4,10 +4,12 @@
 
 // Susy Grid
 
-$total-columns:     12;
+$total-columns:     7;
 $column-width:      4em;
 $gutter-width:      1em;
 $grid-padding:      $gutter-width;
+
+$break:             12;
 
 
 /* MIXINS

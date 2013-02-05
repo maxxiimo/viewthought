@@ -14,7 +14,8 @@
       = chromeframe
       %header{:role => 'banner'}
         = render :partial => 'shared/logo'
-        = render :partial => 'shared/navigation'
+        = render :partial => 'shared/navigation-text'
+        = render :partial => 'shared/navigation-icon'
       #main{:role => 'main'}
         = yield
       = render :partial => 'shared/footer'

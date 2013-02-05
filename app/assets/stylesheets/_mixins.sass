@@ -8,3 +8,45 @@
   font-weight: normal
   line-height: 1
   -webkit-font-smoothing: antialiased
+
+// FIXME ccm: possibly consolidate with next?
+@mixin icon-nav($icon-font-size, $icon-padding)
+  padding: .2em 0
+  a
+    padding: $icon-padding
+    font-family: $base-nav-font
+    font-size: $icon-font-size
+    +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
+    &:hover
+      text-decoration: none
+    span
+      // Fix for icon font clickability issue in WebKit
+      display: inline-block
+
+
+@mixin icon-nav-list($icon-font-size)
+  width: auto
+  +horizontal-list
+  li
+    width: 2em
+    padding: 0
+  a
+    font-size: $icon-font-size
+    +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
+    &:hover
+      text-decoration: none
+    span
+      // Fix for icon font clickability issue in WebKit
+      display: inline-block
+
+
+/*  Helpers
+  -----------------------
+
+@mixin hidden
+  display: none !important
+  visibility: hidden
+
+@mixin reveal-hidden
+  display: block !important
+  visibility: visible

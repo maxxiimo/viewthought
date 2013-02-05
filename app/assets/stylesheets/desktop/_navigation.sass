@@ -1,12 +1,25 @@
 /*  Main
   -----------------------
 
+#nav-icon
+  +span-columns(3 omega, 7)
+  +icon-nav(1.5em, .1em)
+
+  +at-breakpoint($break)
+    +hidden
+
 #nav
+  +span-columns(7 omega, 12)
+  margin: .8em 0 0 0
   a
     padding: 0 20px
     font-family: $base-nav-font
   a:first-child
     padding-left: 0
+  +hidden
+
+  +at-breakpoint($break)
+    +reveal-hidden
 
 
 /*  Icon Fonts

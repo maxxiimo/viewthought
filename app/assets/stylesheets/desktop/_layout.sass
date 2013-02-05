@@ -16,8 +16,11 @@ body
   background-color: $bg-body
 
 .container
-  +container
+  +container($total-columns, $break)
   +susy-grid-background
+
+  +at-breakpoint($break)
+    +susy-grid-background
 
 img
   vertical-align: middle
@@ -26,32 +29,39 @@ img
 /*  Header
   -----------------------
 
+// navigation in _navigation.sass
+
 header
   +clearfix
   margin-bottom: 1em
 
 .logo
-  +span-columns(4, 12)
-  +prefix(1)
+  +span-columns(4, 7)
+  // +prefix(1)
   line-height: 1em
-  margin: .2em 0 0
+  margin-top: .2em
+  margin-right: -2em
+  padding-left: 2em
   font-family: $quatro
-  font-size: 2em
+  font-size: 1.7em
   text-transform: uppercase
-  background: image-url("http://dummyimage.com/40x40/d4d4d4/fff.gif") 10px 0 no-repeat
   +link-colors(#222, #222, #222, #222, #222)
+  background: image-url("http://dummyimage.com/40x40/d4d4d4/fff.gif") .2em 0 no-repeat
+
   &:hover
     text-decoration: none
+
   .char1, .char5
     font-size: 1.2em
-  // .char2, .char3, .char4, .char6, .char7, .char8, .char9, .char10, .char11
+
+  +at-breakpoint($break)
+    +span-columns(5, 12)
+    // +prefix(1)
+    margin-right: -2em
+    font-size: 2em
 
 .wf-loading .logo
   visibility: hidden
-
-nav
-  +span-columns(7 omega, 12)
-  margin: .8em 0 0 0
 
 
 /*  Footer
@@ -65,35 +75,35 @@ footer
     margin: 0
 
 .address
-  +span-columns(3, 12)
+  +span-columns(3, 7)
+
+  +at-breakpoint($break)
+    +span-columns(3, 12)
 
 .connect
-  +span-columns(4, 12)
+  +span-columns(4 omega, 7)
 
+  +at-breakpoint($break)
+    +span-columns(4, 12)
+
+// FIXME ccm: possibly convert to non-list?
 .social-links
-  width: auto
-  +horizontal-list
-  // margin-bottom: .25em
-  li
-    width: 2em
-    padding: 0
-  a
-    font-size: 1.5em
-    +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
-    &:hover
-      text-decoration: none
-    span
-      // Fix for icon font clickability issue in WebKit
-      display: inline-block
+  +icon-nav-list(1.5em)
 
 .related
-  +span-columns(5 omega, 12)
-  ul
-    margin: 0
+  +hidden
+
+  +at-breakpoint($break)
+    +span-columns(5 omega, 12)
+    +reveal-hidden
+    ul
+      margin: 0
 
 .copyright
-  +span-columns(12 omega, 12)
+  +span-columns(7 omega, 7)
   margin: .75em 0 1em
   font-size: .85em
   color: $font-gray
-  // text-align: center
+
+  +at-breakpoint($break)
+    +span-columns(12 omega, 12)
