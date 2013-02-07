@@ -16,10 +16,10 @@ body
   background-color: $bg-body
 
 .container
-  +container($total-columns, $break)
+  +container($total-columns, $desktop)
   +susy-grid-background
 
-  +at-breakpoint($break)
+  +at-breakpoint($desktop)
     +susy-grid-background
 
 img
@@ -54,7 +54,7 @@ header
   .char1, .char5
     font-size: 1.2em
 
-  +at-breakpoint($break)
+  +at-breakpoint($desktop)
     +span-columns(5, 12)
     // +prefix(1)
     margin-right: -2em
@@ -77,13 +77,13 @@ footer
 .address
   +span-columns(3, 7)
 
-  +at-breakpoint($break)
+  +at-breakpoint($desktop)
     +span-columns(3, 12)
 
 .connect
   +span-columns(4 omega, 7)
 
-  +at-breakpoint($break)
+  +at-breakpoint($desktop)
     +span-columns(4, 12)
 
 // FIXME ccm: possibly convert to non-list?
@@ -93,7 +93,7 @@ footer
 .related
   +hidden
 
-  +at-breakpoint($break)
+  +at-breakpoint($desktop)
     +span-columns(5 omega, 12)
     +reveal-hidden
     ul
@@ -105,5 +105,5 @@ footer
   font-size: .85em
   color: $font-gray
 
-  +at-breakpoint($break)
+  +at-breakpoint($desktop)
     +span-columns(12 omega, 12)
