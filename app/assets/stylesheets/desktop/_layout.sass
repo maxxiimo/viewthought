@@ -16,8 +16,11 @@ body
   background-color: $bg-body
 
 .container
-  +container($total-columns, $desktop)
+  +container($total-columns, $desktop, $tablet)
   +susy-grid-background
+
+  +at-breakpoint($tablet)
+    +susy-grid-background
 
   +at-breakpoint($desktop)
     +susy-grid-background
@@ -37,11 +40,10 @@ header
 
 .logo
   +span-columns(4, 7)
-  // +prefix(1)
-  line-height: 1em
   margin-top: .2em
   margin-right: -2em
   padding-left: 2em
+  line-height: 1em
   font-family: $quatro
   font-size: 1.7em
   text-transform: uppercase
@@ -54,11 +56,13 @@ header
   .char1, .char5
     font-size: 1.2em
 
+  +at-breakpoint($tablet)
+    +span-columns(4, 10)
+    margin-right: -2em
+
   +at-breakpoint($desktop)
     +span-columns(5, 12)
-    // +prefix(1)
     margin-right: -2em
-    font-size: 2em
 
 .wf-loading .logo
   visibility: hidden
@@ -77,11 +81,17 @@ footer
 .address
   +span-columns(3, 7)
 
+  +at-breakpoint($tablet)
+    +span-columns(3, 10)
+
   +at-breakpoint($desktop)
-    +span-columns(3, 12)
+    +span-columns(4, 12)
 
 .connect
   +span-columns(4 omega, 7)
+
+  +at-breakpoint($tablet)
+    +span-columns(3, 10)
 
   +at-breakpoint($desktop)
     +span-columns(4, 12)
@@ -91,19 +101,26 @@ footer
   +icon-nav-list(1.5em)
 
 .related
+  ul
+    margin: 0
   +hidden
 
-  +at-breakpoint($desktop)
-    +span-columns(5 omega, 12)
+  +at-breakpoint($tablet)
+    +span-columns(4 omega, 10)
     +reveal-hidden
-    ul
-      margin: 0
+
+  +at-breakpoint($desktop)
+    +span-columns(4 omega, 12)
+    +reveal-hidden
 
 .copyright
   +span-columns(7 omega, 7)
   margin: .75em 0 1em
   font-size: .85em
   color: $font-gray
+
+  +at-breakpoint($tablet)
+    +span-columns(10 omega, 10)
 
   +at-breakpoint($desktop)
     +span-columns(12 omega, 12)

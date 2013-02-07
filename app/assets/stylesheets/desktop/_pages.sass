@@ -5,6 +5,9 @@
   +span-columns(7 omega, 7)
   margin-bottom: 1em
 
+  +at-breakpoint($tablet)
+    +span-columns(10 omega, 10)
+
   +at-breakpoint($desktop)
     +span-columns(12 omega, 12)
 
@@ -17,6 +20,9 @@
   a
     display: block
 
+  +at-breakpoint($tablet)
+    +span-columns(5, 10)
+
   +at-breakpoint($desktop)
     +span-columns(6, 12)
 
@@ -26,6 +32,9 @@
     margin: 0
     font-size: 1.5em
 
+  +at-breakpoint($tablet)
+    +span-columns(5 omega, 10)
+
   +at-breakpoint($desktop)
     +span-columns(6 omega, 12)
 
@@ -33,6 +42,9 @@
   +span-columns(3, 7)
   blockquote
     margin: 0
+
+  +at-breakpoint($tablet)
+    +span-columns(5, 10)
 
   +at-breakpoint($desktop)
     +span-columns(6, 12)
@@ -53,6 +65,13 @@
       +span-columns(1, 6)
     h3, p
       +span-columns(5 omega, 6)
+
+  +at-breakpoint($tablet)
+    +span-columns(5 omega, 10)
+    a
+      +span-columns(1, 5)
+    h3, p
+      +span-columns(4 omega, 5)
 
 
 /*  Work

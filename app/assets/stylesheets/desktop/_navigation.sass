@@ -5,20 +5,27 @@
   +span-columns(3 omega, 7)
   +icon-nav(1.5em, .1em)
 
+  +at-breakpoint($tablet)
+    +hidden
+
   +at-breakpoint($desktop)
     +hidden
 
 #nav
-  +span-columns(7 omega, 12)
   margin: .8em 0 0 0
   a
-    padding: 0 20px
+    padding: 0 10px
     font-family: $base-nav-font
   a:first-child
     padding-left: 0
   +hidden
 
+  +at-breakpoint($tablet)
+    +span-columns(6 omega, 10)
+    +reveal-hidden
+
   +at-breakpoint($desktop)
+    +span-columns(7 omega, 12)
     +reveal-hidden
 
 
