@@ -11,7 +11,7 @@ body
   background-color: $bg-body
 
 .container
-  +container($total-columns, $break3, $break4, $break5, $break6, $break7, $break8, $break9, $break10, $break11, $break12)
+  +container($total-columns, $break3, $break4, $break5, $break6, $break7, $break8, $break9, $break10)
   +susy-grid-background
 
   +at-breakpoint($break3)
@@ -20,7 +20,7 @@ body
 
   +at-breakpoint($break4)
     +susy-grid-background
-    background-color: beige
+    background-color: orange
 
   +at-breakpoint($break5)
     +susy-grid-background
@@ -45,14 +45,6 @@ body
   +at-breakpoint($break10)
     +susy-grid-background
     background-color: brown
-
-  +at-breakpoint($break11)
-    +susy-grid-background
-    background-color: violet
-
-  +at-breakpoint($break12)
-    +susy-grid-background
-    background-color: white
 
 img
   vertical-align: middle
