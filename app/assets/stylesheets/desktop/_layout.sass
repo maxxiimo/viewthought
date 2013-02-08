@@ -16,7 +16,7 @@ body
   background-color: $bg-body
 
 .container
-  +container($total-columns, $break1, $break2, $tablet, $break3, $desktop)
+  +container($total-columns, $break1, $break2, $break3, $break4, $break5)
   +susy-grid-background
 
   +at-breakpoint($break1)
@@ -27,15 +27,15 @@ body
     +susy-grid-background
     background-color: blue
 
-  +at-breakpoint($tablet)
-    +susy-grid-background
-    background-color: white
-
   +at-breakpoint($break3)
     +susy-grid-background
     background-color: green
 
-  +at-breakpoint($desktop)
+  +at-breakpoint($break4)
+    +susy-grid-background
+    background-color: yellow
+
+  +at-breakpoint($break5)
     +susy-grid-background
     background-color: white
 
@@ -70,11 +70,11 @@ header
   .char1, .char5
     font-size: 1.2em
 
-  +at-breakpoint($tablet)
+  +at-breakpoint($break3)
     +span-columns(4, 10)
     margin-right: -2em
 
-  +at-breakpoint($desktop)
+  +at-breakpoint($break5)
     +span-columns(5, 12)
     margin-right: -2em
 
@@ -95,19 +95,19 @@ footer
 .address
   +span-columns(3, 7)
 
-  +at-breakpoint($tablet)
+  +at-breakpoint($break3)
     +span-columns(3, 10)
 
-  +at-breakpoint($desktop)
+  +at-breakpoint($break5)
     +span-columns(4, 12)
 
 .connect
   +span-columns(4 omega, 7)
 
-  +at-breakpoint($tablet)
+  +at-breakpoint($break3)
     +span-columns(3, 10)
 
-  +at-breakpoint($desktop)
+  +at-breakpoint($break5)
     +span-columns(4, 12)
 
 // FIXME ccm: possibly convert to non-list?
@@ -119,11 +119,11 @@ footer
     margin: 0
   +hidden
 
-  +at-breakpoint($tablet)
+  +at-breakpoint($break3)
     +span-columns(4 omega, 10)
     +reveal-hidden
 
-  +at-breakpoint($desktop)
+  +at-breakpoint($break5)
     +span-columns(4 omega, 12)
     +reveal-hidden
 
@@ -133,8 +133,8 @@ footer
   font-size: .85em
   color: $font-gray
 
-  +at-breakpoint($tablet)
+  +at-breakpoint($break3)
     +span-columns(10 omega, 10)
 
-  +at-breakpoint($desktop)
+  +at-breakpoint($break5)
     +span-columns(12 omega, 12)
