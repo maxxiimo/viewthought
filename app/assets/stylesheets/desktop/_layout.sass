@@ -19,11 +19,25 @@ body
   +container($total-columns, $desktop, $tablet)
   +susy-grid-background
 
+  +at-breakpoint($test1)
+    +susy-grid-background
+    background-color: red
+
+  +at-breakpoint($test2)
+    +susy-grid-background
+    background-color: blue
+
   +at-breakpoint($tablet)
     +susy-grid-background
+    background-color: white
+
+  +at-breakpoint($test3)
+    +susy-grid-background
+    background-color: green
 
   +at-breakpoint($desktop)
     +susy-grid-background
+    background-color: white
 
 img
   vertical-align: middle
