@@ -16,26 +16,38 @@ body
   background-color: $bg-body
 
 .container
-  +container($total-columns, $break1, $break2, $break3, $break4, $break5)
+  +container($total-columns, $break5, $break6, $break7, $break8, $break9, $break10, $break11, $break12)
   +susy-grid-background
 
-  +at-breakpoint($break1)
+  +at-breakpoint($break5)
     +susy-grid-background
     background-color: red
 
-  +at-breakpoint($break2)
+  +at-breakpoint($break6)
     +susy-grid-background
     background-color: blue
 
-  +at-breakpoint($break3)
+  +at-breakpoint($break7)
     +susy-grid-background
     background-color: green
 
-  +at-breakpoint($break4)
+  +at-breakpoint($break8)
     +susy-grid-background
     background-color: yellow
 
-  +at-breakpoint($break5)
+  +at-breakpoint($break9)
+    +susy-grid-background
+    background-color: aqua
+
+  +at-breakpoint($break10)
+    +susy-grid-background
+    background-color: brown
+
+  +at-breakpoint($break11)
+    +susy-grid-background
+    background-color: violet
+
+  +at-breakpoint($break12)
     +susy-grid-background
     background-color: white
 
@@ -70,11 +82,11 @@ header
   .char1, .char5
     font-size: 1.2em
 
-  +at-breakpoint($break3)
+  +at-breakpoint($break10)
     +span-columns(4, 10)
     margin-right: -2em
 
-  +at-breakpoint($break5)
+  +at-breakpoint($break12)
     +span-columns(5, 12)
     margin-right: -2em
 
@@ -95,19 +107,19 @@ footer
 .address
   +span-columns(3, 7)
 
-  +at-breakpoint($break3)
+  +at-breakpoint($break10)
     +span-columns(3, 10)
 
-  +at-breakpoint($break5)
+  +at-breakpoint($break12)
     +span-columns(4, 12)
 
 .connect
   +span-columns(4 omega, 7)
 
-  +at-breakpoint($break3)
+  +at-breakpoint($break10)
     +span-columns(3, 10)
 
-  +at-breakpoint($break5)
+  +at-breakpoint($break12)
     +span-columns(4, 12)
 
 // FIXME ccm: possibly convert to non-list?
@@ -119,11 +131,11 @@ footer
     margin: 0
   +hidden
 
-  +at-breakpoint($break3)
+  +at-breakpoint($break10)
     +span-columns(4 omega, 10)
     +reveal-hidden
 
-  +at-breakpoint($break5)
+  +at-breakpoint($break12)
     +span-columns(4 omega, 12)
     +reveal-hidden
 
@@ -133,8 +145,8 @@ footer
   font-size: .85em
   color: $font-gray
 
-  +at-breakpoint($break3)
+  +at-breakpoint($break10)
     +span-columns(10 omega, 10)
 
-  +at-breakpoint($break5)
+  +at-breakpoint($break12)
     +span-columns(12 omega, 12)
