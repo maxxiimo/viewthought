@@ -2,31 +2,40 @@
   -----------------------
 
 #nav-icon
-  +span-columns(3 omega, 7)
-  +icon-nav(1.5em, .1em)
+  +span-columns(4 omega, 4)
+  +icon-nav(1.3em, .3em)
 
-  +at-breakpoint($break10)
-    +hidden
+  // ----- breakpoints -----
 
-  +at-breakpoint($break12)
+  +at-breakpoint($break6)
+    +span-columns(3 omega, $break6)
+    a
+      padding: 0 .2em
+
+  +at-breakpoint($break9)
     +hidden
 
 #nav
   margin: .8em 0 0 0
   a
-    padding: 0 10px
+    padding: 0 .2em
     font-family: $base-nav-font
   a:first-child
     padding-left: 0
   +hidden
 
-  +at-breakpoint($break10)
-    +span-columns(6 omega, 10)
+  // ----- breakpoints -----
+
+  +at-breakpoint($break9)
+    +span-columns(5 omega, 9)
     +reveal-hidden
+    a
+      padding: 0 .4em
 
   +at-breakpoint($break12)
     +span-columns(7 omega, 12)
-    +reveal-hidden
+    a
+      padding: 0 .8em
 
 
 /*  Icon Fonts

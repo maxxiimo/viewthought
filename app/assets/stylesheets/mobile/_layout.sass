@@ -11,40 +11,11 @@ body
   background-color: $bg-body
 
 .container
-  +container($total-columns, $break3, $break4, $break5, $break6, $break7, $break8, $break9, $break10)
+  +container($total-columns, $break6)
   +susy-grid-background
-
-  +at-breakpoint($break3)
-    +susy-grid-background
-    background-color: black
-
-  +at-breakpoint($break4)
-    +susy-grid-background
-    background-color: orange
-
-  +at-breakpoint($break5)
-    +susy-grid-background
-    background-color: red
 
   +at-breakpoint($break6)
     +susy-grid-background
-    background-color: blue
-
-  +at-breakpoint($break7)
-    +susy-grid-background
-    background-color: green
-
-  +at-breakpoint($break8)
-    +susy-grid-background
-    background-color: yellow
-
-  +at-breakpoint($break9)
-    +susy-grid-background
-    background-color: aqua
-
-  +at-breakpoint($break10)
-    +susy-grid-background
-    background-color: brown
 
 img
   vertical-align: middle
@@ -58,19 +29,21 @@ header
   margin-bottom: 1em
 
 .logo
-  +span-columns(4.4 omega, 5)
-  +prefix(.6)
+  +span-columns(4 omega, 4)
+  margin-right: -2em
+  padding-left: 2em
   line-height: 1.3em
   font-family: $quatro
   font-size: 1.3em
   text-transform: uppercase
-  background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
   +link-colors(#222, #222, #222, #222, #222)
+  background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
+
   &:hover
     text-decoration: none
+
   .char1, .char5
     font-size: 1.2em
-  // .char2, .char3, .char4, .char6, .char7, .char8, .char9, .char10, .char11
 
 .wf-loading .viewthought
   visibility: hidden
@@ -86,32 +59,20 @@ footer
     margin: 0
 
 .address
-  +span-columns(3, 5)
+  +span-columns(2, 4)
 
 .connect
-  +span-columns(2 omega, 5)
-  // h3, .social-links, .tel, .email
-    // margin-left: -$gutter-width
+  +span-columns(2 omega, 4)
 
 .email
   display: block
 
+// FIXME ccm: possibly convert to non-list?
 .social-links
-  width: auto
-  +horizontal-list
-  li
-    // width: 1.5em
-    // padding: 0
-  a
-    +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
-    &:hover
-      text-decoration: none
-    span
-      // Fix for icon font clickability issue in WebKit
-      display: inline-block
+  +icon-nav-list(1em, .2em)
 
 .copyright
-  +span-columns(5 omega, 5)
+  +span-columns(4 omega, 4)
   color: $font-gray
   text-align: center
 

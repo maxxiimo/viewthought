@@ -1,7 +1,7 @@
 %footer.vcard{:role => "contentinfo"}
 
   .address
-    %h3.fn.org ViewThought LLC
+    %h3.fn.org ViewThought
     .adr
       %p.street-address 9314 Forest Hill Blvd.
       %p.extended-address Suite 73
@@ -14,7 +14,7 @@
   .connect
     %h3 Connect
     = render :partial => 'shared/social_links'
-    %span.tel 561.320.1117
+    %a.tel{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
     %a.email{:href => "mailto:info@viewthought.com"} Email
 
   .copyright An Ojala Inc. company &copy; ViewThought 2012

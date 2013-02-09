@@ -1,7 +1,9 @@
 %footer.vcard{:role => "contentinfo"}
 
   .address
-    %h3.fn.org ViewThought LLC
+    %h3.fn.org
+      ViewThought
+      %span.footer-hide LLC
     .adr
       %p.street-address 9314 Forest Hill Blvd.
       %p.extended-address Suite 73
@@ -12,10 +14,11 @@
         %span.postal-code 33414
 
   .connect
-    %h3 Connect with us
+    %h3
+      Connect
+      %span.footer-hide with us
     = render :partial => 'shared/social_links'
-    %span.tel 561.320.1117
-    &#124;
+    %a.tel{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
     %a.email{:href => "mailto:info@viewthought.com"} info@viewthought.com
 
   .related

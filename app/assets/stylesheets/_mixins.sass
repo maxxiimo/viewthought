@@ -11,9 +11,8 @@
 
 // FIXME ccm: possibly consolidate with next?
 @mixin icon-nav($icon-font-size, $icon-padding)
-  padding: .2em 0
   a
-    padding: $icon-padding
+    padding: 0 $icon-padding
     font-family: $base-nav-font
     font-size: $icon-font-size
     +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
@@ -24,12 +23,11 @@
       display: inline-block
 
 
-@mixin icon-nav-list($icon-font-size)
+@mixin icon-nav-list($icon-font-size, $icon-padding)
   width: auto
   +horizontal-list
   li
-    width: 2em
-    padding: 0
+    padding: 0 $icon-padding
   a
     font-size: $icon-font-size
     +link-colors($icon-normal, $icon-hover, $icon-active, $icon-visited, $icon-focus)
@@ -49,6 +47,10 @@
 
 @mixin reveal-hidden
   display: block !important
+  visibility: visible
+
+@mixin reveal-hidden-inline
+  display: inline-block !important
   visibility: visible
 
 // @mixin bleed($padding: $grid-padding, $sides: left right) {
