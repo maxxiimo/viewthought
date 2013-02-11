@@ -12,10 +12,10 @@ body
 
 .container
   +container($total-columns, $break6)
-  +susy-grid-background
+  // +susy-grid-background
 
   +at-breakpoint($break6)
-    +susy-grid-background
+    // +susy-grid-background
 
 img
   vertical-align: middle
@@ -45,6 +45,13 @@ header
   .char1, .char5
     font-size: 1.2em
 
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(3, $break6)
+    margin-top: .2em
+    margin-right: -2em
+
 .wf-loading .viewthought
   visibility: hidden
 
@@ -58,11 +65,29 @@ footer
   h3, p
     margin: 0
 
+.footer-hide
+  +hidden
+
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +reveal-hidden-inline
+
 .address
   +span-columns(2, 4)
 
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(3, $break6)
+
 .connect
   +span-columns(2 omega, 4)
+
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(3 omega, $break6)
 
 .email
   display: block
@@ -71,11 +96,27 @@ footer
 .social-links
   +icon-nav-list(1em, .2em)
 
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    font-size: 1.2em
+
 .copyright
   +span-columns(4 omega, 4)
+  font-size: .85em
   color: $font-gray
   text-align: center
 
-.copyright, .adr, .tel, .email
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(6 omega, $break6)
+    margin: .75em 0 1em
+
+.adr, .tel, .email
   font-size: .85em
 
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    font-size: 1em

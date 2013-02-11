@@ -2,7 +2,15 @@
   -----------------------
 
 #nav-icon
-  +icon-nav(1.5em, .3em)
+  +span-columns(4 omega, 4)
+  +icon-nav(1.3em, .3em)
+
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(3 omega, $break6)
+    a
+      padding: 0 .2em
 
 
 /*  Icon Fonts

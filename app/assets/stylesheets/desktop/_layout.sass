@@ -17,16 +17,16 @@ body
 
 .container
   +container($total-columns, $break6, $break9, $break12)
-  +susy-grid-background
+  // +susy-grid-background
 
   +at-breakpoint($break6)
-    +susy-grid-background
+    // +susy-grid-background
 
   +at-breakpoint($break9)
-    +susy-grid-background
+    // +susy-grid-background
 
   +at-breakpoint($break12)
-    +susy-grid-background
+    // +susy-grid-background
 
 img
   vertical-align: middle
@@ -126,10 +126,6 @@ footer
     +span-columns(4, $break12)
     a.tel:after
       content: " |"
-
-// .email
-//   display: block
-// %a.email{:href => "mailto:info@viewthought.com"} Email
 
 // FIXME ccm: possibly convert to non-list?
 .social-links
