@@ -41,9 +41,22 @@ header
   +clearfix
   margin-bottom: 1em
 
-.logo
+.viewthought
   +span-columns(4 omega, 4)
-  margin-right: -2em
+
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(3, $break6)
+
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+
+  +at-breakpoint($break12)
+    +span-columns(5, $break12)
+
+.logo
+  display: block
   padding-left: 2em
   line-height: 1.3em
   font-family: $quatro
@@ -61,19 +74,11 @@ header
   // ----- breakpoints -----
 
   +at-breakpoint($break6)
-    +span-columns(3, $break6)
     margin-top: .2em
-    margin-right: -2em
 
   +at-breakpoint($break9)
-    +span-columns(4, $break9)
-    margin-right: -2em
     font-size: 1.7em
     background: image-url("http://dummyimage.com/40x40/d4d4d4/fff.gif") .2em 0 no-repeat
-
-  +at-breakpoint($break12)
-    +span-columns(5, $break12)
-    margin-right: -2em
 
 .wf-loading .logo
   visibility: hidden

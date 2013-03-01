@@ -28,9 +28,15 @@ header
   +clearfix
   margin-bottom: 1em
 
-.logo
+.viewthought
   +span-columns(4 omega, 4)
-  margin-right: -2em
+
+  // ----- breakpoints -----
+
+  +at-breakpoint($break6)
+    +span-columns(3, $break6)
+
+.logo
   padding-left: 2em
   line-height: 1.3em
   font-family: $quatro
@@ -48,9 +54,7 @@ header
   // ----- breakpoints -----
 
   +at-breakpoint($break6)
-    +span-columns(3, $break6)
     margin-top: .2em
-    margin-right: -2em
 
 .wf-loading .viewthought
   visibility: hidden
