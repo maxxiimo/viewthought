@@ -4,7 +4,7 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  # Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
   Bundler.require(:default, :assets, Rails.env)
 end
@@ -59,14 +59,11 @@ module Viewthought
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Tell your app to use Mobvious::Manager as Rack middleware.
-    config.middleware.use Mobvious::Manager
-
-    # config.assets.paths << "#{Rails.root}/app/assets/fonts"
-    # config.assets.paths << Rails.root.join("app", "assets", "fonts")
-
     # Precompile *all* assets, except those that start with underscore per:
     # http://blog.55minutes.com/2012/01/getting-compass-to-work-with-rails-31-and-32/
     config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/
+
+    # Tell your app to use Mobvious::Manager as Rack middleware.
+    config.middleware.use Mobvious::Manager
   end
 end
