@@ -12,6 +12,8 @@
   %link{:rel => "apple-touch-icon", :href => "/apple-touch-icon.png"}
 
   = stylesheet_link_tag "application"
-  = javascript_include_tag "application"
+  -# for production customize modernizr at: http://www.modernizr.com/download/
+  = javascript_include_tag 'modernizr-2.6.2.min'
+
   %script{:src => "//use.typekit.net/lhf6dru.js"}
   = csrf_meta_tag
