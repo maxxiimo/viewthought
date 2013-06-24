@@ -1,32 +1,30 @@
-%footer.vcard{:role => "contentinfo"}
+.address
+  %h3.fn.org
+    ViewThought
+    %span.footer-hide LLC
+  .adr
+    %p.street-address 9314 Forest Hill Blvd.
+    %p.extended-address Suite 73
+    %p
+      %span.locality> Wellington
+      ,
+      %span.region Florida
+      %span.postal-code 33414
 
-  .address
-    %h3.fn.org
-      ViewThought
-      %span.footer-hide LLC
-    .adr
-      %p.street-address 9314 Forest Hill Blvd.
-      %p.extended-address Suite 73
-      %p
-        %span.locality> Wellington
-        ,
-        %span.region Florida
-        %span.postal-code 33414
+.connect
+  %h3
+    Connect
+    %span.footer-hide with us
+  = render :partial => 'shared/social_links'
+  %a.tel{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
+  %a.email{:href => "mailto:info@viewthought.com"} info@viewthought.com
 
-  .connect
-    %h3
-      Connect
-      %span.footer-hide with us
-    = render :partial => 'shared/social_links'
-    %a.tel{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
-    %a.email{:href => "mailto:info@viewthought.com"} info@viewthought.com
+.related
+  %h3 Related Sites
+  %ul
+    %li
+      %a{:href => 'http://railsviews.com', :title => ''} RailsViews.com
+    %li
+      %a{:href => 'http://thefrontendmanifesto.com', :title => ''} TheFrontEndManifesto.com
 
-  .related
-    %h3 Related Sites
-    %ul
-      %li
-        %a{:href => 'http://railsviews.com', :title => ''} RailsViews.com
-      %li
-        %a{:href => 'http://thefrontendmanifesto.com', :title => ''} TheFrontEndManifesto.com
-
-  .copyright An Ojala Inc. company &copy; ViewThought 2013
+.copyright An Ojala Inc. company &copy; ViewThought 2013

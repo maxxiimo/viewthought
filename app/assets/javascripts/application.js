@@ -12,5 +12,6 @@
 //
 //= require modernizr-2.6.2.min
 //= require jquery-1.8.3.min
+//= require jquery.anystretch
 //= require jquery.lettering-0.6.1.min
 //= require site

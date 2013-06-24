@@ -10,13 +10,19 @@
 
   = head
   %body
-    .container
-      = chromeframe
-      %header{:role => 'banner'}
+    = chromeframe
+    %header{:role => 'banner'}
+      .container
         = render :partial => 'shared/navigation-text'
         = render :partial => 'shared/navigation-icon'
         = render :partial => 'shared/logo'
-      #main{:role => 'main'}
+    #hero
+      .container
+        = render :partial => 'hero'
+    #main{:role => 'main'}
+      .container
         = yield
-      = render :partial => 'shared/footer'
+    %footer.vcard{:role => "contentinfo"}
+      .container
+        = render :partial => 'shared/footer'
     = scripts
