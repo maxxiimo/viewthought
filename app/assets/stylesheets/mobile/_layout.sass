@@ -26,12 +26,10 @@ img
 
 header
   +clearfix
-  margin-bottom: 1em
+  margin-bottom: .716em
 
 .viewthought
   +span-columns(4 omega, 4)
-
-  // ----- breakpoints -----
 
   +at-breakpoint($break6)
     +span-columns(3, $break6)
@@ -42,16 +40,14 @@ header
   font-family: $quatro
   font-size: 1.3em
   text-transform: uppercase
-  +link-colors(#222, #222, #222, #222, #222)
+  +link-colors($logo-color, $logo-color, $logo-color, $logo-color, $logo-color)
   background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
 
   &:hover
     text-decoration: none
 
   .char1, .char5
-    font-size: 1.2em
-
-  // ----- breakpoints -----
+    font-size: 1.159em
 
   +at-breakpoint($break6)
     margin-top: .2em
@@ -65,14 +61,12 @@ header
 
 footer
   clear: both
-  margin-top: 1em
+  padding-top: .716em
   h3, p
     margin: 0
 
 .footer-hide
   +hidden
-
-  // ----- breakpoints -----
 
   +at-breakpoint($break6)
     +reveal-hidden-inline
@@ -80,15 +74,11 @@ footer
 .address
   +span-columns(2, 4)
 
-  // ----- breakpoints -----
-
   +at-breakpoint($break6)
     +span-columns(3, $break6)
 
 .connect
   +span-columns(2 omega, 4)
-
-  // ----- breakpoints -----
 
   +at-breakpoint($break6)
     +span-columns(3 omega, $break6)
@@ -98,29 +88,25 @@ footer
 
 // FIXME ccm: possibly convert to non-list?
 .social-links
-  +icon-nav-list(1em, .2em)
-
-  // ----- breakpoints -----
+  +icon-nav-list(1em, .236em)
 
   +at-breakpoint($break6)
-    font-size: 1.2em
+    font-size: 1.159em
 
 .copyright
   +span-columns(4 omega, 4)
-  font-size: .85em
+  // 1 - .146
+  font-size: .854em
   color: $font-gray
   text-align: center
 
-  // ----- breakpoints -----
-
   +at-breakpoint($break6)
     +span-columns(6 omega, $break6)
-    margin: .75em 0 1em
+    margin: .716em 0 1em
 
 .adr, .tel, .email
-  font-size: .85em
-
-  // ----- breakpoints -----
+  // 1 - .146
+  font-size: .854em
 
   +at-breakpoint($break6)
     font-size: 1em
