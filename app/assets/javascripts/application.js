@@ -11,6 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery-1.8.3.min
-//= require jquery.anystretch
 //= require jquery.lettering-0.6.1.min
+//= require jquery.anystretch
 //= require site

@@ -33,3 +33,8 @@ $(function() {
     })
   } catch(e) {}
 })();
+
+
+// // Anystretch
+
+// $('#hero').anystretch("#{asset_path("pics/IMG_1324.jpg")}", {speed: 150});
