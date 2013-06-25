@@ -4,14 +4,14 @@
 //   These are the base defaults for the buttons, if you are going to use similar buttons on an entire site,
 //   overriding these can save you some time by calling the sassy button mixin with less arguments.
 
-$sb-base-color: rgba(11, 153, 194, 1);
+$sb-base-color: $button-color;
 $sb-second-color: false;
-$sb-border-radius: 5px;
-$sb-padding: 0.3em 1.5em;
-$sb-font-size: 16px;
-$sb-text-color: white;
-$sb-text-style: "inset";
-$sb-gradient-style: "simple";
+$sb-border-radius: .382em;
+$sb-padding: .382em 1.618em;
+$sb-font-size: 1em;
+$sb-text-color: $button-font-color;
+$sb-text-style: "false";
+$sb-gradient-style: "flat";
 $sb-pseudo-states: true;
 $sb-ie-support: true;
 
