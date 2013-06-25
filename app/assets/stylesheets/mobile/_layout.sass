@@ -35,10 +35,10 @@ header
     +span-columns(3, $break6)
 
 .logo
-  padding-left: 2em
-  line-height: 1.3em
+  padding-left: 45px
+  line-height: 1em
   font-family: $quatro
-  font-size: 1.3em
+  font-size: 1.875em
   text-transform: uppercase
   +link-colors($logo-color, $logo-color, $logo-color, $logo-color, $logo-color)
   background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
@@ -47,10 +47,11 @@ header
     text-decoration: none
 
   .char1, .char5
-    font-size: 1.159em
+    // 1 + .146
+    font-size: 1.146em
 
   +at-breakpoint($break6)
-    margin-top: .2em
+    margin-top: .236em
 
 .wf-loading .viewthought
   visibility: hidden
