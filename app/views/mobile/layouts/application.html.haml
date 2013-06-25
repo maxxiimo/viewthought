@@ -8,8 +8,8 @@
   %body
     .container
       %header{:role => "banner"}
-        = render :partial => 'shared/navigation-icon'
         = render :partial => 'shared/logo'
+        = render :partial => 'shared/navigation-icon'
       #main{:role => "main"}
         = yield
       = render :partial => 'shared/footer'

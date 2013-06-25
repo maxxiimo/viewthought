@@ -43,9 +43,12 @@ header
 
 .viewthought
   +span-columns(4 omega, 4)
+  margin-top: .236em
+  margin-bottom: .236em
 
   +at-breakpoint($break6)
     +span-columns(3, $break6)
+    margin-bottom: 0
 
   +at-breakpoint($break9)
     +span-columns(4, $break9)
@@ -58,7 +61,8 @@ header
   padding-left: 45px
   line-height: 1em
   font-family: $quatro
-  font-size: 1.875em
+  // 1 + .443
+  font-size: 1.443em
   text-transform: uppercase
   +link-colors($logo-color, $logo-color, $logo-color, $logo-color, $logo-color)
   background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
@@ -70,8 +74,8 @@ header
     // 1 + .146
     font-size: 1.146em
 
-  +at-breakpoint($break6)
-    margin-top: .236em
+  +at-breakpoint($break9)
+    font-size: 1.875em
 
 .wf-loading .logo
   visibility: hidden
