@@ -1,11 +1,14 @@
 /* Home
   -----------------------
 
-.hero
-  margin-bottom: 1em
+.tagline
+  h1
+    margin: 0
+    font-size: 1.618em
 
   +at-breakpoint($break6)
-    +span-columns(6 omega, $break6)
+    +span-columns(3, $break6)
+    +pad(1, $break6)
 
 .start-project
   text-align: center
@@ -16,16 +19,8 @@
 
   +at-breakpoint($break6)
     +span-columns(3, $break6)
-    margin-top: 6.854em
-
-.tagline
-  h1
-    margin: 0
-    font-size: 1.618em
-
-  +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
-
+    +pad(1, $break6)
+    margin-top: 1.875em
 
 /* Work
   -----------------------

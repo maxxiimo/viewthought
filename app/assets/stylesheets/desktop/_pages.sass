@@ -1,17 +1,25 @@
 /* Home
   -----------------------
 
-.hero
-  margin-bottom: 1em
+.tagline
+  margin-top: 4.909em
+  h1
+    margin: 0
+    font-size: 2.618em
+  p
+    font-size: 1.618em
 
   +at-breakpoint($break6)
-    +span-columns(6 omega, $break6)
+    +span-columns(3, $break6)
+    +pad(1, $break6)
 
   +at-breakpoint($break9)
-    +span-columns(9 omega, $break9)
+    +span-columns(4, $break9)
+    +pad(1, $break9)
 
   +at-breakpoint($break12)
-    +span-columns(12 omega, $break12)
+    +span-columns(6, $break12)
+    +pad(2, $break12)
 
 .start-project
   text-align: center
@@ -27,30 +35,16 @@
 
   +at-breakpoint($break6)
     +span-columns(3, $break6)
-    margin-top: 6.854em
+    +pad(1, $break6)
+    margin-top: 1.875em
 
   +at-breakpoint($break9)
     +span-columns(5, $break9)
+    +pad(1, $break9)
 
   +at-breakpoint($break12)
     +span-columns(6, $break12)
-
-.tagline
-  margin-top: 2.618em
-  h1
-    margin: 0
-    font-size: 2.618em
-  p
-    font-size: 1.618em
-
-  +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
-
-  +at-breakpoint($break9)
-    +span-columns(4 omega, $break9)
-
-  +at-breakpoint($break12)
-    +span-columns(6 omega, $break12)
+    +pad(2, $break12)
 
 .testimonial
   +hidden
