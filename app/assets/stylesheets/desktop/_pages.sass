@@ -1,31 +1,44 @@
 /* Home
   -----------------------
 
-.tagline
-  margin-top: 4.909em
-  h1
-    margin: 0
-    font-size: 2.618em
-  p
-    font-size: 1.618em
-
-  +at-breakpoint($break6)
-    +span-columns(3, $break6)
-    +pad(1, $break6)
+#hero
+  height: 20.792em
+  background-color: $bg-hero
 
   +at-breakpoint($break9)
-    +span-columns(4, $break9)
+    height: 46.971em
+
+.tagline
+  padding-top: .716em
+  h1
+    margin: 0
+    font-size: 1.875em
+  p
+    margin: .443em 0 0
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +span-columns(6, $break6)
+
+  +at-breakpoint($break9)
+    +span-columns(6, $break9)
     +pad(1, $break9)
-    margin-top: 3.034em
+    padding-top: 3.034em
+    h1
+      font-size: 2.618em
+    p
+      font-size: 1.618em
 
   +at-breakpoint($break12)
     +span-columns(6, $break12)
     +pad(2, $break12)
+    padding-top: 4.909em
 
 .start-project
-  text-align: left
+  text-align: center
   button
-    margin: 0 auto
+    // 1 + .274
+    margin-top: 1.274em
     +sassy-button
   // a
   //   display: block
@@ -35,16 +48,22 @@
   //   color: $nav-color
 
   +at-breakpoint($break6)
-    +span-columns(3, $break6)
-    margin-top: 1.875em
+    +span-columns(6, $break6)
+    button
+      margin-top: 1em
 
   +at-breakpoint($break9)
     +span-columns(6, $break9)
     +pad(1, $break9)
+    margin-top: 1.875em
+    text-align: left
 
   +at-breakpoint($break12)
     +span-columns(6, $break12)
     +pad(2, $break12)
+
+#quote
+  background-color: $bg-quote
 
 .quote
   +clearfix
@@ -61,6 +80,10 @@
 
   +at-breakpoint($break12)
     +span-columns(6, $break12)
+
+#manifesto
+  // height: 20.792em
+  background-color: $bg-manifesto
 
 .manifesto
   +clearfix

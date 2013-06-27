@@ -24,9 +24,11 @@ img
 /* Header
   -----------------------
 
+// navigation in _navigation.sass
+
 header
   +clearfix
-  margin-bottom: .716em
+  background-color: $bg-header
 
 .viewthought
   +span-columns(4 omega, 4)
@@ -38,6 +40,7 @@ header
     margin-bottom: 0
 
 .logo
+  display: block
   padding-left: 45px
   line-height: 1em
   font-family: $quatro
@@ -63,7 +66,9 @@ header
 
 footer
   clear: both
+  +clearfix
   padding-top: .716em
+  background-color: $bg-footer
   h3, p
     margin: 0
 
@@ -99,7 +104,6 @@ footer
   +span-columns(4 omega, 4)
   // 1 - .146
   font-size: .854em
-  color: $font-gray
   text-align: center
 
   +at-breakpoint($break6)

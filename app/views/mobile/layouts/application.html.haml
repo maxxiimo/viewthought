@@ -6,11 +6,14 @@
 
   = head
   %body
-    .container
-      %header{:role => "banner"}
+    .rwd-marker
+    %header{:role => 'banner'}
+      .container
         = render :partial => 'shared/logo'
         = render :partial => 'shared/navigation-icon'
-      #main{:role => "main"}
-        = yield
-      = render :partial => 'shared/footer'
+    #main{:role => "main"}
+      = yield
+    %footer.vcard{:role => "contentinfo"}
+      .container
+        = render :partial => 'shared/footer'
     = scripts

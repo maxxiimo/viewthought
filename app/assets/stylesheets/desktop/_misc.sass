@@ -143,6 +143,44 @@ $radius: 12px
   -khtml-box-shadow: 0 1px 3px #aaa
 
 
+/* RWD Marker
+  -----------------------
+
+.rwd-marker
+  position: absolute
+  top: 100px
+  right: 100px
+  width: 100px
+  height: 100px
+  text-align: center
+  background-color: red
+  z-index: 1000
+  +border-radius(5px)
+  +opacity(.50)
+
+  +at-breakpoint($break6)
+    background-color: green
+
+  +at-breakpoint($break9)
+    background-color: blue
+
+  +at-breakpoint($break12)
+    background-color: yellow
+
+.rwd-marker:before
+  content: "4"
+  font-size: 3.5em
+
+  +at-breakpoint($break6)
+    content: "6"
+
+  +at-breakpoint($break9)
+    content: "9"
+
+  +at-breakpoint($break12)
+    content: "12"
+
+
 /* Other
   -----------------------
 
