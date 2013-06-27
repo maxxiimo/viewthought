@@ -16,12 +16,8 @@
         = render :partial => 'shared/logo'
         = render :partial => 'shared/navigation-text'
         = render :partial => 'shared/navigation-icon'
-    #hero
-      .container
-        = render :partial => 'hero'
     #main{:role => 'main'}
-      .container
-        = yield
+      = yield
     %footer.vcard{:role => "contentinfo"}
       .container
         = render :partial => 'shared/footer'
