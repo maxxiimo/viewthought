@@ -1,0 +1,189 @@
+/* Hero
+  -----------------------
+
+#hero
+  height: 20.792em
+  background-color: $bg-hero
+
+  +at-breakpoint($break9)
+    height: 46.971em
+
+
+/* Tagline
+  -----------------------
+
+.tagline
+  padding-top: .716em
+  h1
+    margin: 0
+    font-size: 1.618em
+  p
+    margin: .443em 0 0
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +span-columns(4, $break6)
+    h1
+      font-size: 1.875em
+    p
+      // 1 + .169
+      font-size: 1.169em
+
+  +at-breakpoint($break9)
+    +span-columns(6, $break9)
+    +prefix(1)
+    padding-top: 3.034em
+    h1
+      font-size: 2.618em
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(2)
+    padding-top: 4.909em
+
+
+/* Button
+  -----------------------
+
+.start-project
+  text-align: center
+  button
+    // 1 + .274
+    margin-top: 1.274em
+    +sassy-button
+    font-size: 1.159em
+  // a
+  //   display: block
+  //   margin-top: .443em
+  //   font-family: $base-font-nav
+  //   font-size: 1.618em
+  //   color: $nav-color
+
+  +at-breakpoint($break6)
+    +span-columns(6, $break6)
+    text-align: left
+
+  +at-breakpoint($break9)
+    +span-columns(6, $break9)
+    +prefix(1)
+    margin-top: 1.875em
+    font-size: 1.443em
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(2)
+
+
+/* Quote
+  -----------------------
+
+#quote
+  background-color: $bg-quote
+
+$quote-padding-4: 2.618em
+$quote-padding-6: 3.034em
+$quote-padding-9: 4.236em
+$quote-padding-12: 4.909em
+
+.quote
+  +clearfix
+  position: relative
+  padding: $quote-padding-4 0
+  text-align: center
+  blockquote
+    margin: 0
+    font-size: 1.159em
+  p
+    margin-bottom: 0
+    font-family: $base-font-header
+    font-size: 1.159em
+    color: $blue-gray
+    +opacity(.35)
+
+  +at-breakpoint($break6)
+    +span-columns(5, $break6)
+    padding: $quote-padding-6 $column-width/2
+    blockquote
+      // 1 + .169
+      font-size: 1.169em
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    padding: $quote-padding-9 0
+    blockquote
+      font-size: 1.618em
+    p
+      // 1 + .274
+      font-size: 1.274em
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
+    +squish(2, 2)
+    padding: $quote-padding-12 0
+    blockquote
+      font-size: 1.875em
+
+.quote:before
+  content: ""
+  position: absolute
+  top: $quote-padding-4 / 1.5
+  bottom: $quote-padding-4 / 1.5
+  right: 45%
+  left: 45%
+  border-top: 1px solid $gray
+  border-bottom: 1px solid $gray
+
+  +at-breakpoint($break6)
+    top: $quote-padding-6 / 1.5
+    bottom: $quote-padding-6 / 1.5
+
+  +at-breakpoint($break9)
+    top: $quote-padding-9 / 1.5
+    bottom: $quote-padding-9 / 1.5
+
+  +at-breakpoint($break12)
+    top: $quote-padding-12 / 1.5
+    bottom: $quote-padding-12 / 1.5
+
+
+/* Manifesto
+  -----------------------
+
+#manifesto
+  // height: 20.792em
+  background-color: $bg-manifesto
+
+.manifesto
+  +clearfix
+  padding: 4.909em 0
+  a
+    +span-columns(1, 4)
+  h3, p
+    +span-columns(3 omega, 4)
+    margin: 0
+  h3
+    margin-bottom: .443em
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    a
+      +span-columns(1, 3)
+    h3
+      +span-columns(2 omega, 3)
+    p
+      +span-columns(3 omega, 3)
+
+  +at-breakpoint($break9)
+    a
+      +span-columns(1, 5)
+    h3, p
+      +span-columns(4 omega, 5)
+
+  +at-breakpoint($break12)
+    a
+      +span-columns(5, 12)
+    h3, p
+      +span-columns(7 omega, 12)
