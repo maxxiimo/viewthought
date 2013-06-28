@@ -2,6 +2,7 @@
   -----------------------
 
 #hero
+  position: relative
   height: 20.792em
   background-color: $bg-hero
 
@@ -75,6 +76,34 @@
     +span-columns(6, $break12)
     +prefix(2)
 
+
+/* Arrow
+  -----------------------
+
+.triangle
+  position: absolute
+  bottom: .169em
+  left: 0
+  right: 0
+  text-align: center
+  +rotate(45deg)
+  a
+    font-size: 2.618em
+    +text-shadow
+    +opacity(.5)
+    +link-colors($navy-blue, $blue-gray, $navy-blue, $navy-blue, $navy-blue)
+  a:hover
+    text-decoration: none
+
+  +at-breakpoint($break6)
+    a
+      +hidden
+
+  +at-breakpoint($break9)
+    bottom: .618em
+    a
+      +reveal-hidden
+      font-size: 3.034em
 
 /* Quote
   -----------------------
