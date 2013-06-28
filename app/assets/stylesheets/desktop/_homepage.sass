@@ -82,15 +82,10 @@
 #quote
   background-color: $bg-quote
 
-$quote-padding-4: 2.618em
-$quote-padding-6: 3.034em
-$quote-padding-9: 4.236em
-$quote-padding-12: 4.909em
-
 .quote
   +clearfix
   position: relative
-  padding: $quote-padding-4 0
+  padding: $padding-4 0
   text-align: center
   blockquote
     margin: 0
@@ -104,7 +99,7 @@ $quote-padding-12: 4.909em
 
   +at-breakpoint($break6)
     +span-columns(5, $break6)
-    padding: $quote-padding-6 $column-width/2
+    padding: $padding-6 $column-width/2
     blockquote
       // 1 + .169
       font-size: 1.169em
@@ -112,7 +107,7 @@ $quote-padding-12: 4.909em
   +at-breakpoint($break9)
     +span-columns(7, $break9)
     +squish(1, 1)
-    padding: $quote-padding-9 0
+    padding: $padding-9 0
     blockquote
       font-size: 1.618em
     p
@@ -122,68 +117,86 @@ $quote-padding-12: 4.909em
   +at-breakpoint($break12)
     +span-columns(8, $break12)
     +squish(2, 2)
-    padding: $quote-padding-12 0
+    padding: $padding-12 0
     blockquote
       font-size: 1.875em
 
 .quote:before
   content: ""
   position: absolute
-  top: $quote-padding-4 / 1.5
-  bottom: $quote-padding-4 / 1.5
+  top: $padding-4 / 1.5
+  bottom: $padding-4 / 1.5
   right: 45%
   left: 45%
   border-top: 1px solid $gray
   border-bottom: 1px solid $gray
 
   +at-breakpoint($break6)
-    top: $quote-padding-6 / 1.5
-    bottom: $quote-padding-6 / 1.5
+    top: $padding-6 / 1.5
+    bottom: $padding-6 / 1.5
 
   +at-breakpoint($break9)
-    top: $quote-padding-9 / 1.5
-    bottom: $quote-padding-9 / 1.5
+    top: $padding-9 / 1.5
+    bottom: $padding-9 / 1.5
 
   +at-breakpoint($break12)
-    top: $quote-padding-12 / 1.5
-    bottom: $quote-padding-12 / 1.5
+    top: $padding-12 / 1.5
+    bottom: $padding-12 / 1.5
 
 
 /* Manifesto
   -----------------------
 
 #manifesto
-  // height: 20.792em
   background-color: $bg-manifesto
 
 .manifesto
   +clearfix
-  padding: 4.909em 0
-  a
-    +span-columns(1, 4)
-  h3, p
-    +span-columns(3 omega, 4)
+  padding: $padding-4 0
+  // background: image-url("icons/devices.png") 0 50% no-repeat
+  img
+    +hidden
+  div
+    +span-columns(4 omega, 4)
+  h2, p
     margin: 0
-  h3
-    margin-bottom: .443em
+  h2
+    margin-bottom: .236em
+    // 1 + .382
+    font-size: 1.382em
+  p
+    font-size: 1em
 
   +at-breakpoint($break6)
-    +reveal-hidden
-    a
-      +span-columns(1, 3)
-    h3
-      +span-columns(2 omega, 3)
+    padding: $padding-6 0
+    div
+      +span-columns(6 omega, $break6)
+    h2
+      margin-bottom: .443em
+      font-size: 1.618em
     p
-      +span-columns(3 omega, 3)
+      font-size: 1.159em
 
   +at-breakpoint($break9)
-    a
-      +span-columns(1, 5)
-    h3, p
-      +span-columns(4 omega, 5)
+    padding: $padding-9 0
+    img
+      +reveal-hidden
+      +span-columns(4, 9)
+      margin-top: 1em
+    div
+      +span-columns(5 omega, 9)
+    h2, p
+      margin-left: 16px
+    h2
+      margin-bottom: .443em
+      font-size: 1.875em
+    p
+      font-size: 1.159em
 
   +at-breakpoint($break12)
-    a
+    padding: $padding-12 0
+    img
       +span-columns(5, 12)
-    h3, p
+      margin-top: 0
+    div
       +span-columns(7 omega, 12)

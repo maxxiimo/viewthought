@@ -55,13 +55,10 @@
 #quote
   background-color: $bg-quote
 
-$quote-padding-4: 2.618em
-$quote-padding-6: 3.034em
-
 .quote
   +clearfix
   position: relative
-  padding: $quote-padding-4 0
+  padding: $padding-4 0
   text-align: center
   blockquote
     margin: 0
@@ -75,7 +72,7 @@ $quote-padding-6: 3.034em
 
   +at-breakpoint($break6)
     +span-columns(5, $break6)
-    padding: $quote-padding-6 $column-width/2
+    padding: $padding-6 $column-width/2
     blockquote
       // 1 + .169
       font-size: 1.169em
@@ -83,13 +80,47 @@ $quote-padding-6: 3.034em
 .quote:before
   content: ""
   position: absolute
-  top: $quote-padding-4 / 1.5
-  bottom: $quote-padding-4 / 1.5
+  top: $padding-4 / 1.5
+  bottom: $padding-4 / 1.5
   right: 45%
   left: 45%
   border-top: 1px solid $gray
   border-bottom: 1px solid $gray
 
   +at-breakpoint($break6)
-    top: $quote-padding-6 / 1.5
-    bottom: $quote-padding-6 / 1.5
+    top: $padding-6 / 1.5
+    bottom: $padding-6 / 1.5
+
+
+/* Manifesto
+  -----------------------
+
+#manifesto
+  background-color: $bg-manifesto
+
+.manifesto
+  +clearfix
+  padding: $padding-4 0
+  // background: image-url("icons/devices.png") 0 50% no-repeat
+  img
+    +hidden
+  div
+    +span-columns(4 omega, 4)
+  h2, p
+    margin: 0
+  h2
+    margin-bottom: .236em
+    // 1 + .382
+    font-size: 1.382em
+  p
+    font-size: 1em
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+    div
+      +span-columns(6 omega, $break6)
+    h2
+      margin-bottom: .443em
+      font-size: 1.618em
+    p
+      font-size: 1.159em
