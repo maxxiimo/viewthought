@@ -35,14 +35,6 @@
       padding: 0 $nav-pad-9
     a.current
       color: $logo-color
-    // a.current:before
-    //   content: ""
-    //   position: absolute
-    //   top: -($nav-margin + .169em)
-    //   left: 0
-    //   right: $nav-pad-9
-    //   border: .169em solid $logo-color
-    //   +opacity(.75)
     #magic-line
       position: absolute
       display: block
@@ -52,13 +44,26 @@
       background-color: $logo-color
       +opacity(.75)
 
-
   +at-breakpoint($break12)
     +span-columns(7 omega, 12)
     a
       padding: 0 $nav-pad-12
-    .selected:before
-      right: $nav-pad-12
+
+/* JavaScript Fallback */
+
++at-breakpoint($break9)
+  .no-js #nav .current:before
+    content: ""
+    position: absolute
+    top: -($nav-margin + .169em)
+    left: 0
+    right: $nav-pad-9
+    border: .169em solid $logo-color
+    +opacity(.75)
+
++at-breakpoint($break12)
+  .no-js #nav .current:before
+    right: $nav-pad-12
 
 
 /* Icon Fonts
