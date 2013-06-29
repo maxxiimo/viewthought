@@ -21,8 +21,8 @@
     padding: 0 .236em
     font-family: $base-font-nav
     +link-colors($nav-color, $nav-color, $nav-color, $nav-color, $nav-color)
-  a:first-child
-    padding-left: 0
+  // a:first-child
+  //   padding-left: 0
   a:hover
     text-decoration: none
     color: $logo-color
@@ -39,7 +39,6 @@
       position: absolute
       display: block
       top: -$nav-margin
-      left: 0
       height: .169em
       background-color: $logo-color
       +opacity(.75)
@@ -48,6 +47,8 @@
     +span-columns(7 omega, 12)
     a
       padding: 0 $nav-pad-12
+    // #magic-line
+    //   left: $nav-pad-12
 
 /* JavaScript Fallback */
 
@@ -56,13 +57,14 @@
     content: ""
     position: absolute
     top: -($nav-margin + .169em)
-    left: 0
+    left: $nav-pad-9
     right: $nav-pad-9
     border: .169em solid $logo-color
     +opacity(.75)
 
 +at-breakpoint($break12)
   .no-js #nav .current:before
+    left: $nav-pad-12
     right: $nav-pad-12
 
 
