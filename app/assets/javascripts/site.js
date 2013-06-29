@@ -5,6 +5,45 @@ $(document).ready(function() {
 });
 
 
+// Anystretch
+
+// $('#hero').anystretch("#{asset_path("pics/IMG_1324.jpg")}", {speed: 150});
+
+
+// Magic Line
+
+$(function() {
+
+    var $el, leftPos, newWidth,
+        $mainNav = $("#nav");
+
+    $mainNav.append("<span id='magic-line'></span>");
+    var $magicLine = $("#magic-line");
+
+    $magicLine
+        .width($(".current").width())
+        .css("left", $(".current").position().left)
+        .data("origLeft", $magicLine.position().left)
+        .data("origWidth", $magicLine.width());
+
+    $("#nav a").hover(function() {
+        $el = $(this);
+        leftPos = $el.position().left;
+        // newWidth = $el.parent().width();
+        newWidth = $el.width();
+        $magicLine.stop().animate({
+            left: leftPos,
+            width: newWidth
+        });
+    }, function() {
+        $magicLine.stop().animate({
+            left: $magicLine.data("origLeft"),
+            width: $magicLine.data("origWidth")
+        });
+    });
+});
+
+
 // Typekit
 
 $(function() {
@@ -33,8 +72,3 @@ $(function() {
     })
   } catch(e) {}
 })();
-
-
-// // Anystretch
-
-// $('#hero').anystretch("#{asset_path("pics/IMG_1324.jpg")}", {speed: 150});

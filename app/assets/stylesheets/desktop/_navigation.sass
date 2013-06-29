@@ -14,6 +14,7 @@
     +hidden
 
 #nav
+  position: relative
   margin: $nav-margin 0
   a
     position: relative
@@ -32,15 +33,25 @@
     +reveal-hidden
     a
       padding: 0 $nav-pad-9
-    .selected:before
-      content: ""
+    a.current
+      color: $logo-color
+    // a.current:before
+    //   content: ""
+    //   position: absolute
+    //   top: -($nav-margin + .169em)
+    //   left: 0
+    //   right: $nav-pad-9
+    //   border: .169em solid $logo-color
+    //   +opacity(.75)
+    #magic-line
       position: absolute
-      top: -($nav-margin + .169em)
+      display: block
+      top: -$nav-margin
       left: 0
-      right: $nav-pad-9
-      // border: 5px solid darken($bg-nav, 5)
-      border: .169em solid $logo-color
+      height: .169em
+      background-color: $logo-color
       +opacity(.75)
+
 
   +at-breakpoint($break12)
     +span-columns(7 omega, 12)
