@@ -14,25 +14,40 @@
     +hidden
 
 #nav
-  margin: .716em 0
+  margin: $nav-margin 0
   a
+    position: relative
     padding: 0 .236em
     font-family: $base-font-nav
     +link-colors($nav-color, $nav-color, $nav-color, $nav-color, $nav-color)
   a:first-child
     padding-left: 0
+  a:hover
+    text-decoration: none
+    color: $logo-color
   +hidden
 
   +at-breakpoint($break9)
     +span-columns(5 omega, 9)
     +reveal-hidden
     a
-      padding: 0 .443em
+      padding: 0 $nav-pad-9
+    .selected:before
+      content: ""
+      position: absolute
+      top: -($nav-margin + .169em)
+      left: 0
+      right: $nav-pad-9
+      // border: 5px solid darken($bg-nav, 5)
+      border: .169em solid $logo-color
+      +opacity(.75)
 
   +at-breakpoint($break12)
     +span-columns(7 omega, 12)
     a
-      padding: 0 .716em
+      padding: 0 $nav-pad-12
+    .selected:before
+      right: $nav-pad-12
 
 
 /* Icon Fonts
