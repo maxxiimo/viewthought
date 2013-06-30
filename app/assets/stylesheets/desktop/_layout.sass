@@ -155,21 +155,33 @@ footer
     // +reveal-hidden
 
 .copyright
+  position: relative
   +span-columns(4 omega, 4)
+  margin-top: .716em
+  padding-top: .382em
   // 1 - .146
   font-size: .854em
-  text-align: center
 
   +at-breakpoint($break6)
     +span-columns(6 omega, $break6)
-    margin: .716em 0 1em
-    text-align: left
+    margin: 1em 0
 
   +at-breakpoint($break9)
     +span-columns(9 omega, $break9)
 
   +at-breakpoint($break12)
     +span-columns(12 omega, $break12)
+
+.copyright:after
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  right: 75%
+  height: 5px
+  // border-top: 1px solid $base-font-color
+  +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
+  +opacity(.25)
 
 .adr, .tel, .email
   // 1 - .146
