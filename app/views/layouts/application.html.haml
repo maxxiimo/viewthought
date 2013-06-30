@@ -10,16 +10,16 @@
 
   = head
   %body
-    = chromeframe
-    .rwd-marker
-    %header{:role => 'banner'}
-      .container
-        = render :partial => 'shared/logo'
-        = render :partial => 'shared/navigation-text'
-        = render :partial => 'shared/navigation-icon'
-    #main{:role => 'main'}
-      = yield
-    %footer.vcard{:role => "contentinfo"}
-      .container
-        = render :partial => 'shared/footer'
+    .wrapper
+      = chromeframe
+      %header{:role => 'banner'}
+        .container
+          = render :partial => 'shared/logo'
+          = render :partial => 'shared/navigation-text'
+          = render :partial => 'shared/navigation-icon'
+      #main{:role => 'main'}
+        = yield
+      %footer.vcard{:role => "contentinfo"}
+        .container
+          = render :partial => 'shared/footer'
     = scripts
