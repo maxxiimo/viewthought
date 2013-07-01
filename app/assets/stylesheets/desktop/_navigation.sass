@@ -14,16 +14,14 @@
     +hidden
 
 #nav
-  position: relative
   margin: $nav-margin 0
   a
-    position: relative
     padding: 0 .236em
     font-family: $base-font-nav
     +link-colors($nav-color, $nav-color, $nav-color, $nav-color, $nav-color)
-  a:hover
-    text-decoration: none
-    color: $logo-color
+    &:hover
+      text-decoration: none
+      color: $logo-color
   +hidden
 
   +at-breakpoint($break9)
@@ -31,20 +29,22 @@
     +reveal-hidden
     a
       padding: 0 $nav-pad-9
-    a.current
-      color: $logo-color
-    #magic-line
-      position: absolute
-      display: block
-      top: -$nav-margin
-      height: .169em
-      background-color: $logo-color
-      +opacity(.75)
+      &.current
+        color: $logo-color
 
   +at-breakpoint($break12)
     +span-columns(7 omega, 12)
     a
       padding: 0 $nav-pad-12
+
+#magic-line
+  position: absolute
+  display: block
+  // top: .382em
+  // height: .146em
+  top: 0
+  height: .382em
+  background-color: $logo-color
 
 /* JavaScript Fallback */
 
