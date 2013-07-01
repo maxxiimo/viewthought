@@ -112,8 +112,6 @@
     +panel-shadow(.15)
 
 .quote
-  +clearfix
-  position: relative
   padding: $padding-4 0
   text-align: center
   blockquote
@@ -185,7 +183,6 @@
 .manifesto
   +clearfix
   padding: $padding-4 0
-  // background: image-url("icons/devices.png") 0 50% no-repeat
   img
     +hidden
   div
@@ -205,7 +202,8 @@
       +span-columns(6 omega, $break6)
     h2
       margin-bottom: .443em
-      font-size: 1.618em
+      // 1 + .443
+      font-size: 1.443em
     p
       font-size: 1.159em
 

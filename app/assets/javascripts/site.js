@@ -20,8 +20,8 @@ $(function() {
 
         // http://stackoverflow.com/questions/590602/padding-or-margin-value-in-pixels-as-integer-using-jquery
         $current = $(".current"),
-        // test = $current.css("padding-left"),
-        // test = parseInt($current.css("padding-top").replace("px","")),
+        // paddingLeft = $current.css("padding-left"),
+        // paddingLeft = parseInt($current.css("padding-top").replace("px","")),
         paddingLeft = ($current.innerWidth() - $current.width()) / 2;
 
     $mainNav.append("<span id='magic-line'></span>");
