@@ -131,15 +131,15 @@ footer
     +span-columns(6 omega, $break6)
     margin: 1em 0
 
-.copyright:after
-  content: ""
-  position: absolute
-  top: 0
-  left: 0
-  right: 75%
-  height: 5px
-  +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
-  +opacity(.25)
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 75%
+    height: 5px
+    +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
+    +opacity(.25)
 
 .adr, .tel, .email
   // 1 - .146
