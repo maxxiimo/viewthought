@@ -104,12 +104,20 @@ footer
   +clearfix
   position: relative
   padding-top: $padding-4
-  // background-color: $bg-footer
   +panel-gradient($bg-footer, $bg-footer)
   h3, p
     margin: 0
   &:after
     +panel-shadow
+
+  +at-breakpoint($break6)
+    padding-top: $padding-6
+
+  +at-breakpoint($break9)
+    padding-top: $padding-9
+
+  +at-breakpoint($break12)
+    padding-top: $padding-12
 
 .footer-hide
   +hidden

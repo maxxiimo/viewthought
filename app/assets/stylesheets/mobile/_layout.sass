@@ -91,13 +91,15 @@ footer
   clear: both
   +clearfix
   position: relative
-  padding-top: .716em
-  // background-color: $bg-footer
+  padding-top: $padding-4
   +panel-gradient($bg-footer, $bg-footer)
   h3, p
     margin: 0
   &:after
     +panel-shadow
+
+  +at-breakpoint($break6)
+    padding-top: $padding-6
 
 .footer-hide
   +hidden
