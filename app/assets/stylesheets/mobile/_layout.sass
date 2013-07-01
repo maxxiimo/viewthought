@@ -48,20 +48,28 @@ header
 
 .viewthought
   +span-columns(4 omega, 4)
+  line-height: 1em
   margin-top: .382em
   margin-bottom: .236em
+  // 1 + .443
+  font-size: 1.443em
 
   +at-breakpoint($break6)
     +span-columns(3, $break6)
-    margin-top: .274em
+    margin-top: .236em
     margin-bottom: 0
 
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+    margin-top: .274em
+    font-size: 1.875em
+
+  +at-breakpoint($break12)
+    +span-columns(5, $break12)
+
 .logo
-  display: block
-  line-height: 1em
+  display: inline-block
   font-family: $quatro
-  // 1 + .443
-  font-size: 1.443em
   text-transform: uppercase
   +link-colors($logo-color, $logo-color, $logo-color, $logo-color, $logo-color)
 
@@ -72,7 +80,7 @@ header
     // 1 + .146
     font-size: 1.146em
 
-.wf-loading .viewthought
+.wf-loading .logo
   visibility: hidden
 
 
