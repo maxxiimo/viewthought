@@ -73,7 +73,10 @@
   -----------------------
 
 #quote
+  position: relative
   background-color: $bg-quote
+  &:after
+    +panel-shadow
 
 .quote
   +clearfix
@@ -116,7 +119,10 @@
   -----------------------
 
 #manifesto
+  position: relative
   background-color: $bg-manifesto
+  &:after
+    +panel-shadow
 
 .manifesto
   +clearfix

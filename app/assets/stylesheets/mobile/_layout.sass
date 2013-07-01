@@ -43,6 +43,7 @@ img
 
 header
   +clearfix
+  border-top: 5px solid $gray
   background-color: $bg-header
 
 .viewthought
@@ -81,11 +82,14 @@ header
 footer
   clear: both
   +clearfix
+  position: relative
   padding-top: .716em
   // background-color: $bg-footer
-  +background-image(linear-gradient($bg-footer, lighten($bg-footer, 15)))
+  +panel-gradient($bg-footer, $bg-footer)
   h3, p
     margin: 0
+  &:after
+    +panel-shadow
 
 .footer-hide
   +hidden
