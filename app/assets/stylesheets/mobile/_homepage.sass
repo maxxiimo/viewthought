@@ -119,11 +119,6 @@
 .manifesto
   +clearfix
   padding: $padding-4 0
-  // background: image-url("icons/devices.png") 0 50% no-repeat
-  img
-    +hidden
-  div
-    +span-columns(4 omega, 4)
   h3, p
     margin: 0
   h3
@@ -134,11 +129,9 @@
     font-size: 1em
 
   +at-breakpoint($break6)
-    padding: $padding-6 0
-    div
-      +span-columns(6 omega, $break6)
     h3
       margin-bottom: .443em
-      font-size: 1.618em
+      // 1 + .443
+      font-size: 1.443em
     p
       font-size: 1.159em
