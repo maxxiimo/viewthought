@@ -22,7 +22,8 @@ $(function() {
         $current = $(".current"),
         // paddingLeft = $current.css("padding-left"),
         // paddingLeft = parseInt($current.css("padding-top").replace("px","")),
-        paddingLeft = ($current.innerWidth() - $current.width()) / 2;
+        paddingBoth = ($current.innerWidth() - $current.width()),
+        paddingLeft = paddingBoth / 2;
 
     $mainNav.append("<span id='magic-line'></span>");
     var $magicLine = $("#magic-line");
@@ -35,8 +36,8 @@ $(function() {
 
     $("#nav a").hover(function() {
         $el = $(this);
-        leftPos = $el.position().left + paddingLeft;
-        newWidth = $el.width();
+        leftPos = $el.position().left;
+        newWidth = $el.width() + paddingBoth;
         $magicLine.stop().animate({
             left: leftPos,
             width: newWidth
