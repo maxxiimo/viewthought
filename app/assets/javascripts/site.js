@@ -19,7 +19,7 @@ $(function() {
         $mainNav = $("#nav"),
 
         // http://stackoverflow.com/questions/590602/padding-or-margin-value-in-pixels-as-integer-using-jquery
-        $current = $(".current"),
+        $current = $(".active"),
         // paddingLeft = $current.css("padding-left"),
         // paddingLeft = parseInt($current.css("padding-top").replace("px","")),
         paddingBoth = ($current.innerWidth() - $current.width()),

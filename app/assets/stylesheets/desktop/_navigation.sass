@@ -31,7 +31,7 @@
     +reveal-hidden
     a
       padding: $nav-pad $nav-pad-9
-      &.current
+      &.active
         color: $logo-color
 
   +at-breakpoint($break12)
@@ -49,7 +49,7 @@
 /* JavaScript Fallback */
 
 +at-breakpoint($break9)
-  .no-js #nav .current:before
+  .no-js #nav .active:before
     content: ""
     position: absolute
     top: 0
@@ -59,7 +59,7 @@
     background-color: $logo-color
 
 +at-breakpoint($break12)
-  .no-js #nav .current:before
+  .no-js #nav .active:before
     left: $nav-pad-12
     right: $nav-pad-12
 
