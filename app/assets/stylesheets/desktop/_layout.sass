@@ -21,6 +21,8 @@ body
   font-size: $base-font-size
   line-height: $base-line-height
   background-color: $bg-body
+  &:after
+    +rwd-marker
 
 .wrapper
   max-width: 1400px
@@ -40,9 +42,6 @@ body
 
   +at-breakpoint($break12)
     // +susy-grid-background
-
-#main
-  // margin: 1.875em 0
 
 img
   vertical-align: middle
