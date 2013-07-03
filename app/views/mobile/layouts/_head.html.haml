@@ -4,7 +4,7 @@
   %link{:rel => "dns-prefetch", :href => "//use.typekit.net"}
   %title= content_for?(:title) ? ("ViewThought - " + yield(:title)) : "ViewThought"
 
-  %meta{:name => "description", :content => "XXX"}
+  %meta{:name => "description", :content => "Builders of Mobile and Desktop Web Solutions"}
   %meta{:name => "HandheldFriendly", :content => "True"}
   %meta{:name => "MobileOptimized", :content => "320"}
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
@@ -33,13 +33,3 @@
 
   %script{:src => "//use.typekit.net/lhf6dru.js"}
   = csrf_meta_tag
-
-  -# *******************************************************************************************
-  -# MORE OPTIONS: (https://gist.github.com/849231)
-
-  -# consider using below meta tags if you want to disable format detection by default
-  -# %meta{:name => "format-detection", :content => "telephone=no"}
-  -# %meta{:name => "format-detection", :content => "address=no"}
-
-  -# consider using below link tag if the page is duplicate content of a desktop version
-  -# %link{:rel => "canonical"}

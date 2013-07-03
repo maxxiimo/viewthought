@@ -1,24 +1,22 @@
-%footer.vcard{:role => "contentinfo"}
+.address
+  %h3.fn.org
+    ViewThought
+    %span.footer-hide LLC
+  .adr
+    %p.street-address 9314 Forest Hill Blvd.
+    %p.extended-address Suite 73
+    %p
+      %span.locality> Wellington
+      ,
+      %span.region FL
+      %span.postal-code 33414
 
-  .address
-    %h3.fn.org
-      ViewThought
-      %span.footer-hide LLC
-    .adr
-      %p.street-address 9314 Forest Hill Blvd.
-      %p.extended-address Suite 73
-      %p
-        %span.locality> Wellington
-        ,
-        %span.region FL
-        %span.postal-code 33414
+.connect
+  %h3
+    Connect
+    %span.footer-hide with us
+  = render :partial => 'shared/social_links'
+  %a.tel{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
+  %a.email{:href => "mailto:info@viewthought.com"} Email
 
-  .connect
-    %h3
-      Connect
-      %span.footer-hide with us
-    = render :partial => 'shared/social_links'
-    %a.tel{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
-    %a.email{:href => "mailto:info@viewthought.com"} Email
-
-  .copyright An Ojala Inc. company &copy; ViewThought 2012
+.copyright An Ojala Inc. company &copy; ViewThought 2012
