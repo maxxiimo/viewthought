@@ -93,17 +93,15 @@
       font-size: 1.169em
 
   &:before
-    content: ""
-    position: absolute
-    top: $padding-4 / 1.5
-    bottom: $padding-4 / 1.5
-    right: 45%
-    left: 45%
-    border-top: 1px solid $gray
-    border-bottom: 1px solid $gray
+    +divider-top($gray, $padding-4, 45%)
 
     +at-breakpoint($break6)
       top: $padding-6 / 1.5
+
+  &:after
+    +divider-bottom($gray, $padding-4, 45%)
+
+    +at-breakpoint($break6)
       bottom: $padding-6 / 1.5
 
 
