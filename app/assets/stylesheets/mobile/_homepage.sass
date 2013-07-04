@@ -3,14 +3,26 @@
 
 #hero
   position: relative
-  height: 20.792em
+  padding: .716em 0 1.159em
   background-color: $bg-hero
 
+  +at-breakpoint($break6)
+    // 1 + .443
+    padding: 1.443em 0 1.618em
+
+  // &:before
+  //   content: ""
+  //   position: absolute
+  //   top: 50%
+  //   left: 50%
+  //   width: 500px
+  //   height: 500px
+  //   border: 1px solid #000
+  //   background: image-url("icons/apple-icons.png") 0 0 no-repeat
 
 /* Tagline
 
 .tagline
-  padding-top: .716em
   h2
     margin: 0
     font-size: 1.618em
@@ -21,7 +33,6 @@
     color: $whitesmoke
 
   +at-breakpoint($break6)
-    padding-top: 1.618em
     h2
       font-size: 1.875em
     p
@@ -48,19 +59,21 @@
 /* Arrow
 
 .triangle
-  position: absolute
-  bottom: .169em
-  left: 45%
-  right: 45%
-  text-align: center
-  +rotate(45deg)
-  a
-    font-size: 2.618em
-    +text-shadow
-    +opacity(.5)
-    +link-colors($navy-blue, $blue-gray, $navy-blue, $navy-blue, $navy-blue)
-  a:hover
-    text-decoration: none
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    position: absolute
+    bottom: 5%
+    right: 5%
+    +rotate(45deg)
+    a
+      font-size: 2.618em
+      +text-shadow
+      +opacity(.5)
+      +link-colors($navy-blue, $blue-gray, $navy-blue, $navy-blue, $navy-blue)
+    a:hover
+      text-decoration: none
 
 
 /* Quote
