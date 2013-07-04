@@ -6,6 +6,7 @@
   height: 20.792em
   background-color: $bg-hero
 
+
 /* Tagline
 
 .tagline
@@ -20,32 +21,29 @@
     color: $whitesmoke
 
   +at-breakpoint($break6)
-    +span-columns(4, $break6)
+    padding-top: 1.618em
     h2
       font-size: 1.875em
     p
-      // 1 + .169
-      font-size: 1.169em
+      // 1 + .236
+      font-size: 1.236em
 
 /* Button
 
 .start-project
   text-align: center
+  margin-top: 1.618em
   button
-    // 1 + .274
-    margin-top: 1.274em
     +sassy-button
     font-size: 1.159em
-  // a
-  //   display: block
-  //   margin-top: .443em
-  //   font-family: $base-font-nav
-  //   font-size: 1.618em
-  //   color: $nav-color
 
   +at-breakpoint($break6)
     +span-columns(6, $break6)
     text-align: left
+    margin-top: 1.875em
+    button
+      // 1 + .274
+      font-size: 1.274em
 
 /* Arrow
 
@@ -64,9 +62,6 @@
   a:hover
     text-decoration: none
 
-  +at-breakpoint($break6)
-    a
-      +hidden
 
 /* Quote
   -----------------------

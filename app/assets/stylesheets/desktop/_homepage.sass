@@ -8,6 +8,10 @@
 
   +at-breakpoint($break9)
     // 46.971 - 10
+    height: 29.03em
+
+  +at-breakpoint($break12)
+    // 46.971 - 10
     height: 36.971em
 
 /* Tagline
@@ -24,16 +28,16 @@
     color: $whitesmoke
 
   +at-breakpoint($break6)
-    +span-columns(4, $break6)
+    padding-top: 1.618em
     h2
       font-size: 1.875em
     p
-      // 1 + .169
-      font-size: 1.169em
+      // 1 + .236
+      font-size: 1.236em
 
   +at-breakpoint($break9)
-    +span-columns(6, $break9)
-    +prefix(1)
+    +span-columns(7, $break9)
+    +squish(1, 1)
     padding-top: 3.034em
     h2
       font-size: 2.618em
@@ -41,39 +45,41 @@
       font-size: 1.618em
 
   +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +prefix(2)
+    +span-columns(8, $break12)
+    +squish(2, 2)
     padding-top: 4.909em
 
 /* Button
 
 .start-project
   text-align: center
+  margin-top: 1.618em
   button
-    // 1 + .274
-    margin-top: 1.274em
     +sassy-button
     font-size: 1.159em
-  // a
-  //   display: block
-  //   margin-top: .443em
-  //   font-family: $base-font-nav
-  //   font-size: 1.618em
-  //   color: $nav-color
 
   +at-breakpoint($break6)
     +span-columns(6, $break6)
     text-align: left
+    margin-top: 1.875em
+    button
+      // 1 + .274
+      font-size: 1.274em
 
   +at-breakpoint($break9)
     +span-columns(6, $break9)
     +prefix(1)
-    margin-top: 1.875em
-    font-size: 1.443em
+    margin-top: 3.034em
+    button
+      // 1 + .443
+      font-size: 1.443em
 
   +at-breakpoint($break12)
     +span-columns(6, $break12)
     +prefix(2)
+    margin-top: 4.236em
+    button
+      font-size: 1.618em
 
 /* Arrow
 
@@ -92,17 +98,13 @@
   a:hover
     text-decoration: none
 
-  +at-breakpoint($break6)
-    a
-      +hidden
-
   +at-breakpoint($break9)
     left: 48%
     right: 48%
     bottom: .618em
     a
-      +reveal-hidden
       font-size: 3.034em
+
 
 /* Quote
   -----------------------
