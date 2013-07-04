@@ -3,16 +3,18 @@
 
 #hero
   position: relative
-  height: 20.792em
+  padding: .716em 0 1.159em
   background-color: $bg-hero
 
+  +at-breakpoint($break6)
+    // 1 + .443
+    padding: 1.443em 0 1.618em
+
   +at-breakpoint($break9)
-    // 46.971 - 10
-    height: 29.03em
+    padding: 2.618em 0 4.236em
 
   +at-breakpoint($break12)
-    // 46.971 - 10
-    height: 36.971em
+    padding: 4.236em 0 4.909em
 
   // &:before
   //   content: ""
@@ -27,7 +29,6 @@
 /* Tagline
 
 .tagline
-  padding-top: .716em
   h2
     margin: 0
     font-size: 1.618em
@@ -38,7 +39,6 @@
     color: $whitesmoke
 
   +at-breakpoint($break6)
-    padding-top: 1.618em
     h2
       font-size: 1.875em
     p
@@ -48,7 +48,6 @@
   +at-breakpoint($break9)
     +span-columns(7, $break9)
     +squish(1, 1)
-    padding-top: 3.034em
     h2
       font-size: 2.618em
     p
@@ -57,7 +56,6 @@
   +at-breakpoint($break12)
     +span-columns(8, $break12)
     +squish(2, 2)
-    padding-top: 4.909em
 
 /* Button
 
@@ -94,19 +92,21 @@
 /* Arrow
 
 .triangle
-  position: absolute
-  bottom: .169em
-  left: 45%
-  right: 45%
-  text-align: center
-  +rotate(45deg)
-  a
-    font-size: 2.618em
-    +text-shadow
-    +opacity(.5)
-    +link-colors($navy-blue, $blue-gray, $navy-blue, $navy-blue, $navy-blue)
-  a:hover
-    text-decoration: none
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    position: absolute
+    bottom: 5%
+    right: 5%
+    +rotate(45deg)
+    a
+      font-size: 2.618em
+      +text-shadow
+      +opacity(.5)
+      +link-colors($navy-blue, $blue-gray, $navy-blue, $navy-blue, $navy-blue)
+    a:hover
+      text-decoration: none
 
   +at-breakpoint($break9)
     left: 48%
