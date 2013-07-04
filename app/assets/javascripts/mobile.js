@@ -14,4 +14,5 @@
 //= require jquery.lettering-0.6.1.min
 //= require jquery.anystretch
 //= require skrollr.min
+//= require skrollr.menu.min
 //= require site_mobile

@@ -72,6 +72,50 @@
   +background-image(linear-gradient(left, rgba(255, 255, 255, 0) 0%, $color 13%, $color 86%, rgba(255, 255, 255, 0) 100%))
 
 
+/* Arrow
+  -----------------------
+
+@mixin arrow-up($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-left: $size solid transparent
+  border-right: $size solid transparent
+  border-bottom: $size solid $color
+
+@mixin arrow-down($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-left: $size solid transparent
+  border-right: $size solid transparent
+  border-top: $size solid $color
+
+@mixin arrow-right($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-top: $size solid transparent
+  border-bottom: $size solid transparent
+  border-left: $size solid $color
+
+@mixin arrow-left($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-top: $size solid transparent
+  border-bottom: $size solid transparent
+  border-right: $size solid $color
+
+@mixin arrow-details
+  content: ""
+  position: absolute
+  top: -$arrow-size
+  left: ($arrow-width / 2) - $arrow-size
+  +text-shadow
+  +opacity(.5)
+
+
 /* Helpers
   -----------------------
 

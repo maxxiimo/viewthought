@@ -21,8 +21,8 @@ body
   font-size: $base-font-size
   line-height: $base-line-height
   background-color: $bg-body
-  // &:after
-  //   +rwd-marker
+  &:after
+    +rwd-marker
 
 .wrapper
   max-width: 1400px
@@ -204,3 +204,26 @@ footer
 
   +at-breakpoint($break6)
     font-size: 1em
+
+.arrow-up-anchor
+  +hidden
+  position: absolute
+  display: block
+  width:  $arrow-width
+  bottom: 1.159em
+  right: 2.618em
+  font-family: $base-font-button
+  font-size: .716em
+  text-align: center
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  &:after
+    +arrow-details
+    +arrow-up($size: $arrow-size, $color: $arrow-color-1)
+  &:hover
+    text-decoration: none
+    &:after
+      +arrow-details
+      +arrow-up($size: $arrow-size, $color: $arrow-color-2)
+
+  +at-breakpoint($break6)
+    +reveal-hidden

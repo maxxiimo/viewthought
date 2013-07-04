@@ -8,4 +8,13 @@
   $('#hero').anystretch("#{asset_path("pics/silhouette-320-maximum.jpg")}", {speed: 200, positionY: 'top'});
 
 :javascript
-  skrollr.init();
+  var s = skrollr.init({
+    forceHeight: false
+    // smoothScrolling: false
+  });
+
+  skrollr.menu.init(s, {
+    animate: true,
+    duration: 500,
+    easing: 'sqrt'
+  });
