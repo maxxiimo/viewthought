@@ -13,9 +13,11 @@
   h2
     margin: 0
     font-size: 1.618em
+    color: $dark-white
   p
     margin: .443em 0 0
     font-size: 1.159em
+    color: $whitesmoke
 
   +at-breakpoint($break6)
     +span-columns(4, $break6)
@@ -62,48 +64,49 @@
   a:hover
     text-decoration: none
 
+  +at-breakpoint($break6)
+    a
+      +hidden
 
 /* Quote
   -----------------------
 
 #quote
   position: relative
+  height: 20.792em
   background-color: $bg-quote
   &:after
     +panel-shadow(.15)
 
+  +at-breakpoint($break9)
+    height: 46.971em
+
 .quote
-  padding: $padding-4 0
-  text-align: center
+  +span-columns(3, 4)
+  padding-top: $padding-4
+  // text-align: center
   blockquote
     margin: 0
-    font-size: 1.159em
+    // 1 + .169
+    font-size: 1.169em
+    color: $black-2
   p
     margin-bottom: 0
     font-family: $base-font-header
-    font-size: 1.159em
-    color: $blue-gray
+    font-size: .716em
+    color: $black-2
     +opacity(.35)
+  span
+    +hidden
 
   +at-breakpoint($break6)
-    +span-columns(5, $break6)
-    padding: $padding-6 $column-width/2
+    +span-columns(4, $break6)
+    padding-top: $padding-6
     blockquote
-      // 1 + .169
-      font-size: 1.169em
-
-  &:before
-    +divider-top($gray, $padding-4, 45%)
-
-    +at-breakpoint($break6)
-      top: $padding-6 / 1.5
-
-  &:after
-    +divider-bottom($gray, $padding-4, 45%)
-
-    +at-breakpoint($break6)
-      bottom: $padding-6 / 1.5
-
+      // 1 + .274
+      font-size: 1.274em
+    p
+      font-size: 1em
 
 /* Manifesto
   -----------------------
