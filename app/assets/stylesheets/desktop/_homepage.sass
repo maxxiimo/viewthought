@@ -16,16 +16,6 @@
   +at-breakpoint($break12)
     padding: 4.236em 0 4.909em
 
-  // &:before
-  //   content: ""
-  //   position: absolute
-  //   top: 50%
-  //   left: 50%
-  //   width: 500px
-  //   height: 500px
-  //   border: 1px solid #000
-  //   background: image-url("icons/apple-icons.png") 0 0 no-repeat
-
 /* Tagline
 
 .tagline
@@ -132,12 +122,11 @@
 .quote
   +span-columns(3, 4)
   padding-top: $padding-4
-  // text-align: center
   blockquote
     margin: 0
     // 1 + .169
     font-size: 1.169em
-    color: $black-2
+    color: $whitesmoke
   p
     margin-bottom: 0
     font-family: $base-font-header
@@ -172,6 +161,11 @@
   +at-breakpoint($break12)
     +span-columns(6, $break12)
     padding-top: $padding-12
+    blockquote
+      font-size: 1.875em
+    p
+      // 1 + .382
+      font-size: 1.382em
 
 
 /* Manifesto
