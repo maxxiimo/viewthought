@@ -158,6 +158,13 @@ footer
   +at-breakpoint($break6)
     font-size: 1.159em
 
+.adr, .tel, .email
+  // 1 - .146
+  font-size: .854em
+
+  +at-breakpoint($break6)
+    font-size: 1em
+
 .related
   ul
     margin: 0
@@ -173,57 +180,54 @@ footer
 .copyright
   position: relative
   +span-columns(4 omega, 4)
-  margin-top: 1em
-  padding-top: .382em
+  margin-bottom: 1em
+  padding-top: 1.382em
   // 1 - .146
   font-size: .854em
 
   +at-breakpoint($break6)
     +span-columns(6 omega, $break6)
-    margin: 1.875em 0
+    padding-top: 1.875em
 
   +at-breakpoint($break9)
-    +span-columns(9 omega, $break9)
+    +span-columns(8 omega, $break9)
+    +prefix(1)
+    margin-bottom: 0
+    height: 35px
+    background: image-url("logos/ojala.png") 0 1em no-repeat
 
   +at-breakpoint($break12)
-    +span-columns(12 omega, $break12)
+    +span-columns(11 omega, $break12)
+    +prefix(1)
 
-  &:after
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    right: 75%
-    height: 5px
-    +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
-    +opacity(.25)
-
-.adr, .tel, .email
-  // 1 - .146
-  font-size: .854em
-
-  +at-breakpoint($break6)
-    font-size: 1em
+  // &:after
+  //   content: ""
+  //   position: absolute
+  //   top: 0
+  //   left: 0
+  //   right: 75%
+  //   height: 5px
+  //   +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
+  //   +opacity(.25)
 
 .arrow-up-anchor
   +hidden
-  position: absolute
-  display: block
-  width:  $arrow-width
-  bottom: 1.159em
-  right: 2.618em
-  font-family: $base-font-button
-  font-size: .716em
-  text-align: center
-  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
-  &:after
-    +arrow-details
-    +arrow-up($size: $arrow-size, $color: $arrow-color-1)
-  &:hover
-    text-decoration: none
-    &:after
-      +arrow-details
-      +arrow-up($size: $arrow-size, $color: $arrow-color-2)
 
   +at-breakpoint($break6)
     +reveal-hidden
+    position: absolute
+    bottom: 1em
+    right: 2.618em
+    width:  $arrow-width
+    font-family: $base-font-button
+    font-size: .716em
+    text-align: center
+    +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+    &:after
+      +arrow-details
+      +arrow-up($size: $arrow-size, $color: $arrow-color-1)
+    &:hover
+      text-decoration: none
+      &:after
+        +arrow-details
+        +arrow-up($size: $arrow-size, $color: $arrow-color-2)

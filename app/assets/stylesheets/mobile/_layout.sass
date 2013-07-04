@@ -122,28 +122,6 @@ footer
   +at-breakpoint($break6)
     font-size: 1.159em
 
-.copyright
-  position: relative
-  +span-columns(4 omega, 4)
-  margin-top: .716em
-  padding-top: .382em
-  // 1 - .146
-  font-size: .854em
-
-  +at-breakpoint($break6)
-    +span-columns(6 omega, $break6)
-    margin: 1em 0
-
-  &:after
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    right: 75%
-    height: 5px
-    +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
-    +opacity(.25)
-
 .adr, .tel, .email
   // 1 - .146
   font-size: .854em
@@ -151,25 +129,36 @@ footer
   +at-breakpoint($break6)
     font-size: 1em
 
+.copyright
+  position: relative
+  +span-columns(4 omega, 4)
+  margin-bottom: 1em
+  padding-top: 1.382em
+  // 1 - .146
+  font-size: .854em
+
+  +at-breakpoint($break6)
+    +span-columns(6 omega, $break6)
+    padding-top: 1.875em
+
 .arrow-up-anchor
   +hidden
-  position: absolute
-  display: block
-  width:  $arrow-width
-  bottom: 1.159em
-  right: 2.618em
-  font-family: $base-font-button
-  font-size: .716em
-  text-align: center
-  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
-  &:after
-    +arrow-details
-    +arrow-up($size: $arrow-size, $color: $arrow-color-1)
-  &:hover
-    text-decoration: none
-    &:after
-      +arrow-details
-      +arrow-up($size: $arrow-size, $color: $arrow-color-2)
 
   +at-breakpoint($break6)
     +reveal-hidden
+    position: absolute
+    bottom: 1em
+    right: 2.618em
+    width:  $arrow-width
+    font-family: $base-font-button
+    font-size: .716em
+    text-align: center
+    +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+    &:after
+      +arrow-details
+      +arrow-up($size: $arrow-size, $color: $arrow-color-1)
+    &:hover
+      text-decoration: none
+      &:after
+        +arrow-details
+        +arrow-up($size: $arrow-size, $color: $arrow-color-2)
