@@ -71,14 +71,17 @@
 
 #quote
   position: relative
+  padding-top: $padding-4
   height: 20.792em
   background-color: $bg-quote
   &:after
     +panel-shadow(.15)
 
+  +at-breakpoint($break6)
+    padding-top: $padding-6
+
 .quote
   +span-columns(3, 4)
-  padding-top: $padding-4
   blockquote
     margin: 0
     // 1 + .169
@@ -95,7 +98,6 @@
 
   +at-breakpoint($break6)
     +span-columns(4, $break6)
-    padding-top: $padding-6
     blockquote
       // 1 + .274
       font-size: 1.274em
@@ -108,13 +110,42 @@
 
 #manifesto
   position: relative
+  padding-top:  $padding-4 / 3
+  padding-bottom: $padding-4
   background-color: $bg-manifesto
   &:after
     +panel-shadow
 
-.manifesto
-  +clearfix
+  +at-breakpoint($break6)
+    padding-top:  $padding-6 / 3
+    padding-bottom: $padding-6
+
+.manifesto-intro
+  position: relative
   padding: $padding-4 0
+  p
+    margin: 0
+    font-size: 1.236em
+    text-align: center
+
+  +at-breakpoint($break6)
+    padding: $padding-6
+    p
+      font-size: 1.618em
+
+  &:before
+    +divider-top($black-1, $padding-4, 45%)
+
+    +at-breakpoint($break6)
+      top: $padding-6 / 1.5
+
+  &:after
+    +divider-bottom($black-1, $padding-4, 45%)
+
+    +at-breakpoint($break6)
+      bottom: $padding-6 / 1.5
+
+.manifesto
   h3, p
     margin: 0
   h3
@@ -125,6 +156,7 @@
     font-size: 1em
 
   +at-breakpoint($break6)
+    margin-top: $margin-6 / 2
     h3
       margin-bottom: .443em
       // 1 + .443
