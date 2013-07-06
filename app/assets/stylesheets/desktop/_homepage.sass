@@ -111,17 +111,24 @@
 
 #quote
   position: relative
+  padding-top: $padding-4
   height: 20.792em
   background-color: $bg-quote
   &:after
     +panel-shadow(.15)
 
+  +at-breakpoint($break6)
+    padding-top: $padding-6
+
   +at-breakpoint($break9)
+    padding-top: $padding-9
     height: 46.971em
+
+  +at-breakpoint($break12)
+    padding-top: $padding-12
 
 .quote
   +span-columns(3, 4)
-  padding-top: $padding-4
   blockquote
     margin: 0
     // 1 + .169
@@ -138,7 +145,6 @@
 
   +at-breakpoint($break6)
     +span-columns(4, $break6)
-    padding-top: $padding-6
     blockquote
       // 1 + .274
       font-size: 1.274em
@@ -148,7 +154,6 @@
   +at-breakpoint($break9)
     +span-columns(5, $break9)
     +prefix(1)
-    padding-top: $padding-9
     blockquote
       font-size: 1.618em
     p
@@ -160,7 +165,6 @@
 
   +at-breakpoint($break12)
     +span-columns(6, $break12)
-    padding-top: $padding-12
     blockquote
       font-size: 1.875em
     p
@@ -173,29 +177,48 @@
 
 #manifesto
   position: relative
+  padding: $padding-4 0
   background-color: $bg-manifesto
   &:after
     +panel-shadow
 
+  +at-breakpoint($break6)
+    padding-top: $padding-6
+
   +at-breakpoint($break9)
-    .manifesto
-      +span-columns(5 omega, $break9)
-      +prefix(4)
-      padding-top: $padding-9
-      padding-bottom: $padding-9
-      background: image-url("icons/devices-280px.png") 0 ($padding-9 * 1.25) no-repeat
+    padding-top: $padding-9
+    padding-bottom: $padding-9
 
   +at-breakpoint($break12)
-    .manifesto
-      +span-columns(7 omega, $break12)
-      +prefix(5)
-      padding-top: $padding-12
-      padding-bottom: $padding-12
-      background: image-url("icons/devices.png") 0 ($padding-12 * 1.1) no-repeat
+    padding-top: $padding-12
+    padding-bottom: $padding-12
+
+.manifesto-intro
+  // +clearfix
+  p
+    margin: 0 0 1em 0
+    // 1 + .169
+    font-size: 1.169em
+    text-align: center
+
+  +at-breakpoint($break6)
+    p
+      // 1 + .274
+      font-size: 1.274em
+
+  +at-breakpoint($break9)
+    +span-columns(5 omega, $break9)
+    +prefix(4)
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(7 omega, $break12)
+    +prefix(5)
+      font-size: 1.875em
 
 .manifesto
   +clearfix
-  padding: $padding-4 0
   h3, p
     margin: 0
   h3
@@ -214,8 +237,16 @@
       font-size: 1.159em
 
   +at-breakpoint($break9)
+    +span-columns(5 omega, $break9)
+    +prefix(4)
+    background: image-url("icons/devices-280px.png") 0 1em no-repeat
     h3
       margin-bottom: .443em
       font-size: 1.875em
     p
       font-size: 1.159em
+
+  +at-breakpoint($break12)
+    +span-columns(7 omega, $break12)
+    +prefix(5)
+    background: image-url("icons/devices.png") 0 .5em no-repeat
