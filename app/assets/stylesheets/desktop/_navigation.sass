@@ -19,10 +19,10 @@
     display: inline-block
     padding: $nav-pad $nav-pad-4
     font-family: $base-font-nav
-    +link-colors($color-nav, $color-nav, $color-nav, $color-nav, $color-nav)
+    +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
     &:hover
       text-decoration: none
-      color: $color-logo
+      color: $link-logo
       background-color: $whitesmoke
   +hidden
 
@@ -32,7 +32,7 @@
     a
       padding: $nav-pad $nav-pad-9
       &.active
-        color: $color-logo
+        color: $link-logo
 
   +at-breakpoint($break12)
     +span-columns(7 omega, 12)
@@ -44,7 +44,7 @@
   display: block
   top: 0
   height: .382em
-  background-color: $color-logo
+  background-color: $link-logo
 
 /* JavaScript Fallback */
 
@@ -56,7 +56,7 @@
     left: $nav-pad-9
     right: $nav-pad-9
     height: .382em
-    background-color: $color-logo
+    background-color: $link-logo
 
 +at-breakpoint($break12)
   .no-js #nav .active:before
