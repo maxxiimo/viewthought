@@ -1,3 +1,20 @@
+/* Arrow
+
+.triangle
+  +arrow-rotate
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+
+  +at-breakpoint($break9)
+    bottom: .618em
+    left: 48%
+    right: 48%
+    a
+      font-size: 3.034em
+
+
 /* Hero
   -----------------------
 
@@ -45,25 +62,6 @@
     button
       // 1 + .274
       font-size: 1.274em
-
-/* Arrow
-
-.triangle
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    position: absolute
-    bottom: 5%
-    right: 5%
-    +rotate(45deg)
-    a
-      font-size: 2.618em
-      +text-shadow
-      +opacity(.5)
-      +link-colors($blue-gray, $gray, $blue-gray, $blue-gray, $blue-gray)
-    a:hover
-      text-decoration: none
 
 
 /* Quote
@@ -119,6 +117,9 @@
   +at-breakpoint($break6)
     padding-top:  $padding-6 / 3
     padding-bottom: $padding-6
+
+  .triangle a:hover
+    color:  $navy-blue
 
 .manifesto-intro
   position: relative

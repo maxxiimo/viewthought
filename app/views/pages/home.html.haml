@@ -9,19 +9,11 @@
       %button Start A Project
       -# %a{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
     .triangle
-      %a{:href => '#quote-scroll', :title => 'Scroll Down'} &#9698;
-
-%section#quote
-  .container
-    .quote#quote-scroll{"data-0" => "opacity: 0", "data-200" => "opacity: 1"}
-      %blockquote
-        &#147;A website should give its visitors immediate value, the moment they land on it&ndash;no matter what device they use to get there.
-        %span At ViewThought we think a lot about this and how best to deliver value in an ever-changing device landscape.&#148;
-      %p Chris Maxwell, founder of ViewThought
+      %a{:href => '#manifesto-scroll', :title => 'Scroll Down'} &#9698;
 
 %section#manifesto
   .container
-    .manifesto-intro
+    .manifesto-intro#manifesto-scroll
       %p Well thought out, intuitive online user experiences that look exceptional on any device is our passion.
     .manifesto
       %h3 The Front End Manifesto
@@ -29,3 +21,13 @@
         The Front End Manifesto,
         %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'The Front End Manifesto TOC'} a freely available e-book
         written by the engineers at ViewThought, provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile and desktop, Front End Code: From a Ruby on Rails perspective.
+    .triangle
+      %a{:href => '#quote', :title => 'Scroll Down'} &#9698;
+
+%section#quote
+  .container
+    .quote{"data-400-top" => "opacity: 0", "data-top" => "opacity: 1"}
+      %blockquote
+        &#147;A website should give its visitors immediate value, the moment they land on it&ndash;no matter what device they use to get there.
+        %span At ViewThought we think a lot about this and how best to deliver value in an ever-changing device landscape.&#148;
+      %p Chris Maxwell, founder of ViewThought
