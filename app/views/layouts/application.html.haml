@@ -19,7 +19,7 @@
           = render :partial => 'shared/navigation_icon'
       #main{:role => 'main'}
         = yield
-      %footer.vcard{:role => "contentinfo"}
+      %footer#ft.vcard{:role => "contentinfo"}
         .container
           = render :partial => 'shared/footer'
     = scripts

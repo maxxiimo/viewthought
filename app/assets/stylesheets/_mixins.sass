@@ -117,7 +117,45 @@
   top: -$arrow-size
   left: ($arrow-width / 2) - $arrow-size
   +text-shadow
+
+@mixin arrow-up-anchor($arrow-color-1: $navy-blue, $arrow-color-2: lighten($navy-blue, 15))
+  position: absolute
+  bottom: 1em
+  right: 2.618em
+  width:  $arrow-width
+  font-family: $base-font-button
+  font-size: .716em
+  text-align: center
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
   +opacity(.5)
+  &:after
+    +arrow-details
+    +arrow-up($size: $arrow-size, $color: $arrow-color-1)
+  &:hover
+    text-decoration: none
+    &:after
+      +arrow-details
+      +arrow-up($size: $arrow-size, $color: $arrow-color-2)
+
+@mixin arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: lighten($navy-blue, 15))
+  position: absolute
+  bottom: 1em
+  right: 2.618em
+  width:  $arrow-width
+  font-family: $base-font-button
+  font-size: .716em
+  text-align: center
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  +opacity(.5)
+  &:after
+    +arrow-details
+    +arrow-down($size: $arrow-size, $color: $arrow-color-1)
+  &:hover
+    text-decoration: none
+    &:after
+      +arrow-details
+      +arrow-down($size: $arrow-size, $color: $arrow-color-2)
+
 
 /* rotating arrow
 

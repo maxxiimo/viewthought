@@ -28,6 +28,67 @@
 .arrow-right
   +arrow-right
 
+.arrow-up-anchor
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-up-anchor
+
+.arrow-down-anchor
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor
+
+.hero-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
+
+.blurb-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: lighten($blue-gray, 15), $arrow-color-2: $blue-gray)
+
+.manifesto-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: $white)
+
+.quote-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
+
+// /* rotating triangle
+
+// .triangle
+//   %a{:href => '#blurb', :title => 'Scroll Down'} &#9698;
+
+// .triangle
+//   +arrow-rotate
+//   +hidden
+
+//   +at-breakpoint($break6)
+//     +reveal-hidden
+
+//   +at-breakpoint($break9)
+//     bottom: .618em
+//     left: 48%
+//     right: 48%
+//     a
+//       font-size: 3.034em
+
 
 /* Columns
   -----------------------
