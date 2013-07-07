@@ -7,13 +7,6 @@
   +at-breakpoint($break6)
     +reveal-hidden
 
-  +at-breakpoint($break9)
-    bottom: .618em
-    left: 48%
-    right: 48%
-    a
-      font-size: 3.034em
-
 
 /* Hero
   -----------------------
@@ -21,7 +14,7 @@
 #hero
   position: relative
   padding: .716em 0 1.159em
-  background-color: $bg-hero
+  background-color: $navy-blue
 
   +at-breakpoint($break6)
     // 1 + .443
@@ -64,6 +57,75 @@
       font-size: 1.274em
 
 
+/* Blurb
+  -----------------------
+
+#blurb
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  &:before
+    +divider-top($black-1, $padding-4, 45%)
+
+    +at-breakpoint($break6)
+      top: $padding-6 / 1.5
+
+  &:after
+    +divider-bottom($black-1, $padding-4, 45%)
+
+    +at-breakpoint($break6)
+      bottom: $padding-6 / 1.5
+
+.blurb
+  p
+    margin: 0
+    font-size: 1.236em
+    text-align: center
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.618em
+
+
+/* Manifesto
+  -----------------------
+
+#manifesto
+  position: relative
+  padding-top:  $padding-4 / 3
+  padding-bottom: $padding-4
+  background-color: $blue-gray
+  &:after
+    +panel-shadow
+
+  +at-breakpoint($break6)
+    padding-top:  $padding-6 / 3
+    padding-bottom: $padding-6
+
+.manifesto
+  h3, p
+    margin: 0
+  h3
+    margin-bottom: .236em
+    // 1 + .382
+    font-size: 1.382em
+  p
+    font-size: 1em
+
+  +at-breakpoint($break6)
+    margin-top: $margin-6 / 2
+    h3
+      margin-bottom: .443em
+      // 1 + .443
+      font-size: 1.443em
+    p
+      font-size: 1.159em
+
+
 /* Quote
   -----------------------
 
@@ -71,7 +133,7 @@
   position: relative
   padding-top: $padding-4
   height: 20.792em
-  background-color: $bg-quote
+  background-color: $white
   &:after
     +panel-shadow(.15)
 
@@ -101,66 +163,3 @@
       font-size: 1.274em
     p
       font-size: 1em
-
-
-/* Manifesto
-  -----------------------
-
-#manifesto
-  position: relative
-  padding-top:  $padding-4 / 3
-  padding-bottom: $padding-4
-  background-color: $bg-manifesto
-  &:after
-    +panel-shadow
-
-  +at-breakpoint($break6)
-    padding-top:  $padding-6 / 3
-    padding-bottom: $padding-6
-
-  .triangle a:hover
-    color:  $navy-blue
-
-.manifesto-intro
-  position: relative
-  padding: $padding-4 0
-  p
-    margin: 0
-    font-size: 1.236em
-    text-align: center
-
-  +at-breakpoint($break6)
-    padding: $padding-6
-    p
-      font-size: 1.618em
-
-  &:before
-    +divider-top($black-1, $padding-4, 45%)
-
-    +at-breakpoint($break6)
-      top: $padding-6 / 1.5
-
-  &:after
-    +divider-bottom($black-1, $padding-4, 45%)
-
-    +at-breakpoint($break6)
-      bottom: $padding-6 / 1.5
-
-.manifesto
-  h3, p
-    margin: 0
-  h3
-    margin-bottom: .236em
-    // 1 + .382
-    font-size: 1.382em
-  p
-    font-size: 1em
-
-  +at-breakpoint($break6)
-    margin-top: $margin-6 / 2
-    h3
-      margin-bottom: .443em
-      // 1 + .443
-      font-size: 1.443em
-    p
-      font-size: 1.159em
