@@ -2,32 +2,35 @@
 - content_for :title do
   Work
 
-#value
-  %p Your business has a unique value proposition. Through design and interaction we can help communicate this, and with our unique experience in both web development and business, help enhance it.
+%section#value
+  .container
+    .value
+      %p Your business has a unique value proposition. Through design and interaction we can help communicate this, and with our unique experience in both web development and business, help enhance it.
+      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => ''}
 
-#process
+%section#process
   %h3 Our Process
   %p We bring together great design and great code to make mobile and Web applications work and look amazing across any device no matter how big or small.
   %p To do so we begin with a kickoff meeting, where we get to know you, your company, project, market, target audience, goals, key business requirements, and so forth. We come to an understanding, a plan, and an agreement. From there we get to work! We believe in an iterative approach, where all stakeholders are involved in producing your project from start to finish and in a manner that makes sense. We like to deploy often and frequently, iteratively, with the goal of reaching perfection. We take great pride in our work and would be honored to partner with you.
   %button Want to Hire Us?
 
-#work-quote
+%section#work-quote
   %p "ViewThought provides the handshake between beautiful design and logic." - John Dill, Creative Director at ViewThought
 
-#portfolio
+%section#portfolio
   = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
   = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
   = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
   = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
 
-#code
+%section#code
   %h3 Our Code
   %p
     If you'd really like to see what's under the hood, take a look at the
     %a{:href => 'https://github.com/maxxiimo/viewthought', :title => 'ViewThought code base'} code base
     for this site.
 
-#competencies
+%section#competencies
   %h3 Core Competencies
   %ul
     %li Build technology solutions that enhance the value proposition of our customers &ndash; add value to customer business.

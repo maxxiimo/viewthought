@@ -10,16 +10,31 @@
 #portfolio,
 #code,
 #competencies
-  padding: $padding-12 0
   h3
     margin-top: 0
   p
     margin: 0
 
 #value
+  position: relative
+  padding: .716em 0 1.159em
   background-color: $black-2
+  a
+    +hidden
+
+  +at-breakpoint($break6)
+    // 1 + .443
+    padding: 1.443em 0 1.618em
+
+.value
   p
+    font-size: 1.159em
     color: $dark-white
+
+  +at-breakpoint($break6)
+    p
+      // 1 + .236
+      font-size: 1.236em
 
 #process
   background-color: $gray
