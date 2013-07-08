@@ -88,9 +88,7 @@
   position: relative
   padding-top:  $padding-4 / 3
   padding-bottom: $padding-4
-  background-color: $blue-gray
-  &:after
-    +panel-shadow
+  +panel-gradient($blue-gray, $blue-gray)
 
   +at-breakpoint($break6)
     padding-top:  $padding-6 / 3
@@ -124,8 +122,6 @@
   padding-top: $padding-4
   height: 20.792em
   background-color: $white
-  &:after
-    +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding-top: $padding-6
