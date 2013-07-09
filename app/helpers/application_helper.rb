@@ -23,11 +23,11 @@ module ApplicationHelper
     render :partial => 'layouts/chromeframe'
   end
 
-  def nav_tab(title, url, options = {})
+  def nav_tab(title, url, key, options = {})
     current_tab = options.delete(:current)
     # options[:class] = (current_tab == title) ? 'active' : 'inactive'
     klass = (current_tab == title) ? 'active' : 'inactive'
-    content_tag(:a, title, :href => url, :class => klass)
+    content_tag(:a, title, :href => url, :accesskey => key, :class => klass)
   end
 
   def currently_at(tab)
