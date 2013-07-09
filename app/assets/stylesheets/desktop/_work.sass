@@ -1,0 +1,134 @@
+#value,
+#process,
+#case-study,
+#competencies
+  h3
+    margin-top: 0
+  p
+    margin: 0
+
+
+/* Value
+  -----------------------
+
+#value
+  position: relative
+  padding: .716em 0 1.159em
+  background-color: $black-2
+  a
+    +hidden
+
+  +at-breakpoint($break6)
+    // 1 + .443
+    padding: 1.443em 0 1.618em
+
+  +at-breakpoint($break9)
+    padding: 2.618em 0 $padding-9
+    a
+      +reveal-hidden
+      position: absolute
+      bottom: -200px
+      left: 50%
+      margin-left: -150px
+      width: 300px
+      height: 413px
+      background: image-url("work-ipad-9.png") -284px -47px no-repeat
+      z-index: 5613201117
+    a:hover
+      &:before
+        content: ""
+        position: absolute
+        left: -11px
+        margin-top: -12px
+        width: 321px
+        height: 425px
+        background: image-url("work-ipad-9.png") -274px -498px no-repeat
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 50%
+      display: block
+      margin-left: -433px
+      width: 825px
+      height: 259px
+      background: image-url("work-ipad-9.png") 0 0 no-repeat
+
+  +at-breakpoint($break12)
+    padding: 4.236em 0 $padding-12
+    a
+      background: image-url("work-ipad-12.png") -284px -47px no-repeat
+    a:hover
+      &:before
+        background: image-url("work-ipad-12.png") -274px -498px no-repeat
+    &:after
+      background: image-url("work-ipad-12.png") 0 0 no-repeat
+
+.value
+  p
+    font-size: 1.159em
+    color: $dark-white
+
+  +at-breakpoint($break6)
+    p
+      // 1 + .236
+      font-size: 1.236em
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    padding-bottom: 213px
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      font-size: 1.875em
+
+
+/* Process
+  -----------------------
+
+#process
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+
+/* Case Study
+  -----------------------
+
+#case-study
+  background-color: $gray
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+
+/* Competencies
+  -----------------------
+
+#competencies
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
