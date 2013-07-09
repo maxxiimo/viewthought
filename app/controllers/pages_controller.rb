@@ -5,9 +5,6 @@ class PagesController < ApplicationController
   def work
   end
 
-  def team
-  end
-
   def thoughts
   end
 
