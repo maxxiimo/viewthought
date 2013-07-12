@@ -2,7 +2,6 @@
   -----------------------
 
 #value
-  // display: none
   position: relative
   padding: .716em 0 1.159em
   background-color: $black-2
@@ -75,30 +74,135 @@
   padding: $padding-4 0
   background-color: $white
 
+  // +at-breakpoint($break6)
+  //   padding-top:  $padding-6 / 3
+  //   padding-bottom: $padding-6
+
   +at-breakpoint($break6)
     padding: $padding-6 0
 
   +at-breakpoint($break9)
-    padding: 12.85em 0 $padding-9
+    // 12.85 + 1
+    padding: 13.85em 0 $padding-9
 
   +at-breakpoint($break12)
     padding-bottom: $padding-12
 
-    .discovery
-      +span-columns(5, $break12)
-      +prefix(1, $break12)
+.process
+  position: relative
+  h2
+    margin-top: 0
+    margin-bottom: .236em
+    // 1 + .382
+    font-size: 1.382em
+  p
+    font-size: 1em
 
-    .development
-      +span-columns(5, $break12)
+  +at-breakpoint($break6)
+    h2
+      margin-bottom: .443em
+      // 1 + .443
+      font-size: 1.443em
+    p
+      font-size: 1.159em
 
-    .repeat
-      +span-columns(12 omega, $break12)
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    margin-bottom: 1.875em
+    h2
+      margin-top: 1em
+      font-size: 1.875em
       text-align: center
+    p
+      // 1 + .443
+      font-size: 1.443em
+    &:before
+      +panel-shadow
 
-    .work-with-us
-      +span-columns(10, $break12)
-      +squish(1, 1)
-      text-align: center
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    h2
+      margin-top: 1.159em
+    p
+      font-size: 1.681em
+
+.discovery
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+    +prefix(.5)
+    margin-right: 0
+
+  +at-breakpoint($break12)
+    +span-columns(5, $break12)
+    +prefix(1, $break12)
+
+.development
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+    +prefix(.5)
+
+  +at-breakpoint($break12)
+    +span-columns(5, $break12)
+    padding-left:  0
+
+.repeat
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+    +squish(2.5, 2.5)
+    margin-top: 1.875em
+
+  +at-breakpoint($break12)
+    +span-columns(5, $break12)
+    +squish(3.5, 3.5)
+
+.hire-button
+  text-align: center
+  button
+    +sassy-button
+    margin-top: 1.618em
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    button
+      margin-top: 1.875em
+      // 1 + .274
+      font-size: 1.274em
+
+  +at-breakpoint($break9)
+    button
+      // 1 + .443
+      font-size: 1.443em
+
+  +at-breakpoint($break12)
+    button
+      font-size: 1.618em
+
+.circle
+  margin: 0 auto
+  +circle-border($size: (1.618em * 2), $border: 3px, $color: $lime)
+  span
+    line-height: (1.618em * 1.25)
+    font-size: 1.618em
+
+  +at-breakpoint($break6)
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    span
+      line-height: (1.875em * 1.07)
+      font-size: 1.875em
+
+  +at-breakpoint($break9)
+    +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
+    span
+      line-height: (2.618em * .75)
+      font-size: 2.618em
+
+  +at-breakpoint($break12)
+    +circle-border($size: (3.034em * 2), $color: $lime)
+    span
+      line-height: (3.034em * .63)
+      font-size: 3.034em
 
 
 /* Case Study

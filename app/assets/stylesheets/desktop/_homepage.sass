@@ -152,26 +152,23 @@
 
 #manifesto
   position: relative
-  padding-top:  $padding-4 / 3
+  padding:  $padding-4 0
   padding-bottom: $padding-4
   +panel-gradient($blue-gray, $blue-gray)
 
   +at-breakpoint($break6)
-    padding-top:  $padding-6 / 3
-    padding-bottom: $padding-6
+    padding:  $padding-6 0
 
   +at-breakpoint($break9)
-    padding-top:  $padding-9 / 3
-    padding-bottom: $padding-9
+    padding:  $padding-9 0
 
   +at-breakpoint($break12)
-    padding-top:  $padding-12 / 3
-    padding-bottom: $padding-12
+    padding:  $padding-12 0
 
 .manifesto
-  h3, p
+  h2, p
     margin: 0
-  h3
+  h2
     margin-bottom: .236em
     // 1 + .382
     font-size: 1.382em
@@ -179,8 +176,7 @@
     font-size: 1em
 
   +at-breakpoint($break6)
-    margin-top: $margin-6 / 2
-    h3
+    h2
       margin-bottom: .443em
       // 1 + .443
       font-size: 1.443em
@@ -190,18 +186,13 @@
   +at-breakpoint($break9)
     +span-columns(5 omega, $break9)
     +prefix(4)
-    margin-top: $margin-9 / 2
     background: image-url("icons/devices-280px.png") 0 1em no-repeat
-    h3
-      margin-bottom: .443em
+    h2
       font-size: 1.875em
-    p
-      font-size: 1.159em
 
   +at-breakpoint($break12)
     +span-columns(7 omega, $break12)
     +prefix(5)
-    margin-top: $margin-12 / 2
     background: image-url("icons/devices.png") 0 .5em no-repeat
 
 
