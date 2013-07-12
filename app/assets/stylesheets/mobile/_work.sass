@@ -32,12 +32,10 @@
   padding: $padding-4 0
   background-color: $white
 
-  // +at-breakpoint($break6)
-  //   padding-top:  $padding-6 / 3
-  //   padding-bottom: $padding-6
-
   +at-breakpoint($break6)
     padding: $padding-6 0
+
+/* process
 
 .process
   position: relative
@@ -57,7 +55,41 @@
     p
       font-size: 1.159em
 
+/* circles
+
+.span
+  +span-columns(4 omega, 4)
+  .circle
+    +circle-border($size: (1.618em * 2), $border: 3px, $color: $lime)
+    margin: 0 auto 1em
+    span
+      line-height: (1.618em * 1.25)
+      font-size: 1.618em
+
+  +at-breakpoint($break6)
+    +span-columns(1, $break6)
+    clear: both
+    .circle
+      +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+      margin: 0
+      span
+        line-height: (1.875em * 1.07)
+        font-size: 1.875em
+
+/* steps
+
+.discovery, .development, .repeat
+  h3
+    margin-top: 0
+  +span-columns(4 omega, 4)
+
+  +at-breakpoint($break6)
+    +span-columns(5 omega, $break6)
+
+/* button
+
 .hire-button
+  clear: both
   text-align: center
   button
     +sassy-button
@@ -69,19 +101,6 @@
       margin-top: 1.875em
       // 1 + .274
       font-size: 1.274em
-
-.circle
-  margin: 0 auto
-  +circle-border($size: (1.618em * 2), $border: 3px, $color: $lime)
-  span
-    line-height: (1.618em * 1.25)
-    font-size: 1.618em
-
-  +at-breakpoint($break6)
-    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
-    span
-      line-height: (1.875em * 1.07)
-      font-size: 1.875em
 
 
 /* Case Study
