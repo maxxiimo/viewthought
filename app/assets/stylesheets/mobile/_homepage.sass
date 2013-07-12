@@ -88,9 +88,9 @@
   position: relative
   padding:  $padding-4 0
   padding-bottom: $padding-4
-  +panel-gradient($blue-gray, $blue-gray)
+  background-color: darken($gray, 5)
   &:after
-    +panel-shadow(.15)
+    +panel-shadow(.07)
 
   +at-breakpoint($break6)
     padding:  $padding-6 0
@@ -135,6 +135,12 @@
     // 1 + .169
     font-size: 1.169em
     color: $whitesmoke
+  .giant-quote
+    display: block
+    float: left
+    line-height: 1
+    padding-right: .443em
+    font-size: 2.618em
   p
     margin-bottom: 0
     font-family: $base-font-header

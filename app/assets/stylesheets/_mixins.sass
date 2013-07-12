@@ -50,8 +50,11 @@
   height: 7px
   +background-image(linear-gradient(rgba(0, 0, 0, $opacity) 0%, transparent 100%))
 
-@mixin panel-gradient($color1, $color2)
+@mixin panel-linear-gradient($color1, $color2)
   +background-image(linear-gradient(135deg, lighten($color1, 20), $color2))
+
+@mixin panel-radial-gradient($color1, $color2)
+  +background-image(radial-gradient(100px 100px, lighten($color1, 10), $color2 300px))
 
 
 /* Dividers
