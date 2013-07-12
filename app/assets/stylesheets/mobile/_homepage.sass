@@ -138,22 +138,26 @@
   .giant-quote
     display: block
     float: left
-    line-height: 1
+    line-height: 1.2
     padding-right: .443em
-    font-size: 2.618em
+    // 1 + .274
+    font-size: 1.274em
+  .ever-changing
+    +hidden
   p
     margin-bottom: 0
     font-family: $base-font-header
     font-size: .716em
     color: $black-2
     +opacity(.35)
-  span
-    +hidden
 
   +at-breakpoint($break6)
     +span-columns(4, $break6)
     blockquote
       // 1 + .274
       font-size: 1.274em
+    .giant-quote
+      line-height: 1
+      font-size: 1.618em
     p
       font-size: 1em
