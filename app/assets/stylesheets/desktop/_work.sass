@@ -209,7 +209,10 @@
   -----------------------
 
 #case-study
+  position: relative
   background-color: $gray
+  &:after
+    +panel-shadow(.06)
 
   +at-breakpoint($break6)
     padding: $padding-6 0
@@ -225,7 +228,10 @@
   -----------------------
 
 #competencies
+  position: relative
   background-color: $white
+  &:after
+    +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding: $padding-6 0

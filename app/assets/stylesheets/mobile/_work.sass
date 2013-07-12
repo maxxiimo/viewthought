@@ -1,21 +1,12 @@
-/* Work
+/* Value
   -----------------------
-
-#value,
-#process,
-#work-quote,
-#portfolio,
-#code,
-#competencies
-  h3
-    margin-top: 0
-  p
-    margin: 0
 
 #value
   position: relative
   padding: .716em 0 1.159em
   background-color: $black-2
+  p
+    margin: 0
   a
     +hidden
 
@@ -33,25 +24,87 @@
       // 1 + .236
       font-size: 1.236em
 
+
+/* Process
+  -----------------------
+
 #process
-  background-color: $gray
+  padding: $padding-4 0
+  background-color: $white
+
+  // +at-breakpoint($break6)
+  //   padding-top:  $padding-6 / 3
+  //   padding-bottom: $padding-6
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.process
+  position: relative
+  h2
+    margin-top: 0
+    margin-bottom: .236em
+    // 1 + .382
+    font-size: 1.382em
   p
-    margin-bottom: 1em
+    font-size: 1em
 
-#work-quote
-  background-color: $white
+  +at-breakpoint($break6)
+    h2
+      margin-bottom: .443em
+      // 1 + .443
+      font-size: 1.443em
+    p
+      font-size: 1.159em
 
-#portfolio
-  +clearfix
-  background-color: $white
-  img
-    float: left
-    margin: 0 4.909px 4.909px 0
-    // FIXME ccm: DELETE!
-    background-color: gray
+.hire-button
+  text-align: center
+  button
+    +sassy-button
+    margin-top: 1.618em
+    font-size: 1.159em
 
-#code
-  background-color: $black-1
+  +at-breakpoint($break6)
+    button
+      margin-top: 1.875em
+      // 1 + .274
+      font-size: 1.274em
+
+.circle
+  margin: 0 auto
+  +circle-border($size: (1.618em * 2), $border: 3px, $color: $lime)
+  span
+    line-height: (1.618em * 1.25)
+    font-size: 1.618em
+
+  +at-breakpoint($break6)
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    span
+      line-height: (1.875em * 1.07)
+      font-size: 1.875em
+
+
+/* Case Study
+  -----------------------
+
+#case-study
+  position: relative
+  background-color: $gray
+  &:after
+    +panel-shadow(.06)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+
+/* Competencies
+  -----------------------
 
 #competencies
+  position: relative
   background-color: $white
+  &:after
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
