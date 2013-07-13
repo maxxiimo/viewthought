@@ -2,6 +2,7 @@
   -----------------------
 
 #value
+  +hidden
   position: relative
   padding: .716em 0 1.159em
   background-color: $black-2
@@ -25,10 +26,6 @@
       width: 300px
       height: 381px
       z-index: 5613201117
-      // For image:
-      // bottom: -200px
-      // height: 413px
-      // background: image-url("work-ipad.png") -159px -41px no-repeat
     &:after
       content: ""
       position: absolute
@@ -38,7 +35,7 @@
       margin-left: -309px
       width: 618px
       height: 454px
-      background: image-url("ipad-work.png") 0 0 no-repeat
+      background: image-url("viewthought-ipad.png") 0 0 no-repeat
 
   +at-breakpoint($break12)
     padding: 4.236em 0 $padding-12
@@ -71,6 +68,7 @@
   -----------------------
 
 #process
+  +hidden
   padding: $padding-4 0
   background-color: $white
 
@@ -84,7 +82,7 @@
   +at-breakpoint($break12)
     padding-bottom: $padding-12
 
-/* Process Intro
+/* Intro
 
 .process
   position: relative
@@ -126,7 +124,7 @@
     p
       font-size: 1.681em
 
-/* Circle Icons
+/* Circles
 
 .span
   +span-columns(4 omega, 4)
@@ -165,7 +163,7 @@
         line-height: (3.034em * .63)
         font-size: 3.034em
 
-/* Process Steps
+/* Steps
 
 .discovery, .development, .repeat
   h3
@@ -234,14 +232,31 @@
 #competencies
   position: relative
   background-color: $white
+  h2
+    margin-top: 0
+    margin-bottom: .236em
+    // 1 + .382
+    font-size: 1.382em
   &:after
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding: $padding-6 0
+    h2
+      margin-bottom: .443em
+      // 1 + .443
+      font-size: 1.443em
 
   +at-breakpoint($break9)
     padding: $padding-9 0
+    h2
+      font-size: 1.875em
+      text-align: center
+    h3
+      margin-bottom: 0
+      padding-bottom: 4.909em
+      text-align: center
+      background: image-url("logos/tech-icon-sprite.png") 50% 100% no-repeat
 
   +at-breakpoint($break12)
     padding: $padding-12 0
