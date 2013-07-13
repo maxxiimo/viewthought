@@ -97,7 +97,8 @@
 
 #case-study
   position: relative
-  background-color: $gray
+  padding: $padding-4 0
+  background-color: $black-1
   &:after
     +panel-shadow(.06)
 
@@ -105,16 +106,78 @@
     padding: $padding-6 0
 
 
+/* Tech Icons
+  -----------------------
+
+#tech-icons
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+  +hidden
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+    +reveal-hidden
+
+.tech-icons
+  p
+    margin: 0
+    font-size: 1.236em
+    text-align: center
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.618em
+    span
+      display: block
+      margin: 2.618em auto 0 auto
+      width: 280px
+      height: 149px
+      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
+
+
 /* Competencies
   -----------------------
 
 #competencies
   position: relative
+  padding: $padding-4 0
   background-color: $white
-  h2
-    text-align: center
-  &:after
-    +panel-shadow(.15)
+  // &:after
+  //   +panel-shadow(.15)
 
   +at-breakpoint($break6)
-    padding: $padding-6 0
+    padding-top: 0
+    padding-bottom: $padding-6
+
+.competencies
+  position: relative
+  h2
+    text-align: center
+  li
+    position: relative
+    margin-bottom: 1.618em
+    padding: 1em 1em 1em 3.034em
+    font-size: 1.236em
+    counter-increment: step
+    list-style: none
+    +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+    &:nth-child(3)
+      margin-bottom: 0
+    &:before
+      content: counter(step, upper-roman)
+      position: absolute
+      top: 0
+      left: 0
+      width: 1.875em
+      line-height: 1.875em
+      text-align: center
+      color: $white
+      background-color: $orange
+      // background-color: rgba(137, 169, 174, .7)
+
+  +at-breakpoint($break6)
+    // 1 + .382
+    font-size: 1.382em

@@ -2,7 +2,6 @@
   -----------------------
 
 #value
-  +hidden
   position: relative
   padding: .716em 0 1.159em
   background-color: $black-2
@@ -68,7 +67,6 @@
   -----------------------
 
 #process
-  +hidden
   padding: $padding-4 0
   background-color: $white
 
@@ -200,7 +198,8 @@
 
 #case-study
   position: relative
-  background-color: $gray
+  padding: $padding-4 0
+  background-color: $black-1
   &:after
     +panel-shadow(.06)
 
@@ -214,27 +213,122 @@
     padding: $padding-12 0
 
 
+/* Tech Icons
+  -----------------------
+
+#tech-icons
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+  +hidden
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+    +reveal-hidden
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.tech-icons
+  p
+    margin: 0
+    font-size: 1.236em
+    text-align: center
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.618em
+    span
+      display: block
+      margin: 2.618em auto 0 auto
+      width: 280px
+      height: 149px
+      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    p
+      font-size: 1.875em
+    span
+      margin-top: 2.618em
+      width: 563px
+      height: 69px
+      background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    // 1.875 + .443
+    p
+      font-size: 2.318em
+
+
 /* Competencies
   -----------------------
 
 #competencies
   position: relative
+  padding: $padding-4 0
   background-color: $white
-  h2
-    text-align: center
-  &:after
-    +panel-shadow(.15)
+  // &:after
+  //   +panel-shadow(.15)
 
   +at-breakpoint($break6)
-    padding: $padding-6 0
+    padding-top: 0
+    padding-bottom: $padding-6
 
   +at-breakpoint($break9)
-    padding: $padding-9 0
-    h3
-      margin-bottom: 0
-      padding-bottom: 4.909em
-      text-align: center
-      background: image-url("logos/tech-icon-sprite.png") 50% 100% no-repeat
+    padding-bottom: $padding-9
 
   +at-breakpoint($break12)
-    padding: $padding-12 0
+    padding-bottom: $padding-12
+
+.competencies
+  position: relative
+  h2
+    text-align: center
+  li
+    position: relative
+    margin-bottom: 1.618em
+    padding: 1em 1em 1em 3.034em
+    font-size: 1.236em
+    counter-increment: step
+    list-style: none
+    +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+    &:nth-child(3)
+      margin-bottom: 0
+    &:before
+      content: counter(step, upper-roman)
+      position: absolute
+      top: 0
+      left: 0
+      width: 1.875em
+      line-height: 1.875em
+      text-align: center
+      color: $white
+      background-color: $orange
+      // background-color: rgba(137, 169, 174, .7)
+
+  +at-breakpoint($break6)
+    // 1 + .382
+    font-size: 1.382em
+
+  +at-breakpoint($break9)
+    +span-columns(7 omega, $break9)
+    +squish(1, 1)
+    h2
+      margin-top: 1em
+      margin-bottom: 1.618em
+    &:before
+      +panel-shadow
+
+  +at-breakpoint($break12)
+    +span-columns(10 omega, $break12)
+    +squish(1, 1)
+    font-size: 1.618em
