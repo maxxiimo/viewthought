@@ -35,27 +35,18 @@
   +at-breakpoint($break6)
     padding: $padding-6 0
 
-/* Process Intro
+/* Intro
 
 .process
   position: relative
-  h2
-    margin-top: 0
-    margin-bottom: .236em
-    // 1 + .382
-    font-size: 1.382em
   p
     font-size: 1em
 
   +at-breakpoint($break6)
-    h2
-      margin-bottom: .443em
-      // 1 + .443
-      font-size: 1.443em
     p
       font-size: 1.159em
 
-/* Circle Icons
+/* Circles
 
 .span
   +span-columns(4 omega, 4)
@@ -76,11 +67,9 @@
         line-height: (1.875em * 1.07)
         font-size: 1.875em
 
-/* Process Steps
+/* Steps
 
 .discovery, .development, .repeat
-  h3
-    margin-top: 0
   +span-columns(4 omega, 4)
 
   +at-breakpoint($break6)
@@ -122,6 +111,8 @@
 #competencies
   position: relative
   background-color: $white
+  h2
+    text-align: center
   &:after
     +panel-shadow(.15)
 

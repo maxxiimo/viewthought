@@ -2,7 +2,7 @@
   -----------------------
 
 #value
-  +hidden
+  // +hidden
   position: relative
   padding: .716em 0 1.159em
   background-color: $black-2
@@ -68,7 +68,7 @@
   -----------------------
 
 #process
-  +hidden
+  // +hidden
   padding: $padding-4 0
   background-color: $white
 
@@ -86,19 +86,10 @@
 
 .process
   position: relative
-  h2
-    margin-top: 0
-    margin-bottom: .236em
-    // 1 + .382
-    font-size: 1.382em
   p
     font-size: 1em
 
   +at-breakpoint($break6)
-    h2
-      margin-bottom: .443em
-      // 1 + .443
-      font-size: 1.443em
     p
       font-size: 1.159em
 
@@ -108,7 +99,6 @@
     margin-bottom: 1.875em
     h2
       margin-top: 1em
-      font-size: 1.875em
       text-align: center
     p
       // 1 + .443
@@ -166,8 +156,6 @@
 /* Steps
 
 .discovery, .development, .repeat
-  h3
-    margin-top: 0
   +span-columns(4 omega, 4)
 
   +at-breakpoint($break6)
@@ -233,25 +221,15 @@
   position: relative
   background-color: $white
   h2
-    margin-top: 0
-    margin-bottom: .236em
-    // 1 + .382
-    font-size: 1.382em
+    text-align: center
   &:after
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding: $padding-6 0
-    h2
-      margin-bottom: .443em
-      // 1 + .443
-      font-size: 1.443em
 
   +at-breakpoint($break9)
     padding: $padding-9 0
-    h2
-      font-size: 1.875em
-      text-align: center
     h3
       margin-bottom: 0
       padding-bottom: 4.909em
