@@ -79,6 +79,87 @@
   +background-image(linear-gradient(left, rgba(255, 255, 255, 0) 0%, $color 13%, $color 86%, rgba(255, 255, 255, 0) 100%))
 
 
+/* Box Shadows
+  -----------------------
+
+// http://nimbupani.com/drop-shadows-with-css3.html
+// http://nicolasgallagher.com/css-drop-shadows-without-images/
+// http://www.red-team-design.com/how-to-create-slick-effects-with-css3-box-shadow
+// http://www.paulund.co.uk/creating-different-css3-box-shadows-effects
+
+@mixin shadow-1($bg-color: #f5f5f5)
+  position: relative
+  background-color: $bg-color
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 80%
+    bottom: 15px
+    left: 10px
+    width: 50%
+    max-width: 300px
+    // background: #777
+    z-index: -1
+    +box-shadow(0 15px 10px #777)
+    +simple-transform($rotate: -3deg)
+
+  &:after
+    +simple-transform($rotate: 3deg)
+    right: 10px
+    left: auto
+
+@mixin shadow-2($bg-color: #ddd)
+  position: relative
+  color: rgba(0, 0, 0, 0.8)
+  background-color: $bg-color
+  +border-radius(4px)
+  +single-text-shadow($voff: 1px, $blur: 0, $color: #fff)
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 80%
+    bottom: 15px
+    left: 10px
+    // width: 50%
+    width: 60%
+    max-width: 300px
+    // background: rgba(0, 0, 0, 0.7)
+    z-index: -1
+    +box-shadow(0 15px 10px rgba(0, 0, 0, 0.7))
+    +simple-transform($rotate: -3deg)
+
+  &:after
+    +simple-transform($rotate: 3deg)
+    right: 10px
+    left: auto
+
+@mixin shadow-3($bg-color: #fff, $border: #ccc)
+  position: relative
+  background-color: $bg-color
+  border: 1px solid $border
+  +border-radius(4px)
+  +box-shadow(0 1px 4px $border)
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    bottom: 20px
+    width: 70%
+    height: 55%
+    +box-shadow(0 20px 20px rgba(0, 0, 0, 0.4))
+    z-index: -1
+
+  &:before
+    left: 33px
+    +simple-transform($skew-x: -15deg, $rotate: -4deg)
+
+  &:after
+    right: 33px
+    +simple-transform($skew-x: 15deg, $rotate: 4deg)
+
+
 /* Arrows
   -----------------------
 

@@ -18,17 +18,25 @@ html
   -webkit-font-smoothing: antialiased
 
 body
+  position: relative
   font-size: $base-font-size
   line-height: $base-line-height
   background-color: $bg-body
+  z-index: -5613201117
   &:after
     +rwd-marker
 
 .wrapper
+  position: relative
   max-width: 1400px
   min-width: 320px
   margin: 0 auto
   overflow: hidden
+  z-index: -5613201115
+
+#main
+  position: relative
+  z-index: -1000000
 
 .container
   +container($total-columns, $break6, $break9, $break12)
