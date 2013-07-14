@@ -251,8 +251,6 @@
     text-align: center
 
   +at-breakpoint($break6)
-    p
-      font-size: 1.618em
     span
       display: block
       margin: 2.618em auto 0 auto
@@ -282,13 +280,11 @@
 /* Competencies
   -----------------------
 
-#competencies
+#core-values
   position: relative
   padding: $padding-4 0
   background-color: $white
   z-index: -2
-  // &:after
-  //   +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding-top: 0
@@ -300,7 +296,7 @@
   +at-breakpoint($break12)
     padding-bottom: $padding-12
 
-.competencies
+.core-values
   position: relative
   h2
     text-align: center
@@ -330,18 +326,32 @@
 
   +at-breakpoint($break6)
     li
-      // 1 + .382
-      font-size: 1.382em
+      // 1 + .169
+      font-size: 1.169em
 
   +at-breakpoint($break9)
-    +span-columns(7 omega, $break9)
-    +squish(1, 1)
+    +span-columns(9 omega, $break9)
     h2
-      margin-top: 1em
+      margin-top: 2.618em
       margin-bottom: 1.618em
+    ol
+      text-align: center
+    li
+      display: inline-block
+      width: 7.942em
+      margin: 0 .618em 0 0
+      text-align: left
+      vertical-align: top
+      &:nth-child(3)
+        margin-right: 0
     &:before
+      +squish(.5, .5)
       +panel-shadow
 
   +at-breakpoint($break12)
-    +span-columns(10 omega, $break12)
-    +squish(1, 1)
+    +span-columns(12 omega, $break12)
+    li
+      margin-right: 1em
+      width: 11.089em
+      // 1 + .236
+      font-size: 1.236em
