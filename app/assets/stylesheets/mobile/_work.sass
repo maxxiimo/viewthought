@@ -105,6 +105,38 @@
   +at-breakpoint($break6)
     padding: $padding-6 0
 
+.case-study
+  h2, p, li
+    color: $dark-white
+
+  p
+    margin-top: 0
+
+  ul
+    margin-bottom: 0
+    padding-bottom: 160px
+    background: image-url("lapostita-250px.png") 50% 100% no-repeat
+
+  +at-breakpoint($break6)
+    ul
+      padding-bottom: 200px
+      background: image-url("lapostita-320px.png") 50% 100% no-repeat
+
+#slidingDiv
+  display: none
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+/* JavaScript Fallback */
+
+.no-js #slidingDiv
+  display: block
+
+.no-js .show_hide
+  +hidden
+
 
 /* Tech Icons
   -----------------------

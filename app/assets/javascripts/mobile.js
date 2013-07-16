@@ -15,4 +15,5 @@
 //= require jquery.anystretch
 //= require skrollr.min
 //= require skrollr.menu.min
+//= require showHide
 //= require site_mobile
