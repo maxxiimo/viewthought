@@ -103,6 +103,22 @@ header
 .wf-loading .logo
   visibility: hidden
 
+.phone
+  display: block
+  // 1.618 + 1
+  line-height: 2.618
+  font-family: $base-font-nav
+  font-size: 1.236em
+  text-align: right
+  +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
+
+.phone
+  +at-breakpoint($break9)
+    +span-columns(2 omega, $break9)
+
+  +at-breakpoint($break12)
+    +span-columns(3 omega, $break12)
+
 
 /* Footer
   -----------------------

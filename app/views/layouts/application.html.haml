@@ -17,6 +17,7 @@
           = render :partial => 'shared/logo'
           = yield :navigation_text
           = render :partial => 'shared/navigation_icon'
+          %a{:href => 'callto:561-320-1117', :title => 'Main Number', :class => 'phone'} 561-320-1117
       #main{:role => 'main'}
         = yield
       %footer#ft.vcard{:role => "contentinfo"}
