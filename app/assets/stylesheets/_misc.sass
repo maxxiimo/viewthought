@@ -104,33 +104,25 @@
     +reveal-hidden
     +arrow-down-anchor
 
-.hero-down
+/* customize colors
+
+.hero-down, .blurb-down, .manifesto-down, .quote-down
   +hidden
 
   +at-breakpoint($break6)
     +reveal-hidden
-    +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
+
+.hero-down
+  +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
 
 .blurb-down
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    +arrow-down-anchor($arrow-color-1: lighten($blue-gray, 15), $arrow-color-2: $blue-gray)
+  +arrow-down-anchor($arrow-color-1: lighten($blue-gray, 15), $arrow-color-2: $blue-gray)
 
 .manifesto-down
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    +arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: $white)
+  +arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: $white)
 
 .quote-down
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
+  +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
 
 
 /* Columns
