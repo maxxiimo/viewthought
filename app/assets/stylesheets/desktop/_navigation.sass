@@ -2,13 +2,18 @@
   -----------------------
 
 #nav-icon
-  +span-columns(4 omega, 4)
-  +icon-nav(1.3em, .274em)
+  float: right
+  +icon-nav(1.3em, 0)
+  a:first-child
+    +hidden
 
   +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
+    float: left
+    margin-left: 1.618em
     a
       padding: 0 .236em
+      &:first-child
+        +reveal-hidden-inline
 
   +at-breakpoint($break9)
     +hidden
@@ -17,7 +22,9 @@
   a
     position: relative
     display: inline-block
-    padding: $nav-pad $nav-pad-4
+    // padding: $nav-pad $nav-pad-4
+    padding: 0 $nav-pad-4
+    line-height: 3.034
     font-family: $base-font-nav
     +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
     &:hover
@@ -30,14 +37,16 @@
     +span-columns(3, 9)
     +reveal-hidden
     a
-      padding: $nav-pad $nav-pad-9
+      // padding: $nav-pad $nav-pad-9
+      padding: 0 $nav-pad-9
       &.active
         color: $link-logo
 
   +at-breakpoint($break12)
     +span-columns(4, 12)
     a
-      padding: $nav-pad $nav-pad-12
+      // padding: $nav-pad $nav-pad-12
+      padding: 0 $nav-pad-12
 
 #magic-line
   position: absolute

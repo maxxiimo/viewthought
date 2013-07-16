@@ -67,15 +67,13 @@ header
   +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
 
 .viewthought
-  +span-columns(4 omega, 4)
+  float: left
   line-height: 1em
-  margin-top: .382em
-  margin-bottom: .236em
+  margin: .236em 0
   // 1 + .443
   font-size: 1.443em
 
   +at-breakpoint($break6)
-    +span-columns(3, $break6)
     margin-top: .236em
     margin-bottom: 0
 
@@ -87,34 +85,37 @@ header
   +at-breakpoint($break12)
     +span-columns(5, $break12)
 
-.logo
-  display: inline-block
-  font-family: $quatro
-  text-transform: uppercase
-  +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
+  a
+    font-family: $quatro
+    text-transform: uppercase
+    +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
+    &:hover
+      text-decoration: none
 
-  &:hover
-    text-decoration: none
-
-  .char1, .char5
-    // 1 + .146
-    font-size: 1.146em
+    .char1, .char5
+      // 1 + .146
+      font-size: 1.146em
 
 .wf-loading .logo
   visibility: hidden
 
 .phone
-  display: block
-  // 1.618 + 1
-  line-height: 2.618
+  float: right
   font-family: $base-font-nav
   font-size: 1.236em
   text-align: right
   +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
 
 .phone
+  margin-top: .065em
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+
   +at-breakpoint($break9)
     +span-columns(2 omega, $break9)
+    line-height: 2.4
 
   +at-breakpoint($break12)
     +span-columns(3 omega, $break12)
