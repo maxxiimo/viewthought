@@ -78,11 +78,11 @@
 /* Arrows
   -----------------------
 
-.hero-down, .blurb-down, .manifesto-down, .quote-down
-  +hidden
+// .hero-down, .blurb-down, .manifesto-down, .quote-down
+//   +hidden
 
-  +at-breakpoint($break6)
-    +reveal-hidden
+//   +at-breakpoint($break6)
+//     +reveal-hidden
 
 .arrow-up-anchor
   +hidden
@@ -91,25 +91,38 @@
     +reveal-hidden
     +arrow-up-anchor
 
-.hero-down
-  +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
+// .hero-down
+//   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
 
-.blurb-down
-  +arrow-down-anchor($arrow-color-1: lighten($blue-gray, 15), $arrow-color-2: $blue-gray)
+// .blurb-down
+//   +arrow-down-anchor($arrow-color-1: lighten($blue-gray, 15), $arrow-color-2: $blue-gray)
 
-.manifesto-down
-  +arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: $white)
+// .manifesto-down
+//   +arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: $white)
 
-.quote-down
-  +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
+// .quote-down
+//   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
 
 /* icon arrow
 
+.hero-down, .blurb-down, .manifesto-down,
 .value-down, .case-study-down, .process-down, .core-values-down
   +hidden
 
   +at-breakpoint($break6)
     +reveal-hidden
+
+.hero-down
+  +icon-arrow-down($blue-gray, $white, 4.236em)
+
+.blurb-down
+  +icon-arrow-down(lighten($blue-gray, 15), $blue-gray, 4.236em)
+
+.manifesto-down
+  +icon-arrow-down($navy-blue, $white, 4.236em)
+
+.quote-down
+  +icon-arrow-down($blue-gray, $gray, 4.236em)
 
 .value-down, .case-study-down
   +icon-arrow-down($white, darken($white, 20), 4.236em)

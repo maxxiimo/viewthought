@@ -7,13 +7,19 @@
       %p We would be happy to design and build your site from scratch or improve on what you already have.
     .start-project{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       %button Start A Project
-  %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'} scroll
+  -# %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'} scroll
+  %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
 
 %section#blurb
   .container
     .blurb
       %p We design well thought out, intuitive online user experiences that look exceptional on any device.
-  %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down'} scroll
+  -# %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down'} scroll
+  %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
 
 %section#manifesto
   .container
@@ -23,7 +29,10 @@
         The Front End Manifesto,
         %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'The Front End Manifesto TOC'} a freely available e-book
         written by the engineers at ViewThought, provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile and desktop, Front End Code: From a Ruby on Rails perspective.
-  %a{:href => '#quote', :title => 'Scroll Down', :class => 'manifesto-down'} scroll
+  -# %a{:href => '#quote', :title => 'Scroll Down', :class => 'manifesto-down'} scroll
+  %a{:href => '#quote', :title => 'Scroll Down', :class => 'manifesto-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
 
 %section#quote
   .container
