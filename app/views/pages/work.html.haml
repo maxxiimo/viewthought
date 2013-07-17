@@ -6,12 +6,15 @@
   .container
     .value
       %p Your business has a unique value proposition. Through design and interaction we can help communicate this, and through our unique experience in both web development and business&ndash;help to enhance it.
-      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base'}
+      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
+  %a{:href => '#our-process', :title => 'Scroll Down', :class => 'value-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
 
 %section#process
   .container
     .process
-      %h2 Our Process
+      %h2#our-process Our Process
       %p We bring together great design and great code to make mobile and Web applications work, and look amazing across any device&ndash;no matter how big or small.
     .span
       .circle
@@ -33,6 +36,9 @@
       %p The discovery process never ends, but continuously feeds into development. We value feedback, from you, from your team, from your customers.
     .hire-button
       %button Want to Hire Us?
+  %a{:href => '#case-study', :title => 'Scroll Down', :class => 'process-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
 
 %section#case-study
   .container
@@ -48,6 +54,9 @@
           %li A password-protected, role-based content management system
       %a.show_hide{:href => "#", :rel => "#slidingDiv"}
         Read More
+  %a{:href => '#tech-icons', :title => 'Scroll Down', :class => 'case-study-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
 
 %section#tech-icons
   .container
@@ -66,3 +75,6 @@
           %span Integrate beauty, design and optimal user experience in application development.
         %li
           %span Address device constraints and opportunities while delivering consistent visual design.
+  -# %a{:href => '#ft', :title => 'Scroll Down', :class => 'core-values-down'}
+  -#   %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+  -#   %span.screen-reader-text Scroll Down

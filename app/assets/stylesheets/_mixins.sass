@@ -167,6 +167,8 @@
 /* Arrows
   -----------------------
 
+/* using CSS borders
+
 @mixin arrow-up($size: 20px, $color: $base-font-color)
   display: block
   width: 0
@@ -198,6 +200,8 @@
   border-top: $size solid transparent
   border-bottom: $size solid transparent
   border-right: $size solid $color
+
+/* anchors
 
 @mixin arrow-details
   content: ""
@@ -244,6 +248,34 @@
       +arrow-details
       +arrow-down($size: $arrow-size, $color: $arrow-color-2)
 
+/* icon font arrow
+
+@mixin icon-arrow-down($arrow-color-1, $arrow-color-2, $font-size)
+  position: absolute
+  bottom: -20px
+  right: 0
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  +opacity(.5)
+  &:hover
+    text-decoration: none
+  span
+    padding-right: 20px
+    font-size: $font-size
+
+/* rotating arrow
+
+@mixin arrow-rotate($color1: $blue-gray, $color2: $gray)
+  position: absolute
+  bottom: 5%
+  right: 5%
+  +rotate(45deg)
+  a
+    font-size: 2.618em
+    +text-shadow
+    +opacity(.5)
+    +link-colors($color1, $color2, $color1, $color1, $color1)
+  a:hover
+    text-decoration: none
 
 /* rotating arrow
 

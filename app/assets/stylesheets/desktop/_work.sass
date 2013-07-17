@@ -1,15 +1,3 @@
-// #value,
-// #process
-//   +hidden
-
-// #case-study
-//   +hidden
-
-// +at-breakpoint($break6)
-//   .tech-icons
-//     +hidden
-
-
 /* Value
   -----------------------
 
@@ -19,7 +7,7 @@
   background-color: $black-2
   p
     margin: 0
-  a
+  .ipad
     +hidden
 
   +at-breakpoint($break6)
@@ -28,7 +16,7 @@
 
   +at-breakpoint($break9)
     padding: 2.618em 0 $padding-9
-    a
+    .ipad
       +reveal-hidden
       position: absolute
       bottom: -168px
@@ -79,8 +67,10 @@
   -----------------------
 
 #process
+  position: relative
   padding: $padding-4 0
   background-color: $white
+  z-index: -1
 
   +at-breakpoint($break6)
     padding: $padding-6 0

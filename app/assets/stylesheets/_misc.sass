@@ -78,17 +78,11 @@
 /* Arrows
   -----------------------
 
-.arrow-up
-  +arrow-up
+.hero-down, .blurb-down, .manifesto-down, .quote-down
+  +hidden
 
-.arrow-down
-  +arrow-down
-
-.arrow-left
-  +arrow-left
-
-.arrow-right
-  +arrow-right
+  +at-breakpoint($break6)
+    +reveal-hidden
 
 .arrow-up-anchor
   +hidden
@@ -96,21 +90,6 @@
   +at-breakpoint($break6)
     +reveal-hidden
     +arrow-up-anchor
-
-.arrow-down-anchor
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    +arrow-down-anchor
-
-/* customize colors
-
-.hero-down, .blurb-down, .manifesto-down, .quote-down
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
 
 .hero-down
   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
@@ -123,6 +102,20 @@
 
 .quote-down
   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
+
+/* icon arrow
+
+.value-down, .case-study-down, .process-down, .core-values-down
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+
+.value-down, .case-study-down
+  +icon-arrow-down($white, darken($white, 20), 4.236em)
+
+.process-down, .core-values-down
+  +icon-arrow-down(darken($gray, 20), $gray, 4.236em)
 
 
 /* Columns
