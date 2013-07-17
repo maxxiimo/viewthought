@@ -9,6 +9,9 @@ $(document).ready(function() {
 
 $('#quote').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
 
+// $(".next").click(function() {
+//     $('#quote').anystretch("assets/pics/lake-titicaca-2000-maximum.jpg");
+// });
 
 // Magic Line
 
