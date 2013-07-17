@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 // Anystretch
 
-// $('#hero').anystretch("#{asset_path("pics/silhouette-1024-maximum.jpg")}", {speed: 200, positionY: 'top'});
+$('#quote').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
 
 
 // Magic Line

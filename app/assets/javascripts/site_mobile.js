@@ -5,6 +5,11 @@ $(document).ready(function() {
 });
 
 
+// Anystretch
+
+$('#quote').anystretch("assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
+
+
 // show Hide
 
 // http://papermashup.com/jquery-show-hide-plugin/
