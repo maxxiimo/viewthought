@@ -278,6 +278,11 @@
     +span-columns(6, $break12)
 
 .two, .three, .four
+  blockquote
+    padding: .146em
+    padding-left: .382em
+    background-color: rgba(0, 0, 0, .05)
+
   +span-columns(4 omega, 4)
 
   +at-breakpoint($break6)
@@ -286,8 +291,6 @@
 
 .two
   blockquote
-    padding: .146em
-    padding-left: .236em
     background-color: rgba(0, 0, 0, .25)
 
   +at-breakpoint($break9)
@@ -312,6 +315,7 @@
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
+    +prefix(1)
 
 .two, .three, .four
   display: none
