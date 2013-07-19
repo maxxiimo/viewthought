@@ -46,7 +46,7 @@ ol, ul {
 /* MISCELLANEOUS
   ============================================================================ */
 @import "misc";
-@import "sprites";
+@import "bgstretcher";
 
 
 /* NAVIGATION
@@ -74,11 +74,6 @@ ol, ul {
 /* APPLICATION - ad hoc code under this line
   ============================================================================ */
 
-.screen-reader-text {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
 
 
 /* LAST

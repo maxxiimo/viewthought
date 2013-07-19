@@ -5,9 +5,66 @@ $(document).ready(function() {
 });
 
 
-// Anystretch
+// bgStretcher callback
 
-$('#quote').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
+mycallBack = function(){
+  var $one   = $('.one');
+  var $two   = $('.two');
+  var $three = $('.three');
+  var $four  = $('.four');
+
+  if ($one.is(':visible')){
+      $one.fadeOut(500);
+      $two.delay(1500).fadeIn(1500);
+  }
+  else if ($two.is(':visible')){
+      $two.fadeOut(500);
+      $three.delay(1500).fadeIn(1500);
+  }
+  else if ($three.is(':visible')){
+      $three.fadeOut(500);
+      $four.delay(1500).fadeIn(1500);
+  }
+  else{
+      $four.fadeOut(500);
+      $one.delay(1500).fadeIn(1500);
+  }
+  // console.log("callback");
+}
+
+// bgStretcher
+
+$(document).ready(function(){
+
+  $('#quote').bgStretcher({
+    images: ['assets/pics/silhouette-1024-maximum.jpg', 'assets/pics/drain-1024-maximum.jpg', 'assets/pics/lake-titicaca-1024-maximum.jpg', 'assets/pics/rainbow-1024-maximum.jpg'],
+    imageWidth: 1024,
+    imageHeight: 682,
+    slideDirection: 'N',
+    nextSlideDelay: 10000,
+    slideShowSpeed: 1500,
+    transitionEffect: 'fade',
+    sequenceMode: 'normal',
+    buttonPrev: '#prev',
+    buttonNext: '#next',
+    pagination: '#controls',
+    anchoring: 'center center',
+    anchoringImg: 'center center',
+    callbackfunction: mycallBack
+  });
+
+});
+
+
+// Remove link dotted line
+
+// http://stackoverflow.com/questions/1535538/jquery-getting-rid-of-dotted-outline-around-buttons
+
+$(function() {
+    $('.autoblur').live("click", function(event) {
+        this.blur();
+    });
+});
 
 
 // Magic Line
