@@ -56,7 +56,7 @@ $(document).ready(function(){
 });
 
 
-// Remove link dotted line
+// Remove Anchor Outline
 
 // http://stackoverflow.com/questions/1535538/jquery-getting-rid-of-dotted-outline-around-buttons
 
