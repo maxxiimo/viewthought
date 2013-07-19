@@ -262,6 +262,15 @@
     padding-right: 20px
     font-size: $font-size
 
+@mixin icon-arrow-shuffle($arrow-color-1, $arrow-color-2, $font-size)
+  position: absolute
+  top: 50%
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  &:hover
+    text-decoration: none
+  span
+    font-size: $font-size
+
 /* rotating arrow
 
 @mixin arrow-rotate($color1: $blue-gray, $color2: $gray)
