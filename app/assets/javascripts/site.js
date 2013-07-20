@@ -1,13 +1,17 @@
+// ===========================
 // Lettering.js
+// ===========================
 
 $(document).ready(function() {
   $(".logo").lettering();
 });
 
 
-// bgStretcher callback
+// ===========================
+// bgStretcher
+// ===========================
 
-mycallBack = function(){
+callBack = function(){
   var $one   = $('.one');
   var $two   = $('.two');
   var $three = $('.three');
@@ -32,7 +36,6 @@ mycallBack = function(){
   // console.log("callback");
 }
 
-// bgStretcher
 
 $(document).ready(function(){
 
@@ -50,13 +53,15 @@ $(document).ready(function(){
     pagination: '#controls',
     anchoring: 'center center',
     anchoringImg: 'center center',
-    callbackfunction: mycallBack
+    callbackfunction: callBack
   });
 
 });
 
 
+// ===========================
 // Remove Anchor Outline
+// ===========================
 
 // http://stackoverflow.com/questions/1535538/jquery-getting-rid-of-dotted-outline-around-buttons
 
@@ -67,7 +72,9 @@ $(function() {
 });
 
 
+// ===========================
 // Magic Line
+// ===========================
 
 // http://css-tricks.com/jquery-magicline-navigation/
 
@@ -109,7 +116,9 @@ $(function() {
 });
 
 
+// ===========================
 // show Hide
+// ===========================
 
 // http://papermashup.com/jquery-show-hide-plugin/
 
@@ -126,7 +135,30 @@ $(document).ready(function(){
 });
 
 
+// ===========================
+// Google Maps API
+// ===========================
+
+$(function() {
+
+    var startLatLng = '26.7084, -80.0565';
+    // var startLatLng = new google.maps.LatLng(26.7084, -80.0565);
+
+    $('#map_canvas').gmap({'center': startLatLng});
+    $('#map_canvas').gmap('option', 'zoom', 15);
+
+    $('#map_canvas').gmap().bind('init', function(ev, map) {
+      $('#map_canvas').gmap('addMarker', {'position': '26.7084, -80.0565', 'bounds': false}).click(function() {
+        $('#map_canvas').gmap('openInfoWindow', {'content': "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."}, this);
+      });
+    });
+
+});
+
+
+// ===========================
 // Typekit
+// ===========================
 
 $(function() {
   // As soon as the DOM is ready, make invisible
