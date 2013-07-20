@@ -45,11 +45,36 @@
   position: relative
   padding: $padding-4 0
   background-color: $white
-  &:after
+  &:before
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding: $padding-6 0
+
+.email-us
+  p
+    margin: 0
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    p
+      // 1 + .236
+      font-size: 1.236em
+
+/* Button
+
+.email-button
+  margin-bottom: 1.618em
+  text-align: center
+  button
+    +sassy-button
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    margin-bottom: 1.875em
+    button
+      // 1 + .274
+      font-size: 1.274em
 
 
 /* Contact Form
