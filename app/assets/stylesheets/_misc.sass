@@ -109,13 +109,6 @@
 //   +at-breakpoint($break6)
 //     +reveal-hidden
 
-.arrow-up-anchor
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    +arrow-up-anchor
-
 // .hero-down
 //   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
 
@@ -127,6 +120,13 @@
 
 // .quote-down
 //   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $gray)
+
+.arrow-up-anchor
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-up-anchor
 
 /* icon arrow
 
@@ -146,11 +146,11 @@
   +icon-arrow-down($blue-gray, $gray, 4.236em)
   @extend .smallscreen-hide
 
-.value-down, .case-study-down
+.value-down, .case-study-down, .contact-hero-down
   +icon-arrow-down($white, darken($white, 20), 4.236em)
   @extend .smallscreen-hide
 
-.process-down, .core-values-down
+.process-down, .core-values-down, .email-us-down
   +icon-arrow-down(darken($gray, 20), $gray, 4.236em)
   @extend .smallscreen-hide
 
