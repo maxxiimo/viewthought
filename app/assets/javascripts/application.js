@@ -16,4 +16,5 @@
 //= require skrollr.min
 //= require skrollr.menu.min
 //= require showHide
+//= require gmap3.min
 //= require site

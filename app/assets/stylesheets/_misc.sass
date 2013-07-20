@@ -20,6 +20,16 @@
   right: -9999px
 
 
+/* Smallscreen Hide
+  -----------------------
+
+.smallscreen-hide
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+
+
 /* Box Shadows
   -----------------------
 
@@ -120,30 +130,29 @@
 
 /* icon arrow
 
-.hero-down, .blurb-down, .manifesto-down,
-.value-down, .case-study-down, .process-down, .core-values-down
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-
 .hero-down
   +icon-arrow-down($blue-gray, $white, 4.236em)
+  @extend .smallscreen-hide
 
 .blurb-down
   +icon-arrow-down(lighten($blue-gray, 15), $blue-gray, 4.236em)
+  @extend .smallscreen-hide
 
 .manifesto-down
   +icon-arrow-down($navy-blue, $white, 4.236em)
+  @extend .smallscreen-hide
 
 .quote-down
   +icon-arrow-down($blue-gray, $gray, 4.236em)
+  @extend .smallscreen-hide
 
 .value-down, .case-study-down
   +icon-arrow-down($white, darken($white, 20), 4.236em)
+  @extend .smallscreen-hide
 
 .process-down, .core-values-down
   +icon-arrow-down(darken($gray, 20), $gray, 4.236em)
+  @extend .smallscreen-hide
 
 
 /* Columns

@@ -1,13 +1,17 @@
+// ===========================
 // Lettering.js
+// ===========================
 
 $(document).ready(function() {
   $(".logo").lettering();
 });
 
 
-// bgStretcher callback
+// ===========================
+// bgStretcher
+// ===========================
 
-mycallBack = function(){
+callBack = function(){
   var $one   = $('.one');
   var $two   = $('.two');
   var $three = $('.three');
@@ -32,7 +36,6 @@ mycallBack = function(){
   // console.log("callback");
 }
 
-// bgStretcher
 
 $(document).ready(function(){
 
@@ -50,13 +53,15 @@ $(document).ready(function(){
     pagination: '#controls',
     anchoring: 'center center',
     anchoringImg: 'center center',
-    callbackfunction: mycallBack
+    callbackfunction: callBack
   });
 
 });
 
 
-// Remove link dotted line
+// ===========================
+// Remove Anchor Outline
+// ===========================
 
 // http://stackoverflow.com/questions/1535538/jquery-getting-rid-of-dotted-outline-around-buttons
 
@@ -67,7 +72,9 @@ $(function() {
 });
 
 
+// ===========================
 // Magic Line
+// ===========================
 
 // http://css-tricks.com/jquery-magicline-navigation/
 
@@ -109,7 +116,9 @@ $(function() {
 });
 
 
+// ===========================
 // show Hide
+// ===========================
 
 // http://papermashup.com/jquery-show-hide-plugin/
 
@@ -126,7 +135,81 @@ $(document).ready(function(){
 });
 
 
+// ===========================
+// Google Maps API
+// ===========================
+
+$(document).ready(function(){
+
+  $('#map_canvas').gmap3({
+
+    map:{
+      options:{
+        center:[26.7084, -80.0565],
+        zoom:15,
+        backgroundColor:'none',
+        // mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+        },
+        navigationControl: true,
+        scrollwheel: true,
+        streetViewControl: true
+      }
+    },
+
+    // marker:{
+    //     latLng:[26.7084, -80.0565]
+    // },
+    // infowindow:{
+    //   options:{
+    //     content: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."
+    //   },
+    //   open: true
+    // }
+
+    marker:{
+      values:[
+        {latLng:[26.7084, -80.0565], data: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."}
+      ],
+      options:{
+        draggable: false
+      },
+      events:{
+        // mouseove: function(marker, event, context){
+        click: function(marker, event, context){
+          var map = $(this).gmap3("get"),
+            infowindow = $(this).gmap3({get:{name:"infowindow"}});
+          if (infowindow){
+            infowindow.open(map, marker);
+            infowindow.setContent(context.data);
+          } else {
+            $(this).gmap3({
+              infowindow:{
+                anchor:marker,
+                options:{content: context.data}
+              }
+            });
+          }
+        }
+        // },
+        // mouseout: function(){
+        //   var infowindow = $(this).gmap3({get:{name:"infowindow"}});
+        //   if (infowindow){
+        //     infowindow.close();
+        //   }
+        // }
+      }
+    }
+  });
+
+});
+
+
+// ===========================
 // Typekit
+// ===========================
 
 $(function() {
   // As soon as the DOM is ready, make invisible
