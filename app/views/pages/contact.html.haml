@@ -2,16 +2,17 @@
 - content_for :title do
   Contact
 
-#contact-hero
+%section#contact-hero
+  #map
+  #who-we-are
+    .container
+      .who-we-are
+        %p We are a Ruby on Rails development shop located in West Palm Beach, Florida.
+
+%section#email-us
+  %p We specialize in mobile Web development, design, usability testing, and we can fill any front end development gaps you may have on your team.
   %button hello@viewthought.com
 
-#who-we-are
-  %h2 Who We Are
-  %p We are a Ruby on Rails development shop located in West Palm Beach, Florida. We specialize in mobile Web development, design, usability testing, and we can fill any front end development gaps you may have on your team.
-
-#contact
+%section#contact-form
   %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form below and hit send.
   = render :partial => 'pages/contact_form_long'
-
-#map
-  #map_canvas

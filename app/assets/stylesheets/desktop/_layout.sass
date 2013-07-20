@@ -72,6 +72,16 @@ header
   margin: .236em 0
   // 1 + .443
   font-size: 1.443em
+  a
+    font-family: $quatro
+    text-transform: uppercase
+    +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
+    &:hover
+      text-decoration: none
+
+    .char1, .char5
+      // 1 + .146
+      font-size: 1.146em
 
   +at-breakpoint($break6)
     margin-top: .236em
@@ -84,17 +94,6 @@ header
 
   +at-breakpoint($break12)
     +span-columns(5, $break12)
-
-  a
-    font-family: $quatro
-    text-transform: uppercase
-    +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
-    &:hover
-      text-decoration: none
-
-    .char1, .char5
-      // 1 + .146
-      font-size: 1.146em
 
 .wf-loading .logo
   visibility: hidden

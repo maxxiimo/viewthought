@@ -141,7 +141,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  $('#map_canvas').gmap3({
+  $('#map').gmap3({
 
     map:{
       options:{

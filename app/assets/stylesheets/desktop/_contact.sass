@@ -1,38 +1,103 @@
-/* Contact
-  -----------------------
-
-#contact-hero,
-#who-we-are,
-#contact
-  +hidden
-  padding: $padding-12 0
-  h3
-    margin-top: 0
-  p
-    margin: 0
-
-#contact-hero
-  background-color: $white
-
-#who-we-are
-  background-color: $gray
-
-#contact
-  background-color: $black-3
-
-
 /* Google Map
   -----------------------
 
-#map
+#contact-hero
+  position: relative
   background-color: $white
   // 12.85 + 3.034
   height: 15.884em
+  &:after
+    +panel-shadow(.15)
 
   +at-breakpoint($break9)
     height: 33.641em
 
-#map_canvas
+#map
   width: 100%
   height: 100%
   background-color: $white
+
+#who-we-are
+  position: absolute
+  bottom: 0
+  padding: ($padding-4 / 3) 0
+  width: 100%
+  background-color: $black-1
+  background-color: rgba(115, 115, 115, .8)
+  border-top: 1px solid $black-1
+  // background-color: $orange
+  // background-color: rgba(242, 101, 19, .7)
+  // border-top: 1px solid $orange
+  // background-color: $lime
+  // background-color: rgba(159, 184, 63, .7)
+  // border-top: 1px solid $lime
+
+  +at-breakpoint($break6)
+    padding: ($padding-6 / 3) 0
+
+  +at-breakpoint($break9)
+    padding: ($padding-9 / 3) 0
+
+  +at-breakpoint($break12)
+    padding: ($padding-12 / 3) 0
+
+.who-we-are
+  p
+    margin: 0
+    font-size: 1.159em
+    color: $dark-white
+
+  +at-breakpoint($break6)
+    p
+      // 1 + .236
+      font-size: 1.236em
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(9, $break12)
+    +squish(1.5, 1.5)
+    p
+      font-size: 1.875em
+
+
+/* Email Us
+  -----------------------
+
+#email-us
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+
+/* Contact Form
+  -----------------------
+
+#contact-form
+  position: relative
+  padding: $padding-4 0
+  background-color: $black-3
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
