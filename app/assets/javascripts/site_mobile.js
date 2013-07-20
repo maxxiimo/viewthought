@@ -95,19 +95,70 @@ $(document).ready(function(){
 // Google Maps API
 // ===========================
 
-$(function() {
+$(document).ready(function(){
 
-    var startLatLng = '26.7084, -80.0565';
-    // var startLatLng = new google.maps.LatLng(26.7084, -80.0565);
+  $('#map_canvas').gmap3({
 
-    $('#map_canvas').gmap({'center': startLatLng});
-    $('#map_canvas').gmap('option', 'zoom', 15);
+    map:{
+      options:{
+        center:[26.7084, -80.0565],
+        zoom:15,
+        backgroundColor:'none',
+        // mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+        },
+        navigationControl: true,
+        scrollwheel: true,
+        streetViewControl: true
+      }
+    },
 
-    $('#map_canvas').gmap().bind('init', function(ev, map) {
-      $('#map_canvas').gmap('addMarker', {'position': '26.7084, -80.0565', 'bounds': false}).click(function() {
-        $('#map_canvas').gmap('openInfoWindow', {'content': "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."}, this);
-      });
-    });
+    // marker:{
+    //     latLng:[26.7084, -80.0565]
+    // },
+    // infowindow:{
+    //   options:{
+    //     content: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help."
+    //   },
+    //   open: true
+    // }
+
+    marker:{
+      values:[
+        {latLng:[26.7084, -80.0565], data: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help."}
+      ],
+      options:{
+        draggable: false
+      },
+      events:{
+        // mouseove: function(marker, event, context){
+        click: function(marker, event, context){
+          var map = $(this).gmap3("get"),
+            infowindow = $(this).gmap3({get:{name:"infowindow"}});
+          if (infowindow){
+            infowindow.open(map, marker);
+            infowindow.setContent(context.data);
+          } else {
+            $(this).gmap3({
+              infowindow:{
+                anchor:marker,
+                options:{content: context.data}
+              }
+            });
+          }
+        }
+        // },
+        // mouseout: function(){
+        //   var infowindow = $(this).gmap3({get:{name:"infowindow"}});
+        //   if (infowindow){
+        //     infowindow.close();
+        //   }
+        // }
+      }
+    }
+  });
 
 });
 

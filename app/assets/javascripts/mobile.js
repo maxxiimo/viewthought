@@ -16,5 +16,5 @@
 //= require skrollr.min
 //= require skrollr.menu.min
 //= require showHide
-//= require jquery.ui.map.full.min
+//= require gmap3.min
 //= require site_mobile
