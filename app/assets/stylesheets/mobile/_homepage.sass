@@ -161,6 +161,15 @@
     +span-columns(4, $break6)
     +prefix(.5)
 
+.two, .four
+  blockquote
+    padding: .146em
+    padding-left: .382em
+    background-color: rgba(0, 0, 0, .05)
+
+.three
+  +single-text-shadow(0, 1px, 2px, false, $black-3)
+
 .two, .three, .four
   +span-columns(4 omega, 4)
 
@@ -169,15 +178,11 @@
     +prefix(.5)
 
 .two
-  display: none
   blockquote
-    padding: .146em
-    padding-left: .382em
     background-color: rgba(0, 0, 0, .25)
 
-.three, .four
-  blockquote
-    background-color: rgba(0, 0, 0, .05)
+.two, .three, .four
+  display: none
 
 /* bgStretcher Controls
 
