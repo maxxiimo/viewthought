@@ -72,7 +72,7 @@
   position: relative
   padding: $padding-4 0
   background-color: $white
-  &:after
+  &:before
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
@@ -83,6 +83,54 @@
 
   +at-breakpoint($break12)
     padding: $padding-12 0
+
+.email-us
+  p
+    margin: 0
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    p
+      // 1 + .236
+      font-size: 1.236em
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(9, $break12)
+    +squish(1.5, 1.5)
+    p
+      font-size: 1.875em
+
+/* Button
+
+.email-button
+  margin-bottom: 1.618em
+  text-align: center
+  button
+    +sassy-button
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    margin-bottom: 1.875em
+    button
+      // 1 + .274
+      font-size: 1.274em
+
+  +at-breakpoint($break9)
+    margin-bottom: 3.034em
+    button
+      // 1 + .443
+      font-size: 1.443em
+
+  +at-breakpoint($break12)
+    // margin-bottom: 4.236em
+    button
+      font-size: 1.618em
 
 
 /* Contact Form
