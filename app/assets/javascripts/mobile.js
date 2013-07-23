@@ -17,4 +17,5 @@
 //= require skrollr.menu.min
 //= require showHide
 //= require gmap3.min
+//= require jquery.infieldLabel
 //= require site_mobile
