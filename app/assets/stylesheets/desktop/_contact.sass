@@ -146,6 +146,7 @@
 #contact-form
   position: relative
   padding: $padding-4 0
+  color: $dark-white
   background-color: $black-3
 
   +at-breakpoint($break6)
@@ -157,44 +158,58 @@
   +at-breakpoint($break12)
     padding: $padding-12 0
 
-.contact-form
-  color: $dark-white
-  .project
-    margin: 0 0 $margin-4
+.contact-intro
+  p
+    margin: -.274em 0 1.159em
 
   +at-breakpoint($break6)
-    .project
-      margin: 0 0 1.159em
+    p
+      // margin-bottom: 1.159em
       font-size: 1.159em
 
   +at-breakpoint($break9)
-    +span-columns(7, $break9)
-    +squish(1, 1)
-    .project
+    +span-columns(3, $break9)
+    +pre(.5)
+    p
       // 1 + .443
-      margin: 0 0 1.443em
+      // margin-bottom: 1.443em
       font-size: 1.443em
 
   +at-breakpoint($break12)
-    +span-columns(8, $break12)
-    +squish(2, 2)
-    .project
-      margin: 0 0 1.681em
+    +span-columns(4, $break12)
+    p
+      // margin-bottom: 1.681em
       font-size: 1.681em
 
-  form
-    p
-      margin: 0 0 1.618em
-    input, textarea
-      width: 100%
+.contact-form
+  p
+    margin: 0 0 1.618em
+  input, textarea
+    width: 100%
+  input
+    height: 1.618em
+    outline: none
+  textarea
+    height: 7.942em
+  .button
+    text-align: center
+  button
+    +sassy-button
+
+  +at-breakpoint($break6)
+    .button
+      text-align: left
+
+  +at-breakpoint($break9)
+    +span-columns(5 omega, $break9)
+    +post(.5)
+    input
+      height: 2em
+    textarea
+      height: 12.85em
+
+  +at-breakpoint($break12)
+    +span-columns(7 omega, $break12)
     input
       height: 2.618em
-      outline: none
-    textarea
-      height: 7.942em
 
-      +at-breakpoint($break9)
-        height: 12.85em
-
-    button
-      +sassy-button

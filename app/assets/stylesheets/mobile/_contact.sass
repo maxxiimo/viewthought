@@ -83,30 +83,36 @@
 #contact-form
   position: relative
   padding: $padding-4 0
+  color: $dark-white
   background-color: $black-3
 
   +at-breakpoint($break6)
     padding: $padding-6 0
 
-.contact-form
-  color: $dark-white
-  .project
-    margin: 0 0 $margin-4
+.contact-intro
+  p
+    margin: -.274em 0 1.159em
 
   +at-breakpoint($break6)
-    .project
-      margin: 0 0 1.159em
+    p
+      // margin-bottom: 1.159em
       font-size: 1.159em
 
-  form
-    p
-      margin: 0 0 1.618em
-    input, textarea
-      width: 100%
-    input
-      height: 2.618em
-      outline: none
-    textarea
-      height: 7.942em
-    button
-      +sassy-button
+.contact-form
+  p
+    margin: 0 0 1.618em
+  input, textarea
+    width: 100%
+  input
+    height: 1.618em
+    outline: none
+  textarea
+    height: 7.942em
+  .button
+    text-align: center
+  button
+    +sassy-button
+
+  +at-breakpoint($break6)
+    .button
+      text-align: left
