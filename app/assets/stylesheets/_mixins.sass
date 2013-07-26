@@ -64,23 +64,23 @@
 /* Dividers
   -----------------------
 
-@mixin divider-top($color, $padding, $width)
+@mixin divider-top($padding, $width)
   content: ""
   position: absolute
   top: $padding / 1.5
   right: $width
   left: $width
   height: 1px
-  +background-image(linear-gradient(left, rgba(255, 255, 255, 0) 0%, $color 13%, $color 86%, rgba(255, 255, 255, 0) 100%))
+  +background-image(linear-gradient(left, rgba(137, 159, 174, 0) 0%, $blue-gray 13%, $blue-gray 86%, rgba(137, 159, 174, 0) 100%))
 
-@mixin divider-bottom($color, $padding, $width)
+@mixin divider-bottom($padding, $width)
   content: ""
   position: absolute
   bottom: $padding / 1.5
   right: $width
   left: $width
   height: 1px
-  +background-image(linear-gradient(left, rgba(255, 255, 255, 0) 0%, $color 13%, $color 86%, rgba(255, 255, 255, 0) 100%))
+  +background-image(linear-gradient(left, rgba(137, 159, 174, 0) 0%, $blue-gray 13%, $blue-gray 86%, rgba(137, 159, 174, 0) 100%))
 
 
 /* Box Shadows
