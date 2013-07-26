@@ -101,6 +101,17 @@ header
   +at-breakpoint($break12)
     +span-columns(5, $break12)
 
+// JavaScript fallback
+
+.no-js .viewthought
+  width: 204px
+  background: image-url("logos/viewthought.gif") 0 -49px no-repeat
+  +hide-text
+
+  +at-breakpoint($break9)
+    width: 273px
+    background-position: 0 2px
+
 .wf-loading .logo
   visibility: hidden
 

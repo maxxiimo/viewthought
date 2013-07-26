@@ -267,3 +267,13 @@ $active:   rgba(255, 255, 255, 1)
 #next
   right: 20px
 
+// JavaScript fallback
+
+.no-js #quote
+  background: image-url("pics/silhouette-600-maximum.jpg") 50% 0 no-repeat
+
+  +at-breakpoint($break6)
+    background: image-url("pics/silhouette-1024-maximum.jpg") 50% 15% no-repeat
+
+  #prev, #next
+    +hidden

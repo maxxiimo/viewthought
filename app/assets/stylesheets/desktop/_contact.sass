@@ -17,6 +17,20 @@
   height: 100%
   background-color: $white
 
+// JavaScript fallback
+
+.no-js #map
+  background: image-url("map-320.gif") 50% 50% no-repeat
+
+  +at-breakpoint($break6)
+    background: image-url("map-600.gif") 50% 50% no-repeat
+
+  +at-breakpoint($break9)
+    background: image-url("map-1024.gif") 50% 50% no-repeat
+
+  +at-breakpoint($break12)
+    background: image-url("map-1400.gif") 50% 50% no-repeat
+
 #who-we-are
   position: absolute
   bottom: 0
