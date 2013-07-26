@@ -7,7 +7,6 @@
       %p We would be happy to design and build your site from scratch or improve on what you already have.
     .start-project{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       %button Start A Project
-  -# %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'} scroll
   %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -15,8 +14,7 @@
 %section#blurb
   .container
     .blurb
-      %p We design well thought out, intuitive online user experiences that look exceptional on any device.
-  -# %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down'} scroll
+      %p ViewThought designs well thought out, intuitive online user experiences that look exceptional on any device.
   %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -30,7 +28,22 @@
         %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'The Front End Manifesto TOC'} a freely available e-book
         written by the engineers at ViewThought, provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile and desktop, Front End Code: From a Ruby on Rails perspective.
   -# %a{:href => '#quote', :title => 'Scroll Down', :class => 'manifesto-down'} scroll
-  %a{:href => '#quote', :title => 'Scroll Down', :class => 'manifesto-down'}
+  %a{:href => '#core-values', :title => 'Scroll Down', :class => 'manifesto-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#core-values
+  .container
+    .core-values
+      %h2 Core Values
+      %ol
+        %li
+          %span Build technology solutions that enhance the value proposition of our customers &ndash; add value to customer business.
+        %li
+          %span Integrate beauty, design and optimal user experience in application development.
+        %li
+          %span Address device constraints and opportunities while delivering consistent visual design.
+  %a{:href => '#quote', :title => 'Scroll Down', :class => 'core-values-down'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 

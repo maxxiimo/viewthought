@@ -87,10 +87,6 @@
 .process
   position: relative
 
-  +at-breakpoint($break6)
-    p
-      font-size: 1.159em
-
   +at-breakpoint($break9)
     +span-columns(8, $break9)
     +squish(.5, .5)
@@ -98,9 +94,6 @@
     h2
       margin-top: 1em
       text-align: center
-    p
-      // 1 + .443
-      font-size: 1.443em
     &:before
       +panel-shadow
 
@@ -109,8 +102,6 @@
     +squish(1, 1)
     h2
       margin-top: 1.159em
-    p
-      font-size: 1.681em
 
 /* Circles
 
@@ -317,14 +308,12 @@
       font-size: 2.318em
 
 
-/* Core Values
+/* Closing Blurb
   -----------------------
 
-#core-values
-  position: relative
+#closing-blurb
   padding: $padding-4 0
   background-color: $white
-  z-index: -2
 
   +at-breakpoint($break6)
     padding-top: 0
@@ -336,62 +325,29 @@
   +at-breakpoint($break12)
     padding-bottom: $padding-12
 
-.core-values
+.closing-blurb
   position: relative
-  h2
-    text-align: center
-  li
-    position: relative
-    margin-bottom: 1.618em
-    padding: 1em 1em 1em 3.034em
-    font-size: 1em
-    counter-increment: step
-    list-style: none
-    +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
-    +shadow-3
-    &:nth-child(3)
-      margin-bottom: 0
-    span:before
-      content: counter(step, upper-roman)
-      position: absolute
-      top: 0
-      left: 0
-      width: 1.875em
-      line-height: 1.875em
-      text-align: center
-      color: $white
-      background-color: $orange
-      // background-color: rgba(242, 101, 19, .7)
-      +border-top-left-radius(4px)
+  p
+    margin: 0
 
   +at-breakpoint($break6)
-    li
-      // 1 + .169
-      font-size: 1.169em
-
-  +at-breakpoint($break9)
-    +span-columns(9 omega, $break9)
-    h2
-      margin-top: 2.618em
-      margin-bottom: 1.618em
-    ol
-      text-align: center
-    li
-      display: inline-block
-      width: 7.942em
-      margin: 0 .618em 0 0
-      text-align: left
-      vertical-align: top
-      &:nth-child(3)
-        margin-right: 0
+    p
+      padding-top: 1.875em
+      font-size: 1.159em
     &:before
-      +squish(.5, .5)
       +panel-shadow
 
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    p
+      padding-top: 2em
+      // 1 + .443
+      font-size: 1.443em
+
   +at-breakpoint($break12)
-    +span-columns(12 omega, $break12)
-    li
-      margin-right: 1em
-      width: 11.089em
-      // 1 + .236
-      font-size: 1.236em
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      padding-top: 2.618em
+      font-size: 1.681em
