@@ -102,10 +102,19 @@
   p
     margin: 0
     font-size: 1em
+  .download-button
+    margin-top: 1.618em
+    text-align: center
+    a
+      font-family: $base-font-button
+      +sassy-button(flat, .382em, 1em, $lime)
 
   +at-breakpoint($break6)
     p
       font-size: 1.159em
+    .download-button
+      margin-top: 1.875em
+      text-align: left
 
 
 /* Core Values

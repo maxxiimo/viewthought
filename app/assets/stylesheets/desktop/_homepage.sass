@@ -144,14 +144,18 @@
   +at-breakpoint($break9)
     +span-columns(7, $break9)
     +squish(1, 1)
+    padding-bottom: 210px
+    background: image-url("icons/devices-285.png") 50% 180px no-repeat
     p
       font-size: 2em
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    // 1.875 + .443
+    padding-bottom: 265px
+    background: image-url("icons/devices.png") 50% 220px no-repeat
     p
+      // 1.875 + .443
       font-size: 2.318em
 
 
@@ -179,20 +183,32 @@
   p
     margin: 0
     font-size: 1em
+  .download-button
+    margin-top: 1.618em
+    text-align: center
+    a
+      font-family: $base-font-button
+      +sassy-button(flat, .382em, 1em, $lime)
 
   +at-breakpoint($break6)
     p
       font-size: 1.159em
+    .download-button
+      margin-top: 1.875em
+      text-align: left
 
   +at-breakpoint($break9)
-    +span-columns(5 omega, $break9)
-    +prefix(4)
-    background: image-url("icons/devices-280px.png") 0 1em no-repeat
+    +span-columns(5, $break9)
+    +prefix(3)
+    +pre(.5)
+    // +squish(.5, .5)
+    background: image-url("icons/book-150.png") 55px 8px no-repeat
 
   +at-breakpoint($break12)
-    +span-columns(7 omega, $break12)
-    +prefix(5)
-    background: image-url("icons/devices.png") 0 .5em no-repeat
+    +span-columns(5, $break12)
+    +prefix(3)
+    // padding-bottom: 3em
+    background: image-url("icons/book-200.png") 0 0 no-repeat
 
 
 /* Core Values
