@@ -129,14 +129,14 @@ $(document).ready(function(){
     // },
     // infowindow:{
     //   options:{
-    //     content: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help."
+    //     content: "Let's Meet! We would love to hear all about your project and see how we can help."
     //   },
     //   open: true
     // }
 
     marker:{
       values:[
-        {latLng:[26.7084, -80.0565], data: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help."}
+        {latLng:[26.7084, -80.0565], data: "Let's Meet! We would love to hear all about your project and see how we can help."}
       ],
       options:{
         draggable: false

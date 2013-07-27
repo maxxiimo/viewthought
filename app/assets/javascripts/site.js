@@ -173,14 +173,14 @@ $(document).ready(function(){
     // },
     // infowindow:{
     //   options:{
-    //     content: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."
+    //     content: "Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."
     //   },
     //   open: true
     // }
 
     marker:{
       values:[
-        {latLng:[26.7084, -80.0565], data: "Give us a call. Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."}
+        {latLng:[26.7084, -80.0565], data: "Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."}
       ],
       options:{
         draggable: false
