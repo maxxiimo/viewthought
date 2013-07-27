@@ -7,6 +7,8 @@ Viewthought::Application.routes.draw do
   match 'labs'      => 'pages#labs'
   match 'contact'   => 'pages#contact'
 
+  resources :messages, :controller => 'pages'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

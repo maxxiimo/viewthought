@@ -65,5 +65,9 @@ module Viewthought
 
     # Tell your app to use Mobvious::Manager as Rack middleware.
     config.middleware.use Mobvious::Manager
+
+    # Remove "field_with_errors" div's.
+    # http://stackoverflow.com/questions/5267998/rails-3-field-with-errors-wrapper-changes-the-page-appearance-how-to-avoid-t
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag.html_safe }
   end
 end

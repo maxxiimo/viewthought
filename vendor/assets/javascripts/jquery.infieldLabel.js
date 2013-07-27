@@ -29,7 +29,7 @@
 
         // first time input setup
         base.setup = function () {
-            base.$input = base.$el.find("input[type=text], input[type=password], textarea");
+            base.$input = base.$el.find("input[type=text], input[type=email], input[type=tel], input[type=password], textarea");
 
             // hide label if there's already a value
             base.blur();

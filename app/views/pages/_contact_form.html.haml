@@ -1,0 +1,29 @@
+= form_for @message do |f|
+  - if @message.errors.any?
+    .error_messages
+      %h2
+        = pluralize(@message.errors.count, "error")
+        prohibited this message from being saved:
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
+  %fieldset
+    %p
+      %span.infield-label
+        = f.label 'full_name'
+        = f.text_field :full_name
+    %p
+      %span.infield-label
+        = f.label 'email_address'
+        = f.email_field :email_address
+    %p
+      %span.infield-label
+        = f.label 'phone_number'
+        = f.phone_field :phone_number
+    %p
+      %span.infield-label
+        = f.label 'body', 'Tell us a little about your project'
+        = f.text_area :body, cols: 5, rows: 5
+    %p.button
+      %span.infield-label
+        %button Send
