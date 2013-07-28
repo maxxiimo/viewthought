@@ -1,3 +1,4 @@
-ContactMailer#contact_us_message
-
-= @greeting + ", find me in app/views/contact_mailer/contact_us_message.text.haml"
+%p= @message.full_name
+%p= @message.email_address
+%p= @message.phone_number
+%p= @message.body

@@ -13,6 +13,8 @@
           = render :partial => 'shared/navigation_icon'
           %a{:href => 'tel:561-320-1117', :title => 'Main Number', :class => 'phone'} 561-320-1117
       #main{:role => "main"}
+        - flash.each do |name, msg|
+          = content_tag :div, msg, id: "flash_#{name}"
         = yield
       %footer#ft.vcard{:role => "contentinfo"}
         .container
