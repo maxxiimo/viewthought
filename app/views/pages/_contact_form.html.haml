@@ -1,4 +1,5 @@
-= form_for @message do |f|
+=# form_for @message do |f|
+= form_for @message, :url => { :action => "create" , :anchor => "contact-form" } do |f|
   - if @message.errors.any?
     .error_messages
       %h2

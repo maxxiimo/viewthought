@@ -23,6 +23,8 @@
     %span.screen-reader-text Scroll Down
 
 %section#contact-form
+  - flash.each do |name, msg|
+    = content_tag :div, msg, id: "flash_#{name}"
   .container
     .contact-intro
       %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
