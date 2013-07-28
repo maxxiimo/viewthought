@@ -199,61 +199,79 @@ hr.xlg
 /* Alerts
   -----------------------
 
-$radius: 12px
-
 .info, .success, .warning, .error, .alert
-  margin: 10px 0
-  padding: 5px 20px 5px 45px
-  font-size: 14px
-  // border: 1px solid
+  margin: 0 0 1.618em
+  padding: 1em 1em 1em 40px
   background-repeat: no-repeat
-  background-position: 12px 4px
-  border-radius: $radius
-  -moz-border-radius: $radius
-  -webkit-border-radius: $radius
-  -khtml-border-radius: $radius
+  background-position: 5px 5px
+  +border-radius(.274em)
   h2
+    margin: 0 0 .382em
+    font-size: 1.159em
+  ul
     margin: 0
-  h3
-    display: inline
-    margin: 0
-    font-size: 17px
-    font-weight: bolder
-  p
-    margin: .5em 0
-    font-size: 14px
+  li
+    font-size: 1em
+
+  +at-breakpoint($break6)
+    padding-left: 45px
+    h2
+      // 1 + .274
+      font-size: 1.274em
+    li
+      font-size: 1.159em
+
+  +at-breakpoint($break9)
+    h2
+      // 1 + .443
+      font-size: 1.443em
+    li
+      // 1 + .274
+      font-size: 1.274em
+
+  +at-breakpoint($break12)
+    padding-left: 55px
+    h2
+      font-size: 1.618em
+    li
+      // 1 + .443
+      font-size: 1.443em
 
 .info
   color: $info-drk
   background-color: $info-lgt
-  background-image: url('/images/icons/alert-info.gif')
-  h3
+  background-image: image-url('icons/alert-info.gif')
+  border: 2px solid $info-drk
+  h2
     color: $info-drk
 
 .success
   color: $success-drk
   background-color: $success-lgt
-  background-image: url('/images/icons/alert-success.gif')
-  h3
+  background-image: image-url('icons/alert-success.gif')
+  border: 2px solid $success-drk
+  h2
     color: $success-drk
 
 .warning
   color: $warning-drk
   background-color: $warning-lgt
-  background-image: url('/images/icons/alert-warning.gif')
-  h3
+  background-image: image-url('icons/alert-warning.gif')
+  border: 2px solid $warning-drk
+  h2
     color: $warning-drk
 
 .error
   color: $error-drk
   background-color: $error-lgt
-  background-image: url('/images/icons/alert-error.gif')
-  h3
+  background-image: image-url('icons/alert-error.gif')
+  border: 2px solid $error-drk
+  h2
     color: $error-drk
 
 .alert
   padding-left: 15px
-  border: 1px solid
+  border: 2px solid $success-drk
   color: $success-drk
   img
     float: left

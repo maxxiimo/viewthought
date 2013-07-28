@@ -88,15 +88,25 @@ button, .button
   -----------------------
 
 #flash_notice
-  position: absolute
-  top: 0
-  width: 100%
-  padding: .236em
-  text-align: center
+  @extend .success
   font-size: 1.159em
-  color: $white
-  background-color: $lime
 
   +at-breakpoint($break6)
-    // 1 + .443
-    font-size: 1.443em
+    // 1 + .274
+    font-size: 1.274em
+
+  // position: absolute
+  // top: 0
+  // width: 100%
+  // padding: .236em
+  // text-align: center
+  // font-size: 1.159em
+  // color: $white
+  // background-color: $lime
+
+  // +at-breakpoint($break6)
+  //   // 1 + .443
+  //   font-size: 1.443em
+
+.error_messages
+  @extend .error
