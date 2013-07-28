@@ -8,15 +8,6 @@ $(document).ready(function() {
 
 
 // ===========================
-// Buttons
-// ===========================
-
-$('button').click(function(){
-  document.location.href='/contact#contact-form';
-});
-
-
-// ===========================
 // bgStretcher
 // ===========================
 

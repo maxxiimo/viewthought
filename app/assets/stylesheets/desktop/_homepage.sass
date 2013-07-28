@@ -69,7 +69,7 @@
 .start-project
   text-align: center
   margin-top: 1.618em
-  button
+  .button
     +sassy-button
     font-size: 1.159em
 
@@ -77,7 +77,7 @@
     +span-columns(6, $break6)
     text-align: left
     margin-top: 1.875em
-    button
+    .button
       // 1 + .274
       font-size: 1.274em
 
@@ -85,7 +85,7 @@
     +span-columns(6, $break9)
     +prefix(.5)
     margin-top: 3.034em
-    button
+    .button
       // 1 + .443
       font-size: 1.443em
 
@@ -93,7 +93,7 @@
     +span-columns(6, $break12)
     +prefix(1)
     margin-top: 4.236em
-    button
+    .button
       font-size: 1.618em
 
 
@@ -190,17 +190,16 @@
   p
     margin: 0
     font-size: 1em
-  .download-button
+  .manifesto-button
     margin-top: 1.618em
     text-align: center
-    a
-      font-family: $base-font-button
+    .button
       +sassy-button(flat, .382em, 1em, $lime)
 
   +at-breakpoint($break6)
     p
       font-size: 1.159em
-    .download-button
+    .manifesto-button
       margin-top: 1.875em
       text-align: left
 
