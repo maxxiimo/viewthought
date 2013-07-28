@@ -127,3 +127,29 @@ button, .button
 
 .error_messages
   @extend .error
+
+.info, .success, .warning, .error, .alert
+
+  +at-breakpoint($break6)
+    padding-left: 45px
+    h2
+      // 1 + .274
+      font-size: 1.274em
+    li
+      font-size: 1.159em
+
+  +at-breakpoint($break9)
+    h2
+      // 1 + .443
+      font-size: 1.443em
+    li
+      // 1 + .274
+      font-size: 1.274em
+
+  +at-breakpoint($break12)
+    padding-left: 55px
+    h2
+      font-size: 1.618em
+    li
+      // 1 + .443
+      font-size: 1.443em
