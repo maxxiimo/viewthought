@@ -9,6 +9,8 @@
     margin: 0
   .ipad
     +hidden
+  .hide-text
+    +hidden
 
   +at-breakpoint($break6)
     // 1 + .443
@@ -38,6 +40,8 @@
 
   +at-breakpoint($break12)
     padding: 4.236em 0 $padding-12
+    .hide-text
+      +reveal-hidden
 
 .value
   p
