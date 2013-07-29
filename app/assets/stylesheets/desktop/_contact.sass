@@ -152,13 +152,15 @@
 #contact-hero
   position: relative
   background-color: $white
-  // 12.85 + 3.034
-  height: 15.884em
+  height: 12.85em + 3.034
   &:after
     +panel-shadow(.15)
 
   +at-breakpoint($break9)
-    height: 29.03em
+    height: 33.641em - 1
+
+  +at-breakpoint($break12)
+    height: 33.641em + 3.034
 
 #map
   width: 100%
