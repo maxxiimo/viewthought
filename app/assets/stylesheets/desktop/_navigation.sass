@@ -2,16 +2,16 @@
   -----------------------
 
 #nav-icon
-  float: right
-  +icon-nav(1.3em, 0)
+  float: left
+  +icon-nav(1em + .382, .236em)
+  // To hide the home icon
   // a:first-child
   //   +hidden
 
   +at-breakpoint($break6)
-    float: left
-    margin-left: 1.618em
+    float: right
     a
-      padding: 0 .236em
+      // To reveal the hidden home icon
       // &:first-child
       //   +reveal-hidden-inline
 
@@ -34,8 +34,9 @@
   +hidden
 
   +at-breakpoint($break9)
-    +span-columns(3, 9)
+    +span-columns(4, 9)
     +reveal-hidden
+    text-align: right
     a
       // padding: $nav-pad $nav-pad-9
       padding: 0 $nav-pad-9
@@ -43,7 +44,7 @@
         color: $link-logo
 
   +at-breakpoint($break12)
-    +span-columns(4, 12)
+    +span-columns(5, 12)
     a
       // padding: $nav-pad $nav-pad-12
       padding: 0 $nav-pad-12
