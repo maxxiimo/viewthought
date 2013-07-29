@@ -35,8 +35,8 @@ body
   +container($total-columns, $break6)
   // +susy-grid-background
 
-  +at-breakpoint($break6)
-    // +susy-grid-background
+  // +at-breakpoint($break6)
+  //   +susy-grid-background
 
 img
   vertical-align: middle
@@ -72,15 +72,21 @@ header
     margin-top: .236em
     margin-bottom: 0
 
-// JavaScript fallback
-
-.no-js .viewthought
-  width: 204px
-  background: image-url("logos/viewthought.gif") 0 -49px no-repeat
-  +hide-text
+// TypeKit and JavaScript fallbacks
 
 .wf-loading .logo
   visibility: hidden
+
+.wf-active .logo
+  visibility: visible
+
+.no-js .viewthought,
+.wf-inactive .viewthought
+  width: 192px
+  background: image-url("logos/viewthought.gif") -2px -48px no-repeat
+  +hide-text
+
+// phone number
 
 .phone
   float: right

@@ -8,7 +8,7 @@
       %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
     .contact-form
       = render :partial => 'pages/contact_form'
-  %a{:href => '#email-us', :title => 'Scroll Down', :class => 'contact-hero-down'}
+  %a{:href => '#email-us', :title => 'Scroll Down', :class => 'contact-hero-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
@@ -19,7 +19,7 @@
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
-  %a{:href => '#map', :title => 'Scroll Down', :class => 'email-us-down'}
+  %a{:href => '#map', :title => 'Scroll Down', :class => 'email-us-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 

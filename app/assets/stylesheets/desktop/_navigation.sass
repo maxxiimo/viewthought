@@ -22,7 +22,6 @@
   a
     position: relative
     display: inline-block
-    // padding: $nav-pad $nav-pad-4
     padding: 0 $nav-pad-4
     line-height: 3.034
     font-family: $base-font-nav
@@ -34,11 +33,11 @@
   +hidden
 
   +at-breakpoint($break9)
-    +span-columns(4, 9)
+    +span-columns(4, $break9)
     +reveal-hidden
+    margin-right: 0
     text-align: right
     a
-      // padding: $nav-pad $nav-pad-9
       padding: 0 $nav-pad-9
       &.active
         color: $link-logo
@@ -46,7 +45,6 @@
   +at-breakpoint($break12)
     +span-columns(5, 12)
     a
-      // padding: $nav-pad $nav-pad-12
       padding: 0 $nav-pad-12
 
 #magic-line

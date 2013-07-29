@@ -13,7 +13,10 @@
 
   = stylesheet_link_tag "application"
   -# for production customize modernizr at: http://www.modernizr.com/download/
-  = javascript_include_tag 'modernizr-2.6.2.min'
+  = javascript_include_tag 'modernizr.custom.79790'
 
-  %script{:src => "//use.typekit.net/lhf6dru.js"}
+  %script{:src => "//use.typekit.net/lhf6dru.js", :type => "text/javascript"}
+  :javascript
+    try{Typekit.load();}catch(e){}
+
   = csrf_meta_tag
