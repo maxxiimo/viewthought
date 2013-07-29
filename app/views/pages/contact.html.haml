@@ -2,12 +2,12 @@
 - content_for :title do
   Contact
 
-%section#contact-hero
-  #map
-  #who-we-are
-    .container
-      .who-we-are
-        %p We are a Ruby on Rails development shop located in West Palm Beach, Florida.
+%section#contact-form
+  .container
+    .contact-intro
+      %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
+    .contact-form
+      = render :partial => 'pages/contact_form'
   %a{:href => '#email-us', :title => 'Scroll Down', :class => 'contact-hero-down'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -15,16 +15,17 @@
 %section#email-us
   .container
     .email-us
-      .email-button
-        %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
       %p ViewThought specializes in mobile Web design and development, usability testing, and we can help your team migrate an existing website to mobile.
-  %a{:href => '#contact-form', :title => 'Scroll Down', :class => 'email-us-down'}
+      .email-button
+        %span Email Us:&nbsp;&nbsp;&nbsp;
+        %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
+  %a{:href => '#who-we-are', :title => 'Scroll Down', :class => 'email-us-down'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
-%section#contact-form
-  .container
-    .contact-intro
-      %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
-    .contact-form
-      = render :partial => 'pages/contact_form'
+%section#contact-hero
+  #map
+  #who-we-are
+    .container
+      .who-we-are
+        %p ViewThought is a Ruby on Rails development shop located in West Palm Beach, Florida.

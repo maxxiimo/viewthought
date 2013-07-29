@@ -1,3 +1,150 @@
+/* Contact Form
+  -----------------------
+
+#contact-form
+  position: relative
+  padding: $padding-4 0 $padding-4 / 2
+  color: $dark-white
+  background-color: $black-3
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0 $padding-6 / 2
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0 $padding-9 / 2
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0 $padding-12 / 2
+
+.contact-intro
+  p
+    margin: -.274em 0 1.159em
+
+  +at-breakpoint($break6)
+    p
+      // margin-bottom: 1.159em
+      font-size: 1.159em
+
+  +at-breakpoint($break9)
+    +span-columns(3, $break9)
+    +pre(.5)
+    p
+      // 1 + .443
+      // margin-bottom: 1.443em
+      font-size: 1.443em
+
+  +at-breakpoint($break12)
+    +span-columns(4, $break12)
+    p
+      // margin-bottom: 1.681em
+      font-size: 1.681em
+
+.contact-form
+  p
+    margin: 0 0 1.618em
+  input, textarea
+    width: 100%
+  input
+    height: 1.618em
+    outline: none
+  textarea
+    height: 2.618em
+  .button
+    text-align: center
+  button
+    +sassy-button
+
+  +at-breakpoint($break6)
+    .button
+      text-align: left
+
+  +at-breakpoint($break9)
+    +span-columns(5 omega, $break9)
+    +post(.5)
+    input
+      height: 2em
+    textarea
+      height: 4.236em
+
+  +at-breakpoint($break12)
+    +span-columns(7 omega, $break12)
+    input
+      height: 2.618em
+
+
+/* Email Us
+  -----------------------
+
+#email-us
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:before
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.email-us
+  p
+    margin: 0 0 1.618em
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    p
+      margin-bottom: 1.875em
+      // 1 + .236
+      font-size: 1.236em
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    p
+      // margin-bottom: 3.034em
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(9, $break12)
+    +squish(1.5, 1.5)
+    p
+      // margin-bottom: 4.236em
+      font-size: 1.875em
+
+/* Button
+
+.email-button
+  position: relative
+  text-align: center
+  span
+    position: absolute
+    top: .618em
+    left: 0
+    +hidden
+  a
+    +sassy-button
+    // +sassy-button(flat, .382em, 1.443em, $orange)
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    // 1 + .274
+    font-size: 1.274em
+
+  +at-breakpoint($break9)
+    // 1 + .443
+    font-size: 1.443em
+    span
+      +reveal-hidden
+
+  +at-breakpoint($break12)
+    font-size: 1.618em
+
+
 /* Google Map
   -----------------------
 
@@ -83,147 +230,3 @@
     +squish(1.5, 1.5)
     p
       font-size: 1.875em
-
-
-/* Email Us
-  -----------------------
-
-#email-us
-  position: relative
-  padding: $padding-4 0
-  background-color: $white
-  &:before
-    +panel-shadow(.15)
-
-  +at-breakpoint($break6)
-    padding: $padding-6 0
-
-  +at-breakpoint($break9)
-    padding: $padding-9 0
-
-  +at-breakpoint($break12)
-    padding: $padding-12 0
-
-.email-us
-  p
-    margin: 0
-    font-size: 1.159em
-
-  +at-breakpoint($break6)
-    p
-      // 1 + .236
-      font-size: 1.236em
-
-  +at-breakpoint($break9)
-    +span-columns(8, $break9)
-    +squish(.5, .5)
-    p
-      font-size: 1.618em
-
-  +at-breakpoint($break12)
-    +span-columns(9, $break12)
-    +squish(1.5, 1.5)
-    p
-      font-size: 1.875em
-
-/* Button
-
-.email-button
-  margin-bottom: 1.618em
-  text-align: center
-  a
-    // font-family: $base-font-button
-    +sassy-button
-    // +sassy-button(flat, .382em, 1.443em, $orange)
-    font-size: 1.159em
-
-  +at-breakpoint($break6)
-    margin-bottom: 1.875em
-    a
-      // 1 + .274
-      font-size: 1.274em
-
-  +at-breakpoint($break9)
-    margin-bottom: 3.034em
-    a
-      // 1 + .443
-      font-size: 1.443em
-
-  +at-breakpoint($break12)
-    // margin-bottom: 4.236em
-    a
-      font-size: 1.618em
-
-
-/* Contact Form
-  -----------------------
-
-#contact-form
-  position: relative
-  padding: $padding-4 0
-  color: $dark-white
-  background-color: $black-3
-
-  +at-breakpoint($break6)
-    padding: $padding-6 0
-
-  +at-breakpoint($break9)
-    padding: $padding-9 0
-
-  +at-breakpoint($break12)
-    padding: $padding-12 0
-
-.contact-intro
-  p
-    margin: -.274em 0 1.159em
-
-  +at-breakpoint($break6)
-    p
-      // margin-bottom: 1.159em
-      font-size: 1.159em
-
-  +at-breakpoint($break9)
-    +span-columns(3, $break9)
-    +pre(.5)
-    p
-      // 1 + .443
-      // margin-bottom: 1.443em
-      font-size: 1.443em
-
-  +at-breakpoint($break12)
-    +span-columns(4, $break12)
-    p
-      // margin-bottom: 1.681em
-      font-size: 1.681em
-
-.contact-form
-  p
-    margin: 0 0 1.618em
-  input, textarea
-    width: 100%
-  input
-    height: 1.618em
-    outline: none
-  textarea
-    height: 7.942em
-  .button
-    text-align: center
-  button
-    +sassy-button
-
-  +at-breakpoint($break6)
-    .button
-      text-align: left
-
-  +at-breakpoint($break9)
-    +span-columns(5 omega, $break9)
-    +post(.5)
-    input
-      height: 2em
-    textarea
-      height: 12.85em
-
-  +at-breakpoint($break12)
-    +span-columns(7 omega, $break12)
-    input
-      height: 2.618em
