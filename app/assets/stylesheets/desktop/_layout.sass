@@ -92,26 +92,35 @@ header
     margin-bottom: 0
 
   +at-breakpoint($break9)
-    +span-columns(3, $break9)
+    width: 246px
     margin-top: .274em
     font-size: 1.875em
 
   +at-breakpoint($break12)
     +span-columns(4, $break12)
 
-// JavaScript fallback
-
-.no-js .viewthought
-  width: 204px
-  background: image-url("logos/viewthought.gif") 0 -49px no-repeat
-  +hide-text
-
-  +at-breakpoint($break9)
-    width: 273px
-    background-position: 0 2px
+// TypeKit and JavaScript fallbacks
 
 .wf-loading .logo
   visibility: hidden
+
+.wf-active .logo
+  visibility: visible
+
+.no-js .viewthought,
+.wf-inactive .viewthought
+  width: 192px
+  background: image-url("logos/viewthought.gif") -2px -48px no-repeat
+  +hide-text
+
+  +at-breakpoint($break9)
+    width: 246px
+    background-position: -1px 2px
+
+  +at-breakpoint($break12)
+    +span-columns(4, $break12)
+
+// phone number
 
 .phone
   float: right
