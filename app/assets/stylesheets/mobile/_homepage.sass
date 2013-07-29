@@ -5,11 +5,9 @@
   position: relative
   padding: .716em 0 1.159em
   background-color: $navy-blue
-  // background-color: $blue-gray
 
   +at-breakpoint($break6)
-    // 1 + .443
-    padding: 1.443em 0 1.618em
+    padding: (1em + .443) 0 1.618em
 
 /* Tagline
 
@@ -18,7 +16,6 @@
     margin: 0
     font-size: 1.618em
     color: $dark-white
-    // +single-text-shadow(0, 2px, 2px, false, $navy-blue)
   p
     margin: .443em 0 0
     font-size: 1.159em
@@ -28,17 +25,13 @@
     h2
       font-size: 1.875em
     p
-      // // 1 + .236
-      // font-size: 1.236em
       font-size: 1.159em
 
 .first
-  // +hidden
+  +hidden
 
 .second
-  h2
-    +single-text-shadow(0, 2px, 2px, false, $navy-blue)
-  +hidden
+  // +hidden
 
 /* Button
 
@@ -54,8 +47,7 @@
     text-align: left
     margin-top: 1.875em
     .button
-      // 1 + .274
-      font-size: 1.274em
+      font-size: 1em + .274
 
 
 /* Blurb
@@ -84,7 +76,7 @@
 .blurb
   p
     margin: 0
-    font-size: 1.236em
+    font-size: 1em + .236
     text-align: center
 
   +at-breakpoint($break6)
@@ -166,8 +158,7 @@
 
   +at-breakpoint($break6)
     li
-      // 1 + .169
-      font-size: 1.169em
+      font-size: 1em + .169
 
 
 /* Quote
@@ -184,16 +175,14 @@
   padding-top: $padding-4 / 1.618
   blockquote
     margin: 0
-    // 1 + .169
-    font-size: 1.169em
+    font-size: 1em + .169
     color: $white-smoke
   .giant-quote
     display: block
     float: left
     line-height: 1.2
     padding-right: .443em
-    // 1 + .274
-    font-size: 1.274em
+    font-size: 1em + .274
   .hide-text
     +hidden
   p
@@ -206,8 +195,7 @@
   +at-breakpoint($break6)
     padding-top: $padding-6 / 1.618
     blockquote
-      // 1 + .274
-      font-size: 1.274em
+      font-size: 1em + .274
     .giant-quote
       line-height: 1
       font-size: 1.618em

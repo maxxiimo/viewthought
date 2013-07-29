@@ -45,8 +45,7 @@ button, .button
     cursor: text
 
   .placeholder-focus label
-    // 1.618 + .236
-    top: -1.854em
+    top: -(1.618em + .236)
     bottom: auto
     right: auto
     color: $dark-white
@@ -91,8 +90,7 @@ button, .button
   font-size: 1.159em
 
   +at-breakpoint($break6)
-    // 1 + .274
-    font-size: 1.274em
+    font-size: 1em + .274
 
   // position: absolute
   // top: 0
@@ -104,8 +102,7 @@ button, .button
   // background-color: $lime
 
   // +at-breakpoint($break6)
-  //   // 1 + .443
-  //   font-size: 1.443em
+  //   font-size: 1em + .443
 
 .error_messages
   @extend .error
@@ -115,7 +112,6 @@ button, .button
   +at-breakpoint($break6)
     padding-left: 45px
     h2
-      // 1 + .274
-      font-size: 1.274em
+      font-size: 1em + .274
     li
       font-size: 1.159em

@@ -23,8 +23,6 @@ body
 
 .wrapper
   position: relative
-  // max-width: 1400px
-  // min-width: 320px
   margin: 0 auto
   overflow: hidden
   z-index: -5613201115
@@ -59,8 +57,7 @@ header
   float: left
   line-height: 1em
   margin: .236em 0
-  // 1 + .443
-  font-size: 1.443em
+  font-size: 1em + .443
   a
     font-family: $quatro
     text-transform: uppercase
@@ -69,8 +66,7 @@ header
       text-decoration: none
 
     .char1, .char5
-      // 1 + .146
-      font-size: 1.146em
+      font-size: 1em + .146
 
   +at-breakpoint($break6)
     margin-top: .236em
@@ -89,7 +85,7 @@ header
 .phone
   float: right
   font-family: $base-font-nav
-  font-size: 1.236em
+  font-size: 1em + .236
   text-align: right
   +link-colors($black-1, $black-2, $black-1, $black-1, $black-1)
 
@@ -147,8 +143,7 @@ footer
     font-size: 1.159em
 
 .adr, .tel, .email
-  // 1 - .146
-  font-size: .854em
+  font-size: 1em - .146
 
   +at-breakpoint($break6)
     font-size: 1em
@@ -158,8 +153,7 @@ footer
   +span-columns(4 omega, 4)
   margin-bottom: 1em
   padding-top: 1.382em
-  // 1 - .146
-  font-size: .854em
+  font-size: 1em - .146
 
   +at-breakpoint($break6)
     +span-columns(6 omega, $break6)

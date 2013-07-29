@@ -13,8 +13,7 @@
     +hidden
 
   +at-breakpoint($break6)
-    // 1 + .443
-    padding: 1.443em 0 1.618em
+    padding: (1em + .443) 0 1.618em
 
   +at-breakpoint($break9)
     padding: 2.618em 0 $padding-9
@@ -50,8 +49,7 @@
 
   +at-breakpoint($break6)
     p
-      // 1 + .236
-      font-size: 1.236em
+      font-size: 1em + .236
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -80,8 +78,7 @@
     padding: $padding-6 0
 
   +at-breakpoint($break9)
-    // 12.85 + 1
-    padding: 13.85em 0 $padding-9
+    padding: (12.85em + 1) 0 $padding-9
 
   +at-breakpoint($break12)
     padding-bottom: $padding-12
@@ -175,13 +172,11 @@
   +at-breakpoint($break6)
     .button
       margin-top: 1.875em
-      // 1 + .274
-      font-size: 1.274em
+      font-size: 1em + .274
 
   +at-breakpoint($break9)
     .button
-      // 1 + .443
-      font-size: 1.443em
+      font-size: 1em + .443
 
   +at-breakpoint($break12)
     .button
@@ -282,7 +277,7 @@
 .tech-icons
   p
     margin: 0
-    font-size: 1.236em
+    font-size: 1em + .236
     text-align: center
 
   +at-breakpoint($break6)
@@ -307,9 +302,8 @@
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    // 1.875 + .443
     p
-      font-size: 2.318em
+      font-size: 1.875em + .443
 
 
 /* Closing Blurb
@@ -346,8 +340,7 @@
     +squish(.5, .5)
     p
       padding-top: 2em
-      // 1 + .443
-      font-size: 1.443em
+      font-size: 1em + .443
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
