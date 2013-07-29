@@ -40,7 +40,9 @@
   .container
     .core-values
       %h2 Core Values
-      %ol
+      -# %ol{"data-bottom-top" => "left:100%", "data-100-bottom" => "left:25%;"}
+      -# %ol{"data-bottom-top" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--10-bottom" => "transform:scale(1) rotate(1440deg);opacity:1;"}
+      %ol{"data-bottom-top" => "opacity: 0", "data--100-bottom" => "opacity: 1"}
         %li
           %span Build solutions that enhance the value proposition of our customers &ndash; add value to business.
         %li
