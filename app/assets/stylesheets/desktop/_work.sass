@@ -87,6 +87,10 @@
 
 .process
   position: relative
+  margin-bottom: 1em + .274
+
+  +at-breakpoint($break6)
+    margin-bottom: 1em + .443
 
   +at-breakpoint($break9)
     +span-columns(8, $break9)
@@ -109,11 +113,11 @@
 .span
   +span-columns(4 omega, 4)
   .circle
-    +circle-border($size: (1.618em * 2), $border: 3px, $color: $lime)
-    margin: 0 auto 1em
+    +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+    margin: 0 0 -37px
     span
-      line-height: (1.618em * 1.25)
-      font-size: 1.618em
+      line-height: 2
+      font-size: 1.159em
 
   +at-breakpoint($break6)
     +span-columns(1, $break6)
@@ -147,9 +151,13 @@
 
 .discovery, .development, .repeat
   +span-columns(4 omega, 4)
+  h3
+    margin-left: 55px
 
   +at-breakpoint($break6)
     +span-columns(5 omega, $break6)
+    h3
+      margin-left: 0
 
   +at-breakpoint($break9)
     +span-columns(5, $break9)
