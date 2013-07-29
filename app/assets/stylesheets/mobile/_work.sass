@@ -1,0 +1,189 @@
+/* Value
+  -----------------------
+
+#value
+  position: relative
+  padding: .716em 0 1.159em
+  background-color: $black-3
+  p
+    margin: 0
+  .hide-text
+    +hidden
+
+  +at-breakpoint($break6)
+    padding: (1em + .443) 0 1.618em
+
+.value
+  p
+    font-size: 1.159em
+    color: $dark-white
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1em + .236
+
+
+/* Process
+  -----------------------
+
+#process
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  z-index: -1
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+/* Intro
+
+.process
+  position: relative
+  margin-bottom: 1em + .274
+
+  +at-breakpoint($break6)
+    margin-bottom: 1em + .443
+
+/* Circles
+
+.span
+  +span-columns(4 omega, 4)
+  .circle
+    +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+    margin: 0 0 -37px
+    span
+      line-height: 2
+      font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +span-columns(1, $break6)
+    clear: both
+    .circle
+      +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+      margin: 0
+      span
+        line-height: (1.875em * 1.07)
+        font-size: 1.875em
+
+/* Steps
+
+.discovery, .development, .repeat
+  +span-columns(4 omega, 4)
+
+  +at-breakpoint($break6)
+    +span-columns(5 omega, $break6)
+
+/* Button
+
+.hire-button
+  clear: both
+  text-align: center
+  .button
+    +sassy-button
+    margin-top: 1.618em
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    .button
+      margin-top: 1.875em
+      font-size: 1em + .274
+
+
+/* Case Study
+  -----------------------
+
+#case-study
+  position: relative
+  padding: $padding-4 0
+  background-color: $navy-blue
+  &:after
+    +panel-shadow(.06)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.case-study
+  h2, p, li
+    color: $white-smoke
+
+  p
+    margin-top: 0
+
+  ul
+    margin-bottom: 0
+    padding-bottom: 160px
+    background: image-url("lapostita-250.png") 50% 100% no-repeat
+
+  +at-breakpoint($break6)
+    ul
+      padding-bottom: 200px
+      background: image-url("lapostita-320.png") 50% 100% no-repeat
+
+#slidingDiv
+  display: none
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv
+  display: block
+
+.no-js .show_hide
+  +hidden
+
+
+/* Tech Icons
+  -----------------------
+
+#tech-icons
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+  +hidden
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+    +reveal-hidden
+
+.tech-icons
+  p
+    margin: 0
+    font-size: 1em + .236
+    text-align: center
+
+  +at-breakpoint($break6)
+    span
+      display: block
+      margin: 2.618em auto 0 auto
+      width: 280px
+      height: 149px
+      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
+
+
+/* Closing Blurb
+  -----------------------
+
+#closing-blurb
+  padding: $padding-4 0
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding-top: 0
+    padding-bottom: $padding-6
+
+.closing-blurb
+  position: relative
+  p
+    margin: 0
+
+  +at-breakpoint($break6)
+    p
+      padding-top: 1.875em
+      font-size: 1.159em
+    &:before
+      +panel-shadow

@@ -12,5 +12,106 @@ textarea
 /* Button
   -----------------------
 
-button
+button, .button
   font-family: $base-font-button
+
+
+/* infieldLabel
+  -----------------------
+
+.infield-label
+  display: block
+  position: relative
+
+.infield-label label
+  display: block
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  line-height: 1.8
+  margin: 0
+  font-family: $base-font-nav
+  color: $black-1
+
+/* hidden behind .js class on body */
+
+.js
+  .infield-label label
+    position: absolute
+    padding: 0 .236em
+    font-size: 1.159em
+    white-space: nowrap
+    cursor: text
+
+  .placeholder-focus label
+    top: -(1.618em + .236)
+    bottom: auto
+    right: auto
+    color: $dark-white
+    line-height: 1.618
+    background-color: rgba(242, 101, 19, 0.85)
+    -webkit-box-shadow: 0 0 8px rgba(242, 101, 19, 0.3)
+    -moz-box-shadow: 0 0 8px rgba(242, 101, 19, 0.3)
+    box-shadow: 0 0 8px rgba(242, 101, 19, 0.3)
+
+  .no-rgba .placeholder-focus label
+    background-color: $orange
+
+  .placeholder-focus label:after
+    content: ''
+    position: absolute
+    bottom: -5px
+    left: 10px
+    display: block
+    height: 0
+    border-top: 5px solid rgba(242, 101, 19, 0.8)
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+
+  .no-rgba .placeholder-focus label:after
+    border-top-color: $orange
+
+  // .infield-label-image.placeholder-focus label
+  //   top: -122px
+
+  .placeholder-hide label
+    top: -9999px
+    bottom: auto
+    right: auto
+    left: -9999px
+
+
+/* Notifications
+  -----------------------
+
+#flash_notice
+  @extend .success
+  font-size: 1.159em
+
+  +at-breakpoint($break6)
+    font-size: 1em + .274
+
+  // position: absolute
+  // top: 0
+  // width: 100%
+  // padding: .236em
+  // text-align: center
+  // font-size: 1.159em
+  // color: $white
+  // background-color: $lime
+
+  // +at-breakpoint($break6)
+  //   font-size: 1em + .443
+
+.error_messages
+  @extend .error
+
+.info, .success, .warning, .error, .alert
+
+  +at-breakpoint($break6)
+    padding-left: 45px
+    h2
+      font-size: 1em + .274
+    li
+      font-size: 1.159em

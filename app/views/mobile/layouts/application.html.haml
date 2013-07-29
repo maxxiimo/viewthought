@@ -6,11 +6,14 @@
 
   = head
   %body
-    .container
+    .wrapper#skrollr-body
       %header{:role => "banner"}
-        = render :partial => 'shared/logo'
-        = render :partial => 'shared/navigation-icon'
+        .container
+          = render :partial => 'shared/logo'
+          = render :partial => 'shared/navigation_icon'
       #main{:role => "main"}
         = yield
-      = render :partial => 'shared/footer'
+      %footer#ft.vcard{:role => "contentinfo"}
+        .container
+          = render :partial => 'shared/footer'
     = scripts

@@ -2,41 +2,73 @@
   -----------------------
 
 #nav-icon
-  +span-columns(4 omega, 4)
-  +icon-nav(1.3em, .274em)
+  float: left
+  +icon-nav(1em + .382, .236em)
+  // To hide the home icon
+  // a:first-child
+  //   +hidden
 
   +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
+    float: right
     a
-      padding: 0 .236em
+      // To reveal the hidden home icon
+      // &:first-child
+      //   +reveal-hidden-inline
 
   +at-breakpoint($break9)
     +hidden
 
 #nav
-  margin: .716em 0
   a
-    padding: 0 .236em
+    position: relative
+    display: inline-block
+    // padding: $nav-pad $nav-pad-4
+    padding: 0 $nav-pad-4
+    line-height: 3.034
     font-family: $base-font-nav
-    +link-colors($nav-color, $nav-color, $nav-color, $nav-color, $nav-color)
-  a:first-child
-    padding-left: 0
+    +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
+    &:hover
+      text-decoration: none
+      color: $link-logo
+      background-color: $white-smoke
   +hidden
 
   +at-breakpoint($break9)
-    +span-columns(5 omega, 9)
+    +span-columns(4, 9)
     +reveal-hidden
+    text-align: right
     a
-      padding: 0 .443em
+      // padding: $nav-pad $nav-pad-9
+      padding: 0 $nav-pad-9
+      &.active
+        color: $link-logo
 
   +at-breakpoint($break12)
-    +span-columns(7 omega, 12)
+    +span-columns(5, 12)
     a
-      padding: 0 .716em
+      // padding: $nav-pad $nav-pad-12
+      padding: 0 $nav-pad-12
 
+#magic-line
+  position: absolute
+  display: block
+  top: 0
+  height: .382em
+  background-color: $link-logo
 
-/* Icon Fonts
-  -----------------------
+/* JavaScript fallback */
 
-[data-icon]:before
-  +data-icon
++at-breakpoint($break9)
+  .no-js #nav .active:before
+    content: ""
+    position: absolute
+    top: 0
+    left: $nav-pad-9
+    right: $nav-pad-9
+    height: .382em
+    background-color: $link-logo
+
++at-breakpoint($break12)
+  .no-js #nav .active:before
+    left: $nav-pad-12
+    right: $nav-pad-12

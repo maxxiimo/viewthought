@@ -1,17 +1,51 @@
-.hero
-  .tagline
-    %h1 Builders of Mobile and Desktop Web Solutions
-    %p We would be happy to design and build your site from scratch or improve on what you have.
-  .start-project
-    %button Start A Project
-    %a{:href => 'tel:561-320-1117', :title => 'Main Number'} 561-320-1117
-.testimonial
-  %blockquote Our goal is to provide your customers with immediate value; the moment they land on your page no matter what device they used to get there. You have a unique value proposition. Through design and interaction we would like to help you communicate this, and through our years of experience with both web technologies and business, we would like to help enhance your value proposition.
-  %p - Chris Maxwell, founder of ViewThought
-.book
-  %img{:src => 'http://dummyimage.com/65x65/d4d4d4/fff.gif', :alt => '', :width => '65', :height => '65'}
-  %h3 The Front End Manifesto
-  %p
-    The Front End Manifesto,
-    %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'The Front End Manifesto TOC'} a freely available e-book
-    written by the engineers at ViewThought, provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile and desktop, Front End Code: From a Ruby on Rails perspective.
+= currently_at 'Home'
+
+%section#hero
+  .container
+    .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
+      .first
+        %h2 Take Your Business Website Mobile
+        %p We would be happy to design and build your site from scratch or improve on what you already have.
+      .second
+        %h2 Builders of Mobile Web Solutions
+        %p Going mobile? Need to make your site responsive? Looking to optimize for mobile? We can help.
+    .start-project{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
+      %a{:href => '/contact#contact-form', :title => '', :class => 'button'} Start A Project
+  %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#blurb
+  .container
+    .blurb
+      %p ViewThought designs well thought out, intuitive online user experiences that look exceptional on any device.
+  %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#manifesto
+  .container
+    .manifesto
+      %h2 The Front End Manifesto
+      %p
+        %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'The Front End Manifesto TOC'} A freely available e-book
+        written by the engineers at ViewThought, provides developers with a comprehensive research-based HOW TO on visual design for the nondesigner, and best practices for writing well organized, efficient, mobile to desktop, Front End Code: From a Ruby on Rails perspective.
+      .manifesto-button
+        %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'View The Front End Manifesto', :class => 'button', "data-bottom-top" => "transform:scale(0) rotate(0deg);opacity: 0;", "data-400-top" => "transform:scale(1) rotate(1440deg);opacity:1;"} Review
+  %a{:href => '#core-values', :title => 'Scroll Down', :class => 'manifesto-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#core-values
+  .container
+    .core-values
+      %h2 Core Values
+      -# %ol{"data-bottom-top" => "left:100%", "data-100-bottom" => "left:25%;"}
+      -# %ol{"data-bottom-top" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--10-bottom" => "transform:scale(1) rotate(1440deg);opacity:1;"}
+      %ol{"data-bottom-top" => "opacity: 0", "data--100-bottom" => "opacity: 1"}
+        %li
+          %span Build solutions that enhance the value proposition of our customers &ndash; add value to business.
+        %li
+          %span Integrate beauty, design and optimal user experience in application development.
+        %li
+          %span Address device constraints and opportunities while delivering consistent visual design.

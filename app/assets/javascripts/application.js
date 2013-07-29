@@ -12,4 +12,10 @@
 //
 //= require jquery-1.8.3.min
 //= require jquery.lettering-0.6.1.min
+//= require bgstretcher
+//= require skrollr.min
+//= require skrollr.menu.min
+//= require showHide
+//= require gmap3.min
+//= require jquery.infieldLabel
 //= require site

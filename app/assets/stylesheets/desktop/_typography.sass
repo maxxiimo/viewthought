@@ -16,37 +16,46 @@ h1, h2, h3, h4, h5
   color: $base-header-color
 
 h1
-  // font-size: 2em
   // margin: 0.67em 0
-  font-size: 2em
+  // font-size: 2em
   margin: .618em 0
+  font-size: 2em
 
 h2
-  // font-size: 1.5em
   // margin: 0.83em 0
-  font-size: 1.618em
-  margin: 0.716em 0
+  // font-size: 1.5em
+  margin: 0 0 .236em
+  font-size: 1em + .382
+
+  +at-breakpoint($break6)
+    margin-bottom: .443em
+    font-size: 1em + .443
+
+  +at-breakpoint($break9)
+    font-size: 1.875em
+
+  // +at-breakpoint($break12)
 
 h3
-  // font-size: 1.17em
   // margin: 1em 0
+  // font-size: 1.17em
+  margin: 0 0 1em
   font-size: 1.159em
-  margin: 1em 0
 
 h4
-  // font-size: 1em
   // margin: 1.33em 0
-  font-size: 1em
+  // font-size: 1em
   margin: 1.159em 0
+  font-size: 1em
 
 h5
-  // font-size: 0.83em
   // margin: 1.67em 0
-  font-size: 0.716em
+  // font-size: 0.83em
   margin: 1.618em 0
+  font-size: 0.716em
 
 h6
-  // font-size: 0.67em
   // margin: 2.33em 0
-  font-size: .618em
+  // font-size: 0.67em
   margin: 2.618em 0
+  font-size: .618em

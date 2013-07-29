@@ -9,6 +9,10 @@
   line-height: 1
   -webkit-font-smoothing: antialiased
 
+
+/* Navigation
+  -----------------------
+
 // FIXME ccm: possibly consolidate with next?
 @mixin icon-nav($icon-font-size, $icon-padding)
   a
@@ -38,6 +42,277 @@
       display: inline-block
 
 
+/* Gradients
+  -----------------------
+
+@mixin panel-shadow($opacity: 0.05)
+  content: ""
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 7px
+  +background-image(linear-gradient(rgba(0, 0, 0, $opacity) 0%, transparent 100%))
+
+@mixin panel-linear-gradient($color1, $color2)
+  +background-image(linear-gradient(135deg, lighten($color1, 20), $color2))
+
+@mixin panel-radial-gradient($color1, $color2)
+  +background-image(radial-gradient(100px 100px, lighten($color1, 10), $color2 300px))
+
+
+/* Dividers
+  -----------------------
+
+@mixin divider-top($padding, $width)
+  content: ""
+  position: absolute
+  top: $padding / 1.5
+  right: $width
+  left: $width
+  height: 1px
+  +background-image(linear-gradient(left, rgba(220, 229, 236, 0) 0%, $gray 13%, $gray 86%, rgba(220, 229, 236, 0) 100%))
+
+@mixin divider-bottom($padding, $width)
+  content: ""
+  position: absolute
+  bottom: $padding / 1.5
+  right: $width
+  left: $width
+  height: 1px
+  +background-image(linear-gradient(left, rgba(220, 229, 236, 0) 0%, $gray 13%, $gray 86%, rgba(220, 229, 236, 0) 100%))
+
+
+/* Box Shadows
+  -----------------------
+
+// http://nimbupani.com/drop-shadows-with-css3.html
+// http://nicolasgallagher.com/css-drop-shadows-without-images/
+// http://www.red-team-design.com/how-to-create-slick-effects-with-css3-box-shadow
+// http://www.paulund.co.uk/creating-different-css3-box-shadows-effects
+
+@mixin shadow-1($bg-color: #f5f5f5)
+  position: relative
+  background-color: $bg-color
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 80%
+    bottom: 15px
+    left: 10px
+    width: 50%
+    max-width: 300px
+    // background: #777
+    z-index: -1
+    +box-shadow(0 15px 10px #777)
+    +simple-transform($rotate: -3deg)
+
+  &:after
+    +simple-transform($rotate: 3deg)
+    right: 10px
+    left: auto
+
+@mixin shadow-2($bg-color: #ddd)
+  position: relative
+  color: rgba(0, 0, 0, 0.8)
+  background-color: $bg-color
+  +border-radius(4px)
+  +single-text-shadow($voff: 1px, $blur: 0, $color: #fff)
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    top: 80%
+    bottom: 15px
+    left: 10px
+    // width: 50%
+    width: 60%
+    max-width: 300px
+    // background: rgba(0, 0, 0, 0.7)
+    z-index: -1
+    +box-shadow(0 15px 10px rgba(0, 0, 0, 0.7))
+    +simple-transform($rotate: -3deg)
+
+  &:after
+    +simple-transform($rotate: 3deg)
+    right: 10px
+    left: auto
+
+@mixin shadow-3($bg-color: #fff, $border: #ccc)
+  position: relative
+  background-color: $bg-color
+  border: 1px solid $border
+  +border-radius(4px)
+  +box-shadow(0 1px 4px $border)
+
+  &:before, &:after
+    content: ""
+    position: absolute
+    bottom: 20px
+    width: 70%
+    height: 55%
+    +box-shadow(0 20px 20px rgba(0, 0, 0, 0.4))
+    z-index: -1
+
+  &:before
+    left: 33px
+    +simple-transform($skew-x: -15deg, $rotate: -4deg)
+
+  &:after
+    right: 33px
+    +simple-transform($skew-x: 15deg, $rotate: 4deg)
+
+
+/* Arrows
+  -----------------------
+
+/* using CSS borders
+
+@mixin arrow-up($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-left: $size solid transparent
+  border-right: $size solid transparent
+  border-bottom: $size solid $color
+
+@mixin arrow-down($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-left: $size solid transparent
+  border-right: $size solid transparent
+  border-top: $size solid $color
+
+@mixin arrow-right($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-top: $size solid transparent
+  border-bottom: $size solid transparent
+  border-left: $size solid $color
+
+@mixin arrow-left($size: 20px, $color: $base-font-color)
+  display: block
+  width: 0
+  height: 0
+  border-top: $size solid transparent
+  border-bottom: $size solid transparent
+  border-right: $size solid $color
+
+/* anchors
+
+@mixin arrow-details
+  content: ""
+  position: absolute
+  top: -$arrow-size
+  left: ($arrow-width / 2) - $arrow-size
+  +text-shadow
+
+@mixin arrow-up-anchor($arrow-color-1: $navy-blue, $arrow-color-2: lighten($navy-blue, 15))
+  position: absolute
+  bottom: 1em
+  right: 2.618em
+  width:  $arrow-width
+  font-family: $base-font-button
+  font-size: .716em
+  text-align: center
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  +opacity(.5)
+  &:after
+    +arrow-details
+    +arrow-up($size: $arrow-size, $color: $arrow-color-1)
+  &:hover
+    text-decoration: none
+    &:after
+      +arrow-details
+      +arrow-up($size: $arrow-size, $color: $arrow-color-2)
+
+@mixin arrow-down-anchor($arrow-color-1: $navy-blue, $arrow-color-2: lighten($navy-blue, 15))
+  position: absolute
+  bottom: 1em
+  right: 2.618em
+  width:  $arrow-width
+  font-family: $base-font-button
+  font-size: .716em
+  text-align: center
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  +opacity(.5)
+  &:after
+    +arrow-details
+    +arrow-down($size: $arrow-size, $color: $arrow-color-1)
+  &:hover
+    text-decoration: none
+    &:after
+      +arrow-details
+      +arrow-down($size: $arrow-size, $color: $arrow-color-2)
+
+/* icon font arrow
+
+@mixin icon-arrow-down($arrow-color-1, $arrow-color-2, $font-size)
+  position: absolute
+  bottom: -20px
+  right: 0
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  +opacity(.5)
+  &:hover
+    text-decoration: none
+  span
+    padding-right: 20px
+    font-size: $font-size
+
+@mixin icon-arrow-shuffle($arrow-color-1, $arrow-color-2, $font-size)
+  position: absolute
+  top: 50%
+  +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
+  &:hover
+    text-decoration: none
+  span
+    font-size: $font-size
+
+/* rotating arrow
+
+@mixin arrow-rotate($color1: $blue-gray, $color2: $gray)
+  position: absolute
+  bottom: 5%
+  right: 5%
+  +rotate(45deg)
+  a
+    font-size: 2.618em
+    +text-shadow
+    +opacity(.5)
+    +link-colors($color1, $color2, $color1, $color1, $color1)
+  a:hover
+    text-decoration: none
+
+
+/* Circles
+  -----------------------
+
+@mixin image-portal($size)
+  background: image-url("") 50% 50% no-repeat
+  background-size: cover
+  width: $size
+  height: $size
+  +border-radius($size/2)
+  // +box-shadow(0 6px 0 0 rgba(0, 0, 0, 0.15) inset, 0 0 8px rgba(0, 0, 0, 0.29) inset)
+  +box-shadow(0 6px 0 0 rgba(0, 0, 0, 0.15) inset, 0 0 8px rgba(0, 0, 0, 0.25) inset)
+
+@mixin circle-border($size: 100px, $border: 7px, $color: white)
+  display: block
+  width: $size
+  height: $size
+  text-align: center
+  border: $border solid $color
+  +box-shadow(0 0 5px rgba(0, 0, 0, 0.1))
+  +border-radius($size)
+  img
+    max-width: $size
+    max-height: $size
+    +border-radius($size)
+
+
 /* Helpers
   -----------------------
 
@@ -52,3 +327,34 @@
 @mixin reveal-hidden-inline
   display: inline-block !important
   visibility: visible
+
+
+/* RWD Marker
+  -----------------------
+
+@mixin rwd-marker($box: 75px, $font: 50px)
+  content: "4"
+  position: absolute
+  top: $box
+  right: $box
+  width: $box
+  height: $box
+  line-height: $box * .90
+  font-size: $font
+  text-align: center
+  background-color: red
+  z-index: 1000
+  +border-radius(5px)
+  +opacity(.50)
+
+  +at-breakpoint($break6)
+    background-color: green
+    content: "6"
+
+  +at-breakpoint($break9)
+    background-color: blue
+    content: "9"
+
+  +at-breakpoint($break12)
+    background-color: yellow
+    content: "12"

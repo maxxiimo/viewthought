@@ -1,0 +1,278 @@
+/* Hero
+  -----------------------
+
+#hero
+  position: relative
+  padding: .716em 0 1.159em
+  background-color: $navy-blue
+
+  +at-breakpoint($break6)
+    padding: (1em + .443) 0 1.618em
+
+  +at-breakpoint($break9)
+    padding: 2.618em 0 $padding-9
+
+  +at-breakpoint($break12)
+    padding: 4.236em 0 $padding-12
+
+/* Tagline
+
+.tagline
+  h2
+    margin: 0
+    font-size: 1.618em
+    color: $dark-white
+  p
+    margin: .443em 0 0
+    font-size: 1.159em
+    color: $white-smoke
+
+  +at-breakpoint($break6)
+    h2
+      font-size: 1.875em
+    p
+      font-size: 1.159em
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    h2
+      font-size: 2.618em
+    p
+      font-size: 1em + .236
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    h2
+      font-size: 3.034em
+    p
+      font-size: 1.618em
+
+.first
+  +hidden
+
+.second
+  // +hidden
+
+/* Button
+
+.start-project
+  text-align: center
+  margin-top: 1.618em
+  .button
+    +sassy-button
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +span-columns(6, $break6)
+    text-align: left
+    margin-top: 1.875em
+    .button
+      font-size: 1em + .274
+
+  +at-breakpoint($break9)
+    +span-columns(6, $break9)
+    +prefix(.5)
+    margin-top: 3.034em
+    .button
+      font-size: 1em + .443
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(1)
+    margin-top: 4.236em
+    .button
+      font-size: 1.618em
+
+
+/* Blurb
+  -----------------------
+
+#blurb
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+  &:before
+    +divider-top($padding-4, 45%)
+
+    +at-breakpoint($break6)
+      top: $padding-6 / 1.5
+
+    +at-breakpoint($break9)
+      top: $padding-9 / 1.5
+
+    +at-breakpoint($break12)
+      top: $padding-12 / 1.5
+
+  &:after
+    +divider-bottom($padding-4, 45%)
+
+    +at-breakpoint($break6)
+      bottom: $padding-6 / 1.5
+
+    +at-breakpoint($break9)
+      bottom: $padding-9 / 1.5
+
+    +at-breakpoint($break12)
+      bottom: $padding-12 / 1.5
+
+.blurb
+  p
+    margin: 0
+    font-size: 1em + .236
+    text-align: center
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    padding-bottom: 210px
+    background: image-url("icons/devices-285.png") 50% 180px no-repeat
+    p
+      font-size: 2em
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    padding-bottom: 265px
+    background: image-url("icons/devices.png") 50% 220px no-repeat
+    p
+      font-size: 1.875em + .443
+
+
+/* Manifesto
+  -----------------------
+
+#manifesto
+  position: relative
+  padding:  $padding-4 0
+  padding-bottom: $padding-4
+  background-color: darken($gray, 5)
+  &:after
+    +panel-shadow(.07)
+
+  +at-breakpoint($break6)
+    padding:  $padding-6 0
+
+  +at-breakpoint($break9)
+    padding:  $padding-9 0
+
+  +at-breakpoint($break12)
+    padding:  $padding-12 0
+
+.manifesto
+  p
+    margin: 0
+    font-size: 1em
+  .manifesto-button
+    margin-top: 1.618em
+    text-align: center
+    .button
+      +sassy-button(flat, .382em, 1em, $lime)
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.159em
+    .manifesto-button
+      margin-top: 1.875em
+      text-align: left
+
+  +at-breakpoint($break9)
+    +span-columns(5, $break9)
+    +prefix(3)
+    +pre(.5)
+    // +squish(.5, .5)
+    background: image-url("icons/book-150.png") 55px 8px no-repeat
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(3)
+    background: image-url("icons/book-200.png") 0 0 no-repeat
+    p
+      font-size: 1em + .236
+
+/* Core Values
+  -----------------------
+
+#core-values
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  z-index: -2
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.core-values
+  position: relative
+  h2
+    text-align: center
+  li
+    position: relative
+    margin-bottom: 1.618em
+    padding: 1em 1em 1em 3.034em
+    font-size: 1em
+    counter-increment: step
+    list-style: none
+    +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+    +shadow-3
+    &:nth-child(3)
+      margin-bottom: 0
+    span:before
+      content: counter(step, upper-roman)
+      position: absolute
+      top: 0
+      left: 0
+      width: 1.875em
+      line-height: 1.875em
+      text-align: center
+      color: $white
+      background-color: $orange
+      // background-color: rgba(242, 101, 19, .7)
+      +border-top-left-radius(4px)
+
+  +at-breakpoint($break6)
+    li
+      font-size: 1em + .169
+
+  +at-breakpoint($break9)
+    +span-columns(9 omega, $break9)
+    h2
+      margin-bottom: 1.618em
+    ol
+      text-align: center
+    li
+      display: inline-block
+      width: 7.942em
+      margin: 0 .618em 0 0
+      text-align: left
+      vertical-align: top
+      &:nth-child(3)
+        margin-right: 0
+
+  +at-breakpoint($break12)
+    +span-columns(12 omega, $break12)
+    li
+      margin-right: 1em
+      width: 11.089em
+      font-size: 1em + .236

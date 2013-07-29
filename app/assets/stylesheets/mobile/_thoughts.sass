@@ -1,0 +1,123 @@
+/* Quote
+  -----------------------
+
+#quote
+  position: relative
+  height: 20.792em
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+
+.quote
+  padding-top: $padding-4 / 1.618
+  blockquote
+    margin: 0
+    font-size: 1em + .169
+    color: $white-smoke
+  .giant-quote
+    display: block
+    float: left
+    line-height: 1.2
+    padding-right: .443em
+    font-size: 1em + .274
+  .hide-text
+    +hidden
+  p
+    margin-bottom: 0
+    font-family: $base-font-header
+    font-size: .716em
+    color: $black-2
+    +opacity(.35)
+
+  +at-breakpoint($break6)
+    padding-top: $padding-6 / 1.618
+    blockquote
+      font-size: 1em + .274
+    .giant-quote
+      line-height: 1
+      font-size: 1.618em
+    p
+      font-size: 1em
+
+/* Quotes
+
+.one
+  +span-columns(3, 4)
+
+  +at-breakpoint($break6)
+    +span-columns(4, $break6)
+    +prefix(.5)
+
+.two, .four
+  blockquote
+    padding: .146em
+    padding-left: .382em
+    background-color: rgba(0, 0, 0, .05)
+
+.three
+  +single-text-shadow(0, 1px, 2px, false, $black-3)
+
+.two, .three, .four
+  +span-columns(4 omega, 4)
+
+  +at-breakpoint($break6)
+    +span-columns(5, $break6)
+    +prefix(.5)
+
+.two
+  blockquote
+    background-color: rgba(0, 0, 0, .25)
+
+.two, .three, .four
+  display: none
+
+/* bgStretcher Controls
+
+$inactive: rgba(255, 255, 255, .4)
+$active:   rgba(255, 255, 255, 1)
+
+.bgstretcher-page
+  height: 20.792em
+
+#controls
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  font-size: 2em
+  text-align: center
+  ul
+    margin: 0
+  li
+    display: inline
+  a
+    +link-colors($white-smoke, $white, $white-smoke, $white-smoke, $white-smoke)
+    +link-colors($inactive, $active, $inactive, $inactive, $inactive)
+    +single-transition(color, 1s)
+    outline: 0
+    &:hover
+      text-decoration: none
+  .showPage a
+    color: $white
+    color: $active
+
+#prev, #next
+  +icon-arrow-shuffle($inactive, $active, 4.236em)
+  margin-top: -4.236em
+
+#prev
+  left: 20px
+
+#next
+  right: 20px
+
+// JavaScript fallback
+
+.no-js #quote
+  background: image-url("pics/silhouette-600-maximum.jpg") 50% 0 no-repeat
+
+  +at-breakpoint($break6)
+    background: image-url("pics/silhouette-1024-maximum.jpg") 50% 15% no-repeat
+
+  #prev, #next
+    +hidden

@@ -1,25 +1,71 @@
+= currently_at 'Work'
 - content_for :title do
   Work
 
-%h2 Work
-%p.work-quote "ViewThought provides the handshake between beautiful design and logic." - John Dill, Creative Director at ViewThought
-.who-we-are
-  %h3 Who We Are
-  %p We are a Ruby on Rails development shop located in West Palm Beach, Florida. We specialize in mobile Web development, design, usability testing, and we can fill any front end development gaps you may have on your team.
-.portfolio
-  = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
-  = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
-  = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
-  = link_to image_tag('http://dummyimage.com/200x200/d4d4d4/fff.gif', :alt => '', :width => '200', :height => '200'), root_path, :title => ''
-.core-competencies
-  %h3 Core Competencies
-  %ul
-    %li Build technology solutions that enhance the value proposition of our customers &ndash; add value to customer business.
-    %li Integrate beauty, design and optimal user experience in application development.
-    %li Address device constraints and opportunities while simultaneously delivering consistent visual design.
-.our-code
-  %h3 Our Code
-  %p
-    If you'd really like to see what's under the hood, take a look at the
-    %a{:href => 'https://github.com/maxxiimo/viewthought', :title => 'ViewThought code base'} code base
-    for this site.
+%section#value
+  .container
+    .value
+      %p
+        Your business has a unique value proposition. Through design and interaction we can help communicate this.
+        %span.hide-text Through our unique experience in both web development and business&ndash;help to enhance it.
+      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
+  %a{:href => '#our-process', :title => 'Scroll Down', :class => 'value-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#process
+  .container
+    .process
+      %h2#our-process Our Process
+    .span
+      .circle
+        %span{"aria-hidden" => "true", "data-icon" => "&#x2691;".html_safe}
+    .discovery
+      %h3 1. Discovery
+      %p Through discovery we get to know you, your company, project, market, target audience, goals, key business requirements, and so forth. We come to an understanding, a plan, and an agreement. From discovery we get to work!
+    .span
+      .circle
+        %span{"aria-hidden" => "true", "data-icon" => "&#x2692;".html_safe}
+    .development
+      %h3 2. Development
+      %p We believe in an iterative approach, where all stakeholders are involved in producing your project&ndash;from start to finish. We like to deploy often and frequently, iteratively, and with the goal of reaching perfection.
+    .span
+      .circle
+        %span{"aria-hidden" => "true", "data-icon" => "&#x27f3;".html_safe}
+    .repeat
+      %h3 3. Repeat
+      %p The discovery process never ends, but continuously feeds into development. We value feedback, from you, from your team, from your customers.
+    .hire-button
+      %a{:href => '/contact#contact-form', :title => 'Send us a quick message.', :class => 'button'} Want to Hire Us?
+  %a{:href => '#case-study', :title => 'Scroll Down', :class => 'process-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#case-study
+  .container
+    .case-study
+      %h2 Case Study
+      %p La Postita Eco-cabins and Farm needed to boost their bottom line. They planned to accomplish this through improved marketing, increasing agricultural output, and by employing cost cutting measures. They came to ViewThought for help; specifically, to increase their share of the Costa Rican ecotourism market.
+      #slidingDiv
+        %p La Postita's website was key to their marketing strategy. The old website was built in 2006. With an international customer base and all advertising pointing to LaPostita.com, something new was badly needed. Their goals:
+        %ul
+          %li Modernize while maintaining the old look and feel
+          %li Multilingual content: English, German and Spanish
+          %li A responsive mobile experience
+          %li A password-protected, role-based content management system
+      %a.show_hide{:href => "#", :rel => "#slidingDiv"}
+        Read More
+  %a{:href => '#tech-icons', :title => 'Scroll Down', :class => 'case-study-down'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#tech-icons
+  .container
+    .tech-icons
+      %p Technologies we love to use every day:
+      %span.ir Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
+
+%section#closing-blurb
+  .container
+    .closing-blurb
+      %p Using the technologies we love, ViewThought brings together great design and great code to make mobile and Web applications work and look amazing across any device&ndash;no matter how big or small.

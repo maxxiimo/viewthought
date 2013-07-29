@@ -15,9 +15,21 @@ html, button, input, select, textarea
   color: $base-font-color
 
 body
+  position: relative
   font-size: $base-font-size
   line-height: $base-line-height
   background-color: $bg-body
+  z-index: -5613201117
+
+.wrapper
+  position: relative
+  margin: 0 auto
+  overflow: hidden
+  z-index: -5613201115
+
+#main
+  position: relative
+  z-index: -1000000
 
 .container
   +container($total-columns, $break6)
@@ -33,38 +45,53 @@ img
 /* Header
   -----------------------
 
+// navigation in _navigation.sass
+
 header
   +clearfix
-  margin-bottom: .716em
+  border-top: .382em solid $gray
+  background-color: $bg-header
+  +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
 
 .viewthought
-  +span-columns(4 omega, 4)
-  margin-top: .236em
-  margin-bottom: .236em
+  float: left
+  line-height: 1em
+  margin: .236em 0
+  font-size: 1em + .443
+  a
+    font-family: $quatro
+    text-transform: uppercase
+    +link-colors($link-logo, $link-logo, $link-logo, $link-logo, $link-logo)
+    &:hover
+      text-decoration: none
+
+    .char1, .char5
+      font-size: 1em + .146
 
   +at-breakpoint($break6)
-    +span-columns(3, $break6)
+    margin-top: .236em
     margin-bottom: 0
 
-.logo
-  padding-left: 45px
-  line-height: 1em
-  font-family: $quatro
-  // 1 + .443
-  font-size: 1.443em
-  text-transform: uppercase
-  +link-colors($logo-color, $logo-color, $logo-color, $logo-color, $logo-color)
-  background: image-url("http://dummyimage.com/30x30/d4d4d4/fff.gif") 0 0 no-repeat
+// JavaScript fallback
 
-  &:hover
-    text-decoration: none
+.no-js .viewthought
+  width: 204px
+  background: image-url("logos/viewthought.gif") 0 -49px no-repeat
+  +hide-text
 
-  .char1, .char5
-    // 1 + .146
-    font-size: 1.146em
-
-.wf-loading .viewthought
+.wf-loading .logo
   visibility: hidden
+
+.phone
+  float: right
+  font-family: $base-font-nav
+  font-size: 1em + .236
+  text-align: right
+  +link-colors($black-1, $black-2, $black-1, $black-1, $black-1)
+
+.phone
+  margin-top: .065em
+  +hidden
 
 
 /* Footer
@@ -72,9 +99,17 @@ header
 
 footer
   clear: both
-  padding-top: .716em
+  +clearfix
+  position: relative
+  padding-top: $padding-4
+  background-color: $bg-footer
   h3, p
     margin: 0
+  &:after
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding-top: $padding-6
 
 .footer-hide
   +hidden
@@ -104,20 +139,19 @@ footer
   +at-breakpoint($break6)
     font-size: 1.159em
 
-.copyright
-  +span-columns(4 omega, 4)
-  // 1 - .146
-  font-size: .854em
-  color: $font-gray
-  text-align: center
-
-  +at-breakpoint($break6)
-    +span-columns(6 omega, $break6)
-    margin: .716em 0 1em
-
 .adr, .tel, .email
-  // 1 - .146
-  font-size: .854em
+  font-size: 1em - .146
 
   +at-breakpoint($break6)
     font-size: 1em
+
+.copyright
+  position: relative
+  +span-columns(4 omega, 4)
+  margin-bottom: 1em
+  padding-top: 1.382em
+  font-size: 1em - .146
+
+  +at-breakpoint($break6)
+    +span-columns(6 omega, $break6)
+    padding-top: 1.875em

@@ -2,13 +2,18 @@
   -----------------------
 
 #nav-icon
-  +span-columns(4 omega, 4)
-  +icon-nav(1.3em, .274em)
+  float: left
+  +icon-nav(1em + .382, .236em)
+  // To hide the home icon
+  // a:first-child
+  //   +hidden
 
   +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
+    float: right
     a
-      padding: 0 .236em
+      // To reveal the hidden home icon
+      // &:first-child
+      //   +reveal-hidden-inline
 
 
 /* Icon Fonts

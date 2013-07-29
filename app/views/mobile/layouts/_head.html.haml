@@ -1,10 +1,11 @@
 %head
   %meta{:charset => "utf-8"}
   %link{:rel => "dns-prefetch", :href => "//ajax.googleapis.com"}
+  %link{:rel => "dns-prefetch", :href => "//maps.googleapis.com"}
   %link{:rel => "dns-prefetch", :href => "//use.typekit.net"}
   %title= content_for?(:title) ? ("ViewThought - " + yield(:title)) : "ViewThought"
 
-  %meta{:name => "description", :content => "XXX"}
+  %meta{:name => "description", :content => "Builders of Mobile and Desktop Web Solutions"}
   %meta{:name => "HandheldFriendly", :content => "True"}
   %meta{:name => "MobileOptimized", :content => "320"}
   %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
@@ -30,16 +31,8 @@
   -#   (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
 
   = stylesheet_link_tag "mobile"
-  = javascript_include_tag "application"
+  -# for production customize modernizr at: http://www.modernizr.com/download/
+  = javascript_include_tag 'modernizr-2.6.2.min'
+
   %script{:src => "//use.typekit.net/lhf6dru.js"}
   = csrf_meta_tag
-
-  -# *******************************************************************************************
-  -# MORE OPTIONS: (https://gist.github.com/849231)
-
-  -# consider using below meta tags if you want to disable format detection by default
-  -# %meta{:name => "format-detection", :content => "telephone=no"}
-  -# %meta{:name => "format-detection", :content => "address=no"}
-
-  -# consider using below link tag if the page is duplicate content of a desktop version
-  -# %link{:rel => "canonical"}

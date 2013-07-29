@@ -1,0 +1,358 @@
+/* Value
+  -----------------------
+
+#value
+  position: relative
+  padding: .716em 0 1.159em
+  background-color: $black-3
+  p
+    margin: 0
+  .ipad
+    +hidden
+  .hide-text
+    +hidden
+
+  +at-breakpoint($break6)
+    padding: (1em + .443) 0 1.618em
+
+  +at-breakpoint($break9)
+    padding: 2.618em 0 $padding-9
+    .ipad
+      +reveal-hidden
+      position: absolute
+      bottom: -168px
+      left: 50%
+      margin-left: -150px
+      width: 300px
+      height: 381px
+      z-index: 5613201117
+    &:after
+      content: ""
+      position: absolute
+      bottom: -200px
+      left: 50%
+      display: block
+      margin-left: -309px
+      width: 618px
+      height: 454px
+      background: image-url("ipad.png") 0 0 no-repeat
+
+  +at-breakpoint($break12)
+    padding: 4.236em 0 $padding-12
+    .hide-text
+      +reveal-hidden
+
+.value
+  p
+    font-size: 1.159em
+    color: $dark-white
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1em + .236
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    padding-bottom: 213px
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      font-size: 1.875em
+
+
+/* Process
+  -----------------------
+
+#process
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  z-index: -1
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: (12.85em + 1) 0 $padding-9
+
+  +at-breakpoint($break12)
+    padding-bottom: $padding-12
+
+/* Intro
+
+.process
+  position: relative
+  margin-bottom: 1em + .274
+
+  +at-breakpoint($break6)
+    margin-bottom: 1em + .443
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    margin-bottom: 1.875em
+    h2
+      margin-top: 1em
+      text-align: center
+    &:before
+      +panel-shadow
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    h2
+      margin-top: 1.159em
+
+/* Circles
+
+.span
+  +span-columns(4 omega, 4)
+  .circle
+    +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+    margin: 0 0 -37px
+    span
+      line-height: 2
+      font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +span-columns(1, $break6)
+    clear: both
+    .circle
+      +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+      margin: 0
+      span
+        line-height: (1.875em * 1.07)
+        font-size: 1.875em
+
+  +at-breakpoint($break9)
+    +span-columns(2, $break9)
+    +pre(1)
+    .circle
+      +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
+      span
+        line-height: (2.618em * .75)
+        font-size: 2.618em
+
+  +at-breakpoint($break12)
+    +span-columns(2, $break12)
+    +pre(2)
+    .circle
+      +circle-border($size: (3.034em * 2), $color: $lime)
+      span
+        line-height: (3.034em * .63)
+        font-size: 3.034em
+
+/* Steps
+
+.discovery, .development, .repeat
+  +span-columns(4 omega, 4)
+  h3
+    margin-left: 55px
+
+  +at-breakpoint($break6)
+    +span-columns(5 omega, $break6)
+    h3
+      margin-left: 0
+
+  +at-breakpoint($break9)
+    +span-columns(5, $break9)
+    +post(1)
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +post(2)
+
+/* Button
+
+.hire-button
+  clear: both
+  text-align: center
+  .button
+    +sassy-button
+    margin-top: 1.618em
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    .button
+      margin-top: 1.875em
+      font-size: 1em + .274
+
+  +at-breakpoint($break9)
+    .button
+      font-size: 1em + .443
+
+  +at-breakpoint($break12)
+    .button
+      font-size: 1.618em
+
+
+/* Case Study
+  -----------------------
+
+#case-study
+  position: relative
+  padding: $padding-4 0
+  background-color: $navy-blue
+  &:after
+    +panel-shadow(.06)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.case-study
+  h2, p, li
+    color: $white-smoke
+
+  p
+    margin-top: 0
+
+  ul
+    margin-bottom: 0
+    padding-bottom: 160px
+    background: image-url("lapostita-250.png") 50% 100% no-repeat
+
+  +at-breakpoint($break6)
+    ul
+      padding-bottom: 200px
+      background: image-url("lapostita-320.png") 50% 100% no-repeat
+
+  +at-breakpoint($break9)
+    ul
+      padding-bottom: 300px
+      background: image-url("lapostita-480.png") 50% 100% no-repeat
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(6)
+    padding-bottom: 16px
+    background: image-url("lapostita-480.png") -14px 16px no-repeat
+    ul
+      margin-bottom: 1em
+      padding-bottom: 0
+      background: none
+
+#slidingDiv
+  display: none
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+  +at-breakpoint($break12)
+    font-size: .716em
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv
+  display: block
+
+.no-js .show_hide
+  +hidden
+
+
+/* Tech Icons
+  -----------------------
+
+#tech-icons
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+  +hidden
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+    +reveal-hidden
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.tech-icons
+  p
+    margin: 0
+    font-size: 1em + .236
+    text-align: center
+
+  +at-breakpoint($break6)
+    span
+      display: block
+      margin: 2.618em auto 0 auto
+      width: 280px
+      height: 149px
+      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    p
+      font-size: 1.875em
+    span
+      margin-top: 2.618em
+      width: 563px
+      height: 69px
+      background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      font-size: 1.875em + .443
+
+
+/* Closing Blurb
+  -----------------------
+
+#closing-blurb
+  padding: $padding-4 0
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding-top: 0
+    padding-bottom: $padding-6
+
+  +at-breakpoint($break9)
+    padding-bottom: $padding-9
+
+  +at-breakpoint($break12)
+    padding-bottom: $padding-12
+
+.closing-blurb
+  position: relative
+  p
+    margin: 0
+
+  +at-breakpoint($break6)
+    p
+      padding-top: 1.875em
+      font-size: 1.159em
+    &:before
+      +panel-shadow
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    p
+      padding-top: 2em
+      font-size: 1em + .443
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      padding-top: 2.618em
+      font-size: 1.681em

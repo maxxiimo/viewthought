@@ -10,13 +10,18 @@
 
   = head
   %body
-    .container
+    .wrapper#skrollr-body
       = chromeframe
       %header{:role => 'banner'}
-        = render :partial => 'shared/logo'
-        = render :partial => 'shared/navigation-text'
-        = render :partial => 'shared/navigation-icon'
+        .container
+          = render :partial => 'shared/logo'
+          = yield :navigation_text
+          = render :partial => 'shared/navigation_icon'
+          %a{:href => 'callto:561-320-1117', :title => 'Main Number', :class => 'phone desktop'} 561-320-1117
+          %a{:href => 'tel:561-320-1117', :title => 'Main Number', :class => 'phone mobile'} 561-320-1117
       #main{:role => 'main'}
         = yield
-      = render :partial => 'shared/footer'
+      %footer#ft.vcard{:role => "contentinfo"}
+        .container
+          = render :partial => 'shared/footer'
     = scripts

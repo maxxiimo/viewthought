@@ -1,0 +1,333 @@
+/* Icon Fonts
+  -----------------------
+
+[data-icon]:before
+  +data-icon
+
+.screen-reader-text
+  position: absolute
+  top: -9999px
+  left: -9999px
+
+.screen-reader-text-left
+  position: absolute
+  left: -9999px
+
+.screen-reader-text-right
+  position: absolute
+  right: -9999px
+
+
+/* Smallscreen Hide
+  -----------------------
+
+.smallscreen-hide
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+
+
+/* Box Shadows
+  -----------------------
+
+.box-shadow-example-1,
+.box-shadow-example-2,
+.box-shadow-example-3,
+.box-shadow-example-4,
+.box-shadow-example-5,
+.box-shadow-example-6,
+.box-shadow-example-7
+  float: left
+  margin-right: 30px
+  padding-top: 35px
+  width: 100px
+  height: 65px
+  text-align: center
+
+.box-shadow-example-1
+  // height: 7px
+  +background-image(linear-gradient(rgba(0, 0, 0, .05) 0%, transparent 100%))
+
+.box-shadow-example-2
+  +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
+
+.box-shadow-example-3
+  +box-shadow(0 0 5px rgba(0, 0, 0, 0.15))
+
+.box-shadow-example-4
+  +box-shadow(0 1px 3px #aaa)
+
+.box-shadow-example-5
+  +box-shadow(0 0 10px 0 rgba(25, 25, 25, 0.25))
+
+.box-shadow-example-6
+  +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+
+.box-shadow-example-7
+  +box-shadow(0 0 6px 1px rgba(0, 0, 0, 0.75))
+
+// .box-shadow-example-1 1
+// .box-shadow-example-2 2
+// .box-shadow-example-3 3
+// .box-shadow-example-4 4
+// .box-shadow-example-5 5
+// .box-shadow-example-6 6
+// .box-shadow-example-7 7
+
+
+/* Page Curls
+  -----------------------
+
+.curl
+  border-radius: 0 0 120px 120px / 0 0 6px 6px
+
+
+/* Highlighters
+  -----------------------
+
+.highlighter
+  background-color: yellow
+
+::-moz-selection
+  background: $highlight
+  text-shadow: none
+
+::selection
+  background: $highlight
+  text-shadow: none
+
+
+/* Arrows
+  -----------------------
+
+// .hero-down
+
+//   +at-breakpoint($break6)
+//     +reveal-hidden
+
+// .hero-down
+//   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
+
+// %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'} scroll
+
+.arrow-up-anchor
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+    +arrow-up-anchor
+
+/* icon arrow
+
+.hero-down
+  +icon-arrow-down($blue-gray, $white, 4.236em)
+  @extend .smallscreen-hide
+
+.blurb-down
+  +icon-arrow-down(lighten($blue-gray, 15), $blue-gray, 4.236em)
+  @extend .smallscreen-hide
+
+.manifesto-down
+  +icon-arrow-down($navy-blue, $white, 4.236em)
+  @extend .smallscreen-hide
+
+.quote-down
+  +icon-arrow-down($blue-gray, $gray, 4.236em)
+  @extend .smallscreen-hide
+
+.value-down, .case-study-down, .contact-hero-down
+  +icon-arrow-down($white, darken($white, 20), 4.236em)
+  @extend .smallscreen-hide
+
+.process-down, .core-values-down, .email-us-down
+  +icon-arrow-down(darken($gray, 20), $gray, 4.236em)
+  @extend .smallscreen-hide
+
+
+/* Columns
+  -----------------------
+
+.cols li,
+.cols p
+  clear: both
+
+.col1, .col2, .col3, .col4, .col5
+  float: left
+  display: block
+  // display: inline-block
+
+
+/* Tables
+  -----------------------
+
+// to help tables remember to inherit
+
+table
+  font-size: inherit
+  font: 100%
+
+td
+  vertical-align: top
+
+
+/* Horizontal Rulers
+  -----------------------
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid $ruler
+  margin: 1em 0
+  padding: 0
+
+hr.spacer
+  background: $spacer
+  color: $spacer
+  border-top: 1px solid $spacer
+hr.sm
+  margin-bottom: .5em
+hr.med
+  margin-bottom: 1em
+hr.lg
+  margin-bottom: 2em
+hr.xlg
+  margin-bottom: 3em
+
+
+/* Alerts
+  -----------------------
+
+.info, .success, .warning, .error, .alert
+  margin: 0 0 1.618em
+  padding: 1em 1em 1em 40px
+  background-repeat: no-repeat
+  background-position: 5px 5px
+  +border-radius(.274em)
+  h2
+    margin: 0 0 .382em
+    font-size: 1.159em
+  ul
+    margin: 0
+  li
+    font-size: 1em
+
+.info
+  color: $info-drk
+  background-color: $info-lgt
+  background-image: image-url('icons/alert-info.gif')
+  border: 2px solid $info-drk
+  h2
+    color: $info-drk
+
+.success
+  color: $success-drk
+  background-color: $success-lgt
+  background-image: image-url('icons/alert-success.gif')
+  border: 2px solid $success-drk
+  h2
+    color: $success-drk
+
+.warning
+  color: $warning-drk
+  background-color: $warning-lgt
+  background-image: image-url('icons/alert-warning.gif')
+  border: 2px solid $warning-drk
+  h2
+    color: $warning-drk
+
+.error
+  color: $error-drk
+  background-color: $error-lgt
+  background-image: image-url('icons/alert-error.gif')
+  border: 2px solid $error-drk
+  h2
+    color: $error-drk
+
+.alert
+  padding-left: 15px
+  border: 2px solid $success-drk
+  color: $success-drk
+  img
+    float: left
+    margin-right: 15px
+
+
+/* Avatars
+  -----------------------
+
+.avatar
+  // border: 1px solid #999
+  padding: 5px
+  +box-shadow(0 1px 3px #aaa)
+
+
+/* Other
+  -----------------------
+
+.nobold
+  font-weight: normal
+
+.block
+  display: block
+
+.inline
+  +inline-block
+
+.nowrap
+  white-space: nowrap
+
+.overflow
+  overflow: hidden
+
+/* positioning
+
+.clear
+  clear: both
+
+.rgt, .tar
+  text-align: right !important
+
+.lft, .tal
+  text-align: left !important
+
+.ctr, .tac
+  text-align: center !important
+
+.center
+  margin: 0 auto
+
+.right
+  float: right !important
+
+.left
+  float: left !important
+
+.nofloat
+  float: none
+
+.vtop
+  vertical-align: top
+
+.vbot
+  vertical-align: bottom
+
+.vmid
+  vertical-align: middle
+
+/* padding tweaks
+
+.nopad
+  padding: 0 !important
+
+.pads
+  padding: 20px !important
+
+/* margin tweaks
+
+.nomarg
+  margin: 0 !important
+
+.margs
+  margin: 20px !important
