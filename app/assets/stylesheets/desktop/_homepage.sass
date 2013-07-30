@@ -15,75 +15,147 @@
   +at-breakpoint($break12)
     padding: 4.236em 0 $padding-12
 
-/* Tagline
+  /* Tagline */
 
-.tagline
-  h2
-    margin: 0
-    font-size: 1.618em
-    color: $dark-white
-  p
-    margin: .443em 0 0
-    font-size: 1.159em
-    color: $white-smoke
-
-  +at-breakpoint($break6)
+  .tagline
     h2
-      font-size: 1.875em
+      margin: 0
+      font-size: 1.618em
+      color: $dark-white
     p
+      margin: .443em 0 0
+      font-size: 1.159em
+      color: $white-smoke
+
+    +at-breakpoint($break6)
+      h2
+        font-size: 1.875em
+      p
+        font-size: 1.159em
+
+    +at-breakpoint($break9)
+      +span-columns(8, $break9)
+      +squish(.5, .5)
+      h2
+        font-size: 2.618em
+      p
+        font-size: 1em + .236
+
+    +at-breakpoint($break12)
+      +span-columns(10, $break12)
+      +squish(1, 1)
+      h2
+        font-size: 3.034em
+      p
+        font-size: 1.618em
+
+  .first
+    +hidden
+
+  .second
+    // +hidden
+
+  /* Button */
+
+  .start-project
+    text-align: center
+    margin-top: 1.618em
+    .button
+      +sassy-button
       font-size: 1.159em
 
-  +at-breakpoint($break9)
-    +span-columns(8, $break9)
-    +squish(.5, .5)
-    h2
-      font-size: 2.618em
-    p
-      font-size: 1em + .236
+    +at-breakpoint($break6)
+      +span-columns(6, $break6)
+      text-align: left
+      margin-top: 1.875em
+      .button
+        font-size: 1em + .274
 
-  +at-breakpoint($break12)
-    +span-columns(10, $break12)
-    +squish(1, 1)
-    h2
-      font-size: 3.034em
-    p
-      font-size: 1.618em
+    +at-breakpoint($break9)
+      +span-columns(6, $break9)
+      +prefix(.5)
+      margin-top: 3.034em
+      .button
+        font-size: 1em + .443
 
-.first
-  +hidden
+    +at-breakpoint($break12)
+      +span-columns(6, $break12)
+      +prefix(1)
+      margin-top: 4.236em
+      .button
+        font-size: 1.618em
 
-.second
-  // +hidden
 
-/* Button
+/* Hero Picture
+  -----------------------
 
-.start-project
-  text-align: center
-  margin-top: 1.618em
-  .button
-    +sassy-button
-    font-size: 1.159em
+#hero-pic
+  position: relative
+  height: 20.792em
+  background-color: $blue-gray
 
   +at-breakpoint($break6)
-    +span-columns(6, $break6)
-    text-align: left
-    margin-top: 1.875em
-    .button
-      font-size: 1em + .274
 
   +at-breakpoint($break9)
-    +span-columns(6, $break9)
-    +prefix(.5)
-    margin-top: 3.034em
-    .button
-      font-size: 1em + .443
+    padding-top: 3.034em
+    height: 46.971em - 10
 
   +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +prefix(1)
-    margin-top: 4.236em
-    .button
+    padding-top: 4.909em
+
+  /* Tagline */
+
+  .tagline
+    padding-top: .716em
+    h2
+      margin: 0
       font-size: 1.618em
+    p
+      margin: .443em 0 0
+      font-size: 1.159em
+
+    +at-breakpoint($break6)
+      +span-columns(4, $break6)
+      h2
+        font-size: 1.875em
+      p
+        font-size: 1em + .169
+
+    +at-breakpoint($break9)
+      +span-columns(6, $break9)
+      +prefix(1)
+      h2
+        font-size: 2.618em
+      p
+        font-size: 1.618em
+
+    +at-breakpoint($break12)
+      +span-columns(6, $break12)
+      +prefix(2)
+
+  /* Button */
+
+  .start-project
+    text-align: center
+    .button
+      margin-top: 1em + .274
+      +sassy-button
+      font-size: 1.159em
+
+    +at-breakpoint($break6)
+      +span-columns(6, $break6)
+      text-align: left
+
+    +at-breakpoint($break9)
+      +span-columns(6, $break9)
+      +prefix(1)
+      margin-top: 1.875em
+      .button
+        font-size: 1em + .443
+
+    +at-breakpoint($break12)
+      +span-columns(6, $break12)
+      +prefix(2)
 
 
 /* Blurb

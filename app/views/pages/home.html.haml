@@ -4,12 +4,23 @@
   .container
     .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       .first
-        %h2 Take Your Business Website Mobile
+        %h2 Builders of Mobile Web Solutions
         %p We would be happy to design and build your site from scratch or improve on what you already have.
       .second
-        %h2 Builders of Mobile Web Solutions
+        %h2 Take Your Business Website Mobile
         %p Going mobile? Need to make your site responsive? Looking to optimize for mobile? We can help.
     .start-project{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
+      %a{:href => '/contact#contact-form', :title => '', :class => 'button'} Start A Project
+  %a{:href => '#hero-pic', :title => 'Scroll Down', :class => 'hero-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#hero-pic
+  .container
+    .tagline{"data-0" => "opacity: 0", "data-350" => "opacity: 1"}
+      %h2 Builders of Mobile and Desktop Web Solutions
+      %p We would be happy to design and build your site from scratch or improve on what you have.
+    .start-project{"data-0" => "opacity: 0", "data-350" => "opacity: 1"}
       %a{:href => '/contact#contact-form', :title => '', :class => 'button'} Start A Project
   %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
