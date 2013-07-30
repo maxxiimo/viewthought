@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @message = Message.new
   end
 
   def work
@@ -12,7 +13,6 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @message = Message.new
   end
 
   def create
