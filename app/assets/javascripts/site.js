@@ -80,6 +80,48 @@ $(function() {
 
 
 // ===========================
+// Magic Line
+// ===========================
+
+// http://css-tricks.com/jquery-magicline-navigation/
+
+$(function() {
+
+    var $el, leftPos, newWidth,
+        $mainNav = $("#social-links"),
+
+        // http://stackoverflow.com/questions/590602/padding-or-margin-value-in-pixels-as-integer-using-jquery
+        $current = $(".current"),
+        paddingBoth = ($current.innerWidth() - $current.width()),
+        paddingLeft = paddingBoth / 2;
+
+    $mainNav.append("<span id='magic-line'></span>");
+    var $magicLine = $("#magic-line");
+
+    $magicLine
+        // .width($current.width())
+        // .css("left", $current.position().left + paddingLeft)
+        .data("origLeft", $magicLine.position().left)
+        .data("origWidth", $magicLine.width());
+
+    $("#social-links a").hover(function() {
+        $el = $(this);
+        leftPos = $el.position().left;
+        newWidth = $el.width() + paddingBoth;
+        $magicLine.stop().animate({
+            left: leftPos,
+            width: newWidth
+        });
+    }, function() {
+        $magicLine.stop().animate({
+            left: $magicLine.data("origLeft"),
+            width: $magicLine.data("origWidth")
+        });
+    });
+});
+
+
+// ===========================
 // show Hide
 // ===========================
 

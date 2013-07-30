@@ -73,7 +73,7 @@ header
 .viewthought
   float: left
   line-height: 1em
-  margin: .236em 0
+  margin: .236em 0 0
   font-size: 1em + .443
   a
     font-family: $quatro
@@ -84,10 +84,6 @@ header
 
     .char1, .char5
       font-size: 1em + .146
-
-  +at-breakpoint($break6)
-    margin-top: .236em
-    margin-bottom: 0
 
   +at-breakpoint($break9)
     width: 246px
@@ -120,12 +116,43 @@ header
 
 // social icons
 
-// FIXME ccm: possibly convert to non-list?
-.social-links
-  +icon-nav-list(1em, .236em)
+#social-links
+  +icon-nav(1em + .236, .236em)
+  float: left
+  a
+    display: inline-block
+    line-height: 1.6
+    padding: 0 $nav-pad-4
+    +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
 
   +at-breakpoint($break6)
-    font-size: 1.159em
+    float: right
+    a
+      padding: 0 $nav-pad-6
+      font-size: 1em + .382
+
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+    text-align: center
+    a
+      line-height: 2.2
+      padding: 0 $nav-pad-9
+
+  +at-breakpoint($break12)
+    +span-columns(5, 12)
+    a
+      padding: 0 $nav-pad-12
+      &:hover
+        text-decoration: none
+        color: $link-logo
+        background-color: $white-smoke
+
+#magic-line
+  position: absolute
+  display: block
+  top: 0
+  height: .382em
+  background-color: $link-logo
 
 // phone number
 
