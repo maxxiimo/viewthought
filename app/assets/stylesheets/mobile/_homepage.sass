@@ -50,6 +50,47 @@
       font-size: 1em + .274
 
 
+/* Hero Picture
+  -----------------------
+
+#hero-pic
+  position: relative
+  height: 20.792em
+  background-color: $blue-gray
+
+  /* Tagline */
+
+  .tagline
+    padding-top: .716em
+    h2
+      margin: 0
+      font-size: 1.618em
+    p
+      margin: .443em 0 0
+      font-size: 1.159em
+
+    +at-breakpoint($break6)
+      +span-columns(4, $break6)
+      h2
+        font-size: 1.875em
+      p
+        font-size: 1em + .169
+
+
+  /* Button */
+
+  .start-project
+    text-align: center
+    .button
+      margin-top: 1em + .274
+      +sassy-button
+      font-size: 1.159em
+
+    +at-breakpoint($break6)
+      +span-columns(6, $break6)
+      text-align: left
+
+
 /* Blurb
   -----------------------
 
