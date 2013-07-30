@@ -251,8 +251,9 @@
 
 @mixin icon-arrow-down($arrow-color-1, $arrow-color-2, $font-size)
   position: absolute
-  bottom: -20px
+  bottom: 0
   right: 0
+  line-height: 1
   +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
   +opacity(.5)
   &:hover
