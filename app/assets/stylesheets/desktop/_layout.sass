@@ -118,6 +118,15 @@ header
   +at-breakpoint($break12)
     +span-columns(4, $break12)
 
+// social icons
+
+// FIXME ccm: possibly convert to non-list?
+.social-links
+  +icon-nav-list(1em, .236em)
+
+  +at-breakpoint($break6)
+    font-size: 1.159em
+
 // phone number
 
 .phone
@@ -138,116 +147,3 @@ header
 
   +at-breakpoint($break12)
     +span-columns(3 omega, $break12)
-
-
-/* Footer
-  -----------------------
-
-footer
-  clear: both
-  +clearfix
-  position: relative
-  padding-top: $padding-4
-  background-color: $bg-footer
-  h3, p
-    margin: 0
-  &:after
-    +panel-shadow(.15)
-
-  +at-breakpoint($break6)
-    padding-top: $padding-6
-
-  +at-breakpoint($break9)
-    padding-top: $padding-9
-
-  +at-breakpoint($break12)
-    padding-top: $padding-12
-
-.footer-hide
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden-inline
-
-.address
-  +span-columns(2, 4)
-
-  +at-breakpoint($break6)
-    +span-columns(3, $break6)
-
-  +at-breakpoint($break9)
-    +span-columns(3, 9)
-
-  +at-breakpoint($break12)
-    +span-columns(4, 12)
-
-.connect
-  +span-columns(2 omega, 4)
-
-  +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
-
-  +at-breakpoint($break9)
-    +span-columns(3, $break9)
-
-  +at-breakpoint($break12)
-    +span-columns(4, $break12)
-    a.tel:after
-      content: " |"
-
-// FIXME ccm: possibly convert to non-list?
-.social-links
-  +icon-nav-list(1em, .236em)
-
-  +at-breakpoint($break6)
-    font-size: 1.159em
-
-.adr, .tel, .email
-  font-size: 1em - .146
-
-  +at-breakpoint($break6)
-    font-size: 1em
-
-.related
-  ul
-    margin: 0
-  +hidden
-
-  +at-breakpoint($break9)
-    +span-columns(3 omega, 9)
-    +reveal-hidden
-
-  +at-breakpoint($break12)
-    +span-columns(4 omega, 12)
-
-.copyright
-  position: relative
-  +span-columns(4 omega, 4)
-  margin-bottom: 1em
-  padding-top: 1.382em
-  font-size: 1em - .146
-
-  +at-breakpoint($break6)
-    +span-columns(6 omega, $break6)
-    padding-top: 1.875em
-
-  +at-breakpoint($break9)
-    +span-columns(8 omega, $break9)
-    +prefix(1)
-    margin-bottom: 0
-    height: 35px
-    background: image-url("logos/ojala.png") 0 1em no-repeat
-
-  +at-breakpoint($break12)
-    +span-columns(11 omega, $break12)
-    +prefix(1)
-
-  // &:after
-  //   content: ""
-  //   position: absolute
-  //   top: 0
-  //   left: 0
-  //   right: 75%
-  //   height: 5px
-  //   +background-image(linear-gradient(left, $base-font-color, lighten($base-font-color, 30)))
-  //   +opacity(.25)
