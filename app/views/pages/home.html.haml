@@ -1,5 +1,9 @@
 = currently_at 'Home'
 
+-#  ===========================
+-#  Home
+-#  ===========================
+
 %section#hero
   .container
     .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
@@ -60,3 +64,143 @@
           %span Integrate beauty, design and optimal user experience in application development.
         %li
           %span Address device constraints and opportunities while delivering consistent visual design.
+
+-#  ===========================
+-#  Work
+-#  ===========================
+
+%section#value
+  .container
+    .value
+      %p
+        Your business has a unique value proposition. Through design and interaction we can help communicate this.
+        %span.hide-text Through our unique experience in both web development and business&ndash;help to enhance it.
+      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
+  %a{:href => '#our-process', :title => 'Scroll Down', :class => 'value-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#process
+  .container
+    .process
+      %h2#our-process Our Process
+    .span
+      .circle
+        %span{"aria-hidden" => "true", "data-icon" => "&#x2691;".html_safe}
+    .discovery
+      %h3 1. Discovery
+      %p Through discovery we get to know you, your company, project, market, target audience, goals, key business requirements, and so forth. We come to an understanding, a plan, and an agreement. From discovery we get to work!
+    .span
+      .circle
+        %span{"aria-hidden" => "true", "data-icon" => "&#x2692;".html_safe}
+    .development
+      %h3 2. Development
+      %p We believe in an iterative approach, where all stakeholders are involved in producing your project&ndash;from start to finish. We like to deploy often and frequently, iteratively, and with the goal of reaching perfection.
+    .span
+      .circle
+        %span{"aria-hidden" => "true", "data-icon" => "&#x27f3;".html_safe}
+    .repeat
+      %h3 3. Repeat
+      %p The discovery process never ends, but continuously feeds into development. We value feedback, from you, from your team, from your customers.
+    .hire-button
+      %a{:href => '/contact#contact-form', :title => 'Send us a quick message.', :class => 'button'} Want to Hire Us?
+  %a{:href => '#case-study', :title => 'Scroll Down', :class => 'process-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#case-study
+  .container
+    .case-study
+      %h2 Case Study
+      %p La Postita Eco-cabins and Farm needed to boost their bottom line. They planned to accomplish this through improved marketing, increasing agricultural output, and by employing cost cutting measures. They came to ViewThought for help; specifically, to increase their share of the Costa Rican ecotourism market.
+      #slidingDiv
+        %p La Postita's website was key to their marketing strategy. The old website was built in 2006. With an international customer base and all advertising pointing to LaPostita.com, something new was badly needed. Their goals:
+        %ul
+          %li Modernize while maintaining the old look and feel
+          %li Multilingual content: English, German and Spanish
+          %li A responsive mobile experience
+          %li A password-protected, role-based content management system
+      %a.show_hide{:href => "#", :rel => "#slidingDiv"}
+        Read More
+  %a{:href => '#tech-icons', :title => 'Scroll Down', :class => 'case-study-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#tech-icons
+  .container
+    .tech-icons
+      %p Technologies we love to use every day:
+      %span.ir Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
+
+%section#closing-blurb
+  .container
+    .closing-blurb
+      %p Using the technologies we love, ViewThought brings together great design and great code to make mobile and Web applications work and look amazing across any device&ndash;no matter how big or small.
+
+-#  ===========================
+-#  Thoughts
+-#  ===========================
+
+%section#quote
+  .container
+    -# .quote{"data-400-top" => "opacity: 0", "data-top" => "opacity: 1"}
+    .quote
+      .one
+        %blockquote
+          %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+          A website should provide its visitors with immediate value, the moment they land on a page&ndash;no matter what device they used to get there.
+          %span.hide-text Here at ViewThought we think a lot about this and how best to deliver value in an ever-changing technology landscape.
+        %p Chris Maxwell, founder of ViewThought
+      .two
+        %blockquote
+          %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+          Think of us as the handshake between beautiful design and logic.
+      .three
+        %blockquote
+          %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+          As a company we work together around the idea that what you see on the Web, no matter the device, should be easy-to-use and make sense for the device you're using.
+      .four
+        %blockquote
+          %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+          Our goal is to add value to the companies we serve. Give us a call or email us to learn more.
+  %a{:href => 'javascript:;', :title => 'Next Slide', :id => 'prev', :class => 'autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x21d0;".html_safe}
+    %span.screen-reader-text-left Previous Slide
+  %a{:href => 'javascript:;', :title => 'Next Slide', :id => 'next', :class => 'autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x21d2;".html_safe}
+    %span.screen-reader-text-right Next Slide
+  #controls
+
+-# %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :mozallowfullscreen => "", :scrolling => "no", :src => "http://embed.ted.com/talks/jinha_lee_a_tool_that_lets_you_touch_pixels.html", :webkitallowfullscreen => "", :width => "560"}
+
+-#  ===========================
+-#  Contact
+-#  ===========================
+
+%section#contact-form
+  .container
+    .contact-intro
+      %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
+    .contact-form
+      = render :partial => 'pages/contact_form'
+  %a{:href => '#email-us', :title => 'Scroll Down', :class => 'contact-hero-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#email-us
+  .container
+    .email-us
+      %p ViewThought specializes in mobile Web design and development, usability testing, and we can help your team migrate an existing website to mobile.
+      .email-button
+        %span Email Us:&nbsp;&nbsp;&nbsp;
+        %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
+  %a{:href => '#map', :title => 'Scroll Down', :class => 'email-us-down autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#contact-hero
+  #map
+  #who-we-are
+    .container
+      .who-we-are
+        %p We are a Ruby on Rails development shop located in West Palm Beach, Florida.
