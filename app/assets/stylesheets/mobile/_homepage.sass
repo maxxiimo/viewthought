@@ -1,62 +1,14 @@
-/* Hero
+/* Photo Hero
   -----------------------
 
-#hero
+#photo-hero
   position: relative
+  height: 20.792em
   padding: .716em 0 1.159em
-  background-color: $navy-blue
+  background-color: $white
 
   +at-breakpoint($break6)
     padding: (1em + .443) 0 1.618em
-
-/* Tagline
-
-.tagline
-  h2
-    margin: 0
-    font-size: 1.618em
-    color: $dark-white
-  p
-    margin: .443em 0 0
-    font-size: 1.159em
-    color: $white-smoke
-
-  +at-breakpoint($break6)
-    h2
-      font-size: 1.875em
-    p
-      font-size: 1.159em
-
-.first
-  +hidden
-
-.second
-  // +hidden
-
-/* Button
-
-.start-project
-  text-align: center
-  margin-top: 1.618em
-  .button
-    +sassy-button
-    font-size: 1.159em
-
-  +at-breakpoint($break6)
-    +span-columns(6, $break6)
-    text-align: left
-    margin-top: 1.875em
-    .button
-      font-size: 1em + .274
-
-
-/* Hero Picture
-  -----------------------
-
-#hero-pic
-  position: relative
-  height: 20.792em
-  background-color: $blue-gray
 
   /* Tagline */
 
@@ -74,21 +26,29 @@
       h2
         font-size: 1.875em
       p
-        font-size: 1em + .169
+        font-size: 1.159em
 
+  .first
+    +hidden
+
+  .second
+    // +hidden
 
   /* Button */
 
   .start-project
     text-align: center
+    margin-top: 1.618em
     .button
-      margin-top: 1em + .274
       +sassy-button
       font-size: 1.159em
 
     +at-breakpoint($break6)
       +span-columns(6, $break6)
       text-align: left
+      margin-top: 1.875em
+      .button
+        font-size: 1em + .274
 
 
 /* Blurb
