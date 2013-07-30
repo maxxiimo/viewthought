@@ -22,6 +22,7 @@
 %section#blurb
   .container
     .blurb
+    -# .blurb{"data-400-top" => "opacity: 0", "data-top" => "opacity: 1"}
       %p ViewThought designs well thought out, intuitive online user experiences that look exceptional on any device.
   %a{:href => '#manifesto', :title => 'Scroll Down', :class => 'blurb-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
@@ -128,7 +129,7 @@
   .container
     .tech-blurb
       %p Using the technologies we love, ViewThought brings together great design and great code to make mobile and Web applications work and look amazing across any device&ndash;no matter how big or small.
-  %a{:href => '#value', :title => 'Scroll Down', :class => 'tech-down autoblur'}
+  %a{:href => '#quote', :title => 'Scroll Down', :class => 'tech-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
@@ -138,7 +139,6 @@
 
 %section#quote
   .container
-    -# .quote{"data-400-top" => "opacity: 0", "data-top" => "opacity: 1"}
     .quote
       .one
         %blockquote
@@ -190,14 +190,17 @@
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
-  %a{:href => '#map', :title => 'Scroll Down', :class => 'email-us-down autoblur'}
+  %a{:href => '#contact-map', :title => 'Scroll Down', :class => 'email-us-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
-%section#contact-hero
+%section#contact-map
   #map
   #who-we-are
     .container
       .who-we-are
         %p ViewThought is a Ruby on Rails development shop located in West Palm Beach, Florida.
-  %a{:href => '#skrollr-body', :title => 'Scroll to top', :class => 'arrow-up-anchor autoblur'} top
+  -# %a{:href => '#skrollr-body', :title => 'Scroll to top', :class => 'arrow-up-anchor autoblur'} top
+  %a{:href => '#skrollr-body', :title => 'Scroll Up', :class => 'contact-map-up autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x27f0;".html_safe}
+    %span.screen-reader-text Scroll Down

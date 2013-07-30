@@ -101,12 +101,8 @@
 /* Arrows
   -----------------------
 
-// .arrow-up-anchor
-//   +hidden
-
-//   +at-breakpoint($break6)
-//     +reveal-hidden
-//     +arrow-up-anchor
+.arrow-up-anchor
+  +arrow-up-anchor($arrow-color-1: $dark-white, $arrow-color-2: $black-2)
 
 /* icon arrow
 
@@ -128,9 +124,13 @@
 .process-down, .core-values-down, .tech-down, .quote-dow, .email-us-down
   +icon-arrow-down(darken($gray, 20), $gray, 2.618em)
 
+.contact-map-up
+  +icon-arrow-down($white, darken($white, 20), 2.618em)
+
 .hero-down, .blurb-down, .manifesto-down, .quote-down,
 .core-values-down, .value-down, .case-study-down, .contact-hero-down,
-.process-down, .core-values-down, .tech-down, .quote-down, .email-us-down
+.process-down, .core-values-down, .tech-down, .quote-down, .email-us-down,
+.contact-map-up
   // @extend .smallscreen-hide
   +at-breakpoint($break6)
     span
