@@ -15,7 +15,10 @@
 .tagline
   h2
     margin: 0
+    padding: 0 .443em
     font-size: 1.618em
+    background-color: rgba(255, 255, 255, .05)
+    +border-radius(4px)
   p
     margin: .443em 0 0
     font-size: 1.159em
@@ -33,19 +36,27 @@
 .second
   // +hidden
 
+/* Mobile Icons
+
+.mobile-icons
+  font-size: 1.875em
+  color: rgba(255, 255, 255, .15)
+  +hidden
+
+  +at-breakpoint($break6)
+    +span-columns(4, $break6)
+    font-size: 3.034em
+
 /* Button
 
 .start-project
-  text-align: center
-  margin-top: 1.618em
+  margin-top: 1.159em
   .button
     +sassy-button
     font-size: 1.159em
 
   +at-breakpoint($break6)
     +span-columns(6, $break6)
-    text-align: left
-    margin-top: 1.875em
     .button
       font-size: 1em + .274
 
