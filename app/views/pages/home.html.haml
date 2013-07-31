@@ -55,7 +55,7 @@
     -# .how{"data-800" => "opacity: 0", "data-1000" => "opacity: 1"}
     .how{"data-500" => "opacity: 0", "data-600" => "opacity: 1"}
       %h2 How do we do it?
-      %p To begin  we follow a tried and true agile development process that delivers results.
+      %p To begin we follow a tried and true agile development process that delivers results.
   %a{:href => '#process', :title => 'Scroll Down', :class => 'how-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -103,7 +103,9 @@
 
 %section#books
   .container
-    %p.yes YES! In just a few panels down we will share testimonials and examples of our work, but to really understand how passionate we are about our craft &ndash; how we think and code &ndash; take a look at our e-book's below; required reading for every new member of our team...
+    %p.yes
+      %span YES!
+      To really understand how passionate we are about our craft &ndash; how we think and code &ndash; take a look at our e-book's below; required reading for every new member of our team...
     .manifesto
       %h2 The Front End Manifesto
       %p Written by the engineers at ViewThought, The Front End Manifesto provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile to desktop, Front End Code: From a Ruby on Rails perspective.
@@ -248,4 +250,4 @@
   -# %a{:href => '#skrollr-body', :title => 'Scroll to top', :class => 'arrow-up-anchor autoblur'} top
   %a{:href => '#skrollr-body', :title => 'Scroll Up', :class => 'contact-map-up autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f0;".html_safe}
-    %span.screen-reader-text Scroll Down
+    %span.screen-reader-text Scroll Up

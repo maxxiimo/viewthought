@@ -13,6 +13,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @message = Message.new
   end
 
   def create
