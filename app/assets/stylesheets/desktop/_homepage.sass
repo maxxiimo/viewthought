@@ -1,16 +1,18 @@
-/* Blue Hero
+/* Photo Hero
   -----------------------
 
-#blue-hero
+#photo-hero
   position: relative
+  height: 20.792em
   padding: .716em 0 1.159em
-  background-color: $navy-blue
+  background-color: $white
 
   +at-breakpoint($break6)
     padding: (1em + .443) 0 1.618em
 
   +at-breakpoint($break9)
     padding: 2.618em 0 $padding-9
+    height: 46.971em - 10
 
   +at-breakpoint($break12)
     padding: 4.236em 0 $padding-12
@@ -21,29 +23,30 @@
   h2
     margin: 0
     font-size: 1.618em
-    color: $dark-white
   p
     margin: .443em 0 0
     font-size: 1.159em
-    color: $white-smoke
 
   +at-breakpoint($break6)
+    +span-columns(4, $break6)
     h2
       font-size: 1.875em
     p
       font-size: 1.159em
 
   +at-breakpoint($break9)
-    +span-columns(8, $break9)
-    +squish(.5, .5)
+    +span-columns(7, $break9)
+    +prefix(.5)
     h2
       font-size: 2.618em
     p
       font-size: 1em + .236
+      span
+        display: block
 
   +at-breakpoint($break12)
-    +span-columns(10, $break12)
-    +squish(1, 1)
+    +span-columns(8, $break12)
+    +prefix(1)
     h2
       font-size: 3.034em
     p
@@ -84,6 +87,94 @@
     margin-top: 4.236em
     .button
       font-size: 1.618em
+
+
+/* Blue Hero
+  -----------------------
+
+// #blue-hero
+//   position: relative
+//   padding: .716em 0 1.159em
+//   background-color: $navy-blue
+
+//   +at-breakpoint($break6)
+//     padding: (1em + .443) 0 1.618em
+
+//   +at-breakpoint($break9)
+//     padding: 2.618em 0 $padding-9
+
+//   +at-breakpoint($break12)
+//     padding: 4.236em 0 $padding-12
+
+// /* Tagline
+
+// .tagline
+//   h2
+//     margin: 0
+//     font-size: 1.618em
+//     color: $dark-white
+//   p
+//     margin: .443em 0 0
+//     font-size: 1.159em
+//     color: $white-smoke
+
+//   +at-breakpoint($break6)
+//     h2
+//       font-size: 1.875em
+//     p
+//       font-size: 1.159em
+
+//   +at-breakpoint($break9)
+//     +span-columns(8, $break9)
+//     +squish(.5, .5)
+//     h2
+//       font-size: 2.618em
+//     p
+//       font-size: 1em + .236
+
+//   +at-breakpoint($break12)
+//     +span-columns(10, $break12)
+//     +squish(1, 1)
+//     h2
+//       font-size: 3.034em
+//     p
+//       font-size: 1.618em
+
+// .first
+//   +hidden
+
+// .second
+//   // +hidden
+
+// /* Button
+
+// .start-project
+//   text-align: center
+//   margin-top: 1.618em
+//   .button
+//     +sassy-button
+//     font-size: 1.159em
+
+//   +at-breakpoint($break6)
+//     +span-columns(6, $break6)
+//     text-align: left
+//     margin-top: 1.875em
+//     .button
+//       font-size: 1em + .274
+
+//   +at-breakpoint($break9)
+//     +span-columns(6, $break9)
+//     +prefix(.5)
+//     margin-top: 3.034em
+//     .button
+//       font-size: 1em + .443
+
+//   +at-breakpoint($break12)
+//     +span-columns(6, $break12)
+//     +prefix(1)
+//     margin-top: 4.236em
+//     .button
+//       font-size: 1.618em
 
 
 /* Blurb
@@ -154,29 +245,26 @@
       font-size: 1.875em + .443
 
 
-/* Photo
+/* Process Intro
   -----------------------
 
-#photo
+#how
   position: relative
-  height: 20.792em
-  padding: .716em 0 1.159em
+  padding: $padding-4 0
   background-color: $blue-gray
 
   +at-breakpoint($break6)
-    padding: (1em + .443) 0 1.618em
+    padding: $padding-6 0
 
   +at-breakpoint($break9)
-    padding: 2.618em 0 $padding-9
-    height: 46.971em - 10
+    padding: $padding-9 0
 
   +at-breakpoint($break12)
-    padding: 4.236em 0 $padding-12
+    padding: $padding-12 0
 
-.photo
-  +span-columns(3, 4)
-  padding-top: .716em
+.how
   h2
+    line-height: 1
     margin: 0
     font-size: 1.618em
   p
@@ -184,15 +272,14 @@
     font-size: 1.159em
 
   +at-breakpoint($break6)
-    +span-columns(4, $break6)
     h2
       font-size: 1.875em
     p
       font-size: 1.159em
 
   +at-breakpoint($break9)
-    +span-columns(6, $break9)
-    +prefix(.5)
+    +span-columns(7, $break9)
+    +squish(1, 1)
     h2
       font-size: 3.034em
     p
@@ -200,7 +287,7 @@
 
   +at-breakpoint($break12)
     +span-columns(8, $break12)
-    +prefix(1)
+    +squish(2, 2)
     h2
       font-size: 4.909em
     p

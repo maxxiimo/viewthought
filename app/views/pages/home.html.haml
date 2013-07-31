@@ -2,7 +2,7 @@
 -#  Home
 -#  ===========================
 
-%section#blue-hero
+%section#photo-hero
   .container
     .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       .first
@@ -10,27 +10,44 @@
         %p We would be happy to design and build your site from scratch or improve on what you already have.
       .second
         %h2 Take Your Business Website Mobile
-        %p Going mobile? Need to make your site responsive? Looking to optimize for mobile? We can help.
+        %p
+          Going mobile? Need to make your site responsive?
+          %span Looking to optimize for mobile? We can help.
     .start-project{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       %a{:href => '#contact-form', :title => '', :class => 'button'} Start A Project
   %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
+/ %section#blue-hero
+/   .container
+/     .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
+/       .first
+/         %h2 Builders of Mobile Web Solutions
+/         %p We would be happy to design and build your site from scratch or improve on what you already have.
+/       .second
+/         %h2 Take Your Business Website Mobile
+/         %p Going mobile? Need to make your site responsive? Looking to optimize for mobile? We can help.
+/     .start-project{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
+/       %a{:href => '#contact-form', :title => '', :class => 'button'} Start A Project
+/   %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down autoblur'}
+/     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+/     %span.screen-reader-text Scroll Down
+
 %section#blurb
   .container
-    .blurb
-      -#{"data-700-top" => "opacity: 0", "data-top" => "opacity: 1"}
+    -# .blurb{"data-700-top" => "opacity: 0", "data-top" => "opacity: 1"}
+    .blurb{"data-200" => "opacity: 0", "data-400" => "opacity: 1"}
       %p ViewThought designs well thought out, intuitive online user experiences that look exceptional on any device.
-  %a{:href => '#photo', :title => 'Scroll Down', :class => 'blurb-down autoblur'}
+  %a{:href => '#how', :title => 'Scroll Down', :class => 'blurb-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
-%section#photo
+%section#how
   .container
-    .photo
-      %h2{"data-bottom" => "opacity: 0", "data-150-top" => "opacity: 1", "data-top" => "opacity: 0"} How do we do it?
-      %p{"data-center" => "opacity: 0", "data-300-top" => "opacity: 1", "data-100-top" => "opacity: 0"} To begin  we follow a tried and true agile development process that delivers results.
+    .how{"data-800" => "opacity: 0", "data-1000" => "opacity: 1"}
+      %h2 How do we do it?
+      %p To begin  we follow a tried and true agile development process that delivers results.
   %a{:href => '#process', :title => 'Scroll Down', :class => 'hero-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down

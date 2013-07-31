@@ -11,7 +11,7 @@ $(document).ready(function() {
 // Anystretch
 // ===========================
 
-$('#photo').anystretch("assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
+$('#photo-hero').anystretch("assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
 
 
 // ===========================
