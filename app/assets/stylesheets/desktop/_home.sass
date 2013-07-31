@@ -268,14 +268,14 @@
       font-size: 1.875em + .443
 
 
-/* How do we do it?
+/* How
   -----------------------
 
 #how
   position: relative
   padding: $padding-4 0
-  border-color: $blue-gray
-  background-color: $blue-gray
+  border-color: $navy-blue
+  background-color: $navy-blue
   &:after
     content: ""
     position: absolute
@@ -301,9 +301,11 @@
     line-height: 1
     margin: 0
     font-size: 1.618em
+    color: $dark-white
   p
     margin: .443em 0 0
     font-size: 1.159em
+    color: $white-smoke
 
   +at-breakpoint($break6)
     h2
@@ -467,56 +469,3 @@
   +at-breakpoint($break12)
     .button
       font-size: 1.618em
-
-
-/* Manifesto
-  -----------------------
-
-#manifesto
-  position: relative
-  padding:  $padding-4 0
-  padding-bottom: $padding-4
-  background-color: darken($gray, 5)
-  &:after
-    +panel-shadow(.07)
-
-  +at-breakpoint($break6)
-    padding:  $padding-6 0
-
-  +at-breakpoint($break9)
-    padding:  $padding-9 0
-
-  +at-breakpoint($break12)
-    padding:  $padding-12 0
-
-.manifesto
-  p
-    margin: 0
-    font-size: 1em
-  .manifesto-button
-    margin-top: 1.618em
-    text-align: center
-    .button
-      +sassy-button(flat, .382em, 1em, $lime)
-
-  +at-breakpoint($break6)
-    p
-      font-size: 1.159em
-    .manifesto-button
-      margin-top: 1.875em
-      text-align: left
-
-  +at-breakpoint($break9)
-    +span-columns(5, $break9)
-    +prefix(3)
-    +pre(.5)
-    // +squish(.5, .5)
-    background: image-url("icons/book-150.png") 55px 8px no-repeat
-
-  +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +prefix(3)
-    min-height: 318px
-    background: image-url("icons/book-200.png") 0 0 no-repeat
-    p
-      font-size: 1em + .236

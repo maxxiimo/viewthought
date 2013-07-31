@@ -1,3 +1,87 @@
+/* Skills
+  -----------------------
+
+#skills
+  position: relative
+  padding: $padding-4 0
+  border-color: darken($gray, 5)
+  background-color: darken($gray, 5)
+  &:after
+    content: ""
+    position: absolute
+    top: 100%
+    left: 50%
+    margin-left: -20px
+    border-top: 20px solid blue
+    border-top-color: inherit
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.skills
+  h2
+    line-height: 1
+    margin-top: 0
+    font-size: 1.618em
+    color: $dark-white
+    +single-text-shadow(0, 2px, 2px, false, $navy-blue)
+
+  +at-breakpoint($break6)
+    h2
+      font-size: 1.875em
+
+
+/* Books
+  -----------------------
+
+.yes
+  margin: 0 0 $margin-4 / 2
+  font-size: 1.159em
+
+  +at-breakpoint($break6)
+    margin-bottom: $margin-6 / 2
+    font-size: 1.159em
+
+#books
+  position: relative
+  padding:  $padding-4 0
+  padding-bottom: $padding-4
+  background-color: $white
+  z-index: -1
+
+  +at-breakpoint($break6)
+    padding:  $padding-6 0
+
+.manifesto, .coding-design
+  p
+    margin: 0
+    font-size: 1em
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.159em
+
+.coding-design
+  margin-top: $margin-4
+
+  +at-breakpoint($break6)
+    margin-top: $margin-6
+
+/* Buttons
+
+.manifesto-button, .coding-design-button
+  margin-top: 1.618em
+  text-align: center
+  .button
+    +sassy-button(flat, .382em, 1em, $lime)
+
+  +at-breakpoint($break6)
+    margin-top: 1.875em
+    text-align: left
+
+
 /* Value
   -----------------------
 
