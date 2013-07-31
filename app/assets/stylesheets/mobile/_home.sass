@@ -207,38 +207,36 @@
 #process ul
   margin: 0
   li
+    clear: both
     list-style: none
 
 /* Circles
 
-.span
-  +span-columns(4 omega, 4)
-  .circle
-    +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
-    margin: 0 0 -37px
-    span
-      line-height: 2
-      font-size: 1.159em
+.circle
+  float: left
+  +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+  margin: 0 0 -37px
+  span
+    line-height: 2
+    font-size: 1.159em
 
   +at-breakpoint($break6)
-    +span-columns(1, $break6)
-    clear: both
-    .circle
-      +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
-      margin: 0
-      span
-        line-height: (1.875em * 1.07)
-        font-size: 1.875em
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    margin: 0
+    span
+      line-height: (1.875em * 1.07)
+      font-size: 1.875em
 
 /* Steps
 
 .discovery, .development, .repeat
-  +span-columns(4 omega, 4)
+  float: right
+  width: 100%
   h3
     margin-left: 55px
 
   +at-breakpoint($break6)
-    +span-columns(5 omega, $break6)
+    width: 80%
     h3
       margin-left: 0
 

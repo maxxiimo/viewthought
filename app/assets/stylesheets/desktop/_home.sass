@@ -371,66 +371,61 @@
 #process ul
   margin: 0
   li
+    clear: both
     list-style: none
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +pre(1)
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
+    +pre(2)
 
 /* Circles
 
-.span
-  +span-columns(4 omega, 4)
-  .circle
-    +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
-    margin: 0 0 -37px
-    span
-      line-height: 2
-      font-size: 1.159em
+.circle
+  float: left
+  +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+  margin: 0 0 -37px
+  span
+    line-height: 2
+    font-size: 1.159em
 
   +at-breakpoint($break6)
-    +span-columns(1, $break6)
-    clear: both
-    .circle
-      +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
-      margin: 0
-      span
-        line-height: (1.875em * 1.07)
-        font-size: 1.875em
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    margin: 0
+    span
+      line-height: (1.875em * 1.07)
+      font-size: 1.875em
 
   +at-breakpoint($break9)
-    +span-columns(2, $break9)
-    +pre(1)
-    .circle
-      +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
-      span
-        line-height: (2.618em * .75)
-        font-size: 2.618em
+    +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
+    span
+      line-height: (2.618em * .75)
+      font-size: 2.618em
 
   +at-breakpoint($break12)
-    +span-columns(2, $break12)
-    +pre(2)
-    .circle
-      +circle-border($size: (3.034em * 2), $color: $lime)
-      span
-        line-height: (3.034em * .63)
-        font-size: 3.034em
+    +circle-border($size: (3.034em * 2), $color: $lime)
+    span
+      line-height: (3.034em * .63)
+      font-size: 3.034em
 
 /* Steps
 
 .discovery, .development, .repeat
-  +span-columns(4 omega, 4)
+  float: right
+  width: 100%
   h3
     margin-left: 55px
 
   +at-breakpoint($break6)
-    +span-columns(5 omega, $break6)
+    width: 80%
     h3
       margin-left: 0
 
   +at-breakpoint($break9)
-    +span-columns(5, $break9)
-    +post(1)
-
-  +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +post(2)
+    width: 76%
 
 /* Button
 
