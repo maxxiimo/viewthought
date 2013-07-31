@@ -16,6 +16,7 @@
 //= require bgstretcher
 //= require skrollr.min
 //= require skrollr.menu.min
+//= require jquery.roundabout.min
 //= require showHide
 //= require gmap3.min
 //= require jquery.infieldLabel

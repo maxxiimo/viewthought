@@ -15,6 +15,20 @@ $('#photo-hero').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 2
 
 
 // ===========================
+// Roundabout
+// ===========================
+
+ $(document).ready(function() {
+    $('#process ul').roundabout({
+       autoplay: true,
+       autoplayDuration: 12000,
+       autoplayPauseOnHover: true,
+       responsive: true
+    });
+ });
+
+
+// ===========================
 // bgStretcher
 // ===========================
 
