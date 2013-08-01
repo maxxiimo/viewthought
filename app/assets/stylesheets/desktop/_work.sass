@@ -207,10 +207,10 @@
       font-size: 1.875em
 
 
-/* Core Values
+/* Our Mission
   -----------------------
 
-#core-values
+#our-mission
   position: relative
   padding: $padding-4 0
   background-color: $white
@@ -225,7 +225,7 @@
   +at-breakpoint($break12)
     padding-bottom: $padding-12
 
-.core-values
+.our-mission
   position: relative
   h2
     text-align: center
@@ -259,6 +259,8 @@
 
   +at-breakpoint($break9)
     +span-columns(9 omega, $break9)
+    p
+      font-size: 1em + .169
     h2
       margin: 1em 0 1.618em
     &:before
@@ -284,74 +286,11 @@
       font-size: 1em + .236
 
 
-/* Case Study
+/*
   -----------------------
 
-#case-study
-  position: relative
-  padding: $padding-4 0
-  background-color: $navy-blue
-  &:after
-    +panel-shadow(.06)
 
-  +at-breakpoint($break6)
-    padding: $padding-6 0
 
-  +at-breakpoint($break9)
-    padding: $padding-9 0
-
-  +at-breakpoint($break12)
-    padding: $padding-12 0
-
-.case-study
-  h2, p, li
-    color: $white-smoke
-
-  p
-    margin-top: 0
-
-  ul
-    margin-bottom: 0
-    padding-bottom: 160px
-    background: image-url("lapostita-250.png") 50% 100% no-repeat
-
-  +at-breakpoint($break6)
-    ul
-      padding-bottom: 200px
-      background: image-url("lapostita-320.png") 50% 100% no-repeat
-
-  +at-breakpoint($break9)
-    ul
-      padding-bottom: 300px
-      background: image-url("lapostita-480.png") 50% 100% no-repeat
-
-  +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +prefix(6)
-    padding-bottom: 16px
-    background: image-url("lapostita-480.png") -14px 16px no-repeat
-    ul
-      margin-bottom: 1em
-      padding-bottom: 0
-      background: none
-
-#slidingDiv
-  display: none
-
-.show_hide
-  font-family: $base-font-button
-  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-
-  +at-breakpoint($break12)
-    font-size: .716em
-
-/* JavaScript fallback */
-
-.no-js #slidingDiv
-  display: block
-
-.no-js .show_hide
-  +hidden
 
 
 /* Tech Icons
