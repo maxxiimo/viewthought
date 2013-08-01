@@ -181,13 +181,31 @@
     padding: $padding-6 0
 
 .the-point
-  p
-    font-size: 1.159em
+  blockquote
+    margin: 0
+    font-size: 1em + .169
     color: $white-smoke
+  .giant-quote
+    display: block
+    float: left
+    line-height: 1.2
+    padding-right: .443em
+    font-size: 1em + .274
+  p
+    margin-bottom: 0
+    font-family: $base-font-header
+    font-size: .716em
+    color: $black-2
+    +opacity(.35)
 
   +at-breakpoint($break6)
+    blockquote
+      font-size: 1em + .274
+    .giant-quote
+      line-height: 1
+      font-size: 1.618em
     p
-      font-size: 1.159em
+      font-size: 1em
 
 
 /* Tech Icons

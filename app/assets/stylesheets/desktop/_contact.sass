@@ -46,7 +46,30 @@
     outline: none
   textarea
     height: 2.618em
+  .textarea
+    position: relative
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      bottom: -28px
+      left: 50%
+      width: 0
+      border-width: 0 0 30px 30px
+      border-style: solid
+      border-color: transparent $white
+    // &:after
+    //   content: ""
+    //   display: block
+    //   position: absolute
+    //   bottom: -30px
+    //   left: 50%
+    //   width: 0
+    //   border-width: 0 0 30px 20px
+    //   border-style: solid
+    //   border-color: transparent $black-3
   .button
+    margin-top: 3em
     text-align: center
   button
     +sassy-button
@@ -54,6 +77,8 @@
   +at-breakpoint($break6)
     .button
       text-align: left
+    .textarea:before
+      left: 80px
 
   +at-breakpoint($break9)
     +span-columns(5 omega, $break9)
@@ -67,6 +92,8 @@
     +span-columns(7 omega, $break12)
     input
       height: 2.618em
+    textarea
+      height: 7.942em
 
 
 /* Email Us

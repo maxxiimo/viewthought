@@ -4,6 +4,7 @@
 
 %section#photo-hero
   .container
+    -# .tagline{"data-500" => "opacity:0;top:-10%;transform:rotate(-90deg);", "data-0" => "opacity:1;transform:rotate(0deg);transform-origin:0 0;", :style => "opacity: 1; top: 3%; transform: rotate(0deg); transform-origin: 0px 0px 0px;"}
     .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       .first
         %h2 Builders of Mobile Web Solutions
@@ -13,7 +14,7 @@
           Take Your Business Website Mobile
         %p
           Going mobile? Need to make your site responsive?
-          %span Looking to optimize for mobile? We can help.
+          %span We can help.
     .mobile-icons{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       %span{"aria-hidden" => "true", "data-icon" => "&#x31;".html_safe, :class => 'desktop-computer'}
       %span{"aria-hidden" => "true", "data-icon" => "&#x32;".html_safe}
@@ -61,7 +62,7 @@
           %span{"aria-hidden" => "true", "data-icon" => "&#x2692;".html_safe}
         .development
           %h3 2. Development
-          %p We follow in an iterative approach to development, where all stakeholders are involved in producing your project&ndash;from start to finish. We like to deploy often and frequently, and test test test.
+          %p We follow in an iterative approach to development. We like to deploy often and frequently, and test test test.
       %li
         .circle
           %span{"aria-hidden" => "true", "data-icon" => "&#x27f3;".html_safe}
@@ -98,7 +99,7 @@
         %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'View The Front End Manifesto', :class => 'button', "data-200-bottom" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--50-bottom" => "transform:scale(1) rotate(720deg);opacity:1;"} Review
     .coding-design
       %h2 Coding Design
-      %p As the diversity of device types and sizes increases, Web design is increasingly taking place in the browser. Coding Design is an in depth look at the ins and outs and best practices for creating and coding great design from the front end developer's perspective and toolset: CSS3, HTML5, and a browser.
+      %p Device types and screen sizes of becoming more and more diverse, and as a result Web design is increasingly taking place in the browser and not Photoshop. Coding Design is an in depth look at the ins and outs and best practices for creating and coding great design from the front end developer's perspective and toolset: CSS3, HTML5, and a browser.
       .coding-design-button
         %a{:href => 'https://github.com/maxxiimo/coding-design/blob/master/TOC.md', :title => 'View Coding Design', :class => 'button', "data-200-bottom" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--50-bottom" => "transform:scale(1) rotate(720deg);opacity:1;"} Review
   %a{:href => '#value', :title => 'Scroll Down', :class => 'manifesto-down autoblur'}
@@ -109,7 +110,7 @@
   .container
     .value
       %p
-        The bottom line is your business has a unique value proposition. Through our development process and experience we can help you communicate it.
+        The bottom line is that your business has a unique value proposition. Through our development process and experience we can help you communicate it.
         %span.hide-text Take for example our website...
       %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
   %a{:href => '#our-mission', :title => 'Scroll Down', :class => 'value-down autoblur'}
@@ -119,8 +120,8 @@
 %section#our-mission
   .container
     .our-mission
-      %p Our website tells a story, the story of our own value proposition, how we can help you. On top of that, we like to think that it looks beautiful (in its own very simple way).
-      %p.desktop And now for a little demonstration. Scroll down a little bit and you will see ViewThought's mission statement. On a desktop computer or even a tablet, lining up the boxes side-by-side makes sense, but on iPad mini or smart phone, there just isn't enough room. In fact there isn't enough room for this paragraph. Resize your browser and watch how this website responds...
+      %p Our website tells a story, the story of our own value proposition, how we can help you. We also like to think that it looks beautiful (in its own very simple way).
+      %p.desktop Scroll down a little bit and you will see ViewThought's mission statement. On a desktop computer or even a tablet, lining up the boxes side-by-side makes sense, but on iPad mini or smart phone, there just isn't enough room. In fact there isn't enough room for this paragraph or the iPad image above. Resize your browser and watch how this website responds...
       %h2 Our Mission
       -# %ol{"data-bottom-top" => "left:100%", "data-100-bottom" => "left:25%;"}
       -# %ol{"data-bottom-top" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--10-bottom" => "transform:scale(1) rotate(1440deg);opacity:1;"}
@@ -138,7 +139,9 @@
 %section#the-point
   .container
     .the-point
-      %p The point of the responsive demo is that with great design and great code we make mobile and Web applications work &ndash; and look amazing across any device &ndash; no matter how big or small.
+      %blockquote
+        %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+        When you put great design and great code together, Web applications work well and look amazing across any device &ndash; no matter how big or small.
   %a{:href => '#tech-icons', :title => 'Scroll Down', :class => 'the-point-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -152,7 +155,7 @@
 %section#tech-blurb
   .container
     .tech-blurb
-      %p How about giving us a shot? We start at a minimum project commitment of $10,000 and promise you, you will be happy with our work.
+      %p How about giving us a shot? We start at a minimum project commitment of $10,000. We promise you, you will be happy with our work.
   %a{:href => '#contact-form', :title => 'Scroll Down', :class => 'tech-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -174,7 +177,7 @@
 %section#email-us
   .container
     .email-us
-      %p Specialist in mobile Web design, development, usability testing, and we can help your team migrate an existing website to mobile.
+      %p Specialist in mobile Web design, development, usability testing: we can help your team migrate an existing website to mobile.
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
@@ -187,7 +190,7 @@
   #who-we-are
     .container
       .who-we-are
-        %p ViewThought is a Ruby on Rails development shop located in West Palm Beach, Florida.
+        %p Want to meet in person around West Palm Beach, Florida? We'd love to.
   -# %a{:href => '#skrollr-body', :title => 'Scroll to top', :class => 'arrow-up-anchor autoblur'} top
   %a{:href => '#skrollr-body', :title => 'Scroll Up', :class => 'contact-map-up autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f0;".html_safe}

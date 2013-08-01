@@ -29,7 +29,20 @@
     outline: none
   textarea
     height: 2.618em
+  .textarea
+    position: relative
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      bottom: -28px
+      left: 50%
+      width: 0
+      border-width: 0 0 30px 30px
+      border-style: solid
+      border-color: transparent $white
   .button
+    margin-top: 3em
     text-align: center
   button
     +sassy-button
@@ -37,6 +50,8 @@
   +at-breakpoint($break6)
     .button
       text-align: left
+    .textarea:before
+      left: 80px
 
 
 /* Email Us
