@@ -20,6 +20,7 @@ $('#photo-hero').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 2
 
  $(document).ready(function() {
     $('#process ul').roundabout({
+       enableDrag: true,
        autoplay: true,
        autoplayDuration: 12000,
        autoplayPauseOnHover: true,
