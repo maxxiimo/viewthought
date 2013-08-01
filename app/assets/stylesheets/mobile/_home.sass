@@ -6,6 +6,8 @@
   height: 20.792em
   padding: .716em 0 1.159em
   background-color: $white
+  &:after
+    +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding: (1em + .443) 0 1.618em
@@ -85,6 +87,8 @@
     margin: 0
     font-size: 1em + .236
     text-align: center
+  &:after
+    +panel-shadow(.15)
 
   +at-breakpoint($break6)
     p
@@ -137,8 +141,6 @@
   padding: $padding-4 0
   background-color: $white
   z-index: -1
-  &:after
-    +panel-shadow(.15)
 
   +at-breakpoint($break6)
     padding: $padding-6 0
