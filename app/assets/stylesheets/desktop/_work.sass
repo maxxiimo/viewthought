@@ -227,6 +227,8 @@
 
 .our-mission
   position: relative
+  p:first-child
+    font-size: 1em + .169
   h2
     text-align: center
   li
@@ -260,6 +262,10 @@
   +at-breakpoint($break9)
     +span-columns(9 omega, $break9)
     p
+      +squish(.5, .5)
+    p:first-child
+      font-size: 1em + .443
+    p.desktop
       font-size: 1em + .169
     h2
       margin: 1em 0 1.618em
@@ -278,6 +284,8 @@
 
   +at-breakpoint($break12)
     +span-columns(12 omega, $break12)
+    p:first-child
+      font-size: 1em + .618
     h2
       margin-top: 1.159em
     li
@@ -286,11 +294,54 @@
       font-size: 1em + .236
 
 
-/*
+/* The Point
   -----------------------
 
+#the-point
+  position: relative
+  padding: $padding-4 0
+  border-color: $navy-blue
+  background-color: $navy-blue
+  &:after
+    content: ""
+    position: absolute
+    top: 100%
+    left: 50%
+    margin-left: -20px
+    border-top: 20px solid blue
+    border-top-color: inherit
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
 
+  +at-breakpoint($break6)
+    padding: $padding-6 0
 
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.the-point
+  p
+    font-size: 1.159em
+    color: $white-smoke
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.159em
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    p
+      font-size: 1em + .236
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
+    +squish(2, 2)
+    p
+      font-size: 1.618em
 
 
 /* Tech Icons
@@ -300,6 +351,7 @@
   position: relative
   padding: $padding-4 0
   background-color: $white
+  z-index: -1
   &:after
     +panel-shadow(.15)
   +hidden
