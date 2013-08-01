@@ -4,7 +4,6 @@
 
 %section#photo-hero
   .container
-    -# .tagline{"data-500" => "opacity:0;top:-10%;transform:rotate(-90deg);", "data-0" => "opacity:1;transform:rotate(0deg);transform-origin:0 0;", :style => "opacity: 1; top: 3%; transform: rotate(0deg); transform-origin: 0px 0px 0px;"}
     .tagline{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       .first
         %h2 Builders of Mobile Web Solutions
@@ -14,7 +13,7 @@
           Take Your Business Website Mobile
         %p
           Going mobile? Need to make your site responsive?
-          %span We can help.
+          %span We can help your team migrate an existing website to mobile.
     .mobile-icons{"data-0" => "opacity: 1", "data-200" => "opacity: 0"}
       %span{"aria-hidden" => "true", "data-icon" => "&#x31;".html_safe, :class => 'desktop-computer'}
       %span{"aria-hidden" => "true", "data-icon" => "&#x32;".html_safe}
@@ -29,17 +28,15 @@
 
 %section#blurb
   .container
-    -# .blurb{"data-700-top" => "opacity: 0", "data-top" => "opacity: 1"}
     .blurb
-      %p{"data-200" => "opacity: 0", "data-400" => "opacity: 1"} ViewThought designs well thought out, intuitive online user experiences that look exceptional on any device.
+      %p{"data-bottom-top" => "opacity: 0", "data--300-bottom" => "opacity: 1"} ViewThought designs well thought out, intuitive online user experiences that look exceptional on any device.
   %a{:href => '#how', :title => 'Scroll Down', :class => 'blurb-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
 %section#how
   .container
-    -# .how{"data-800" => "opacity: 0", "data-1000" => "opacity: 1"}
-    .how{"data-500" => "opacity: 0", "data-600" => "opacity: 1"}
+    .how{"data-bottom-top" => "opacity: 0", "data--300-bottom" => "opacity: 1"}
       %h2 How do we do it?
       %p To begin we follow a tried and true agile development process that delivers results.
   %a{:href => '#process', :title => 'Scroll Down', :class => 'how-down autoblur'}
@@ -82,16 +79,13 @@
 %section#skills
   .container
     .skills
-      %h2 Do we have the skills? Can you trust us to deliver high-quality work?
+      %h2 To really understand how passionate we are about our craft, what we can do for you, take a look at our e-book's below.
   %a{:href => '#books', :title => 'Scroll Down', :class => 'skills-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
 
 %section#books
   .container
-    %p.yes
-      %span YES!
-      To really understand how passionate we are about our craft &ndash; how we think and code &ndash; take a look at our e-book's below (required reading for every new member of our team)...
     .manifesto
       %h2 The Front End Manifesto
       %p Written by the engineers at ViewThought, The Front End Manifesto provides developers with a comprehensive research-based HOW TO on best practices for writing well organized, efficient, mobile to desktop, Front End Code: From a Ruby on Rails perspective.
@@ -99,9 +93,9 @@
         %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'View The Front End Manifesto', :class => 'button', "data-200-bottom" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--50-bottom" => "transform:scale(1) rotate(720deg);opacity:1;"} Review
     .coding-design
       %h2 Coding Design
-      %p Device types and screen sizes of becoming more and more diverse, and as a result Web design is increasingly taking place in the browser and not Photoshop. Coding Design is an in depth look at the ins and outs and best practices for creating and coding great design from the front end developer's perspective and toolset: CSS3, HTML5, and a browser.
+      %p With so many new device types and screen sizes, Web design is taking place in the browser: not Photoshop. Coding Design is an in depth look at the ins and outs and best practices for creating and coding great design from the front end developer's perspective and toolset: CSS3, HTML5, and a browser.
       .coding-design-button
-        %a{:href => 'https://github.com/maxxiimo/coding-design/blob/master/TOC.md', :title => 'View Coding Design', :class => 'button', "data-200-bottom" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--50-bottom" => "transform:scale(1) rotate(720deg);opacity:1;"} Review
+        %a.button Review
   %a{:href => '#value', :title => 'Scroll Down', :class => 'manifesto-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -110,8 +104,7 @@
   .container
     .value
       %p
-        The bottom line is that your business has a unique value proposition. Through our development process and experience we can help you communicate it.
-        %span.hide-text Take for example our website...
+        The bottom line is that your business has a unique value proposition. Through our development process and experience we can help you communicate it. Take for example our website...
       %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
   %a{:href => '#our-mission', :title => 'Scroll Down', :class => 'value-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
@@ -120,8 +113,10 @@
 %section#our-mission
   .container
     .our-mission
-      %p Our website tells a story, the story of our own value proposition, how we can help you. We also like to think that it looks beautiful (in its own very simple way).
-      %p.desktop Scroll down a little bit and you will see ViewThought's mission statement. On a desktop computer or even a tablet, lining up the boxes side-by-side makes sense, but on iPad mini or smart phone, there just isn't enough room. In fact there isn't enough room for this paragraph or the iPad image above. Resize your browser and watch how this website responds...
+      %p Our website tells a story, the story of our own value proposition. We also like to think that it looks beautiful (in its own very simple way).
+      %p.desktop
+        %span Resize your browser
+        and watch how it also responds to display size changes. Try it on a smart phone. We can do this for your website.
       %h2 Our Mission
       -# %ol{"data-bottom-top" => "left:100%", "data-100-bottom" => "left:25%;"}
       -# %ol{"data-bottom-top" => "transform:scale(0) rotate(0deg);opacity: 0;", "data--10-bottom" => "transform:scale(1) rotate(1440deg);opacity:1;"}
@@ -149,13 +144,13 @@
 %section#tech-icons
   .container
     .tech-icons
-      %p The technologies we use to do this:
+      %p The technologies we use to achieve this:
       %span.ir Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
 
 %section#tech-blurb
   .container
     .tech-blurb
-      %p How about giving us a shot? We start at a minimum project commitment of $10,000. We promise you, you will be happy with our work.
+      %p How about giving us a shot? We promise you, you will be happy with our work.
   %a{:href => '#contact-form', :title => 'Scroll Down', :class => 'tech-down autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -177,7 +172,7 @@
 %section#email-us
   .container
     .email-us
-      %p Specialist in mobile Web design, development, usability testing: we can help your team migrate an existing website to mobile.
+      %p We can help your team migrate an existing website to mobile.
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         %a{:href => 'mailto:hello@viewthought.com', :title => 'Send us an email', :class => 'button'} hello@viewthought.com
@@ -191,7 +186,6 @@
     .container
       .who-we-are
         %p Want to meet in person around West Palm Beach, Florida? We'd love to.
-  -# %a{:href => '#skrollr-body', :title => 'Scroll to top', :class => 'arrow-up-anchor autoblur'} top
   %a{:href => '#skrollr-body', :title => 'Scroll Up', :class => 'contact-map-up autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x27f0;".html_safe}
     %span.screen-reader-text Scroll Up

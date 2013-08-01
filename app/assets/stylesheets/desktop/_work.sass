@@ -56,24 +56,6 @@
 /* Books
   -----------------------
 
-.yes
-  margin: 0 0 $margin-4 / 2
-  font-size: 1.159em
-  span
-    color: $orange
-
-  +at-breakpoint($break6)
-    margin-bottom: $margin-6 / 2
-    font-size: 1.159em
-
-  +at-breakpoint($break9)
-    margin-bottom: $margin-9 / 2
-    font-size: 1em + .236
-
-  +at-breakpoint($break12)
-    margin-bottom: $margin-12 / 2
-    font-size: 1.618em
-
 #books
   position: relative
   padding:  $padding-4 0
@@ -146,20 +128,18 @@
 
 #value
   position: relative
-  padding: .716em 0 1.159em
+  padding: $padding-4 0
   background-color: $black-3
   p
     margin: 0
   .ipad
     +hidden
-  .hide-text
-    +hidden
 
   +at-breakpoint($break6)
-    padding: (1em + .443) 0 1.618em
+    padding: $padding-6 0
 
   +at-breakpoint($break9)
-    padding: 2.618em 0 $padding-9
+    padding: $padding-9 0
     .ipad
       +reveal-hidden
       position: absolute
@@ -181,7 +161,7 @@
       background: image-url("ipad.png") 0 0 no-repeat
 
   +at-breakpoint($break12)
-    padding: 4.236em 0 $padding-12
+    padding: $padding-12 0
     .hide-text
       +reveal-hidden
       display: inline  !important
@@ -229,8 +209,10 @@
 
 .our-mission
   position: relative
-  p:first-child
+  p
     font-size: 1em + .169
+  .desktop span
+    color: $orange
   h2
     text-align: center
   li
@@ -265,10 +247,7 @@
     +span-columns(9 omega, $break9)
     p
       +squish(.5, .5)
-    p:first-child
-      font-size: 1em + .443
-    p.desktop
-      font-size: 1em + .169
+      font-size: 1em + .618
     h2
       margin: 1em 0 1.618em
     &:before
@@ -287,6 +266,8 @@
   +at-breakpoint($break12)
     +span-columns(12 omega, $break12)
     p:first-child
+      font-size: 1.875em
+    p.desktop
       font-size: 1em + .618
     h2
       margin-top: 1.159em

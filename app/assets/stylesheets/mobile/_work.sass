@@ -38,16 +38,6 @@
 /* Books
   -----------------------
 
-.yes
-  margin: 0 0 $margin-4 / 2
-  font-size: 1.159em
-  span
-    color: $orange
-
-  +at-breakpoint($break6)
-    margin-bottom: $margin-6 / 2
-    font-size: 1.159em
-
 #books
   position: relative
   padding:  $padding-4 0
@@ -91,15 +81,15 @@
 
 #value
   position: relative
-  padding: .716em 0 1.159em
+  padding: $padding-4 0
   background-color: $black-3
   p
     margin: 0
-  .hide-text
+  .ipad
     +hidden
 
   +at-breakpoint($break6)
-    padding: (1em + .443) 0 1.618em
+    padding: $padding-6 0
 
 .value
   p
@@ -125,8 +115,10 @@
 
 .our-mission
   position: relative
-  p:first-child
+  p
     font-size: 1em + .169
+  .desktop span
+    color: $orange
   h2
     text-align: center
   li
