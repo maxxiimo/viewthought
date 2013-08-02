@@ -1,13 +1,14 @@
-=# form_for @message, :url => { :action => "create" , :anchor => "contact-form" } do |f|
-= form_for @message do |f|
+-# http://stackoverflow.com/questions/2068887/rails-render-action-to-target-anchor-tag
+= form_for @message, :url => { :action => "create" , :anchor => "contact-form" } do |f|
+  =# form_for @message do |f|
   - if @message.errors.any?
     .error_messages
-      %h2
-        = pluralize(@message.errors.count, "error")
-        prohibited this message from being saved:
+      %h2 Oops...
       %ul
-        - @message.errors.full_messages.each do |msg|
-          %li= msg
+        -# - @message.errors.full_messages.each do |msg|
+        -#   %li= msg
+        - @message.errors.each_with_index.each do |msg, i|
+          %li= msg[1]
   - flash.each do |name, msg|
     = content_tag :div, msg, id: "flash_#{name}"
   %fieldset
@@ -25,13 +26,8 @@
         = f.phone_field :phone_number
     %p
       %span.infield-label.textarea
-        = f.label 'body', 'Tell us a little about your project'
-        = f.text_area :body, cols: 5, rows: 5
+        = f.label 'message', 'Tell us a little about your project'
+        = f.text_area :message, cols: 5, rows: 5
     %p.button
       %span.infield-label
         %button Send
-
-// We can't get back you without your:
-
-// Name
-// Valid email
