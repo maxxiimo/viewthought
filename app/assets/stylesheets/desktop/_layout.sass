@@ -115,36 +115,37 @@ header
 
 // social icons
 
-#social-links
-  +icon-nav(1em + .236, .236em)
-  float: left
-  a
-    display: inline-block
-    line-height: 1.6
-    padding: 0 $nav-pad-4
-    +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
-
-  +at-breakpoint($break6)
-    float: right
+header
+  #social-links
+    +icon-nav(1em + .236, .236em)
+    float: left
     a
-      padding: 0 $nav-pad-6
-      font-size: 1em + .382
+      display: inline-block
+      line-height: 1.6
+      padding: 0 $nav-pad-4
+      +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
 
-  +at-breakpoint($break9)
-    +span-columns(4, $break9)
-    text-align: center
-    a
-      line-height: 2.2
-      padding: 0 $nav-pad-9
+    +at-breakpoint($break6)
+      float: right
+      a
+        padding: 0 $nav-pad-6
+        font-size: 1em + .382
 
-  +at-breakpoint($break12)
-    +span-columns(5, 12)
-    a
-      padding: 0 $nav-pad-12
-      &:hover
-        text-decoration: none
-        color: $lime
-        background-color: $white-smoke
+    +at-breakpoint($break9)
+      +span-columns(4, $break9)
+      text-align: center
+      a
+        line-height: 2.2
+        padding: 0 $nav-pad-9
+
+    +at-breakpoint($break12)
+      +span-columns(5, 12)
+      a
+        padding: 0 $nav-pad-12
+        &:hover
+          text-decoration: none
+          color: $lime
+          background-color: $white-smoke
 
 #magic-line
   position: absolute

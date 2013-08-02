@@ -82,20 +82,21 @@ header
 
 // social icons
 
-#social-links
-  +icon-nav(1em + .236, .236em)
-  float: left
-  a
-    display: inline-block
-    line-height: 1.6
-    padding: 0 $nav-pad-4
-    +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
-
-  +at-breakpoint($break6)
-    float: right
+header
+  #social-links
+    +icon-nav(1em + .236, .236em)
+    float: left
     a
-      padding: 0 $nav-pad-6
-      font-size: 1em + .382
+      display: inline-block
+      line-height: 1.6
+      padding: 0 $nav-pad-4
+      +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
+
+    +at-breakpoint($break6)
+      float: right
+      a
+        padding: 0 $nav-pad-6
+        font-size: 1em + .382
 
 // phone number
 
