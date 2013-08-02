@@ -101,48 +101,47 @@
 /* Arrows
   -----------------------
 
-// .hero-down
-
-//   +at-breakpoint($break6)
-//     +reveal-hidden
-
-// .hero-down
-//   +arrow-down-anchor($arrow-color-1: $blue-gray, $arrow-color-2: $white)
-
-// %a{:href => '#blurb', :title => 'Scroll Down', :class => 'hero-down'} scroll
-
 .arrow-up-anchor
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden
-    +arrow-up-anchor
+  +arrow-up-anchor($arrow-color-1: $dark-white, $arrow-color-2: $black-2)
 
 /* icon arrow
 
-.hero-down
-  +icon-arrow-down($blue-gray, $white, 4.236em)
-  @extend .smallscreen-hide
+.hero-down, .how-down, .the-point-down
+  +icon-arrow-down($blue-gray, $white, 2.618em)
 
 .blurb-down
-  +icon-arrow-down(lighten($blue-gray, 15), $blue-gray, 4.236em)
-  @extend .smallscreen-hide
+  +icon-arrow-down(lighten($blue-gray, 15), $blue-gray, 2.618em)
 
-.manifesto-down
-  +icon-arrow-down($navy-blue, $white, 4.236em)
-  @extend .smallscreen-hide
+.skills-down
+  +icon-arrow-down($navy-blue, $white, 2.618em)
 
 .quote-down
-  +icon-arrow-down($blue-gray, $gray, 4.236em)
-  @extend .smallscreen-hide
+  +icon-arrow-down($blue-gray, $gray, 2.618em)
 
-.value-down, .case-study-down, .contact-hero-down
-  +icon-arrow-down($white, darken($white, 20), 4.236em)
-  @extend .smallscreen-hide
+.core-values-down, .value-down, .case-study-down, .contact-hero-down
+  +icon-arrow-down($white, darken($white, 20), 2.618em)
 
-.process-down, .core-values-down, .email-us-down
-  +icon-arrow-down(darken($gray, 20), $gray, 4.236em)
-  @extend .smallscreen-hide
+.process-down, .manifesto-down, .core-values-down, .tech-down, .quote-down, .email-us-down
+  +icon-arrow-down(darken($gray, 20), $gray, 2.618em)
+
+.contact-map-up
+  +icon-arrow-down($white, darken($white, 20), 2.618em)
+
+.work-up
+  +icon-arrow-down(darken($gray, 20), $gray, 2.618em)
+
+.hero-down, .how-down, .the-point-down,
+.blurb-down,
+.skills-down,
+.quote-down,
+.core-values-down, .value-down, .case-study-down, .contact-hero-down,
+.process-down, .manifesto-down, .core-values-down, .tech-down, .quote-down, .email-us-down,
+.contact-map-up, .work-up
+  +at-breakpoint($break6)
+    span
+      font-size: 3.034em
+
+// NOTE ccm: breakpoint 9 code is in desktop/pages.sass.
 
 
 /* Columns

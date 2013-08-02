@@ -26,7 +26,6 @@
       // Fix for icon font clickability issue in WebKit
       display: inline-block
 
-
 @mixin icon-nav-list($icon-font-size, $icon-padding)
   width: auto
   +horizontal-list
@@ -213,13 +212,13 @@
 @mixin arrow-up-anchor($arrow-color-1: $navy-blue, $arrow-color-2: lighten($navy-blue, 15))
   position: absolute
   bottom: 1em
-  right: 2.618em
+  right: 1.618em
   width:  $arrow-width
   font-family: $base-font-button
   font-size: .716em
   text-align: center
   +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
-  +opacity(.5)
+  // +opacity(.5)
   &:after
     +arrow-details
     +arrow-up($size: $arrow-size, $color: $arrow-color-1)
@@ -252,8 +251,9 @@
 
 @mixin icon-arrow-down($arrow-color-1, $arrow-color-2, $font-size)
   position: absolute
-  bottom: -20px
+  bottom: 0
   right: 0
+  line-height: 1
   +link-colors($arrow-color-1, $arrow-color-2, $arrow-color-1, $arrow-color-1, $arrow-color-1)
   +opacity(.5)
   &:hover

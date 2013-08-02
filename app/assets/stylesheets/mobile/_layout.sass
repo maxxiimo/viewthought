@@ -45,8 +45,6 @@ img
 /* Header
   -----------------------
 
-// navigation in _navigation.sass
-
 header
   +clearfix
   border-top: .382em solid $gray
@@ -56,7 +54,7 @@ header
 .viewthought
   float: left
   line-height: 1em
-  margin: .236em 0
+  margin: .236em 0 0
   font-size: 1em + .443
   a
     font-family: $quatro
@@ -67,10 +65,6 @@ header
 
     .char1, .char5
       font-size: 1em + .146
-
-  +at-breakpoint($break6)
-    margin-top: .236em
-    margin-bottom: 0
 
 // TypeKit and JavaScript fallbacks
 
@@ -86,6 +80,24 @@ header
   background: image-url("logos/viewthought.gif") -2px -48px no-repeat
   +hide-text
 
+// social icons
+
+header
+  #social-links
+    +icon-nav(1em + .236, .236em)
+    float: left
+    a
+      display: inline-block
+      line-height: 1.6
+      padding: 0 $nav-pad-4
+      +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
+
+    +at-breakpoint($break6)
+      float: right
+      a
+        padding: 0 $nav-pad-6
+        font-size: 1em + .382
+
 // phone number
 
 .phone
@@ -98,66 +110,3 @@ header
 .phone
   margin-top: .065em
   +hidden
-
-
-/* Footer
-  -----------------------
-
-footer
-  clear: both
-  +clearfix
-  position: relative
-  padding-top: $padding-4
-  background-color: $bg-footer
-  h3, p
-    margin: 0
-  &:after
-    +panel-shadow(.15)
-
-  +at-breakpoint($break6)
-    padding-top: $padding-6
-
-.footer-hide
-  +hidden
-
-  +at-breakpoint($break6)
-    +reveal-hidden-inline
-
-.address
-  +span-columns(2, 4)
-
-  +at-breakpoint($break6)
-    +span-columns(3, $break6)
-
-.connect
-  +span-columns(2 omega, 4)
-
-  +at-breakpoint($break6)
-    +span-columns(3 omega, $break6)
-
-.email
-  display: block
-
-// FIXME ccm: possibly convert to non-list?
-.social-links
-  +icon-nav-list(1em, .236em)
-
-  +at-breakpoint($break6)
-    font-size: 1.159em
-
-.adr, .tel, .email
-  font-size: 1em - .146
-
-  +at-breakpoint($break6)
-    font-size: 1em
-
-.copyright
-  position: relative
-  +span-columns(4 omega, 4)
-  margin-bottom: 1em
-  padding-top: 1.382em
-  font-size: 1em - .146
-
-  +at-breakpoint($break6)
-    +span-columns(6 omega, $break6)
-    padding-top: 1.875em

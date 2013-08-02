@@ -8,6 +8,28 @@ $(document).ready(function() {
 
 
 // ===========================
+// Anystretch
+// ===========================
+
+$('#photo-hero').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
+
+
+// ===========================
+// Roundabout
+// ===========================
+
+ $(document).ready(function() {
+    $('#process ul').roundabout({
+       enableDrag: true,
+       autoplay: true,
+       autoplayDuration: 8000,
+       autoplayPauseOnHover: true,
+       responsive: true
+    });
+ });
+
+
+// ===========================
 // bgStretcher
 // ===========================
 
@@ -81,12 +103,10 @@ $(function() {
 $(function() {
 
     var $el, leftPos, newWidth,
-        $mainNav = $("#nav"),
+        $mainNav = $("#social-links"),
 
         // http://stackoverflow.com/questions/590602/padding-or-margin-value-in-pixels-as-integer-using-jquery
-        $current = $(".active"),
-        // paddingLeft = $current.css("padding-left"),
-        // paddingLeft = parseInt($current.css("padding-top").replace("px","")),
+        $current = $(".current"),
         paddingBoth = ($current.innerWidth() - $current.width()),
         paddingLeft = paddingBoth / 2;
 
@@ -94,12 +114,12 @@ $(function() {
     var $magicLine = $("#magic-line");
 
     $magicLine
-        .width($current.width())
-        .css("left", $current.position().left + paddingLeft)
+        // .width($current.width())
+        // .css("left", $current.position().left + paddingLeft)
         .data("origLeft", $magicLine.position().left)
         .data("origWidth", $magicLine.width());
 
-    $("#nav a").hover(function() {
+    $("#social-links a").hover(function() {
         $el = $(this);
         leftPos = $el.position().left;
         newWidth = $el.width() + paddingBoth;

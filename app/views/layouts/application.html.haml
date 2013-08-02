@@ -15,13 +15,8 @@
       %header{:role => 'banner'}
         .container
           = render :partial => 'shared/logo'
-          = yield :navigation_text
-          = render :partial => 'shared/navigation_icon'
-          %a{:href => 'callto:561-320-1117', :title => 'Main Number', :class => 'phone desktop'} 561-320-1117
-          %a{:href => 'tel:561-320-1117', :title => 'Main Number', :class => 'phone mobile'} 561-320-1117
+          = render :partial => 'shared/social_links'
+          = render :partial => 'shared/phone_number'
       #main{:role => 'main'}
         = yield
-      %footer#ft.vcard{:role => "contentinfo"}
-        .container
-          = render :partial => 'shared/footer'
     = scripts
