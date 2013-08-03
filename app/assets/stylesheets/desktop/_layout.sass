@@ -54,8 +54,9 @@ body
 img
   vertical-align: middle
 
-// #photo-hero, #blurb, #how, #process,
-// #skills, #books, #value, #our-mission, #the-point, .tech-icons, #tech-blurb,
+#photo-hero, #blurb, #how, #process,
+#skills, #books, #value, #our-mission, #the-point, .tech-icons, #tech-blurb,
+  +hidden
 // #contact-form, #email-us, #contact-map
 //   +hidden
 
@@ -157,21 +158,21 @@ header
 
 // phone number
 
-.phone
-  float: right
-  font-family: $base-font-nav
-  font-size: 1em + .236
-  text-align: right
-  +link-colors($black-1, $black-2, $black-1, $black-1, $black-1)
+header
+  .phone-number
+    float: right
+    margin-top: .065em
+    text-align: right
+    +hidden
+    a
+      font-family: $base-font-nav
+      font-size: 1em + .236
+      +link-colors($black-1, $black-2, $black-1, $black-1, $black-1)
 
-.phone
-  margin-top: .065em
-  +hidden
+    +at-breakpoint($break9)
+      +reveal-hidden
+      +span-columns(2 omega, $break9)
+      line-height: 2.4
 
-  +at-breakpoint($break9)
-    +reveal-hidden
-    +span-columns(2 omega, $break9)
-    line-height: 2.4
-
-  +at-breakpoint($break12)
-    +span-columns(3 omega, $break12)
+    +at-breakpoint($break12)
+      +span-columns(3 omega, $break12)

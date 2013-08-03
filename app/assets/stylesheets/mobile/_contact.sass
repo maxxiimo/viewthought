@@ -21,7 +21,6 @@
 .contact-info
   margin-bottom: 1.159em
   a
-    display: inline !important
     line-height: 1
     padding: $nav-pad-4 / 4
     font-size: 1em + .236
@@ -29,8 +28,9 @@
     &:hover
       text-decoration: none
       color: $lime
-  #social-links
+  .phone-number,  #social-links
     display: inline-block
+  #social-links
     float: right
     margin-left: 1em
 
@@ -38,13 +38,6 @@
     a
       padding: $nav-pad-6 / 4
       font-size: 1em + .382
-
-.contact-info
-  .desktop
-    position: absolute
-    top: -9999px
-    left: -9999px
-    +hidden
 
 .contact-form
   p

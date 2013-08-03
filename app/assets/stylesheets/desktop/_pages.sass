@@ -1,7 +1,7 @@
-/* Mobile Desktop Toggle
+/* Toggles
   -----------------------
 
-// Used for toggling desktop only properties like "callto" vs. "tel"
+// For toggling desktop only properties
 
 .desktop
   +hidden
@@ -12,6 +12,27 @@
 
   .desktop
     +reveal-hidden
+
+// For toggling between phone number markup
+
+.callto
+  position: absolute
+  top: -9999px
+  left: -9999px
+  +hidden
+
++at-breakpoint($break9)
+  .tel
+    position: absolute
+    top: -9999px
+    left: -9999px
+    +hidden
+
+  .callto
+    position: relative
+    top: auto
+    left: auto
+    +reveal-hidden-inline
 
 
 /* Arrows
