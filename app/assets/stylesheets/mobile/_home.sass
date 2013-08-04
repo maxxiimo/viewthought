@@ -12,6 +12,14 @@
   +at-breakpoint($break6)
     padding: (1em + .443) 0 1.618em
 
+// JavaScript fallback
+
+.no-js #photo-hero
+  background: image-url("pics/silhouette-320-maximum.jpg") 50% 50% no-repeat
+
+  +at-breakpoint($break6)
+    background: image-url("pics/silhouette-600-maximum.jpg") 50% 50% no-repeat
+
 /* Tagline
 
 .white-box
