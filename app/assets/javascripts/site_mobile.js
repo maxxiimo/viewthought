@@ -12,6 +12,7 @@ $(document).ready(function() {
 // ===========================
 
 $('#photo-hero').anystretch("assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
+$('#in-person').anystretch("assets/map-320.gif", {speed: 200, positionY: 'top'});
 
 
 // ===========================
