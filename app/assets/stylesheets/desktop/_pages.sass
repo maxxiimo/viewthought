@@ -1,7 +1,7 @@
-/* Mobile Desktop Toggle
+/* Toggles
   -----------------------
 
-// Used for toggling desktop only properties like "callto" vs. "tel"
+// For toggling desktop only properties
 
 .desktop
   +hidden
@@ -13,17 +13,37 @@
   .desktop
     +reveal-hidden
 
+// For toggling between phone number markup
+
+.callto
+  position: absolute
+  top: -9999px
+  left: -9999px
+  +hidden
+
++at-breakpoint($break9)
+  .tel
+    position: absolute
+    top: -9999px
+    left: -9999px
+    +hidden
+
+  .callto
+    position: relative
+    top: auto
+    left: auto
+    +reveal-hidden-inline
+
 
 /* Arrows
   -----------------------
 
-.hero-down, .how-down, .the-point-down,
-.blurb-down,
-.skills-down,
-.quote-down,
-.core-values-down, .value-down, .case-study-down, .contact-hero-down,
-.process-down, .manifesto-down, .core-values-down, .tech-down, .quote-down, .email-us-down,
-.contact-map-up, .work-up
+.b-g-w,
+.l-b-g-b-g,
+.n-b-w,
+.b-g-g,
+.w-d-w,
+.d-g-g
 
   +at-breakpoint($break9)
     span

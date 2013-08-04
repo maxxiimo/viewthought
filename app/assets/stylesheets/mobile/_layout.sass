@@ -51,7 +51,7 @@ header
   background-color: $bg-header
   +box-shadow(0 1px 3px rgba(0, 0, 0, 0.1))
 
-.viewthought
+#viewthought
   float: left
   line-height: 1em
   margin: .236em 0 0
@@ -75,7 +75,7 @@ header
   visibility: visible
 
 .no-js .viewthought,
-.wf-inactive .viewthought
+.wf-inactive #viewthought
   width: 192px
   background: image-url("logos/viewthought.gif") -2px -48px no-repeat
   +hide-text
@@ -100,13 +100,6 @@ header
 
 // phone number
 
-.phone
-  float: right
-  font-family: $base-font-nav
-  font-size: 1em + .236
-  text-align: right
-  +link-colors($black-1, $black-2, $black-1, $black-1, $black-1)
-
-.phone
-  margin-top: .065em
-  +hidden
+header
+  .phone-number
+    +hidden
