@@ -17,6 +17,5 @@
 
 -# %script{:src => "http://maps.google.com/maps/api/js?sensor=false&language=en", :type => "text/javascript"}
 
-/[if lt IE 9]
-  /[if gt IE 6]
-    %script{:src => "skrollr.ie.min.js", :type => "text/javascript"}
+/[if (IE 7)|(IE 8)]
+  %script{:src => "skrollr.ie.min.js", :type => "text/javascript"}
