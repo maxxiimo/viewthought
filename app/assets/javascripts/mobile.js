@@ -15,6 +15,7 @@
 //= require jquery.anystretch
 //= require skrollr.min
 //= require skrollr.menu.min
+//= require skrollr.ie.min
 //= require showHide
 //= require jquery.infieldLabel
 //= require site_mobile
