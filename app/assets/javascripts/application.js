@@ -15,7 +15,6 @@
 //= require jquery.anystretch
 //= require skrollr.min
 //= require skrollr.menu.min
-//= require skrollr.ie.min
 //= require jquery.roundabout.min
 //= require jquery.event.drag-2.2
 //= require jquery.event.drop-2.2
