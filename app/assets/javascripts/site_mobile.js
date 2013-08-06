@@ -16,6 +16,39 @@ $('#in-person').anystretch("assets/map-320.gif", {speed: 200, positionY: 'top'})
 
 
 // ===========================
+// Adjust Arrow Location
+// ===========================
+
+$(document).ready(function () {
+    var windowHeight, headHeight, heroHeight, expertiseHeight;
+
+    function init() {
+        windowHeight = $(window).height();
+        headHeight = $('#home').height();
+        arrowHeight = $('#photo-hero .scroll').height();
+        heroHeight = $('#photo-hero').outerHeight();
+        expertiseHeight = $('#expertise').outerHeight();
+
+        // FIXME ccm: Why doesn't this work properly on resize?
+        // $('#photo-hero .scroll').css('top', windowHeight - (arrowHeight + headHeight));
+        // $('#expertise .scroll').css('top', windowHeight - (arrowHeight - 10))
+
+        if (heroHeight + headHeight > windowHeight) {
+            $('#photo-hero .scroll').css('top', windowHeight - 110);
+        }
+        if (expertiseHeight > windowHeight) {
+            $('#expertise .scroll').css('top', windowHeight - 60)
+        };
+    }
+    init();
+    $(window).resize(function () {
+
+        init();
+    });
+})
+
+
+// ===========================
 // Remove Anchor Outline
 // ===========================
 
@@ -25,6 +58,24 @@ $(function() {
     $('.autoblur').live("click", function(event) {
         this.blur();
     });
+});
+
+
+// ===========================
+// Smooth Scroll
+// ===========================
+
+$(document).ready(function() {
+
+  $('.scroll').click(function(event) {
+    event.preventDefault();
+    var link = this;
+    $.smoothScroll({
+      speed: 1000,
+      scrollTarget: link.hash
+    });
+  });
+
 });
 
 

@@ -13,8 +13,7 @@
 //= require jquery-1.8.3.min
 //= require jquery.lettering-0.6.1.min
 //= require jquery.anystretch
-//= require skrollr.min
-//= require skrollr.menu.min
+//= require jquery.smooth-scroll.min
 //= require jquery.roundabout.min
 //= require jquery.event.drag-2.2
 //= require jquery.event.drop-2.2
