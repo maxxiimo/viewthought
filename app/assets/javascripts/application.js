@@ -17,6 +17,8 @@
 //= require jquery.roundabout.min
 //= require jquery.event.drag-2.2
 //= require jquery.event.drop-2.2
+//= require TweenMax.min
+//= require jquery.superscrollorama
 //= require showHide
 //= require jquery.infieldLabel
 //= require site

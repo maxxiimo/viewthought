@@ -157,6 +157,39 @@ $(document).ready(function() {
 
 
 // ===========================
+// Superscrollorama
+// ===========================
+
+$(document).ready(function() {
+  var controller = $.superscrollorama();
+
+  controller.addTween('.tagline, .start-project', TweenMax.fromTo ( $('.tagline, .start-project'), 1.5, {css:{opacity: 1}}, {css:{opacity: 0}, ease:Power4.easeInOut}), 800);
+  controller.addTween('.manifesto-button a',      TweenMax.from   ( $('.manifesto-button a'),      1,   {css:{opacity:0, rotation: 720}, ease:Quad.easeOut}));
+  controller.addTween('.how',                     TweenMax.from   ( $('.how'),                     1,   {css:{opacity: 0}}), 0);
+  controller.addTween('.passion',                 TweenMax.from   ( $('.passion'),                 1,   {css:{opacity: 0}}), 0);
+  controller.addTween('.value',                   TweenMax.from   ( $('.value'),                   1,   {css:{opacity: 0}}), 0);
+  controller.addTween('#our-mission ol',          TweenMax.from   ( $('#our-mission ol'),          1,   {css:{opacity: 0}}), 0);
+  controller.addTween('.the-point',               TweenMax.from   ( $('.the-point'),               1,   {css:{opacity: 0}}), 0);
+
+  $(window).resize(function () {
+    controller.triggerCheckAnim();
+  });
+
+  // individual element tween examples
+  // controller.addTween('#fade-it', TweenMax.from( $('#fade-it'), .5, {css:{opacity: 0}}), scrollDuration);
+  // controller.addTween('#fade-it', TweenMax.from( $('#fade-it'), .5, {css:{opacity: 0}}));
+  // controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}), scrollDuration);
+  // controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+  // controller.addTween('#spin-it', TweenMax.from( $('#spin-it'), .25, {css:{opacity:0, rotation: 720}, ease:Quad.easeOut}), scrollDuration);
+  // controller.addTween('#spin-it', TweenMax.from( $('#spin-it'), .25, {css:{opacity:0, rotation: 720}, ease:Quad.easeOut}));
+  // controller.addTween('#scale-it', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}), scrollDuration);
+  // controller.addTween('#scale-it', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}));
+  // controller.addTween('#smush-it', TweenMax.fromTo( $('#smush-it'), .25, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), scrollDuration); // 100 px offset for better timing
+  // controller.addTween('#smush-it', TweenMax.fromTo( $('#smush-it'), .25, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 100); // 100 px offset for better timing
+});
+
+
+// ===========================
 // show Hide
 // ===========================
 
