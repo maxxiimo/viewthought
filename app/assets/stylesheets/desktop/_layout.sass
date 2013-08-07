@@ -54,9 +54,6 @@ body
 img
   vertical-align: middle
 
-#photo-hero
-  +hidden
-
 // #photo-hero, #about-us, #how, #process, #passion, #expertise,
 // #value, #our-mission, #the-point, .tech-icons, #tech-blurb,
 // #contact-us, #email-us, #in-person
@@ -96,6 +93,7 @@ header
     +span-columns(4, $break12)
 
 .wf-active #viewthought
+  visibility: hidden
   @extend .big-entrance
 
 // TypeKit and JavaScript fallbacks

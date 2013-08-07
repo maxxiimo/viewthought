@@ -125,15 +125,35 @@ $(document).ready(function() {
 // Roundabout
 // ===========================
 
- $(document).ready(function() {
-    $('#process ul').roundabout({
-       enableDrag: true,
-       autoplay: true,
-       autoplayDuration: 8000,
-       autoplayPauseOnHover: true,
-       responsive: true
+$(document).ready(function() {
+  $('#process ul').roundabout({
+     enableDrag: true,
+     autoplay: true,
+     autoplayDuration: 8000,
+     autoplayPauseOnHover: true,
+     responsive: true
+  });
+});
+
+
+// ===========================
+// Animations
+// ===========================
+
+$(document).ready(function() {
+
+  $(window).scroll(function() {
+    $('.devices').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+400) {
+        $(this).addClass("fade-in");
+      }
     });
- });
+  });
+
+});
 
 
 // ===========================

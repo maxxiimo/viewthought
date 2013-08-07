@@ -191,7 +191,10 @@
       background: image-url("icons/devices-356.png") 0 0 no-repeat
 
 .devices
-  @extend .big-entrance
+  visibility: hidden
+
+.no-js .devices
+  visibility: visible !important
 
 
 /* How
