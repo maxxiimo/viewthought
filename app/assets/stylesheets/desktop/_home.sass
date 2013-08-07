@@ -167,18 +167,31 @@
   +at-breakpoint($break9)
     +span-columns(7, $break9)
     +squish(1, 1)
-    padding-bottom: 210px
-    background: image-url("icons/devices-285.png") 50% 90% no-repeat
+    // padding-bottom: 210px
+    // background: image-url("icons/devices-285.png") 50% 90% no-repeat
     p
       font-size: 2em
+    .devices
+      margin: 1.875em auto 1.159em
+      width: 285px
+      height: 162px
+      background: image-url("icons/devices-285.png") 0 0 no-repeat
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    padding-bottom: 265px
-    background: image-url("icons/devices.png") 50% 90% no-repeat
+    // padding-bottom: 265px
+    // background: image-url("icons/devices-356.png") 50% 90% no-repeat
     p
       font-size: 1.875em + .443
+    .devices
+      margin: 1.875em + .443 auto 1.618em
+      width: 356px
+      height: 202px
+      background: image-url("icons/devices-356.png") 0 0 no-repeat
+
+.devices
+  @extend .big-entrance
 
 
 /* How

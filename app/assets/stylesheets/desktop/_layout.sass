@@ -95,6 +95,9 @@ header
   +at-breakpoint($break12)
     +span-columns(4, $break12)
 
+.wf-active #viewthought
+  @extend .big-entrance
+
 // TypeKit and JavaScript fallbacks
 
 .wf-loading .logo
@@ -108,6 +111,7 @@ header
   width: 192px
   background: image-url("logos/viewthought.gif") -2px -48px no-repeat
   +hide-text
+  @extend .big-entrance
 
   +at-breakpoint($break9)
     width: 246px
