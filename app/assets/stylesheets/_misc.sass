@@ -134,55 +134,52 @@
 // NOTE ccm: breakpoint 9 code is in desktop/pages.sass.
 
 
-/* Columns
+/* Animation
   -----------------------
 
-.cols li,
-.cols p
-  clear: both
+.hatch
+  animation-name: hatch
+  -webkit-animation-name: hatch
+  animation-duration: 2s
+  -webkit-animation-duration: 2s
+  animation-timing-function: ease-in-out
+  -webkit-animation-timing-function: ease-in-out
+  transform-origin: 50% 100%
+  -ms-transform-origin: 50% 100%
+  -webkit-transform-origin: 50% 100%
+  visibility: visible !important
 
-.col1, .col2, .col3, .col4, .col5
-  float: left
-  display: block
-  // display: inline-block
+@keyframes hatch
+  0%
+    transform: rotate(0deg) scaleY(0.6)
+  20%
+    transform: rotate(-2deg) scaleY(1.05)
+  35%
+    transform: rotate(2deg) scaleY(1)
+  50%
+    transform: rotate(-2deg)
+  65%
+    transform: rotate(1deg)
+  80%
+    transform: rotate(-1deg)
+  100%
+    transform: rotate(0deg)
 
-
-/* Tables
-  -----------------------
-
-// to help tables remember to inherit
-
-table
-  font-size: inherit
-  font: 100%
-
-td
-  vertical-align: top
-
-
-/* Horizontal Rulers
-  -----------------------
-
-hr
-  display: block
-  height: 1px
-  border: 0
-  border-top: 1px solid $ruler
-  margin: 1em 0
-  padding: 0
-
-hr.spacer
-  background: $spacer
-  color: $spacer
-  border-top: 1px solid $spacer
-hr.sm
-  margin-bottom: .5em
-hr.med
-  margin-bottom: 1em
-hr.lg
-  margin-bottom: 2em
-hr.xlg
-  margin-bottom: 3em
+@-webkit-keyframes hatch
+  0%
+    -webkit-transform: rotate(0deg) scaleY(0.6)
+  20%
+    -webkit-transform: rotate(-2deg) scaleY(1.05)
+  35%
+    -webkit-transform: rotate(2deg) scaleY(1)
+  50%
+    -webkit-transform: rotate(-2deg)
+  65%
+    -webkit-transform: rotate(1deg)
+  80%
+    -webkit-transform: rotate(-1deg)
+  100%
+    -webkit-transform: rotate(0deg)
 
 
 /* Alerts
