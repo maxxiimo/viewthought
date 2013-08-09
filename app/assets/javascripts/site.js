@@ -211,16 +211,16 @@ $(document).ready(function() {
       .append([
         TweenMax.staggerFromTo(
           $('.ruby, .jquery, .git, .backbone, .html, .css, .haml, .sass'),
-          .75,
+          .5,
           {css:{opacity: 0, scale: 0}},
           {css:{opacity: 1, scale: 1}},
-          .2
+          .1
         ),
         TweenMax.staggerTo(
           $('.ruby, .jquery, .git, .backbone, .html, .css, .haml, .sass'),
-          .75,
+          .5,
           {css:{rotation: 360}},
-          .2
+          .1
         )
       ])
   );
