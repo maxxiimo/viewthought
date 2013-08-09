@@ -14,6 +14,5 @@
 //= require jquery.lettering-0.6.1.min
 //= require jquery.anystretch
 //= require jquery.smooth-scroll.min
-//= require showHide
 //= require jquery.infieldLabel
 //= require site_mobile

@@ -14,11 +14,10 @@
 //= require jquery.lettering-0.6.1.min
 //= require jquery.anystretch
 //= require jquery.smooth-scroll.min
+//= require TweenMax.min
+//= require jquery.superscrollorama
 //= require jquery.roundabout.min
 //= require jquery.event.drag-2.2
 //= require jquery.event.drop-2.2
-//= require TweenMax.min
-//= require jquery.superscrollorama
-//= require showHide
 //= require jquery.infieldLabel
 //= require site
