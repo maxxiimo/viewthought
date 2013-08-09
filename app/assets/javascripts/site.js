@@ -179,7 +179,7 @@ $(document).ready(function() {
     800
   );
 
-  controller.addTween('.manifesto-button a',
+  controller.addTween('.manifesto',
     TweenMax.from(
       $('.manifesto-button a'),
       1.0,
