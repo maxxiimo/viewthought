@@ -110,6 +110,9 @@
 .n-b-w
   +icon-arrow($navy-blue, $white, 2.618em)
 
+.g-w
+  +icon-arrow($gray, $white, 2.618em)
+
 .b-g-g
   +icon-arrow($blue-gray, $gray, 2.618em)
 
@@ -119,12 +122,7 @@
 .d-g-g
   +icon-arrow(darken($gray, 20), $gray, 2.618em)
 
-.b-g-w,
-.l-b-g-b-g,
-.n-b-w,
-.b-g-g,
-.w-d-w,
-.d-g-g
+.scroll
   +at-breakpoint($break6)
     span
       font-size: 3.034em
@@ -134,57 +132,6 @@
 
 
 // NOTE ccm: breakpoint 9 code is in desktop/pages.sass.
-
-
-/* Columns
-  -----------------------
-
-.cols li,
-.cols p
-  clear: both
-
-.col1, .col2, .col3, .col4, .col5
-  float: left
-  display: block
-  // display: inline-block
-
-
-/* Tables
-  -----------------------
-
-// to help tables remember to inherit
-
-table
-  font-size: inherit
-  font: 100%
-
-td
-  vertical-align: top
-
-
-/* Horizontal Rulers
-  -----------------------
-
-hr
-  display: block
-  height: 1px
-  border: 0
-  border-top: 1px solid $ruler
-  margin: 1em 0
-  padding: 0
-
-hr.spacer
-  background: $spacer
-  color: $spacer
-  border-top: 1px solid $spacer
-hr.sm
-  margin-bottom: .5em
-hr.med
-  margin-bottom: 1em
-hr.lg
-  margin-bottom: 2em
-hr.xlg
-  margin-bottom: 3em
 
 
 /* Alerts
@@ -256,6 +203,15 @@ hr.xlg
 
 /* Other
   -----------------------
+
+.hidden
+  +hidden
+
+.reveal-hidden
+  +reveal-hidden
+
+.reveal-hidden-inline
+  +reveal-hidden-inline
 
 .nobold
   font-weight: normal

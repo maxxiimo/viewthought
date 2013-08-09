@@ -16,54 +16,36 @@ $('#in-person').anystretch("assets/map-320.gif", {speed: 200, positionY: 'top'})
 
 
 // ===========================
-// bgStretcher
+// Adjust Arrow Location
 // ===========================
 
-// callBack = function(){
-//   var $one   = $('.one');
-//   var $two   = $('.two');
-//   var $three = $('.three');
-//   var $four  = $('.four');
+$(document).ready(function () {
+    var windowHeight, headHeight, heroHeight, expertiseHeight;
 
-//   if ($one.is(':visible')){
-//       $one.fadeOut(500);
-//       $two.delay(1500).fadeIn(1500);
-//   }
-//   else if ($two.is(':visible')){
-//       $two.fadeOut(500);
-//       $three.delay(1500).fadeIn(1500);
-//   }
-//   else if ($three.is(':visible')){
-//       $three.fadeOut(500);
-//       $four.delay(1500).fadeIn(1500);
-//   }
-//   else{
-//       $four.fadeOut(500);
-//       $one.delay(1500).fadeIn(1500);
-//   }
-// }
+    function init() {
+        windowHeight = $(window).height();
+        headHeight = $('#home').height();
+        arrowHeight = $('#photo-hero .scroll').height();
+        heroHeight = $('#photo-hero').outerHeight();
+        expertiseHeight = $('#expertise').outerHeight();
 
+        // FIXME ccm: Why doesn't this work properly on resize?
+        // $('#photo-hero .scroll').css('top', windowHeight - (arrowHeight + headHeight));
+        // $('#expertise .scroll').css('top', windowHeight - (arrowHeight - 10))
 
-// $(document).ready(function(){
+        if (heroHeight + headHeight > windowHeight) {
+            $('#photo-hero .scroll').css('top', windowHeight - 110);
+        }
+        if (expertiseHeight > windowHeight) {
+            $('#expertise .scroll').css('top', windowHeight - 60)
+        };
+    }
+    init();
+    $(window).resize(function () {
 
-//   $('#quote').bgStretcher({
-//     images: ['assets/pics/silhouette-320-maximum.jpg', 'assets/pics/drain-320-maximum.jpg', 'assets/pics/lake-titicaca-320-maximum.jpg', 'assets/pics/rainbow-320-maximum.jpg'],
-//     imageWidth: 1024,
-//     imageHeight: 682,
-//     slideDirection: 'N',
-//     nextSlideDelay: 10000,
-//     slideShowSpeed: 1500,
-//     transitionEffect: 'fade',
-//     sequenceMode: 'normal',
-//     buttonPrev: '#prev',
-//     buttonNext: '#next',
-//     pagination: '#controls',
-//     anchoring: 'center center',
-//     anchoringImg: 'center center',
-//     callbackfunction: callBack
-//   });
-
-// });
+        init();
+    });
+})
 
 
 // ===========================
@@ -80,22 +62,42 @@ $(function() {
 
 
 // ===========================
+// Smooth Scroll
+// ===========================
+
+$(document).ready(function() {
+
+  $('.scroll').click(function(event) {
+    event.preventDefault();
+    var link = this;
+    $.smoothScroll({
+      speed: 1000,
+      scrollTarget: link.hash
+    });
+  });
+
+});
+
+
+// ===========================
 // show Hide
 // ===========================
 
 // http://papermashup.com/jquery-show-hide-plugin/
 
-$(document).ready(function(){
+//= require showHide
 
-  $('.show_hide').showHide({
-    speed: 1000,  // speed you want the toggle to happen
-    easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-    changeText: 1, // if you dont want the button text to change, set this to 0
-    showText: 'Read More',// the button text to show when a div is closed
-    hideText: 'Less' // the button text to show when a div is open
-  });
+// $(document).ready(function(){
 
-});
+//   $('.show_hide').showHide({
+//     speed: 1000,             // speed you want the toggle to happen
+//     easing: '',              // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+//     changeText: 1,           // if you dont want the button text to change, set this to 0
+//     showText: 'Read More',   // the button text to show when a div is closed
+//     hideText: 'Less'         // the button text to show when a div is open
+//   });
+
+// });
 
 
 // ===========================

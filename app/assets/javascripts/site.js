@@ -8,93 +8,6 @@ $(document).ready(function() {
 
 
 // ===========================
-// Anystretch
-// ===========================
-
-$('#photo-hero').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
-$('#in-person').anystretch("assets/map-1400.gif", {speed: 200, positionY: 'top'});
-
-
-// ===========================
-// Roundabout
-// ===========================
-
- $(document).ready(function() {
-    $('#process ul').roundabout({
-       enableDrag: true,
-       autoplay: true,
-       autoplayDuration: 8000,
-       autoplayPauseOnHover: true,
-       responsive: true
-    });
- });
-
-
-// ===========================
-// bgStretcher
-// ===========================
-
-// callBack = function(){
-//   var $one   = $('.one');
-//   var $two   = $('.two');
-//   var $three = $('.three');
-//   var $four  = $('.four');
-
-//   if ($one.is(':visible')){
-//       $one.fadeOut(500);
-//       $two.delay(1500).fadeIn(1500);
-//   }
-//   else if ($two.is(':visible')){
-//       $two.fadeOut(500);
-//       $three.delay(1500).fadeIn(1500);
-//   }
-//   else if ($three.is(':visible')){
-//       $three.fadeOut(500);
-//       $four.delay(1500).fadeIn(1500);
-//   }
-//   else{
-//       $four.fadeOut(500);
-//       $one.delay(1500).fadeIn(1500);
-//   }
-// }
-
-
-// $(document).ready(function(){
-
-//   $('#quote').bgStretcher({
-//     images: ['assets/pics/silhouette-1024-maximum.jpg', 'assets/pics/drain-1024-maximum.jpg', 'assets/pics/lake-titicaca-1024-maximum.jpg', 'assets/pics/rainbow-1024-maximum.jpg'],
-//     imageWidth: 1024,
-//     imageHeight: 682,
-//     slideDirection: 'N',
-//     nextSlideDelay: 10000,
-//     slideShowSpeed: 1500,
-//     transitionEffect: 'fade',
-//     sequenceMode: 'normal',
-//     buttonPrev: '#prev',
-//     buttonNext: '#next',
-//     pagination: '#controls',
-//     anchoring: 'center center',
-//     anchoringImg: 'center center',
-//     callbackfunction: callBack
-//   });
-
-// });
-
-
-// ===========================
-// Remove Anchor Outline
-// ===========================
-
-// http://stackoverflow.com/questions/1535538/jquery-getting-rid-of-dotted-outline-around-buttons
-
-$(function() {
-    $('.autoblur').live("click", function(event) {
-        this.blur();
-    });
-});
-
-
-// ===========================
 // Magic Line
 // ===========================
 
@@ -137,22 +50,186 @@ $(function() {
 
 
 // ===========================
+// Anystretch
+// ===========================
+
+$('#photo-hero').anystretch("assets/pics/silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
+$('#in-person').anystretch("assets/map-1400.gif", {speed: 200, positionY: 'top'});
+
+
+// ===========================
+// Adjust Arrow Location
+// ===========================
+
+$(document).ready(function () {
+    var windowHeight, headHeight, heroHeight, expertiseHeight;
+
+    function init() {
+        windowHeight = $(window).height();
+        headHeight = $('#home').height();
+        arrowHeight = $('#photo-hero .scroll').height();
+
+        heroHeight = $('#photo-hero').outerHeight();
+        expertiseHeight = $('#expertise').outerHeight();
+        processHeight = $('#process').outerHeight();
+        valueHeight = $('#value').outerHeight();
+
+        // FIXME ccm: Why doesn't this work properly on resize?
+        // $('#photo-hero .scroll').css('top', windowHeight - (arrowHeight + headHeight));
+        // $('#expertise .scroll').css('top', windowHeight - (arrowHeight - 10))
+
+        if (heroHeight + headHeight > windowHeight) {
+            $('#photo-hero .scroll').css('top', windowHeight - 110);
+        }
+        if (expertiseHeight > windowHeight) {
+            $('#expertise .scroll').css('top', windowHeight - 60)
+        }
+        if (processHeight > windowHeight) {
+            $('#process .scroll').css('top', windowHeight - 60)
+        }
+        if (valueHeight > windowHeight) {
+            $('#value .scroll').css('top', windowHeight - 60)
+        };
+    }
+    init();
+    $(window).resize(function () {
+
+        init();
+    });
+})
+
+
+// ===========================
+// Remove Anchor Outline
+// ===========================
+
+// http://stackoverflow.com/questions/1535538/jquery-getting-rid-of-dotted-outline-around-buttons
+
+$(function() {
+    $('.autoblur').live("click", function(event) {
+        this.blur();
+    });
+});
+
+
+// ===========================
+// Smooth Scroll
+// ===========================
+
+$(document).ready(function() {
+
+  $('.scroll').click(function(event) {
+    event.preventDefault();
+    var link = this;
+    $.smoothScroll({
+      speed: 1000,
+      scrollTarget: link.hash
+    });
+  });
+
+});
+
+
+// ===========================
+// Roundabout
+// ===========================
+
+$(document).ready(function() {
+  $('#process ul').roundabout({
+     enableDrag: true,
+     autoplay: true,
+     autoplayDuration: 8000,
+     autoplayPauseOnHover: true,
+     responsive: true
+  });
+});
+
+
+// ===========================
+// Animations
+// ===========================
+
+$(document).ready(function() {
+
+  Mobvious.for_device_type('desktop', function() {
+      $(window).scroll(function() {
+        $('.devices').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+400) {
+            $(this).addClass("fade-in");
+          }
+        });
+      });
+  });
+
+  Mobvious.for_device_type('tablet', function() {
+      $('.devices').addClass("reveal-devices");
+  });
+
+});
+
+
+// ===========================
+// Superscrollorama
+// ===========================
+
+$(document).ready(function() {
+  var controller = $.superscrollorama();
+
+  controller.addTween('.tagline, .start-project',
+    TweenMax.fromTo(
+      $('.tagline, .start-project'),
+      1.5,
+      {css:{opacity: 1}},
+      {css:{opacity: 0}, ease:Power4.easeInOut}
+    ),
+    800
+  );
+
+  controller.addTween('#expertise',
+    TweenMax.from(
+      $('.manifesto-button a'),
+      1.0,
+      {css:{opacity: 0, rotation: 720}, ease:Quad.easeOut}
+    )
+  );
+
+  controller.addTween('.our-mission',
+    TweenMax.fromTo(
+      $('#our-mission ol'),
+      1.5,
+      {css:{opacity: 0, scale: 0}},
+      {css:{opacity: 1, scale: 1}}
+    )
+  );
+
+  $(window).resize(function () {
+    controller.triggerCheckAnim();
+  });
+});
+
+
+// ===========================
 // show Hide
 // ===========================
 
 // http://papermashup.com/jquery-show-hide-plugin/
 
-$(document).ready(function(){
+//= require showHide
 
-  $('.show_hide').showHide({
-    speed: 1000,  // speed you want the toggle to happen
-    easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-    changeText: 1, // if you dont want the button text to change, set this to 0
-    showText: 'Read More',// the button text to show when a div is closed
-    hideText: 'Less' // the button text to show when a div is open
-  });
+// $(document).ready(function(){
 
-});
+//   $('.show_hide').showHide({
+//     speed: 1000,             // speed you want the toggle to happen
+//     easing: '',              // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+//     changeText: 1,           // if you dont want the button text to change, set this to 0
+//     showText: 'Read More',   // the button text to show when a div is closed
+//     hideText: 'Less'         // the button text to show when a div is open
+//   });
+
+// });
 
 
 // ===========================
