@@ -205,6 +205,26 @@ $(document).ready(function() {
     )
   );
 
+  controller.addTween(
+    '.tech-icons',
+    (new TimelineLite())
+      .append([
+        TweenMax.staggerFromTo(
+          $('.ruby, .jquery, .git, .backbone, .html, .css, .haml, .sass'),
+          .5,
+          {css:{opacity: 0, scale: 0}},
+          {css:{opacity: 1, scale: 1}},
+          .1
+        ),
+        TweenMax.staggerTo(
+          $('.ruby, .jquery, .git, .backbone, .html, .css, .haml, .sass'),
+          .5,
+          {css:{rotation: 360}},
+          .1
+        )
+      ])
+  );
+
   $(window).resize(function () {
     controller.triggerCheckAnim();
   });
