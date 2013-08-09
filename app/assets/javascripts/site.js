@@ -143,7 +143,6 @@ $(document).ready(function() {
 $(document).ready(function() {
 
   Mobvious.for_device_type('desktop', function() {
-
       $(window).scroll(function() {
         $('.devices').each(function(){
         var imagePos = $(this).offset().top;
@@ -154,8 +153,12 @@ $(document).ready(function() {
           }
         });
       });
-
   });
+
+  Mobvious.for_device_type('tablet', function() {
+      $('.devices').addClass("reveal-devices");
+  });
+
 });
 
 
