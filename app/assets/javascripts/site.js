@@ -163,13 +163,32 @@ $(document).ready(function() {
 $(document).ready(function() {
   var controller = $.superscrollorama();
 
-  controller.addTween('.tagline, .start-project', TweenMax.fromTo ( $('.tagline, .start-project'), 1.5, {css:{opacity: 1}}, {css:{opacity: 0}, ease:Power4.easeInOut}), 800);
-  controller.addTween('.manifesto-button a',      TweenMax.from   ( $('.manifesto-button a'),      1,   {css:{opacity:0, rotation: 720}, ease:Quad.easeOut}));
-  // controller.addTween('.how',                     TweenMax.from   ( $('.how'),                     1,   {css:{opacity: 0}}), 0);
-  // controller.addTween('.passion',                 TweenMax.from   ( $('.passion'),                 1,   {css:{opacity: 0}}), 0);
-  // controller.addTween('.value',                   TweenMax.from   ( $('.value'),                   1,   {css:{opacity: 0}}), 0);
-  controller.addTween('#our-mission ol',          TweenMax.from   ( $('#our-mission ol'),          1,   {css:{opacity: 0}}), 0);
-  // controller.addTween('.the-point',               TweenMax.from   ( $('.the-point'),               1,   {css:{opacity: 0}}), 0);
+  controller.addTween('.tagline, .start-project',
+    TweenMax.fromTo(
+      $('.tagline, .start-project'),
+      1.5,
+      {css:{opacity: 1}},
+      {css:{opacity: 0}, ease:Power4.easeInOut}
+    ),
+    800
+  );
+
+  controller.addTween('.manifesto-button a',
+    TweenMax.from(
+      $('.manifesto-button a'),
+      1.0,
+      {css:{opacity: 0, rotation: 720}, ease:Quad.easeOut}
+    )
+  );
+
+  controller.addTween('.our-mission',
+    TweenMax.fromTo(
+      $('#our-mission ol'),
+      1.5,
+      {css:{opacity: 0, scale: 0}},
+      {css:{opacity: 1, scale: 1}}
+    )
+  );
 
   $(window).resize(function () {
     controller.triggerCheckAnim();
@@ -186,11 +205,11 @@ $(document).ready(function() {
 $(document).ready(function(){
 
   $('.show_hide').showHide({
-    speed: 1000,  // speed you want the toggle to happen
-    easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-    changeText: 1, // if you dont want the button text to change, set this to 0
-    showText: 'Read More',// the button text to show when a div is closed
-    hideText: 'Less' // the button text to show when a div is open
+    speed: 1000,             // speed you want the toggle to happen
+    easing: '',              // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+    changeText: 1,           // if you dont want the button text to change, set this to 0
+    showText: 'Read More',   // the button text to show when a div is closed
+    hideText: 'Less'         // the button text to show when a div is open
   });
 
 });
