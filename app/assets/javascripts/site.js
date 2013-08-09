@@ -142,17 +142,20 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-  $(window).scroll(function() {
-    $('.devices').each(function(){
-    var imagePos = $(this).offset().top;
+  Mobvious.for_device_type('desktop', function() {
 
-    var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow+400) {
-        $(this).addClass("fade-in");
-      }
-    });
+      $(window).scroll(function() {
+        $('.devices').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+400) {
+            $(this).addClass("fade-in");
+          }
+        });
+      });
+
   });
-
 });
 
 
