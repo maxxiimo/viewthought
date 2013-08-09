@@ -248,18 +248,20 @@
     padding: $padding-12 0
 
 .tech-icons
+  text-align: center
   p
     margin: 0
     font-size: 1em + .236
-    text-align: center
+  span
+    +hidden
 
   +at-breakpoint($break6)
-    span
-      display: block
+    .all
       margin: 2.618em auto 0 auto
       width: 280px
       height: 149px
       background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
+      +reveal-hidden
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -268,9 +270,28 @@
       font-size: 1.875em
     span
       margin-top: 2.618em
-      width: 563px
+      width: 68px
       height: 69px
       background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
+      +reveal-hidden-inline
+    .ruby
+      background-position: 0 0
+    .jquery
+      background-position: -65px 0
+    .git
+      background-position: -135px 0
+    .backbone
+      background-position: -220px 0
+    .html
+      background-position: -300px 0
+    .css
+      background-position: -370px 0
+    .haml
+      background-position: -431px 0
+    .sass
+      background-position: -498px 0
+    .all
+      +hidden
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)

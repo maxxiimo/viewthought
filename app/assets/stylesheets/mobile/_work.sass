@@ -139,18 +139,20 @@
     +reveal-hidden
 
 .tech-icons
+  text-align: center
   p
     margin: 0
     font-size: 1em + .236
-    text-align: center
+  span
+    +hidden
 
   +at-breakpoint($break6)
-    span
-      display: block
+    .all
       margin: 2.618em auto 0 auto
       width: 280px
       height: 149px
       background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
+      +reveal-hidden
 
 
 /* Tech Blurb
