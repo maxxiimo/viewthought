@@ -68,8 +68,11 @@ $(document).ready(function () {
         windowHeight = $(window).height();
         headHeight = $('#home').height();
         arrowHeight = $('#photo-hero .scroll').height();
+
         heroHeight = $('#photo-hero').outerHeight();
         expertiseHeight = $('#expertise').outerHeight();
+        processHeight = $('#process').outerHeight();
+        valueHeight = $('#value').outerHeight();
 
         // FIXME ccm: Why doesn't this work properly on resize?
         // $('#photo-hero .scroll').css('top', windowHeight - (arrowHeight + headHeight));
@@ -80,6 +83,12 @@ $(document).ready(function () {
         }
         if (expertiseHeight > windowHeight) {
             $('#expertise .scroll').css('top', windowHeight - 60)
+        }
+        if (processHeight > windowHeight) {
+            $('#process .scroll').css('top', windowHeight - 60)
+        }
+        if (valueHeight > windowHeight) {
+            $('#value .scroll').css('top', windowHeight - 60)
         };
     }
     init();
@@ -179,7 +188,7 @@ $(document).ready(function() {
     800
   );
 
-  controller.addTween('.manifesto',
+  controller.addTween('#expertise',
     TweenMax.from(
       $('.manifesto-button a'),
       1.0,
