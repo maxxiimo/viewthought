@@ -178,14 +178,13 @@ $(document).ready(function() {
 $(document).ready(function() {
   var controller = $.superscrollorama();
 
-  controller.addTween('.start-project',
+  controller.addTween('#photo-hero .scroll',
     TweenMax.fromTo(
       $('.tagline, .start-project'),
       1.5,
       {css:{opacity: 1}},
-      {css:{opacity: 0}, ease:Power4.easeInOut}
-    ),
-    500
+      {css:{opacity: 0}}
+    )
   );
 
   controller.addTween('#expertise',
@@ -205,10 +204,10 @@ $(document).ready(function() {
     )
   );
 
-  controller.addTween(
-    '.tech-icons',
+  controller.addTween('.tech-icons',
     (new TimelineLite())
       .append([
+
         TweenMax.staggerFromTo(
           $('.ruby, .jquery, .git, .backbone, .html, .css, .haml, .sass'),
           .5,
@@ -222,6 +221,7 @@ $(document).ready(function() {
           {css:{rotation: 360}},
           .1
         )
+
       ])
   );
 
