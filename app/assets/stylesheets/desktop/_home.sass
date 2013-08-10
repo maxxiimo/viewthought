@@ -150,12 +150,20 @@
     margin: 0
     font-size: 1em + .236
     text-align: center
+  .devices
+    margin: 1em + .443 auto 1.159em
+    width: 150px
+    height: 85px
+    // background: image-url("icons/devices-150.png") 0 0 no-repeat
+    background: image-url("smush_sprite-sm.png") -260px -500px no-repeat
   &:after
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
     p
       font-size: 1.618em
+    .devices
+      margin: 1.875em auto .716em
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -163,7 +171,6 @@
     p
       font-size: 2em
     .devices
-      margin: 1.875em auto 1.159em
       width: 285px
       height: 162px
       // background: image-url("icons/devices-285.png") 0 0 no-repeat

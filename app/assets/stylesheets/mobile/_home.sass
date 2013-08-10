@@ -87,12 +87,20 @@
     margin: 0
     font-size: 1em + .236
     text-align: center
+  .devices
+    margin: 1em + .443 auto .716em
+    width: 150px
+    height: 85px
+    // background: image-url("icons/devices-150.png") 0 0 no-repeat
+    background: image-url("smush_sprite-sm.png") -260px -500px no-repeat
   &:after
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
     p
       font-size: 1.618em
+    .devices
+      margin: 1.875em auto 1.159em
 
 
 /* How
@@ -101,8 +109,8 @@
 #how
   position: relative
   padding: $padding-4 0
-  border-color: $blue-gray
-  background-color: $blue-gray
+  border-color: $navy-blue
+  background-color: $navy-blue
   &:after
     content: ""
     position: absolute
@@ -122,9 +130,11 @@
     line-height: 1
     margin: 0
     font-size: 1.618em
+    color: $dark-white
   p
     margin: .443em 0 0
     font-size: 1.159em
+    color: $white-smoke
 
   +at-breakpoint($break6)
     h2
