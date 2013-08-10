@@ -157,7 +157,7 @@ $(document).ready(function() {
         var imagePos = $(this).offset().top;
 
         var topOfWindow = $(window).scrollTop();
-          if (imagePos < topOfWindow+400) {
+          if (imagePos < topOfWindow+600) {
             $(this).addClass("fade-in");
           }
         });
@@ -185,7 +185,7 @@ $(document).ready(function() {
       {css:{opacity: 1}},
       {css:{opacity: 0}, ease:Power4.easeInOut}
     ),
-    800
+    1000
   );
 
   controller.addTween('#expertise',
