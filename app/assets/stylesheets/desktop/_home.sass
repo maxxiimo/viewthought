@@ -160,28 +160,26 @@
   +at-breakpoint($break9)
     +span-columns(7, $break9)
     +squish(1, 1)
-    // padding-bottom: 210px
-    // background: image-url("icons/devices-285.png") 50% 90% no-repeat
     p
       font-size: 2em
     .devices
       margin: 1.875em auto 1.159em
       width: 285px
       height: 162px
-      background: image-url("icons/devices-285.png") 0 0 no-repeat
+      // background: image-url("icons/devices-285.png") 0 0 no-repeat
+      background: image-url("sprite.png") 0 -85px no-repeat
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    // padding-bottom: 265px
-    // background: image-url("icons/devices-356.png") 50% 90% no-repeat
     p
       font-size: 1.875em + .443
     .devices
       margin: 1.875em + .443 auto 1.618em
       width: 356px
       height: 202px
-      background: image-url("icons/devices-356.png") 0 0 no-repeat
+      // background: image-url("icons/devices-356.png") 0 0 no-repeat
+      background: image-url("sprite.png") -320px 0 no-repeat
 
 .devices
   visibility: hidden
@@ -495,19 +493,31 @@
       font-size: 1.159em
 
   +at-breakpoint($break9)
-    +span-columns(5, $break9)
-    +prefix(3)
-    +pre(.5)
-    background: image-url("icons/manifesto-150.png") 55px 8px no-repeat
+    +span-columns(8, $break9)
+    +pre(1)
+    .book
+      float: left
+      margin-right: 2.618em
+      width: 150px
+      height: 239px
+      // background: image-url("icons/manifesto-150.png") 55px 8px no-repeat
+      background: image-url("sprite.png") 0 -260px no-repeat
+    .description
+      +span-columns(6, $break9)
 
   +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +prefix(3)
+    +span-columns(9, $break12)
     +pre(1)
     min-height: 318px
-    background: image-url("icons/manifesto-200.png") 0 0 no-repeat
+    .book
+      width: 200px
+      height: 318px
+      // background: image-url("icons/manifesto-200.png") 0 0 no-repeat
+      background: image-url("sprite.png") -320px -260px no-repeat
     p
       font-size: 1em + .236
+    .description
+      +span-columns(6 omega, $break9)
 
 .coding-design
   margin-top: $margin-4
@@ -517,11 +527,15 @@
 
   +at-breakpoint($break9)
     margin-top: $margin-9
-    background: image-url("icons/design-150.png") 55px 8px no-repeat
+    .book
+      // background: image-url("icons/design-150.png") 55px 8px no-repeat
+      background: image-url("sprite.png") -160px -260px no-repeat
 
   +at-breakpoint($break12)
     margin-top: $margin-12
-    background: image-url("icons/design-200.png") 0 0 no-repeat
+    .book
+      // background: image-url("icons/design-200.png") 0 0 no-repeat
+      background: image-url("sprite.png") -530px -260px no-repeat
 
 /* Buttons
 
