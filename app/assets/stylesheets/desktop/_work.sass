@@ -33,7 +33,7 @@
       margin-left: -309px
       width: 618px
       height: 454px
-      background: image-url("ipad.png") 0 0 no-repeat
+      background: image-url("smush_ipad.png") 0 0 no-repeat
 
   +at-breakpoint($break12)
     padding: $padding-12 0
@@ -252,45 +252,38 @@
   p
     margin: 0
     font-size: 1em + .236
-  span
-    +hidden
 
   +at-breakpoint($break6)
-    .all
-      margin: 2.618em auto 0 auto
-      width: 280px
-      height: 149px
-      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
-      +reveal-hidden
+    span
+      display: inline-block
+      margin-top: 2.618em
+      width: 63px
+      height: 69px
+      // background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
+      background: image-url("smush_sprite.png") 0 -590px no-repeat
+    .ruby
+      background-position: 0 -590px
+    .jquery
+      background-position: -65px -590px
+    .git
+      background-position: -139px -590px
+    .backbone
+      background-position: -220px -590px
+    .html
+      background-position: -300px -590px
+    .css
+      background-position: -370px -590px
+    .haml
+      background-position: -431px -590px
+    .sass
+      background-position: -498px -590px
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
     +squish(1, 1)
     p
       font-size: 1.875em
-    span
-      margin-top: 2.618em
-      width: 63px
-      height: 69px
-      background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
-      +reveal-hidden-inline
-    .ruby
-      background-position: 0 0
-    .jquery
-      background-position: -65px 0
-    .git
-      background-position: -139px 0
-    .backbone
-      background-position: -220px 0
-    .html
-      background-position: -300px 0
-    .css
-      background-position: -370px 0
-    .haml
-      background-position: -431px 0
-    .sass
-      background-position: -498px 0
-    .all
+    br
       +hidden
 
   +at-breakpoint($break12)

@@ -143,16 +143,31 @@
   p
     margin: 0
     font-size: 1em + .236
-  span
-    +hidden
 
   +at-breakpoint($break6)
-    .all
-      margin: 2.618em auto 0 auto
-      width: 280px
-      height: 149px
-      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
-      +reveal-hidden
+    span
+      display: inline-block
+      margin-top: 2.618em
+      width: 63px
+      height: 69px
+      // background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
+      background: image-url("smush_sprite.png") 0 -590px no-repeat
+    .ruby
+      background-position: 0 -590px
+    .jquery
+      background-position: -65px -590px
+    .git
+      background-position: -139px -590px
+    .backbone
+      background-position: -220px -590px
+    .html
+      background-position: -300px -590px
+    .css
+      background-position: -370px -590px
+    .haml
+      background-position: -431px -590px
+    .sass
+      background-position: -498px -590px
 
 
 /* Tech Blurb
