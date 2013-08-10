@@ -185,7 +185,7 @@ $(document).ready(function() {
       {css:{opacity: 1}},
       {css:{opacity: 0}, ease:Power4.easeInOut}
     ),
-    200
+    500
   );
 
   controller.addTween('#expertise',
