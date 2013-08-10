@@ -178,14 +178,14 @@ $(document).ready(function() {
 $(document).ready(function() {
   var controller = $.superscrollorama();
 
-  controller.addTween('.tagline, .start-project',
+  controller.addTween('.start-project',
     TweenMax.fromTo(
       $('.tagline, .start-project'),
       1.5,
       {css:{opacity: 1}},
       {css:{opacity: 0}, ease:Power4.easeInOut}
     ),
-    1000
+    200
   );
 
   controller.addTween('#expertise',
