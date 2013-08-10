@@ -11,8 +11,8 @@ $(document).ready(function() {
 // Anystretch
 // ===========================
 
-$('#photo-hero').anystretch("assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
-$('#in-person').anystretch("assets/map-320.gif", {speed: 200, positionY: 'top'});
+$('#photo-hero').anystretch("assets/pics/smush_silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
+$('#in-person').anystretch("assets/smush_map-320.png", {speed: 200, positionY: 'top'});
 
 
 // ===========================
