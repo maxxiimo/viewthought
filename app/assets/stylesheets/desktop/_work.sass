@@ -252,28 +252,14 @@
   p
     margin: 0
     font-size: 1em + .236
-  span
-    +hidden
 
   +at-breakpoint($break6)
-    .all
-      margin: 2.618em auto 0 auto
-      width: 280px
-      height: 149px
-      background: image-url("logos/tech-icon-sprite-280.png") 0 0 no-repeat
-      +reveal-hidden
-
-  +at-breakpoint($break9)
-    +span-columns(7, $break9)
-    +squish(1, 1)
-    p
-      font-size: 1.875em
     span
+      display: inline-block
       margin-top: 2.618em
       width: 63px
       height: 69px
       background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
-      +reveal-hidden-inline
     .ruby
       background-position: 0 0
     .jquery
@@ -290,7 +276,13 @@
       background-position: -431px 0
     .sass
       background-position: -498px 0
-    .all
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    p
+      font-size: 1.875em
+    br
       +hidden
 
   +at-breakpoint($break12)
