@@ -85,6 +85,7 @@
 .our-mission
   position: relative
   p
+    margin-top: 0
     font-size: 1em + .169
   .desktop span
     color: $orange
@@ -260,23 +261,23 @@
       width: 63px
       height: 69px
       // background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
-      background: image-url("smush_sprite.png") 0 -590px no-repeat
+      background: image-url("smush_sprite-sm.png") 0 -590px no-repeat
     .ruby
-      background-position: 0 -590px
+      background-position: 5px -590px
     .jquery
-      background-position: -65px -590px
+      background-position: -68px -590px
     .git
       background-position: -139px -590px
     .backbone
-      background-position: -220px -590px
+      background-position: -227px -590px
     .html
-      background-position: -300px -590px
+      background-position: 8px -500px
     .css
-      background-position: -370px -590px
+      background-position: -65px -500px
     .haml
-      background-position: -431px -590px
+      background-position: -127px -500px
     .sass
-      background-position: -498px -590px
+      background-position: -193px -500px
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -291,6 +292,16 @@
     +squish(1, 1)
     p
       font-size: 1.875em + .443
+    span
+      background: image-url("smush_sprite.png") 0 -590px no-repeat
+    .html
+      background-position: -300px -590px
+    .css
+      background-position: -370px -590px
+    .haml
+      background-position: -431px -590px
+    .sass
+      background-position: -498px -590px
 
 
 /* Tech Blurb

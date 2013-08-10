@@ -42,14 +42,14 @@
     font-size: 1.618em
   p
     margin: .443em 0 0
-    font-size: 1.159em
+    font-size: 1em + .236
 
   +at-breakpoint($break6)
     +span-columns(4, $break6)
     h2
       font-size: 1.875em
     p
-      font-size: 1.159em
+      font-size: 1em + .274
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -57,7 +57,7 @@
     h2
       font-size: 2.618em
     p
-      font-size: 1em + .236
+      font-size: 1em + .443
       span
         display: block
 
@@ -150,12 +150,20 @@
     margin: 0
     font-size: 1em + .236
     text-align: center
+  .devices
+    margin: 1em + .443 auto 1.159em
+    width: 150px
+    height: 85px
+    // background: image-url("icons/devices-150.png") 0 0 no-repeat
+    background: image-url("smush_sprite-sm.png") -260px -500px no-repeat
   &:after
     +panel-shadow(.15)
 
   +at-breakpoint($break6)
     p
       font-size: 1.618em
+    .devices
+      margin: 1.875em auto .716em
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -163,11 +171,10 @@
     p
       font-size: 2em
     .devices
-      margin: 1.875em auto 1.159em
       width: 285px
       height: 162px
       // background: image-url("icons/devices-285.png") 0 0 no-repeat
-      background: image-url("smush_sprite.png") 0 -85px no-repeat
+      background: image-url("smush_sprite-sm.png") 0 -85px no-repeat
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
@@ -501,7 +508,7 @@
       width: 150px
       height: 239px
       // background: image-url("icons/manifesto-150.png") 55px 8px no-repeat
-      background: image-url("smush_sprite.png") 0 -260px no-repeat
+      background: image-url("smush_sprite-sm.png") 0 -260px no-repeat
     .description
       +span-columns(6, $break9)
 
@@ -529,7 +536,7 @@
     margin-top: $margin-9
     .book
       // background: image-url("icons/design-150.png") 55px 8px no-repeat
-      background: image-url("smush_sprite.png") -160px -260px no-repeat
+      background: image-url("smush_sprite-sm.png") -160px -260px no-repeat
 
   +at-breakpoint($break12)
     margin-top: $margin-12
