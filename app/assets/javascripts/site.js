@@ -178,7 +178,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   var controller = $.superscrollorama();
 
-  controller.addTween('#photo-hero .scroll',
+  controller.addTween('#photo-hero .scroll span',
     TweenMax.fromTo(
       $('.tagline, .start-project'),
       1.5,
