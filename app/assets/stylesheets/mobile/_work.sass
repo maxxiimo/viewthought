@@ -15,12 +15,12 @@
 
 .value
   p
-    font-size: 1.159em
+    font-size: 1em + .443
     color: $dark-white
 
   +at-breakpoint($break6)
     p
-      font-size: 1em + .236
+      font-size: 1.618em
 
 
 /* Our Mission
@@ -98,7 +98,7 @@
 .the-point
   blockquote
     margin: 0
-    font-size: 1em + .169
+    font-size: 1em + .443
     color: $white-smoke
   .giant-quote
     display: block
@@ -106,21 +106,13 @@
     line-height: 1.2
     padding-right: .443em
     font-size: 1em + .274
-  p
-    margin-bottom: 0
-    font-family: $base-font-header
-    font-size: .716em
-    color: $black-2
-    +opacity(.35)
 
   +at-breakpoint($break6)
     blockquote
-      font-size: 1em + .274
-    .giant-quote
-      line-height: 1
       font-size: 1.618em
-    p
-      font-size: 1em
+    .giant-quote
+      margin: -3px 0 -10px
+      font-size: 1em + .382
 
 
 /* Technologies
@@ -141,11 +133,11 @@
 
 .tech-icons
   text-align: center
-  p
-    margin: 0
-    font-size: 1em + .236
 
   +at-breakpoint($break6)
+    p
+      margin: 0
+      font-size: 1.618em
     span
       display: inline-block
       margin-top: 2.618em
@@ -180,13 +172,13 @@
   background-color: $white
 
   +at-breakpoint($break6)
-    padding-top: 0
-    padding-bottom: $padding-6
+    padding: 0 0 $padding-6
 
 .tech-blurb
   position: relative
   p
     margin: 0
+    font-size: 1em + .443
 
   +at-breakpoint($break6)
     p
