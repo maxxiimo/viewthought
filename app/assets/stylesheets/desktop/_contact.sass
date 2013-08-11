@@ -18,11 +18,13 @@
 
 .contact-intro
   p
-    margin: 0 0 1.159em
+    margin: 0 0 $margin-4 / 2
+    font-size: 1em + .443
 
   +at-breakpoint($break6)
     p
-      font-size: 1.159em
+      margin: 0 0 $margin-6 / 2
+      font-size: 1.618em
 
   +at-breakpoint($break9)
     +span-columns(3, $break9)
@@ -160,19 +162,16 @@
 
 .email-us
   p
-    margin: 0 0 1.618em
-    font-size: 1.159em
+    margin: 0 0 1 + .443em
+    font-size: 1em + .443
 
   +at-breakpoint($break6)
     p
-      margin-bottom: 1 + .443em
-      font-size: 1em + .236
+      font-size: 1em + .618
 
   +at-breakpoint($break9)
     +span-columns(8, $break9)
     +squish(.5, .5)
-    p
-      font-size: 1.618em
 
   +at-breakpoint($break12)
     +span-columns(9, $break12)
@@ -263,12 +262,12 @@
 .map-overlay
   p
     margin: 0
-    font-size: 1.159em
+    font-size: 1em + .236
     color: $dark-white
 
   +at-breakpoint($break6)
     p
-      font-size: 1em + .236
+      font-size: 1em + .382
 
   +at-breakpoint($break9)
     +span-columns(8, $break9)

@@ -54,7 +54,7 @@ header
 #viewthought
   float: left
   line-height: 1em
-  margin: .236em 0 0
+  margin: .236em 0
   font-size: 1em + .443
   a
     font-family: $quatro
@@ -91,6 +91,7 @@ header
   #social-links
     +icon-nav(1em + .236, .236em)
     float: left
+    +hidden
     a
       display: inline-block
       line-height: 1.6
@@ -99,6 +100,7 @@ header
 
     +at-breakpoint($break6)
       float: right
+      +reveal-hidden
       a
         padding: 0 $nav-pad-6
         font-size: 1em + .382
