@@ -62,6 +62,7 @@ $('#photo-hero').anystretch("assets/pics/smush_silhouette-1024-maximum.jpg", {sp
 // ===========================
 
 $(document).ready(function () {
+  Mobvious.for_device_type('tablet', function() {
     var windowHeight, headHeight, heroHeight, expertiseHeight;
 
     function init() {
@@ -96,7 +97,8 @@ $(document).ready(function () {
 
         init();
     });
-})
+  });
+});
 
 
 // ===========================
