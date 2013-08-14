@@ -20,5 +20,6 @@
 //= require jquery.event.drag-2.2
 //= require jquery.event.drop-2.2
 //= require jquery.infieldLabel
+//= require map
 //= require mobvious-rails
 //= require site

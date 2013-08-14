@@ -54,7 +54,7 @@ $(function() {
 // ===========================
 
 $('#photo-hero').anystretch("assets/pics/smush_silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
-$('#in-person').anystretch("assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
+// $('#in-person').anystretch("assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
 
 
 // ===========================
@@ -247,59 +247,6 @@ $(document).ready(function() {
 //     changeText: 1,           // if you dont want the button text to change, set this to 0
 //     showText: 'Read More',   // the button text to show when a div is closed
 //     hideText: 'Less'         // the button text to show when a div is open
-//   });
-
-// });
-
-
-// ===========================
-// Google Maps API
-// ===========================
-
-// $(document).ready(function(){
-
-//   $('#map').gmap3({
-
-//     map:{
-//       options:{
-//         center:[26.7084, -80.0565],
-//         zoom:15,
-//         backgroundColor:'none',
-//         mapTypeControl: true,
-//         mapTypeControlOptions: {
-//           style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-//         },
-//         navigationControl: true,
-//         scrollwheel: true,
-//         streetViewControl: true
-//       }
-//     },
-
-//     marker:{
-//       values:[
-//         {latLng:[26.7084, -80.0565], data: "Let's Meet! We would love to hear all about your project and see how we can help. To set up a meeting give us a call at 561-320-1117. We look forward to chatting."}
-//       ],
-//       options:{
-//         draggable: false
-//       },
-//       events:{
-//         click: function(marker, event, context){
-//           var map = $(this).gmap3("get"),
-//             infowindow = $(this).gmap3({get:{name:"infowindow"}});
-//           if (infowindow){
-//             infowindow.open(map, marker);
-//             infowindow.setContent(context.data);
-//           } else {
-//             $(this).gmap3({
-//               infowindow:{
-//                 anchor:marker,
-//                 options:{content: context.data}
-//               }
-//             });
-//           }
-//         }
-//       }
-//     }
 //   });
 
 // });
