@@ -234,6 +234,15 @@ $(document).ready(function() {
 
 
 // ===========================
+// Equal Heights
+// ===========================
+
+// http://filamentgroup.com/lab/setting_equal_heights_with_jquery/
+
+$('.our-mission ol').equalHeights();
+
+
+// ===========================
 // show Hide
 // ===========================
 
