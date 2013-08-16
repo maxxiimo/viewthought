@@ -239,7 +239,11 @@ $(document).ready(function() {
 
 // http://filamentgroup.com/lab/setting_equal_heights_with_jquery/
 
-$('.our-mission ol').equalHeights();
+$(document).ready(function() {
+
+  $('.our-mission ol').equalHeights();
+
+});
 
 
 // ===========================
