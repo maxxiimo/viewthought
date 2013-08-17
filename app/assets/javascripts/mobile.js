@@ -15,5 +15,4 @@
 //= require jquery.anystretch
 //= require jquery.smooth-scroll.min
 //= require jquery.infieldLabel
-//= require map
 //= require site_mobile
