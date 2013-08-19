@@ -54,7 +54,7 @@ $(function() {
 // ===========================
 
 $('#photo-hero').anystretch("assets/pics/smush_silhouette-1024-maximum.jpg", {speed: 200, positionY: 'top'});
-// $('#in-person').anystretch("assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
+$('#in-person').anystretch("assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
 
 
 // ===========================

@@ -21,6 +21,5 @@
 //= require jquery.event.drop-2.2
 //= require jQuery.equalHeights
 //= require jquery.infieldLabel
-//= require map
 //= require mobvious-rails
 //= require site
