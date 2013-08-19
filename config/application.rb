@@ -70,6 +70,9 @@ module Viewthought
     # http://stackoverflow.com/questions/5267998/rails-3-field-with-errors-wrapper-changes-the-page-appearance-how-to-avoid-t
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag.html_safe }
 
+    # AssetSync configuration options
+    AssetSync.config.gzip_compression == ENV['ASSET_SYNC_GZIP_COMPRESSION']
+
     # Environment variables.
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')
