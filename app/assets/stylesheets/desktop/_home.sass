@@ -303,8 +303,9 @@
 #process ul
   margin-top: 0
   li
-    clear: both
     list-style: none
+    margin-bottom: 1em
+    +clearfix
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -314,12 +315,77 @@
     +span-columns(8, $break12)
     +pre(2)
 
+/* Symbol
+
+.symbol
+  float: left
+
+  +at-breakpoint($break6)
+    width: 19%
+
+  +at-breakpoint($break9)
+    width: 21%
+
+  +at-breakpoint($break12)
+    width: 22%
+
+.circle
+  +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+  margin: 0 0 -37px
+  span
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    margin: 0
+    span
+      font-size: 1.875em
+
+  +at-breakpoint($break9)
+    +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
+    span
+      font-size: 2.618em
+
+  +at-breakpoint($break12)
+    +circle-border($size: (3.034em * 2), $color: $lime)
+    span
+      font-size: 3.034em
+
+/* Step
+
+.step
+  float: left
+  width: 100%
+  h3
+    margin-left: 3.034em
+  p
+    margin: 0
+
+  +at-breakpoint($break6)
+    width: 81%
+    // margin-left: 1%
+    h3
+      margin-left: 0
+
+  +at-breakpoint($break9)
+    width: 79%
+    // margin-left: 1.618em
+
+  +at-breakpoint($break12)
+    width: 78%
+
 /* Roundabout
 
 .roundabout-holder
   clear: both
   height: 12.85em
   margin-bottom: 3.034em
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
 
 .roundabout-moveable-item
   padding: 1.159em
@@ -331,51 +397,6 @@
 
 .roundabout-in-focus
   cursor: auto
-
-/* Circles
-
-.circle
-  float: left
-  +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
-  margin: 0 0 -37px
-  span
-    line-height: 2
-    font-size: 1.159em
-
-  +at-breakpoint($break6)
-    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
-    margin: 0
-    span
-      line-height: (1.875em * 1.07)
-      font-size: 1.875em
-
-  +at-breakpoint($break9)
-    +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
-    span
-      line-height: (2.618em * .75)
-      font-size: 2.618em
-
-  +at-breakpoint($break12)
-    +circle-border($size: (3.034em * 2), $color: $lime)
-    span
-      line-height: (3.034em * .63)
-      font-size: 3.034em
-
-/* Steps
-
-.discovery, .development, .repeat
-  float: right
-  width: 100%
-  h3
-    margin-left: 55px
-
-  +at-breakpoint($break6)
-    width: 80%
-    h3
-      margin-left: 0
-
-  +at-breakpoint($break9)
-    width: 76%
 
 /* Button
 

@@ -1,5 +1,18 @@
+// Lettering
+// Magic Line
+// Anystretch
+// Adjust Arrow Location
+// Remove Anchor Outline
+// Smooth Scroll
+// Roundabout
+// Animations
+// Superscrollorama
+// Equal Heights
+// Show Hide
+
+
 // ===========================
-// Lettering.js
+// Lettering
 // ===========================
 
 $(document).ready(function() {
@@ -247,7 +260,7 @@ $(document).ready(function() {
 
 
 // ===========================
-// show Hide
+// Show Hide
 // ===========================
 
 // http://papermashup.com/jquery-show-hide-plugin/
