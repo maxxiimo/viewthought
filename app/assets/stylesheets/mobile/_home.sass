@@ -167,38 +167,45 @@
 /* List
 
 #process ul
-  margin: 0
+  margin-top: 0
   li
-    clear: both
     list-style: none
+    margin-bottom: 1em
+    +clearfix
 
-/* Circles
+/* Symbol
+
+.symbol
+  float: left
+
+  +at-breakpoint($break6)
+    width: 19%
 
 .circle
-  float: left
   +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
   margin: 0 0 -37px
   span
-    line-height: 2
     font-size: 1.159em
 
   +at-breakpoint($break6)
     +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
     margin: 0
     span
-      line-height: (1.875em * 1.07)
       font-size: 1.875em
 
-/* Steps
+/* Step
 
-.discovery, .development, .repeat
-  float: right
+.step
+  float: left
   width: 100%
   h3
-    margin-left: 55px
+    margin-left: 3.034em
+  p
+    margin: 0
 
   +at-breakpoint($break6)
-    width: 80%
+    width: 81%
+    // margin-left: 1%
     h3
       margin-left: 0
 
