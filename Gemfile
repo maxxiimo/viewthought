@@ -21,6 +21,7 @@ group :assets do
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
   gem 'asset_sync'
+  gem 'font_assets'
 
   # Compass specific gems.
   gem 'compass-rails'

@@ -59,6 +59,10 @@ Viewthought::Application.configure do
   # config.action_controller.asset_host = "http://dt1m8zdqb95uu.cloudfront.net"
   config.action_controller.asset_host = "http://assets%d.viewthought.com"
 
+  # To set the origin domain that will get set in the Access-Control-Allow-Origin header.
+  # https://github.com/rubymaverick/font_assets#usage
+  config.font_assets.origin = 'http://viewthought.com'
+
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w(  )
 
