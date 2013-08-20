@@ -56,7 +56,8 @@ Viewthought::Application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  config.action_controller.asset_host = "http://dt1m8zdqb95uu.cloudfront.net"
+  # config.action_controller.asset_host = "http://dt1m8zdqb95uu.cloudfront.net"
+  config.action_controller.asset_host = "http://assets%d.viewthought.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w(  )
