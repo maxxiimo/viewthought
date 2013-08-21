@@ -206,6 +206,7 @@
   padding: $padding-4 0
   border-color: $navy-blue
   background-color: $navy-blue
+  z-index: 2
   &:after
     content: ""
     position: absolute
@@ -252,12 +253,15 @@
       font-size: 1em + .443
 
   +at-breakpoint($break12)
-    +span-columns(8, $break12)
-    +squish(2, 2)
+    +span-columns(10, $break12)
+    +squish(1, 1)
     h2
       font-size: 3.034em
     p
+      padding-bottom: 1em
       font-size: 1.618em
+    #slidingDiv p
+      font-size: 1em + .274
 
 
 /* Process
@@ -445,6 +449,7 @@
   padding: $padding-4 0
   border-color: $blue-gray
   background-color: $blue-gray
+  z-index: 1
   &:before
     +panel-shadow(.05)
   &:after
