@@ -169,7 +169,7 @@
     top: 100%
     left: 50%
     margin-left: -20px
-    border-top: 20px solid blue
+    border-top: 20px solid $navy-blue
     border-top-color: inherit
     border-left: 20px solid transparent
     border-right: 20px solid transparent
@@ -192,6 +192,7 @@
     display: block
     float: left
     line-height: 1.2
+    margin-top: 2px
     padding-right: .443em
     font-size: 1em + .274
 
@@ -199,21 +200,25 @@
     blockquote
       font-size: 1.618em
     .giant-quote
-      margin: -3px 0 -10px
+      margin: -1px 0 -10px
       font-size: 1em + .382
 
   +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
     blockquote
       font-size: 2em
     .giant-quote
-      margin-top: -5px
+      margin-top: -2px
       font-size: 1em + .443
 
   +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
     blockquote
       font-size: 1.875em + .443
     .giant-quote
-      margin-top: -10px
+      margin-top: -8px
       font-size: 1.618em
 
 
