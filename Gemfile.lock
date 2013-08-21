@@ -115,6 +115,7 @@ GEM
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.8)
+    newrelic_rpm (3.6.6.147)
     nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     oily_png (1.1.0)
@@ -213,6 +214,7 @@ DEPENDENCIES
   letter_opener
   mobvious
   mobvious-rails
+  newrelic_rpm
   oily_png
   pg (= 0.12.2)
   rails (= 3.2.13)
