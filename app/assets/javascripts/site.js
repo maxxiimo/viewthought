@@ -163,30 +163,30 @@ $(document).ready(function() {
 });
 
 
-// ===========================
-// Animations
-// ===========================
+// // ===========================
+// // Animations
+// // ===========================
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  Mobvious.for_device_type('desktop', function() {
-      $(window).scroll(function() {
-        $('.devices').each(function(){
-        var imagePos = $(this).offset().top;
+//   Mobvious.for_device_type('desktop', function() {
+//       $(window).scroll(function() {
+//         $('.devices').each(function(){
+//         var imagePos = $(this).offset().top;
 
-        var topOfWindow = $(window).scrollTop();
-          if (imagePos < topOfWindow+600) {
-            $(this).addClass("fade-in");
-          }
-        });
-      });
-  });
+//         var topOfWindow = $(window).scrollTop();
+//           if (imagePos < topOfWindow+600) {
+//             $(this).addClass("fade-in");
+//           }
+//         });
+//       });
+//   });
 
-  Mobvious.for_device_type('tablet', function() {
-      $('.devices').addClass("reveal-devices");
-  });
+//   Mobvious.for_device_type('tablet', function() {
+//       $('.devices').addClass("reveal-devices");
+//   });
 
-});
+// });
 
 
 // ===========================
