@@ -1,31 +1,48 @@
 /* Toggles
   -----------------------
 
-.desktop
+// Hide elements with .desktop class when breakpoint < 12
+// Purpose: display elements on larger desktop screens exclusively
+
+.desktop, .hide-lt-12
   +hidden
 
 +at-breakpoint($break12)
-  .mobile
-    +hidden
-
   .desktop
     +reveal-hidden
 
-.smallscreen-hide
+// Hide elements with .desktop-hide class when breakpoint = 12
+// Purpose: display elements on ALL screen sizes smaller than larger desktop screens
+
++at-breakpoint($break12)
+  .desktop-hide, .hide-eq-12
+    +hidden
+
+// Hide elements with .tablet class when breakpoint < 9
+// Purpose: display elements only on larger desktop screens and tablets,
+//          hide elements from mini's and the smallest screen sizes (smart phones)
+
+.tablet, .hide-lt-9
+  +hidden
+
+  +at-breakpoint($break9)
+    +reveal-hidden
+
+// Hide elements with .tablet-hide class when breakpoint > 6
+// Purpose: hide elements from tablets and desktops
+
+.tablet-hide, .hide-gt-6
+  +at-breakpoint($break9)
+    +hidden
+
+// Hide elements with .smallscreen-hide class when breakpoint < 6
+// Purpose: hide elements from the smallest screen sizes only (smart phones)
+
+.smallscreen-hide, .hide-lt-6
   +hidden
 
   +at-breakpoint($break6)
     +reveal-hidden
-
-.mini-hide
-  +hidden
-
-  +at-breakpoint($break9)
-    +reveal-hidden
-
-.tablet-hide
-  +at-breakpoint($break9)
-    +hidden
 
 // For toggling between phone number markup
 
@@ -84,4 +101,3 @@
 @import "work"
 @import "thoughts"
 @import "contact"
-@import "extra"

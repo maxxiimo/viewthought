@@ -254,7 +254,14 @@
     h2
       font-size: 2.618em
     p
+      padding-bottom: 1em
       font-size: 1em + .443
+    #slidingDiv
+      ul
+        margin: 0
+        color: $white-smoke
+      li
+        margin-bottom: .618em
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
@@ -262,18 +269,33 @@
     h2
       font-size: 3.034em
     p
-      padding-bottom: 1em
       font-size: 1.618em
     #slidingDiv
-      ul
-        margin: 0
-        color: $white-smoke
       li
         margin-bottom: .716em
-        font-size: 1em + .274
+        font-size: 1.159em
+
+#slidingDiv
+  display: none
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+  +at-breakpoint($break9)
+    font-size: .618em
+
+  +at-breakpoint($break12)
+    font-size: .716em
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv
+  display: block
 
 .no-js .show_hide
   +hidden
+
 
 /* Process
   -----------------------
