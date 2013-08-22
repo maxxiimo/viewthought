@@ -1,9 +1,16 @@
 /* Toggles
   -----------------------
 
-// For toggling desktop only properties
-
 .desktop
+  +hidden
+
+.smallscreen-hide
+  +hidden
+
+  +at-breakpoint($break6)
+    +reveal-hidden
+
+.mini-hide
   +hidden
 
 // For toggling between phone number markup
