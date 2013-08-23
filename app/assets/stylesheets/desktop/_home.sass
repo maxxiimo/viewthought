@@ -277,6 +277,53 @@
 
 #slidingDiv
   display: none
+  li
+    position: relative
+    list-style: none
+    padding-left: 85px
+  span
+    color: $orange
+
+  +at-breakpoint($break9)
+    .mobile-first, .rails, .speed, .agile
+      position: absolute
+      top: 12px
+      left: 10px
+      background: image-url("smush_sprite-sm.png") 0 0 no-repeat
+    .mobile-first
+      top: 11px
+      width: 45px
+      height: 76px
+      // background: image-url("icons/mobile-first-45.png") 0 11px no-repeat
+      background-position: -320px 0px
+    .rails
+      width: 50px
+      height: 64px
+      // background: image-url("icons/rails-50.png") 0 12px no-repeat
+      background-position: -320px -85px
+    .speed
+      top: 14px
+      width: 55px
+      height: 66px
+      // background: image-url("icons/stopwatch-55.png") 0 14px no-repeat
+      background-position: -320px -160px
+    .agile
+      width: 55px
+      height: 37px
+      // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
+      background-position: -320px -230px
+
+  +at-breakpoint($break12)
+    .mobile-first, .rails, .speed, .agile
+      background: image-url("smush_sprite.png") 0 0 no-repeat
+    .mobile-first
+      background-position: 0 -500px
+    .rails
+      background-position: -70px -500px
+    .speed
+      background-position: -140px -500px
+    .agile
+      background-position: -210px -500px
 
 .show_hide
   font-family: $base-font-button
