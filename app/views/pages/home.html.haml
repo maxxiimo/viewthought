@@ -6,7 +6,7 @@
   .container
     .tagline
       .first
-        %h2 Builders of Mobile and Desktop Web Solutions
+        %h2 We build web applications.
         %p
           Think of us as the handshake between beautiful design and logic.
           %span.tablet Why? Scroll down to learn more.
@@ -25,12 +25,9 @@
 %section#about-us
   .container
     .about-us
-      %p.tablet A website should provide immediate value, the moment people land on a page&ndash;no matter what device they use to get there.
-      .devices.tablet
-      %p
-        %span.tablet That's where we come in.
-        ViewThought designs well thought out intuitive user experiences that look exceptional on any device.
-      .devices.tablet-hide
+      %p A web application should provide immediate value, the moment people land on it&ndash;no matter what device they use to get there.
+      -# %p That's where we come in. ViewThought designs well thought out intuitive user experiences that look exceptional on any device.
+      .devices
   %a{:href => '#how', :title => 'Scroll Down', :class => 'l-b-g-b-g scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -39,41 +36,41 @@
   .container
     .how
       %h2 How do we do it?
-      %p.tablet-hide To begin we follow a tried and true agile development process that delivers results.
-      .tablet
-        %p We tell stories. With your content and through design.
-        #slidingDiv
-          %ul
-            %li
-              .mobile-first
-              We start with a
-              %span mobile first approach
-              to ensure that what your users see on the smallest of devices looks like it was designed for that device, not just an afterthought.
-            %li
-              .rails
-              We use
-              %span Ruby on Rails
-              combined with a boatload of experience on best practices for
-              %span cross device
-              and
-              %span cross browser
-              development.
-            %li
-              .speed
-              We build for speed by
-              %span optimizing absolutely everything
-              &ndash; from images to JavaScript files, and we harness the power of Content Delivery Networks and caching strategies.
-            %li
-              .agile
-              Pulling all of this together is our
-              %span agile development process
-              that exemplifies the old adage; "
-              %span> measure twice
-              ,&nbsp;
-              %span> cut once
-              \."
-        %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
-          Behind the scenes
+      -# %p To begin we follow a tried and true agile development process that delivers results.
+      -# .tablet
+      %p We tell stories. With content and through design.
+      #slidingDiv
+        %ul
+          %li
+            .mobile-first
+            We start with a
+            %span mobile first approach
+            to ensure that what your users see on the smallest of devices looks like it was designed for that device, not just as an afterthought.
+          %li
+            .rails
+            We use
+            %span Ruby on Rails
+            combined with a boatload of experience on best practices for
+            %span cross device
+            and
+            %span cross browser
+            development.
+          %li
+            .speed
+            We build for speed by
+            %span optimizing absolutely everything
+            &ndash; from images to JavaScript files, and we harness the power of Content Delivery Networks and caching strategies.
+          %li
+            .agile
+            Pulling all of this together is our
+            %span agile development process
+            that exemplifies the old adage; "
+            %span> measure twice
+            ,&nbsp;
+            %span> cut once
+            \."
+      %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
+        Behind the scenes
   %a{:href => '#process', :title => 'Scroll Down', :class => 'b-g-w scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -124,14 +121,14 @@
       .book
       .description
         %h2 The Front End Manifesto
-        %p Written by the engineers at ViewThought, The Front End Manifesto provides developers with a comprehensive research-based HOW TO on best practices for writing well-organized, efficient, mobile to desktop, Front End Code: From a Ruby on Rails perspective.
+        %p A comprehensive research-based HOW TO on best practices for writing well-organized, efficient, mobile to desktop, Front End Code: From a Ruby on Rails perspective.
         .manifesto-button
           %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'Take a look at The Front End Manifesto\'s TOC', :class => 'button'} Review
     .coding-design
       .book
       .description
         %h2 Coding Design
-        %p With so many new device types and screen sizes, Web design is no longer taking place exclusively in Photoshop. Coding Design is an in-depth look at the ins and outs and best practices for creating and coding great design from the front-end developer's perspective and toolset: CSS3, HTML5, and a browser.
+        %p An in-depth look at information architecting, website design, and coding design from the front-end developer's perspective and toolset: CSS3, HTML5, and a browser.
         .coding-design-button
           %a{:href => 'https://github.com/maxxiimo/coding-design/blob/master/TOC.md#table-of-contents', :title => 'Take a look at Coding Design\'s TOC', :class => 'button'} Review
   %a{:href => '#value', :title => 'Scroll Down', :class => 'd-g-g scroll autoblur'}
@@ -146,7 +143,7 @@
   .container
     .value
       %p
-        We publish books to hone our craft and share our expertise, but there's more to us than just development chops. We're also MBA's thinking about your organization's unique value proposition. We understand this and can help you communicate it. Take for example this website...
+        We publish books to hone our craft and share our expertise, but there's more to us than just development chops. We're also MBA's thinking about your organization's unique value proposition. We understand this and can help you communicate it. Take for example our website...
       %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
   %a{:href => '#story', :title => 'Scroll Down', :class => 'w-d-w scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}

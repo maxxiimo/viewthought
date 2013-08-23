@@ -153,7 +153,7 @@
     font-size: 1em + .443
     text-align: center
   .devices
-    margin: 1em + .443 auto
+    margin: 1em + .443 auto (1em + .443) / 2
     width: 150px
     height: 85px
     // background: image-url("icons/devices-150.png") 0 0 no-repeat
@@ -164,8 +164,6 @@
   +at-breakpoint($break6)
     p
       font-size: 1.618em
-    .devices
-      margin: 1.875em auto
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -175,6 +173,7 @@
     .devices
       width: 285px
       height: 162px
+      margin: 1.875em auto
       // background: image-url("icons/devices-285.png") 0 0 no-repeat
       background: image-url("smush_sprite-sm.png") 0 -85px no-repeat
     span
@@ -186,7 +185,7 @@
     p
       font-size: 1.875em + .443
     .devices
-      margin: 1.875em + .443 auto
+      margin: 1.875em + .443 auto (1.875em + .443) / 2
       width: 356px
       height: 202px
       // background: image-url("icons/devices-356.png") 0 0 no-repeat
@@ -266,8 +265,8 @@
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    h2
-      font-size: 3.034em
+    // h2
+    //   font-size: 3.034em
     p
       font-size: 1.618em
     #slidingDiv
@@ -632,19 +631,19 @@
       +span-columns(6 omega, $break9)
 
 .coding-design
-  margin-top: $margin-4
+  margin-top: $margin-4 / 2
 
   +at-breakpoint($break6)
-    margin-top: $margin-6
+    margin-top: $margin-6 / 2
 
   +at-breakpoint($break9)
-    margin-top: $margin-9
+    margin-top: $margin-9 / 2
     .book
       // background: image-url("icons/design-150.png") 55px 8px no-repeat
       background: image-url("smush_sprite-sm.png") -160px -260px no-repeat
 
   +at-breakpoint($break12)
-    margin-top: $margin-12
+    margin-top: $margin-12 / 2
     .book
       // background: image-url("icons/design-200.png") 0 0 no-repeat
       background: image-url("smush_sprite.png") -530px -260px no-repeat
