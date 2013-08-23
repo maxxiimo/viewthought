@@ -79,6 +79,8 @@
 
   +at-breakpoint($break9)
     padding: (12.85em + 1) 0 $padding-9
+    .our-mission
+      padding-top: 1em + .443
 
   +at-breakpoint($break12)
     padding-bottom: $padding-12
@@ -88,8 +90,11 @@
   p
     margin-top: 0
     font-size: 1em + .169
-  .desktop span
-    color: $orange
+    span
+      color: $orange
+  p .tablet
+    display: inline !important
+    color: inherit
   h2
     text-align: center
   li
@@ -124,7 +129,6 @@
     +span-columns(9 omega, $break9)
     p
       +squish(.5, .5)
-      padding-top: 1em + .443
       font-size: 1em + .618
     h2
       margin: 1em 0 1.618em
@@ -146,7 +150,6 @@
     p:first-child
       font-size: 1.875em
     p.desktop
-      padding-top: 0
       font-size: 1em + .618
     h2
       margin-top: 1.159em

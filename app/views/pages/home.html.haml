@@ -26,7 +26,6 @@
   .container
     .about-us
       %p A web application should provide immediate value, the moment people land on it&ndash;no matter what device they use to get there.
-      -# %p That's where we come in. ViewThought designs well thought out intuitive user experiences that look exceptional on any device.
       .devices
   %a{:href => '#how', :title => 'Scroll Down', :class => 'l-b-g-b-g scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
@@ -35,10 +34,10 @@
 %section#how
   .container
     .how
-      %h2 How do we do it?
+      %h2 That's where we come in.
       -# %p To begin we follow a tried and true agile development process that delivers results.
       -# .tablet
-      %p We tell stories. With content and through design.
+      %p ViewThought designs well thought out intuitive user experiences that look exceptional on any device.
       #slidingDiv
         %ul
           %li
@@ -59,7 +58,7 @@
             .speed
             We build for speed by
             %span optimizing absolutely everything
-            &ndash; from images to JavaScript files, and we harness the power of Content Delivery Networks and caching strategies.
+            &ndash; from images to JavaScript files, and we harness the power of Content Delivery Networks and well thought out caching strategies.
           %li
             .agile
             Pulling all of this together is our
@@ -143,7 +142,7 @@
   .container
     .value
       %p
-        We publish books to hone our craft and share our expertise, but there's more to us than just development chops. We're also MBA's thinking about your organization's unique value proposition. We understand this and can help you communicate it. Take for example our website...
+        We publish books to hone our craft and share expertise, but there's more to us than just development chops. We're also MBA's thinking about your organization's unique value proposition. We understand this and can help you communicate it. Take for example our website...
       %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
   %a{:href => '#story', :title => 'Scroll Down', :class => 'w-d-w scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
@@ -152,10 +151,16 @@
 %section#our-mission
   .container
     .our-mission#story
-      %p Our website tells a story, the story of our own value proposition&ndash;which includes the ability to build websites that respond to mobile devices. Try it!
+      %p
+        Our website tells a story, the story of our own value proposition&ndash;which includes the ability to build websites that respond to different devices.
+        %span.tablet Try it!
       %p.desktop
         %span Resize your browser
         and watch how it responds to display size changes. Try it on a tablet or smart phone. We can do this for your website.
+      .tablet
+        %p.desktop-hide
+          %span Open this website on a desktop computer
+          and watch how it changes. Try it on a smart phone. We can do this for your website.
       %h2 Our Mission
       %ol
         %li
@@ -181,7 +186,7 @@
 %section#technologies
   .container
     .tech-icons
-      %p The technologies we use to achieve this:
+      %p Technologies we use to achieve this:
       -# %span.ir.all Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
       %span.ir.ruby Ruby
       %span.ir.jquery jQuery

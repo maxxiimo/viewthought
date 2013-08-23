@@ -43,9 +43,9 @@ $(document).ready(function () {
         if (heroHeight + headHeight > windowHeight) {
             $('#photo-hero .scroll').css('top', windowHeight - 110);
         }
-        // if (expertiseHeight > windowHeight) {
-        //     $('#about-us .scroll').css('top', windowHeight - 60)
-        // }
+        if (expertiseHeight > windowHeight) {
+            $('#about-us .scroll').css('top', windowHeight - 60)
+        }
         if (expertiseHeight > windowHeight) {
             $('#expertise .scroll').css('top', windowHeight - 60)
         };
