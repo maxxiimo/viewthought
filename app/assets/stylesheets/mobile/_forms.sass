@@ -40,9 +40,11 @@ button, .button
   .infield-label label
     position: absolute
     padding: 0 .236em
-    font-size: 1.159em
     white-space: nowrap
     cursor: text
+
+    +at-breakpoint($break6)
+      font-size: 1.159em
 
   .placeholder-focus label
     top: -(1.618em + .236)

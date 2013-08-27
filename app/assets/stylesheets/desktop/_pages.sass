@@ -35,6 +35,13 @@
   +at-breakpoint($break9)
     +hidden
 
+// Hide elements with .mobile class when breakpoint > 4
+// Purpose: hide elements from everything but smart phones
+
+.mobile, .hide-gt-4
+  +at-breakpoint($break6)
+    +hidden
+
 // Hide elements with .smallscreen-hide class when breakpoint < 6
 // Purpose: hide elements from the smallest screen sizes only (smart phones)
 

@@ -207,7 +207,7 @@ $(document).ready(function() {
 
   controller.addTween('#expertise',
     TweenMax.from(
-      $('.manifesto-button a'),
+      $('.coding-design-button a'),
       1.0,
       {css:{opacity: 0, rotation: 720}, ease:Quad.easeOut}
     )
