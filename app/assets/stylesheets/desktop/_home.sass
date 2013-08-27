@@ -256,12 +256,6 @@
     p
       padding-bottom: 1em
       font-size: 1em + .443
-    #slidingDiv
-      ul
-        margin: 0
-        color: $white-smoke
-      li
-        margin-bottom: .618em
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
@@ -270,10 +264,16 @@
     //   font-size: 3.034em
     p
       font-size: 1.618em
-    #slidingDiv
-      li
-        margin-bottom: .716em
-        font-size: 1.159em
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+  +at-breakpoint($break9)
+    font-size: .618em
+
+  +at-breakpoint($break12)
+    font-size: .716em
 
 #slidingDiv
   display: none
@@ -285,6 +285,11 @@
     color: $orange
 
   +at-breakpoint($break9)
+    ul
+      margin: 0
+      color: $white-smoke
+    li
+      margin-bottom: .618em
     .mobile-first, .rails, .speed, .agile
       position: absolute
       top: 12px
@@ -314,6 +319,9 @@
       background-position: -320px -230px
 
   +at-breakpoint($break12)
+    li
+      margin-bottom: .716em
+      font-size: 1.159em
     .mobile-first, .rails, .speed, .agile
       background: image-url("smush_sprite.png") 0 0 no-repeat
     .mobile-first
@@ -324,16 +332,6 @@
       background-position: -140px -500px
     .agile
       background-position: -210px -500px
-
-.show_hide
-  font-family: $base-font-button
-  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-
-  +at-breakpoint($break9)
-    font-size: .618em
-
-  +at-breakpoint($break12)
-    font-size: .716em
 
 /* JavaScript fallback */
 
