@@ -28,10 +28,10 @@
   +at-breakpoint($break9)
     +reveal-hidden
 
-// Hide elements with .tablet-hide class when breakpoint > 6
+// Hide elements with .mini class when breakpoint > 6
 // Purpose: hide elements from tablets and desktops
 
-.tablet-hide, .hide-gt-6
+.mini, .hide-gt-6
   +at-breakpoint($break9)
     +hidden
 
@@ -42,10 +42,10 @@
   +at-breakpoint($break6)
     +hidden
 
-// Hide elements with .smallscreen-hide class when breakpoint < 6
+// Hide elements with .mobile-hide class when breakpoint = 4
 // Purpose: hide elements from the smallest screen sizes only (smart phones)
 
-.smallscreen-hide, .hide-lt-6
+.mobile-hide, .hide-eq-4
   +hidden
 
   +at-breakpoint($break6)
