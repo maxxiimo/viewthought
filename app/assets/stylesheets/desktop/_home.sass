@@ -235,7 +235,7 @@
   h2
     line-height: 1
     margin-top: 0
-    font-size: 1.875em
+    font-size: 1.618em
     color: $dark-white
   p
     margin: 0
@@ -244,9 +244,10 @@
 
   +at-breakpoint($break6)
     h2
-      font-size: 1.875em + .274
+      font-size: 1.875em
     p
-    font-size: 1em + .274
+      padding-bottom: 1em
+      font-size: 1em + .443
 
   +at-breakpoint($break9)
     +span-columns(7, $break9)
@@ -254,26 +255,15 @@
     h2
       font-size: 2.618em
     p
-      padding-bottom: 1em
-      font-size: 1em + .443
+      font-size: 1.618em
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    // h2
-    //   font-size: 3.034em
+    h2
+      font-size: 3.034em
     p
-      font-size: 1.618em
-
-.show_hide
-  font-family: $base-font-button
-  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-
-  +at-breakpoint($break9)
-    font-size: .618em
-
-  +at-breakpoint($break12)
-    font-size: .716em
+      font-size: 1.618em + .274
 
 #slidingDiv
   display: none
@@ -281,10 +271,12 @@
     position: relative
     list-style: none
     padding-left: 85px
+    margin-bottom: .443em
+    font-size: 1em + .274
   span
     color: $orange
 
-  +at-breakpoint($break9)
+  +at-breakpoint($break6)
     ul
       margin: 0
       color: $white-smoke
@@ -318,10 +310,14 @@
       // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
       background-position: -320px -230px
 
-  +at-breakpoint($break12)
+  +at-breakpoint($break9)
     li
       margin-bottom: .716em
-      font-size: 1.159em
+      font-size: 1em + .443
+
+  +at-breakpoint($break12)
+    li
+      font-size: 1.618em
     .mobile-first, .rails, .speed, .agile
       background: image-url("smush_sprite.png") 0 0 no-repeat
     .mobile-first
@@ -332,6 +328,14 @@
       background-position: -140px -500px
     .agile
       background-position: -210px -500px
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+  display: none
+
+  +at-breakpoint($break6)
+    display: inline
 
 /* JavaScript fallback */
 
