@@ -1,12 +1,15 @@
 .social-links
-  %a{:href => "https://www.facebook.com/viewthought", :title => 'Facebook', :class => 'current'}
+  %a{:href => "#email-us", :title => 'Email Us', :class => 'current scroll'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x2709;".html_safe}
+    %span.screen-reader-text Email
+  %a{:href => "https://www.facebook.com/viewthought", :title => 'Facebook'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x263a;".html_safe}
     %span.screen-reader-text Facebook
   %a{:href => "https://www.twitter.com/viewthought", :title => 'Twitter'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x270d;".html_safe}
     %span.screen-reader-text Twitter
   %a{:href => "https://www.github.com/viewthought", :title => 'Github'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x26bc;".html_safe}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x2604;".html_safe}
     %span.screen-reader-text Github
   %a{:href => "http://www.linkedin.com/company/viewthought", :title => 'LinkedIn'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x260d;".html_safe}
