@@ -125,23 +125,108 @@
 
   +at-breakpoint($break6)
     padding: $padding-6 0
-
 .how
   h2
     line-height: 1
     margin-top: 0
-    font-size: 1.875em
+    font-size: 1.618em
     color: $dark-white
   p
-    margin: 0
+    margin: .443em 0 0
     font-size: 1em + .236
     color: $white-smoke
 
   +at-breakpoint($break6)
     h2
-      font-size: 1.875em + .274
+      font-size: 1.875em
     p
+      margin-top: 0
+      padding-bottom: 1em
+      font-size: 1em + .443
+
+#slidingDiv
+  display: none
+  li
+    position: relative
+    list-style: none
+    padding-left: 85px
+    margin-bottom: .443em
     font-size: 1em + .274
+  span
+    color: $orange
+
+  +at-breakpoint($break6)
+    ul
+      margin: 0
+      color: $white-smoke
+    li
+      margin-bottom: .618em
+    .mobile-first, .rails, .speed, .agile
+      position: absolute
+      top: 12px
+      left: 10px
+      background: image-url("smush_sprite-sm.png") 0 0 no-repeat
+    .mobile-first
+      top: 11px
+      width: 45px
+      height: 76px
+      // background: image-url("icons/mobile-first-45.png") 0 11px no-repeat
+      background-position: -320px 0px
+    .rails
+      width: 50px
+      height: 64px
+      // background: image-url("icons/rails-50.png") 0 12px no-repeat
+      background-position: -320px -85px
+    .speed
+      top: 14px
+      width: 55px
+      height: 66px
+      // background: image-url("icons/stopwatch-55.png") 0 14px no-repeat
+      background-position: -320px -160px
+    .agile
+      width: 55px
+      height: 37px
+      // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
+      background-position: -320px -230px
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+  display: none
+
+  +at-breakpoint($break6)
+    display: inline
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv
+  display: block
+
+.no-js .show_hide
+  +hidden
+
+
+/* Process
+  -----------------------
+
+.how
+  h2
+    line-height: 1
+    margin-top: 0
+    font-size: 1.618em
+    color: $dark-white
+  p
+    margin: .443em 0 0
+    font-size: 1em + .236
+    color: $white-smoke
+
+  +at-breakpoint($break6)
+    h2
+      font-size: 1.875em
+    p
+      margin-top: 0
+      padding-bottom: 1em
+      font-size: 1em + .443
 
 .show_hide, #slidingDiv
   +hidden

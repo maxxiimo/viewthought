@@ -238,7 +238,7 @@
     font-size: 1.618em
     color: $dark-white
   p
-    margin: 0
+    margin: .443em 0 0
     font-size: 1em + .236
     color: $white-smoke
 
@@ -246,6 +246,7 @@
     h2
       font-size: 1.875em
     p
+      margin-top: 0
       padding-bottom: 1em
       font-size: 1em + .443
 
@@ -276,12 +277,13 @@
   span
     color: $orange
 
-  +at-breakpoint($break6)
+  +at-breakpoint($break9)
     ul
       margin: 0
       color: $white-smoke
     li
-      margin-bottom: .618em
+      margin-bottom: .716em
+      font-size: 1em + .443
     .mobile-first, .rails, .speed, .agile
       position: absolute
       top: 12px
@@ -310,11 +312,6 @@
       // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
       background-position: -320px -230px
 
-  +at-breakpoint($break9)
-    li
-      margin-bottom: .716em
-      font-size: 1em + .443
-
   +at-breakpoint($break12)
     li
       font-size: 1.618em
@@ -334,7 +331,7 @@
   +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
   display: none
 
-  +at-breakpoint($break6)
+  +at-breakpoint($break9)
     display: inline
 
 /* JavaScript fallback */
