@@ -9,6 +9,7 @@ gem 'jquery-rails', '2.0.2'
 gem 'haml-rails'
 gem 'active_attr'
 gem 'newrelic_rpm'
+gem 'rack-mini-profiler'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
