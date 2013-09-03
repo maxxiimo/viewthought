@@ -127,16 +127,19 @@
   background-color: $white
   &:after
     +panel-shadow(.15)
-  +hidden
 
   +at-breakpoint($break6)
     padding: $padding-6 0
-    +reveal-hidden
+
+/* tech icons
 
 .tech-icons
+  padding-bottom: $padding-4
   text-align: center
+  +hidden
 
   +at-breakpoint($break6)
+    padding-bottom: $padding-6
     p
       margin: 0
       font-size: 1.618em
@@ -163,18 +166,9 @@
       background-position: -127px -500px
     .sass
       background-position: -193px -500px
+    +reveal-hidden
 
-
-/* Tech Blurb
-  -----------------------
-
-#tech-blurb
-  position: relative
-  padding: $padding-4 0
-  background-color: $white
-
-  +at-breakpoint($break6)
-    padding: 0 0 $padding-6
+/* tech blurb
 
 .tech-blurb
   position: relative
