@@ -13,13 +13,13 @@ html, button, input, select, textarea
   color: $base-font-color
 
 html
+  font-size: $base-font-size
+  line-height: $base-line-height
   /* This may cause problems in Firefox when combined with JS plugins (like modals or drag-and-drop UIs) that rely on viewport dimension calculations */
   overflow-y: scroll
   -webkit-font-smoothing: antialiased
 
 body
-  font-size: $base-font-size
-  line-height: $base-line-height
   background-color: $bg-body
   // &:after
   //   +rwd-marker
@@ -43,7 +43,11 @@ body
   // +at-breakpoint($break12)
   //   +susy-grid-background
 
-img
+audio,
+canvas,
+img,
+svg,
+video
   vertical-align: middle
 
 // #photo-hero, #about-us, #how, #process, #passion, #expertise,
