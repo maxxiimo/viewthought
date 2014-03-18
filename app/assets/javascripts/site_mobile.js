@@ -17,8 +17,8 @@ $(document).ready(function() {
 // Anystretch
 // ===========================
 
-$('#photo-hero').anystretch("assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
-$('#in-person').anystretch("assets/smush_map-320.png", {speed: 200, positionY: 'top'});
+$('#photo-hero').anystretch("http://cdn0.viewthought.com/assets/pics/silhouette-320-maximum.jpg", {speed: 200, positionY: 'top'});
+$('#in-person').anystretch("http://cdn0.viewthought.com/assets/smush_map-320.png", {speed: 200, positionY: 'top'});
 
 
 // ===========================
