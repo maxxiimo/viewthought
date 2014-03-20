@@ -64,6 +64,9 @@ Viewthought::Application.configure do
   # https://github.com/rubymaverick/font_assets#usage
   config.font_assets.origin = 'http://viewthought.com'
 
+  # http://work.stevegrossi.com/2013/05/28/set-far-future-expires-headers-for-assets-on-heroku/
+  config.static_cache_control = "public, max-age=31536000"
+
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w(  )
 
