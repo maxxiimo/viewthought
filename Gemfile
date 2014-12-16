@@ -5,6 +5,7 @@ gem 'rails', '3.2.13'
 
 # Add for Heroku issue.
 gem 'sprockets', '2.2.2'
+gem 'sass', '3.2.7'
 
 gem 'mobvious'
 gem 'mobvious-rails'
