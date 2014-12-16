@@ -3,9 +3,10 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
-# Add for Heroku issue.
-gem 'sprockets', '2.2.2'
-gem 'sass', '3.2.7'
+# May need to add this back for Heroku issue.
+# Problem solved with, but probably not necessary.
+# gem 'sprockets', '2.2.2'
+# Sass specification was also here, moved it down.
 
 gem 'mobvious'
 gem 'mobvious-rails'
@@ -25,6 +26,8 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails', '3.2.5'
+  # Specified sass version to overcome deployment issue.
+  gem 'sass', '3.2.7'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
   gem 'asset_sync'
