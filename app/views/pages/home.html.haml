@@ -7,9 +7,10 @@
     .tagline
       .first
         %h2
-          We Build Mobile and
-          %br.desktop-hide
-          Desktop Web Applications
+          Mobile and Web Development
+          -# We Build Mobile and
+          -# %br.desktop-hide
+          -# Desktop Web Applications
         %p
           Think of us as the handshake
           %br.mobile
@@ -24,7 +25,7 @@
           Going mobile? Need to make your site responsive?
           %span We can help your team migrate an existing website to mobile.
     .start-project
-      %a{:href => '#contact-us', :title => '', :class => 'button scroll'} Start A Project
+      %a{:href => '#contact-us', :title => '', :class => 'button scroll'} Lets Talk
   %a{:href => '#about-us', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -34,49 +35,19 @@
     .about-us
       %p
         %strong Our Goal:
-        build intuitive well-designed websites that provide your customers with immediate value the moment they visit&ndash;and from any device or browser used.
+        Help you to engage your customers through intuitive artfully-designed websites that provide immediate value the moment they visit, from any device or browser used.
+        -# build intuitive well-designed websites that provide your customers with immediate value the moment they visit&ndash;from any device or browser used.
       .devices
-  %a{:href => '#how', :title => 'Scroll Down', :class => 'blue-blue scroll autoblur'}
+  %a{:href => '#the-point', :title => 'Scroll Down', :class => 'blue-blue scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
 
-%section#how
+%section#the-point
   .container
-    .how
-      %h2 How we work.
-      %p Our style of web dev is kind of like dancing. It's collaborative. Sometimes you lead, sometimes you follow&ndash;without stepping on your partners toes! We are nimble and quickly and gracefully adjust to changing end-user and business needs. We have fun.
-      #slidingDiv
-        %ul
-          %li
-            .mobile-first
-            We start with a
-            %span mobile first approach
-            to ensure that what your users see on the smallest of devices looks like it was designed for that device, not as an afterthought.
-          %li
-            .rails
-            We use
-            %span Ruby on Rails
-            combined with a boatload of experience on best practices for
-            %span cross device
-            and
-            %span cross browser
-            development.
-          %li
-            .speed
-            We build for speed by
-            %span optimizing absolutely everything
-            &ndash; from images to JavaScript files, and we harness the power of well thought out caching strategies and Content Delivery Networks.
-          %li
-            .agile
-            Pulling all of this together is our
-            %span agile development process
-            that exemplifies the old adage; "
-            %span> measure twice
-            ,&nbsp;
-            %span> cut once
-            \."
-      %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
-        CLICK HERE to learn about what will go into the building of your site.
+    .the-point
+      %blockquote
+        %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+        Our process begins with content and we don't stop perfecting your message until we are both completely satisfied. Then we design and code. The result is a clear focused picture of what you offer that will enhance all your marketing and communications."
   %a{:href => '#process', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -121,7 +92,7 @@
   .container
     .value
       %p
-        Something important about us; we are super user-centric. Your customers expect an intuitive user experience, speed, and device responsiveness. We do this exceptionally well.
+        We are super user-centric. Your customers expect an intuitive user experience, speed, and device responsiveness. We do this exceptionally well.
       %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
   %a{:href => '#story', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
@@ -149,16 +120,47 @@
           %span Integrate beauty, design and optimal user experience in application development.
         %li
           %span Address device constraints and opportunities while delivering consistent visual design.
-  %a{:href => '#the-point', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+  %a{:href => '#how', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
 
-%section#the-point
+%section#how
   .container
-    .the-point
-      %blockquote
-        %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
-        Think of us as the handshake between beautiful design and code. Our process starts with design and we don't stop perfecting your site design until you're completely satisfied. Then we code."
+    .how
+      %h2 How we work.
+      %p Our style of web development is kind of like dancing. It's collaborative. Sometimes you lead, sometimes you follow&ndash;without stepping on your partners toes! We are nimble and quickly and gracefully adjust to changing end-user and business needs. We have fun.
+      #slidingDiv
+        %ul
+          %li
+            .mobile-first
+            We start with a
+            %span mobile first approach
+            to ensure that what your users see on the smallest of devices looks like it was designed for that device, not as an afterthought.
+          %li
+            .rails
+            We use
+            %span Ruby on Rails
+            combined with a boatload of experience on best practices for
+            %span cross device
+            and
+            %span cross browser
+            development.
+          %li
+            .speed
+            We build for speed by
+            %span optimizing absolutely everything
+            &ndash; from images to JavaScript files, and we harness the power of well thought out caching strategies and Content Delivery Networks.
+          %li
+            .agile
+            Pulling all of this together is our
+            %span agile development process
+            that exemplifies the old adage; "
+            %span> measure twice
+            ,&nbsp;
+            %span> cut once
+            \."
+      %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
+        CLICK HERE to learn about what will go into the building of your site.
   %a{:href => '#technologies', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -179,37 +181,10 @@
       %span.ir.sass Sass
     .tech-blurb
       %p Ruby on Rails is the core of all of our projects, from one-page marketing sites like this one to Ember applications consuming Rail's API's.
-  %a{:href => '#passion', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#passion
-  .container
-    .passion
-      %h2 To really understand how passionate we are about technology and what we can do for you, take a look at our e-books below.
-  %a{:href => '#expertise', :title => 'Scroll Down', :class => 'gray-white scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#expertise
-  .container
-    .coding-design
-      .book
-      .description
-        %h2 Coding Design
-        %p An in-depth look at information architecting, website design, and the coding of design from the front-end developer's perspective and toolset: CSS3, HTML5, and the browser.
-        .coding-design-button
-          %a{:href => 'https://github.com/maxxiimo/coding-design/blob/master/TOC.md#table-of-contents', :title => 'Take a look at Coding Design\'s TOC', :class => 'button'} Review
-    .manifesto
-      .book
-      .description
-        %h2 The Front End Manifesto
-        %p A comprehensive research-based HOW TO on best practices for writing well-organized, efficient, mobile to desktop, Front End Code: From a Ruby on Rails perspective.
-        .manifesto-button
-          %a{:href => 'https://github.com/maxxiimo/the-front-end-manifesto/blob/master/TOC.md#table-of-contents', :title => 'Take a look at The Front End Manifesto\'s TOC', :class => 'button'} Review
   %a{:href => '#contact-us', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
+
 
 -#  ===========================
 -#  Contact
@@ -231,20 +206,10 @@
 %section#email-us
   .container
     .email-us
-      %p Adding value to the companies we serve since 2006.
+      %p Let's start the conversation!
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         = render :partial => 'shared/email'
-  %a{:href => '#in-person', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#in-person
-  #map
-  #map-overlay
-    .container
-      .map-overlay
-        %p Want to meet in person around West Palm Beach, Florida?
-    %a{:href => '#home', :title => 'Scroll Up', :class => 'white-white bottom-arrow scroll autoblur'}
-      %span{"aria-hidden" => "true", "data-icon" => "&#x25b4;".html_safe}
-      %span.screen-reader-text Scroll Up
+  %a{:href => '#home', :title => 'Scroll Up', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25b4;".html_safe}
+    %span.screen-reader-text Scroll Up

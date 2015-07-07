@@ -152,7 +152,7 @@
   p
     margin: 0
     font-size: 1em + .443
-    text-align: center
+    // text-align: center
   .devices
     margin: 1em + .443 auto (1em + .443) / 2
     width: 150px
@@ -202,15 +202,19 @@
 //   visibility: visible !important
 
 
-/* How
+/* The Point
   -----------------------
 
-#how
+#the-point
   position: relative
   padding: $padding-4 0
   border-color: $navy-blue
   background-color: $navy-blue
-  z-index: 2
+  // border-color: $blue-gray
+  // background-color: $blue-gray
+  z-index: 1
+  // &:before
+  //   +panel-shadow(.05)
   &:after
     content: ""
     position: absolute
@@ -218,6 +222,7 @@
     left: 50%
     margin-left: -20px
     border-top: 20px solid $navy-blue
+    // border-top: 20px solid $blue-gray
     border-top-color: inherit
     border-left: 20px solid transparent
     border-right: 20px solid transparent
@@ -231,116 +236,45 @@
   +at-breakpoint($break12)
     padding: $padding-12 0
 
-.how
-  h2
-    line-height: 1
-    margin-top: 0
-    font-size: 1.618em
-    color: $dark-white
-  p
-    margin: .443em 0 0
-    font-size: 1em + .236
+.the-point
+  blockquote
+    margin: 0
+    font-size: 1em + .443
     color: $white-smoke
+    // color: $dark-white
+    // +single-text-shadow(0, 2px, 2px, false, $navy-blue)
+  .giant-quote
+    display: block
+    float: left
+    line-height: 1.2
+    margin-top: 2px
+    padding-right: .443em
+    font-size: 1em + .274
 
   +at-breakpoint($break6)
-    h2
-      font-size: 1.875em
-    p
-      margin-top: 0
-      padding-bottom: 1em
-      font-size: 1em + .443
+    blockquote
+      font-size: 1.618em
+    .giant-quote
+      margin: -1px 0 -10px
+      font-size: 1em + .382
 
   +at-breakpoint($break9)
-    +span-columns(7, $break9)
-    +squish(1, 1)
-    h2
-      font-size: 2.618em
-    p
-      font-size: 1.618em
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    blockquote
+      font-size: 2em
+    .giant-quote
+      margin-top: -2px
+      font-size: 1em + .443
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    h2
-      font-size: 3.034em
-    p
-      font-size: 1.618em + .274
-
-#slidingDiv
-  display: none
-  li
-    position: relative
-    list-style: none
-    padding-left: 85px
-    margin-bottom: .443em
-    font-size: 1em + .274
-  span
-    color: $orange
-
-  +at-breakpoint($break9)
-    ul
-      margin: 0
-      color: $white-smoke
-    li
-      margin-bottom: .716em
-      font-size: 1em + .443
-    .mobile-first, .rails, .speed, .agile
-      position: absolute
-      top: 12px
-      left: 10px
-      background: image-url("smush_sprite-sm.png") 0 0 no-repeat
-    .mobile-first
-      top: 11px
-      width: 45px
-      height: 76px
-      // background: image-url("icons/mobile-first-45.png") 0 11px no-repeat
-      background-position: -320px 0px
-    .rails
-      width: 50px
-      height: 64px
-      // background: image-url("icons/rails-50.png") 0 12px no-repeat
-      background-position: -320px -85px
-    .speed
-      top: 14px
-      width: 55px
-      height: 66px
-      // background: image-url("icons/stopwatch-55.png") 0 14px no-repeat
-      background-position: -320px -160px
-    .agile
-      width: 55px
-      height: 37px
-      // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
-      background-position: -320px -230px
-
-  +at-breakpoint($break12)
-    li
+    blockquote
+      font-size: 1.875em + .443
+    .giant-quote
+      margin-top: -8px
       font-size: 1.618em
-    .mobile-first, .rails, .speed, .agile
-      background: image-url("smush_sprite.png") 0 0 no-repeat
-    .mobile-first
-      background-position: 0 -500px
-    .rails
-      background-position: -70px -500px
-    .speed
-      background-position: -140px -500px
-    .agile
-      background-position: -210px -500px
-
-.show_hide
-  font-family: $base-font-button
-  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-  display: none
-
-  +at-breakpoint($break9)
-    display: inline
-
-/* JavaScript fallback */
-
-.no-js #slidingDiv
-  display: block
-
-.no-js .show_hide
-  +hidden
 
 
 /* Process

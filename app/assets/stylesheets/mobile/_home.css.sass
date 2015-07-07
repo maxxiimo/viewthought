@@ -86,7 +86,7 @@
   p
     margin: 0
     font-size: 1em + .443
-    text-align: center
+    // text-align: center
   .devices
     margin: 1em + .443 auto (1em + .443) / 2
     width: 150px
@@ -103,15 +103,19 @@
       margin: 1.875em auto
 
 
-/* How
+/* The Point
   -----------------------
 
-#how
+#the-point
   position: relative
   padding: $padding-4 0
   border-color: $navy-blue
   background-color: $navy-blue
-  z-index: 2
+  // border-color: $blue-gray
+  // background-color: $blue-gray
+  z-index: 1
+  // &:before
+  //   +panel-shadow(.05)
   &:after
     content: ""
     position: absolute
@@ -119,91 +123,35 @@
     left: 50%
     margin-left: -20px
     border-top: 20px solid $navy-blue
+    // border-top: 20px solid $blue-gray
     border-top-color: inherit
     border-left: 20px solid transparent
     border-right: 20px solid transparent
 
   +at-breakpoint($break6)
     padding: $padding-6 0
-.how
-  h2
-    line-height: 1
-    margin-top: 0
-    font-size: 1.618em
-    color: $dark-white
-  p
-    margin: .443em 0 0
-    font-size: 1em + .236
+
+.the-point
+  blockquote
+    margin: 0
+    font-size: 1em + .443
     color: $white-smoke
-
-  +at-breakpoint($break6)
-    h2
-      font-size: 1.875em
-    p
-      margin-top: 0
-      padding-bottom: 1em
-      font-size: 1em + .443
-
-#slidingDiv
-  display: none
-  li
-    position: relative
-    list-style: none
-    padding-left: 85px
-    margin-bottom: .443em
+    // color: $dark-white
+    +single-text-shadow(0, 2px, 2px, false, $navy-blue)
+  .giant-quote
+    display: block
+    float: left
+    line-height: 1.2
+    margin-top: 2px
+    padding-right: .443em
     font-size: 1em + .274
-  span
-    color: $orange
 
   +at-breakpoint($break6)
-    ul
-      margin: 0
-      color: $white-smoke
-    li
-      margin-bottom: .618em
-    .mobile-first, .rails, .speed, .agile
-      position: absolute
-      top: 12px
-      left: 10px
-      background: image-url("smush_sprite-sm.png") 0 0 no-repeat
-    .mobile-first
-      top: 11px
-      width: 45px
-      height: 76px
-      // background: image-url("icons/mobile-first-45.png") 0 11px no-repeat
-      background-position: -320px 0px
-    .rails
-      width: 50px
-      height: 64px
-      // background: image-url("icons/rails-50.png") 0 12px no-repeat
-      background-position: -320px -85px
-    .speed
-      top: 14px
-      width: 55px
-      height: 66px
-      // background: image-url("icons/stopwatch-55.png") 0 14px no-repeat
-      background-position: -320px -160px
-    .agile
-      width: 55px
-      height: 37px
-      // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
-      background-position: -320px -230px
-
-.show_hide
-  font-family: $base-font-button
-  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-  display: none
-
-  +at-breakpoint($break6)
-    display: inline
-
-/* JavaScript fallback */
-
-.no-js #slidingDiv
-  display: block
-
-.no-js .show_hide
-  +hidden
+    blockquote
+      font-size: 1.618em
+    .giant-quote
+      margin: -1px 0 -10px
+      font-size: 1em + .382
 
 
 /* Process

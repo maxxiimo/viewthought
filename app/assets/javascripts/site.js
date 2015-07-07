@@ -67,7 +67,7 @@ $(function() {
 // ===========================
 
 $('#photo-hero').anystretch("http://cdn0.viewthought.com/assets/pics/smush_silhouette-1024-maximum-cut.jpg", {speed: 200, positionY: 'top'});
-$('#in-person').anystretch("http://cdn0.viewthought.com/assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
+// $('#in-person').anystretch("http://cdn0.viewthought.com/assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
 
 
 // ===========================
@@ -84,7 +84,7 @@ $(document).ready(function () {
         arrowHeight = $('#photo-hero .scroll').height();
 
         heroHeight = $('#photo-hero').outerHeight();
-        expertiseHeight = $('#expertise').outerHeight();
+        // expertiseHeight = $('#expertise').outerHeight();
         processHeight = $('#process').outerHeight();
         valueHeight = $('#value').outerHeight();
 
@@ -95,12 +95,12 @@ $(document).ready(function () {
         if (heroHeight + headHeight > windowHeight) {
             $('#photo-hero .scroll').css('top', windowHeight - 110);
         }
-        if (expertiseHeight > windowHeight) {
-            $('#about-us .scroll').css('top', windowHeight - 60)
-        }
-        if (expertiseHeight > windowHeight) {
-            $('#expertise .scroll').css('top', windowHeight - 60)
-        }
+        // if (expertiseHeight > windowHeight) {
+        //     $('#about-us .scroll').css('top', windowHeight - 60)
+        // }
+        // if (expertiseHeight > windowHeight) {
+        //     $('#expertise .scroll').css('top', windowHeight - 60)
+        // }
         if (processHeight > windowHeight) {
             $('#process .scroll').css('top', windowHeight - 60)
         }
@@ -205,13 +205,13 @@ $(document).ready(function() {
     )
   );
 
-  controller.addTween('#expertise',
-    TweenMax.from(
-      $('.coding-design-button a'),
-      1.0,
-      {css:{opacity: 0, rotation: 720}, ease:Quad.easeOut}
-    )
-  );
+  // controller.addTween('#expertise',
+  //   TweenMax.from(
+  //     $('.coding-design-button a'),
+  //     1.0,
+  //     {css:{opacity: 0, rotation: 720}, ease:Quad.easeOut}
+  //   )
+  // );
 
   controller.addTween('.our-mission',
     TweenMax.fromTo(

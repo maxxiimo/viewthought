@@ -159,15 +159,15 @@
       font-size: 1em + .236
 
 
-/* The Point
+/* How
   -----------------------
 
-#the-point
+#how
   position: relative
   padding: $padding-4 0
   border-color: $navy-blue
   background-color: $navy-blue
-  z-index: 1
+  z-index: 2
   &:after
     content: ""
     position: absolute
@@ -188,43 +188,116 @@
   +at-breakpoint($break12)
     padding: $padding-12 0
 
-.the-point
-  blockquote
-    margin: 0
-    font-size: 1em + .443
+.how
+  h2
+    line-height: 1
+    margin-top: 0
+    font-size: 1.618em
+    color: $dark-white
+  p
+    margin: .443em 0 0
+    font-size: 1em + .236
     color: $white-smoke
-  .giant-quote
-    display: block
-    float: left
-    line-height: 1.2
-    margin-top: 2px
-    padding-right: .443em
-    font-size: 1em + .274
 
   +at-breakpoint($break6)
-    blockquote
-      font-size: 1.618em
-    .giant-quote
-      margin: -1px 0 -10px
-      font-size: 1em + .382
+    h2
+      font-size: 1.875em
+    p
+      margin-top: 0
+      padding-bottom: 1em
+      font-size: 1em + .443
 
   +at-breakpoint($break9)
-    +span-columns(8, $break9)
-    +squish(.5, .5)
-    blockquote
-      font-size: 2em
-    .giant-quote
-      margin-top: -2px
-      font-size: 1em + .443
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    h2
+      font-size: 2.618em
+    p
+      font-size: 1.618em
 
   +at-breakpoint($break12)
     +span-columns(10, $break12)
     +squish(1, 1)
-    blockquote
-      font-size: 1.875em + .443
-    .giant-quote
-      margin-top: -8px
+    h2
+      font-size: 3.034em
+    p
+      font-size: 1.618em + .274
+
+#slidingDiv
+  display: none
+  li
+    position: relative
+    list-style: none
+    padding-left: 85px
+    margin-bottom: .443em
+    font-size: 1em + .274
+  span
+    color: $orange
+
+  +at-breakpoint($break9)
+    ul
+      margin: 0
+      color: $white-smoke
+    li
+      margin-bottom: .716em
+      font-size: 1em + .443
+    .mobile-first, .rails, .speed, .agile
+      position: absolute
+      top: 12px
+      left: 10px
+      background: image-url("smush_sprite-sm.png") 0 0 no-repeat
+    .mobile-first
+      top: 11px
+      width: 45px
+      height: 76px
+      // background: image-url("icons/mobile-first-45.png") 0 11px no-repeat
+      background-position: -320px 0px
+    .rails
+      width: 50px
+      height: 64px
+      // background: image-url("icons/rails-50.png") 0 12px no-repeat
+      background-position: -320px -85px
+    .speed
+      top: 14px
+      width: 55px
+      height: 66px
+      // background: image-url("icons/stopwatch-55.png") 0 14px no-repeat
+      background-position: -320px -160px
+    .agile
+      width: 55px
+      height: 37px
+      // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
+      background-position: -320px -230px
+
+  +at-breakpoint($break12)
+    li
       font-size: 1.618em
+    .mobile-first, .rails, .speed, .agile
+      background: image-url("smush_sprite.png") 0 0 no-repeat
+    .mobile-first
+      background-position: 0 -500px
+    .rails
+      background-position: -70px -500px
+    .speed
+      background-position: -140px -500px
+    .agile
+      background-position: -210px -500px
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+  display: none
+
+  +at-breakpoint($break9)
+    display: inline
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv
+  display: block
+
+.no-js .show_hide
+  +hidden
 
 
 /* Technologies
@@ -336,144 +409,3 @@
     p
       padding-top: 2.618em
       font-size: 2em
-
-
-/* Passion
-  -----------------------
-
-#passion
-  position: relative
-  padding: $padding-4 0
-  border-color: $blue-gray
-  background-color: $blue-gray
-  z-index: 1
-  &:before
-    +panel-shadow(.05)
-  &:after
-    content: ""
-    position: absolute
-    top: 99%
-    left: 50%
-    margin-left: -20px
-    border-top: 20px solid $blue-gray
-    border-top-color: inherit
-    border-left: 20px solid transparent
-    border-right: 20px solid transparent
-
-  +at-breakpoint($break6)
-    padding: $padding-6 0
-
-  +at-breakpoint($break9)
-    padding: $padding-9 0
-
-  +at-breakpoint($break12)
-    padding: $padding-12 0
-
-.passion
-  h2
-    line-height: 1.236
-    margin-top: 0
-    font-size: 1.618em
-    color: $dark-white
-    +single-text-shadow(0, 2px, 2px, false, $navy-blue)
-
-  +at-breakpoint($break6)
-    h2
-      font-size: 1.875em
-
-  +at-breakpoint($break9)
-    +span-columns(7, $break9)
-    +squish(1, 1)
-    h2
-      font-size: 2.618em
-
-  +at-breakpoint($break12)
-    +span-columns(10, $break12)
-    +squish(1, 1)
-    h2
-      font-size: 3.034em
-
-
-/* Expertise
-  -----------------------
-
-#expertise
-  position: relative
-  padding:  $padding-4 0
-  padding-bottom: $padding-4
-  background-color: $white
-
-  +at-breakpoint($break6)
-    padding:  $padding-6 0
-
-  +at-breakpoint($break9)
-    padding:  $padding-9 0
-
-  +at-breakpoint($break12)
-    padding:  $padding-12 0
-
-.coding-design, .manifesto
-  p
-    margin: 0
-    font-size: 1em
-
-  +at-breakpoint($break6)
-    p
-      font-size: 1.159em
-
-  +at-breakpoint($break9)
-    +span-columns(8, $break9)
-    +pre(1)
-    .book
-      float: left
-      margin-right: 2.618em
-      width: 150px
-      height: 239px
-      // background: image-url("icons/design-150.png") 55px 8px no-repeat
-      background: image-url("smush_sprite-sm.png") -160px -260px no-repeat
-    .description
-      +span-columns(6, $break9)
-
-  +at-breakpoint($break12)
-    +span-columns(9, $break12)
-    +pre(1)
-    min-height: 318px
-    .book
-      width: 200px
-      height: 318px
-      // background: image-url("icons/design-200.png") 0 0 no-repeat
-      background: image-url("smush_sprite.png") -530px -260px no-repeat
-    p
-      font-size: 1em + .236
-    .description
-      +span-columns(6 omega, $break9)
-
-.manifesto
-  margin-top: $margin-4 / 2
-
-  +at-breakpoint($break6)
-    margin-top: $margin-6 / 2
-
-  +at-breakpoint($break9)
-    margin-top: $margin-9 / 2
-    .book
-      // background: image-url("icons/manifesto-150.png") 55px 8px no-repeat
-      background: image-url("smush_sprite-sm.png") 0 -260px no-repeat
-
-  +at-breakpoint($break12)
-    margin-top: $margin-12 / 2
-    .book
-      // background: image-url("icons/manifesto-200.png") 0 0 no-repeat
-      background: image-url("smush_sprite.png") -320px -260px no-repeat
-
-/* Buttons
-
-.coding-design-button, .manifesto-button
-  margin-top: 1.618em
-  text-align: center
-  .button
-    +sassy-button(flat, .382em, 1em, $lime)
-
-  +at-breakpoint($break6)
-    margin-top: 1.875em
-    text-align: left
