@@ -1,5 +1,5 @@
 class ContactMailer < ActionMailer::Base
-  default from: "contact_us@viewthought.com"
+  default from: "no-reply@viewthought.com"
 
   def contact_us_message(message)
     @message = message
