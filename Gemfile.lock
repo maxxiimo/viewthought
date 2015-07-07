@@ -65,6 +65,7 @@ GEM
     excon (0.25.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    ffi (1.5.0)
     ffi (1.5.0-x86-mingw32)
     fog (1.15.0)
       builder
@@ -115,9 +116,11 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.6.8)
     newrelic_rpm (3.6.6.147)
+    nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     oily_png (1.1.0)
       chunky_png (~> 1.2.7)
+    pg (0.12.2)
     pg (0.12.2-x86-mingw32)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -178,6 +181,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.5)
     sqlite3 (1.3.5-x86-mingw32)
     susy (1.0.7)
       compass (>= 0.12.2)
@@ -196,6 +200,7 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
@@ -215,8 +220,12 @@ DEPENDENCIES
   pg (= 0.12.2)
   rails (= 3.2.13)
   rspec-rails (= 2.11.0)
+  sass (= 3.2.7)
   sass-rails (= 3.2.5)
   sassy-buttons
   sqlite3 (= 1.3.5)
   susy
   uglifier (= 1.2.3)
+
+BUNDLED WITH
+   1.10.5
