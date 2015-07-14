@@ -22,4 +22,15 @@ module ApplicationHelper
   def chromeframe
     render :partial => 'layouts/chromeframe'
   end
+
+  def nav_tab(title, url, key, options = {})
+    current_tab = options.delete(:current)
+    # options[:class] = (current_tab == title) ? 'active' : 'inactive'
+    klass = (current_tab == title) ? 'active' : 'inactive'
+    content_tag(:a, title, :href => url, :accesskey => key, :class => klass)
+  end
+
+  def currently_at(tab)
+    render partial: 'shared/navigation_text', locals: {current_tab: tab}
+  end
 end

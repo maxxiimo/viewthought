@@ -1,0 +1,72 @@
+/* Main
+  ----------------------- */
+
+#nav-icon
+  float: left
+  +icon-nav(1em + .382, .236em)
+  // To hide the home icon
+  // a:first-child
+  //   +hidden
+
+  +at-breakpoint($break6)
+    float: right
+    a
+      // To reveal the hidden home icon
+      // &:first-child
+      //   +reveal-hidden-inline
+
+  +at-breakpoint($break9)
+    +hidden
+
+#nav
+  a
+    position: relative
+    display: inline-block
+    padding: 0 $nav-pad-4
+    line-height: 3.034
+    font-family: $base-font-nav
+    +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
+    &:hover
+      text-decoration: none
+      color: $link-logo
+      background-color: $white-smoke
+  +hidden
+
+  +at-breakpoint($break9)
+    +span-columns(4, $break9)
+    +reveal-hidden
+    margin-right: 0
+    text-align: right
+    a
+      padding: 0 $nav-pad-9
+      &.active
+        color: $link-logo
+
+  +at-breakpoint($break12)
+    +span-columns(5, 12)
+    a
+      padding: 0 $nav-pad-12
+
+#magic-line
+  position: absolute
+  display: block
+  top: 0
+  height: .382em
+  background-color: $link-logo
+
+/* JavaScript fallback */
+
++at-breakpoint($break9)
+  .no-js #nav .active:before
+    content: ""
+    position: absolute
+    top: 0
+    left: $nav-pad-9
+    right: $nav-pad-9
+    height: .382em
+    background-color: $link-logo
+
++at-breakpoint($break12)
+  .no-js #nav .active:before
+    left: $nav-pad-12
+    right: $nav-pad-12

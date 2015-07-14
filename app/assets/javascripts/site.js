@@ -29,10 +29,12 @@ $(document).ready(function() {
 $(function() {
 
     var $el, leftPos, newWidth,
-        $mainNav = $(".social-links"),
+        $mainNav = $("#nav"),
 
         // http://stackoverflow.com/questions/590602/padding-or-margin-value-in-pixels-as-integer-using-jquery
-        $current = $(".current"),
+        $current = $(".active"),
+        // paddingLeft = $current.css("padding-left"),
+        // paddingLeft = parseInt($current.css("padding-top").replace("px","")),
         paddingBoth = ($current.innerWidth() - $current.width()),
         paddingLeft = paddingBoth / 2;
 
@@ -40,12 +42,12 @@ $(function() {
     var $magicLine = $("#magic-line");
 
     $magicLine
-        // .width($current.width())
-        // .css("left", $current.position().left + paddingLeft)
+        .width($current.width())
+        .css("left", $current.position().left + paddingLeft)
         .data("origLeft", $magicLine.position().left)
         .data("origWidth", $magicLine.width());
 
-    $(".social-links a").hover(function() {
+    $("#nav a").hover(function() {
         $el = $(this);
         leftPos = $el.position().left;
         newWidth = $el.width() + paddingBoth;
