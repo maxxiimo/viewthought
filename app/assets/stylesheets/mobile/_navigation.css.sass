@@ -1,16 +1,38 @@
 /* Main
   ----------------------- */
 
-#nav-icon
-  float: left
-  +icon-nav(1em + .382, .236em)
-  // To hide the home icon
-  // a:first-child
-  //   +hidden
+// #nav-icon
+//   float: left
+//   +icon-nav(1em + .382, .236em)
+//   // To hide the home icon
+//   // a:first-child
+//   //   +hidden
 
-  +at-breakpoint($break6)
-    float: right
+//   +at-breakpoint($break6)
+//     float: right
+//     a
+//       // To reveal the hidden home icon
+//       // &:first-child
+//       //   +reveal-hidden-inline
+
+
+/* Social Icons
+  ----------------------- */
+
+header
+  .social-links
+    +icon-nav(1em + .236, .236em)
+    float: left
+    +hidden
     a
-      // To reveal the hidden home icon
-      // &:first-child
-      //   +reveal-hidden-inline
+      display: inline-block
+      line-height: 1.6
+      padding: 0 $nav-pad-4
+      +link-colors($link-nav, $link-nav, $link-nav, $link-nav, $link-nav)
+
+    +at-breakpoint($break6)
+      float: right
+      +reveal-hidden
+      a
+        padding: 0 $nav-pad-6
+        font-size: 1em + .382

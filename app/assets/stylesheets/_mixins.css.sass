@@ -1,15 +1,3 @@
-/* Icon Fonts
-  ----------------------- */
-
-@mixin data-icon
-  font-family: 'icon-fonts'
-  content: attr(data-icon)
-  speak: none
-  font-weight: normal
-  line-height: 1
-  -webkit-font-smoothing: antialiased
-
-
 /* Navigation
   ----------------------- */
 
@@ -39,6 +27,18 @@
     span
       // Fix for icon font clickability issue in WebKit
       display: inline-block
+
+
+/* Icon Fonts
+  ----------------------- */
+
+@mixin data-icon
+  font-family: 'icon-fonts'
+  content: attr(data-icon)
+  speak: none
+  font-weight: normal
+  line-height: 1
+  -webkit-font-smoothing: antialiased
 
 
 /* Gradients

@@ -1,22 +1,22 @@
 /* Main
   ----------------------- */
 
-#nav-icon
-  float: left
-  +icon-nav(1em + .382, .236em)
-  // To hide the home icon
-  // a:first-child
-  //   +hidden
+// #nav-icon
+//   float: left
+//   +icon-nav(1em + .382, .236em)
+//   // To hide the home icon
+//   // a:first-child
+//   //   +hidden
 
-  +at-breakpoint($break6)
-    float: right
-    a
-      // To reveal the hidden home icon
-      // &:first-child
-      //   +reveal-hidden-inline
+//   +at-breakpoint($break6)
+//     float: right
+//     a
+//       // To reveal the hidden home icon
+//       // &:first-child
+//       //   +reveal-hidden-inline
 
-  +at-breakpoint($break9)
-    +hidden
+//   +at-breakpoint($break9)
+//     +hidden
 
 #nav
   a
@@ -33,17 +33,16 @@
   +hidden
 
   +at-breakpoint($break9)
-    +span-columns(4, $break9)
     +reveal-hidden
-    // margin-right: 0
-    // text-align: right
+    float: left
+    width: 245px
     a
       padding: 0 $nav-pad-9
       &.active
         color: $link-logo
 
   +at-breakpoint($break12)
-    +span-columns(5, 12)
+    +span-columns(5, $break12)
     a
       padding: 0 $nav-pad-12
 
