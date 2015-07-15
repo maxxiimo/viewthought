@@ -1,0 +1,44 @@
+/* How
+  ----------------------- */
+
+#how
+  position: relative
+  padding: $padding-4 0
+  border-color: $navy-blue
+  background-color: $navy-blue
+  z-index: 1
+  &:after
+    content: ""
+    position: absolute
+    top: 99%
+    left: 50%
+    margin-left: -20px
+    border-top: 20px solid $navy-blue
+    border-top-color: inherit
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.how
+  h2
+    line-height: 1
+    margin-top: 0
+    font-size: 1.618em
+    color: $dark-white
+  p
+    margin: .443em 0 0
+    font-size: 1em + .236
+    color: $white-smoke
+
+  +at-breakpoint($break6)
+    h2
+      font-size: 1.875em
+    p
+      margin-top: 0
+      padding-bottom: 1em
+      font-size: 1em + .443
+
+.show_hide, #slidingDiv
+  +hidden

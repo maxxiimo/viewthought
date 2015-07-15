@@ -1,0 +1,139 @@
+/* How
+  ----------------------- */
+
+#how
+  position: relative
+  padding: $padding-4 0
+  border-color: $navy-blue
+  background-color: $navy-blue
+  z-index: 1
+  &:after
+    content: ""
+    position: absolute
+    top: 99%
+    left: 50%
+    margin-left: -20px
+    border-top: 20px solid $navy-blue
+    border-top-color: inherit
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.how
+  h2
+    line-height: 1
+    margin-top: 0
+    font-size: 1.618em
+    color: $dark-white
+  p
+    margin: .443em 0 0
+    font-size: 1em + .236
+    color: $white-smoke
+
+  +at-breakpoint($break6)
+    h2
+      font-size: 1.875em
+    p
+      margin-top: 0
+      padding-bottom: 1em
+      font-size: 1em + .443
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    h2
+      font-size: 2.618em
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    h2
+      font-size: 3.034em
+    p
+      font-size: 1.618em + .274
+
+#slidingDiv
+  display: none
+  li
+    position: relative
+    list-style: none
+    padding-left: 85px
+    margin-bottom: .443em
+    font-size: 1em + .274
+  span
+    color: $orange
+
+  +at-breakpoint($break9)
+    ul
+      margin: 0
+      color: $white-smoke
+    li
+      margin-bottom: .716em
+      font-size: 1em + .443
+    .mobile-first, .rails, .speed, .agile
+      position: absolute
+      top: 12px
+      left: 10px
+      background: image-url("smush_sprite-sm.png") 0 0 no-repeat
+    .mobile-first
+      top: 11px
+      width: 45px
+      height: 76px
+      // background: image-url("icons/mobile-first-45.png") 0 11px no-repeat
+      background-position: -320px 0px
+    .rails
+      width: 50px
+      height: 64px
+      // background: image-url("icons/rails-50.png") 0 12px no-repeat
+      background-position: -320px -85px
+    .speed
+      top: 14px
+      width: 55px
+      height: 66px
+      // background: image-url("icons/stopwatch-55.png") 0 14px no-repeat
+      background-position: -320px -160px
+    .agile
+      width: 55px
+      height: 37px
+      // background: image-url("icons/measuring-tape-55.png") 0 12px no-repeat
+      background-position: -320px -230px
+
+  +at-breakpoint($break12)
+    li
+      font-size: 1.618em
+    .mobile-first, .rails, .speed, .agile
+      background: image-url("smush_sprite.png") 0 0 no-repeat
+    .mobile-first
+      background-position: 0 -500px
+    .rails
+      background-position: -70px -500px
+    .speed
+      background-position: -140px -500px
+    .agile
+      background-position: -210px -500px
+
+.show_hide
+  font-family: $base-font-button
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+  display: none
+
+  +at-breakpoint($break9)
+    display: inline
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv
+  display: block
+
+.no-js .show_hide
+  +hidden

@@ -1,0 +1,42 @@
+/* About Us
+  ----------------------- */
+
+#about-us
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  &:before
+    +divider-top($padding-4, 45%)
+
+    +at-breakpoint($break6)
+      top: $padding-6 / 1.5
+
+  &:after
+    +divider-bottom($padding-4, 45%)
+
+    +at-breakpoint($break6)
+      bottom: $padding-6 / 1.5
+
+.about-us
+  p
+    margin: 0
+    font-size: 1em + .443
+    // text-align: center
+  .devices
+    margin: 1em + .443 auto (1em + .443) / 2
+    width: 150px
+    height: 85px
+    // background: image-url("icons/devices-150.png") 0 0 no-repeat
+    background: image-url("smush_sprite-sm.png") -260px -500px no-repeat
+  &:after
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.618em
+    .devices
+      margin: 1.875em auto

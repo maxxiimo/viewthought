@@ -1,4 +1,4 @@
-/* Contact Form
+/* Contact Us
   ----------------------- */
 
 #contact-us
@@ -85,43 +85,3 @@
       text-align: left
     .textarea:before
       left: 80px
-
-
-/* Email Us
-  ----------------------- */
-
-#email-us
-  position: relative
-  padding: $padding-4 0
-  background-color: $white
-  &:before
-    +panel-shadow(.15)
-
-  +at-breakpoint($break6)
-    padding: $padding-6 0
-
-.email-us
-  p
-    margin: 0 0 1 + .443em
-    font-size: 1em + .443
-
-  +at-breakpoint($break6)
-    p
-      font-size: 1em + .618
-
-/* Button */
-
-.email-button
-  position: relative
-  text-align: center
-  span
-    position: absolute
-    top: .618em
-    left: 0
-    +hidden
-  a
-    +sassy-button
-    font-size: 1.159em
-
-  +at-breakpoint($break6)
-    font-size: 1em + .274

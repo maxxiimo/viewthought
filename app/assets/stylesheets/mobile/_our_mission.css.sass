@@ -1,0 +1,48 @@
+/* Our Mission
+  ----------------------- */
+
+#our-mission
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  z-index: 1
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.our-mission
+  position: relative
+  p
+    margin-top: 0
+    font-size: 1em + .443
+    span
+      color: $orange
+  h2
+    text-align: center
+  li
+    position: relative
+    margin-bottom: 1.618em
+    padding: 1em 1em 1em 3.034em
+    font-size: 1em
+    counter-increment: step
+    list-style: none
+    +box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+    +shadow-3
+    &:nth-child(3)
+      margin-bottom: 0
+    span:before
+      content: counter(step, upper-roman)
+      position: absolute
+      top: 0
+      left: 0
+      width: 1.875em
+      line-height: 1.875em
+      text-align: center
+      color: $white
+      background-color: $orange
+      // background-color: rgba(242, 101, 19, .7)
+      +border-top-left-radius(4px)
+
+  +at-breakpoint($break6)
+    li
+      font-size: 1em + .169

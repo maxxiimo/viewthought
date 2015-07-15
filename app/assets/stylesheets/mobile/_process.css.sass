@@ -1,0 +1,80 @@
+/* Process
+  ----------------------- */
+
+#process
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  z-index: 1
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+/* Intro */
+
+.process
+  position: relative
+  margin-bottom: 1em + .274
+
+  +at-breakpoint($break6)
+    margin-bottom: 1em + .443
+
+/* List */
+
+#process ul
+  margin-top: 0
+  li
+    list-style: none
+    margin-bottom: 1em
+    +clearfix
+
+/* Symbol */
+
+.symbol
+  float: left
+
+  +at-breakpoint($break6)
+    width: 19%
+
+.circle
+  +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+  margin: 0 0 -37px
+  span
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    margin: 0
+    span
+      font-size: 1.875em
+
+/* Step */
+
+.step
+  float: left
+  width: 100%
+  h3
+    margin-left: 3.034em
+  p
+    margin: 0
+
+  +at-breakpoint($break6)
+    width: 81%
+    // margin-left: 1%
+    h3
+      margin-left: 0
+
+/* Button */
+
+.hire-button
+  clear: both
+  text-align: center
+  .button
+    +sassy-button
+    margin-top: 1.618em
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    .button
+      margin-top: 1.875em
+      font-size: 1em + .274

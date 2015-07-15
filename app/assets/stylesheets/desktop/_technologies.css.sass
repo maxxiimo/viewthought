@@ -1,0 +1,109 @@
+/* Technologies
+  ----------------------- */
+
+#technologies
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+/* tech icons */
+
+.tech-icons
+  padding-bottom: $padding-4
+  text-align: center
+  +hidden
+
+  +at-breakpoint($break6)
+    padding-bottom: $padding-6
+    p
+      margin: 0
+      font-size: 1.618em
+    span
+      display: inline-block
+      margin-top: 2.618em
+      width: 63px
+      height: 69px
+      // background: image-url("logos/tech-icon-sprite.png") 0 0 no-repeat
+      background: image-url("smush_sprite-sm.png") 0 -590px no-repeat
+    .ruby
+      background-position: 5px -590px
+    .jquery
+      background-position: -68px -590px
+    .git
+      background-position: -139px -590px
+    .backbone
+      background-position: -227px -590px
+    .html
+      background-position: 8px -500px
+    .css
+      background-position: -65px -500px
+    .haml
+      background-position: -127px -500px
+    .sass
+      background-position: -193px -500px
+    +reveal-hidden
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    padding-bottom: $padding-9
+    p
+      font-size: 2em
+    br
+      +hidden
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    padding-bottom: $padding-12
+    p
+      font-size: 1.875em + .443
+    span
+      background: image-url("smush_sprite.png") 0 -590px no-repeat
+    .html
+      background-position: -300px -590px
+    .css
+      background-position: -370px -590px
+    .haml
+      background-position: -431px -590px
+    .sass
+      background-position: -498px -590px
+
+/* tech blurb */
+
+.tech-blurb
+  position: relative
+  p
+    margin: 0
+    font-size: 1em + .443
+
+  +at-breakpoint($break6)
+    p
+      padding-top: 1.875em
+    &:before
+      +panel-shadow
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    p
+      padding-top: 2em
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      padding-top: 2.618em
+      font-size: 2em

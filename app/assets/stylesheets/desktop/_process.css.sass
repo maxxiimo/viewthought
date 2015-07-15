@@ -1,0 +1,173 @@
+/* Process
+  ----------------------- */
+
+#process
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  z-index: 1
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+/* Intro */
+
+.process
+  position: relative
+  margin-bottom: 1em + .274
+
+  +at-breakpoint($break6)
+    margin-bottom: 1em + .443
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+    margin-bottom: 1.875em
+    h2
+      text-align: center
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+
+/* List */
+
+#process ul
+  margin-top: 0
+  li
+    list-style: none
+    margin-bottom: 1em
+    +clearfix
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +pre(1)
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
+    +pre(2)
+
+/* Symbol */
+
+.symbol
+  float: left
+
+  +at-breakpoint($break6)
+    width: 19%
+
+  +at-breakpoint($break9)
+    width: 21%
+
+  +at-breakpoint($break12)
+    width: 22%
+
+.circle
+  +circle-border($size: (1.159em * 2), $border: 3px, $color: $lime)
+  margin: 0 0 -37px
+  span
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +circle-border($size: (1.875em * 2), $border: 4px, $color: $lime)
+    margin: 0
+    span
+      font-size: 1.875em
+
+  +at-breakpoint($break9)
+    +circle-border($size: (2.618em * 2), $border: 6px, $color: $lime)
+    span
+      font-size: 2.618em
+
+  +at-breakpoint($break12)
+    +circle-border($size: (3.034em * 2), $color: $lime)
+    span
+      font-size: 3.034em
+
+/* Step */
+
+.step
+  float: left
+  width: 100%
+  h3
+    margin-left: 3.034em
+  p
+    margin: 0
+
+  +at-breakpoint($break6)
+    width: 81%
+    h3
+      margin-left: 0
+
+  +at-breakpoint($break9)
+    width: 79%
+
+  +at-breakpoint($break12)
+    width: 78%
+
+/* Roundabout */
+
+.roundabout-holder
+  clear: both
+  height: 12.85em
+  margin-bottom: 3.034em
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
+
+.roundabout-moveable-item
+  padding: 1.159em
+  cursor: pointer
+  background-color: $white
+  border: 1px solid $black-1
+  border: 6px solid rgba(0, 0, 0, .05)
+  +border-radius(1em)
+
+.roundabout-in-focus
+  cursor: auto
+
+/* Button */
+
+.hire-button
+  clear: both
+  text-align: center
+  .button
+    +sassy-button
+    margin-top: 1.618em
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    .button
+      margin-top: 1.875em
+      font-size: 1em + .274
+
+  +at-breakpoint($break9)
+    .button
+      font-size: 1em + .443
+
+  +at-breakpoint($break12)
+    .button
+      font-size: 1.618em
+
+/* Old */
+
+.work-process
+
+  +at-breakpoint($break9)
+    padding-top: 11.089em
+    h2
+      position: relative
+      padding-top: 1em
+      &:before
+        +panel-shadow
+
+  +at-breakpoint($break12)
+    padding-top: 11.089em

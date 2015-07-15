@@ -1,0 +1,62 @@
+/* Email Us
+  ----------------------- */
+
+#email-us
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:before
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.email-us
+  p
+    margin: 0 0 1 + .443em
+    font-size: 1em + .443
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1em + .618
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+
+  +at-breakpoint($break12)
+    +span-columns(9, $break12)
+    +squish(1.5, 1.5)
+    p
+      font-size: 1.875em
+
+/* Button */
+
+.email-button
+  position: relative
+  text-align: center
+  span
+    position: absolute
+    top: .618em
+    left: 0
+    +hidden
+  a
+    +sassy-button
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    font-size: 1em + .274
+
+  +at-breakpoint($break9)
+    font-size: 1em + .443
+    span
+      +reveal-hidden
+
+  +at-breakpoint($break12)
+    font-size: 1.618em

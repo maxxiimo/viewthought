@@ -1,0 +1,107 @@
+/* Photo Hero
+  ----------------------- */
+
+#photo-hero
+  position: relative
+  height: 20.792em
+  padding: .716em 0 1.159em
+  background-color: $white
+  &:after
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: (1em + .443) 0 1.618em
+
+  +at-breakpoint($break9)
+    padding: 2.618em 0 $padding-9
+    // height: 46.971em - 10
+    height: 33.641em - 2
+
+  +at-breakpoint($break12)
+    padding: 4.236em 0 $padding-12
+
+// JavaScript fallback
+
+.no-js #photo-hero
+  background: image-url("pics/silhouette-320-maximum.jpg") 50% 50% no-repeat
+
+  +at-breakpoint($break6)
+    background: image-url("pics/smush_silhouette-600-maximum.jpg") 50% 50% no-repeat
+
+  +at-breakpoint($break9)
+    background: image-url("pics/smush_silhouette-1024-maximum.jpg") 50% 50% no-repeat
+
+  +at-breakpoint($break12)
+    background: image-url("pics/smush_silhouette-1400-maximum.jpg") 50% 50% no-repeat
+
+/* Tagline */
+
+.tagline
+  h2
+    line-height: 1 + .443
+    margin: 0
+    font-size: 1.618em
+  p
+    margin: .443em 0 0
+    font-size: 1em + .236
+
+  +at-breakpoint($break6)
+    +span-columns(4, $break6)
+    h2
+      font-size: 1.875em
+    p
+      font-size: 1em + .382
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +prefix(.5)
+    h2
+      font-size: 2.618em
+    p
+      font-size: 1em + .443
+      span
+        display: block
+    span
+      display: inline !important
+
+  +at-breakpoint($break12)
+    +span-columns(8, $break12)
+    +prefix(1)
+    h2
+      font-size: 3.034em
+    p
+      font-size: 1.618em
+
+.first
+  // +hidden
+
+.second
+  +hidden
+
+/* Button */
+
+.start-project
+  margin-top: 1.618em
+  .button
+    +sassy-button
+    font-size: 1.159em
+
+  +at-breakpoint($break6)
+    +span-columns(6, $break6)
+    margin-top: 1.875em
+    .button
+      font-size: 1em + .274
+
+  +at-breakpoint($break9)
+    +span-columns(6, $break9)
+    +prefix(.5)
+    margin-top: 3.034em
+    .button
+      font-size: 1em + .443
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(1)
+    margin-top: 4.236em
+    .button
+      font-size: 1.618em
