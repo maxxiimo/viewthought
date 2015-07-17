@@ -69,7 +69,7 @@ $(function() {
 // ===========================
 
 $('#photo-hero').anystretch("http://cdn0.viewthought.com/assets/pics/smush_silhouette-1024-maximum-cut.jpg", {speed: 200, positionY: 'top'});
-// $('#in-person').anystretch("http://cdn0.viewthought.com/assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
+$('#in-person').anystretch("http://cdn0.viewthought.com/assets/smush_map-1400.png", {speed: 200, positionY: 'top'});
 
 
 // ===========================

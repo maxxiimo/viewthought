@@ -1,3 +1,4 @@
+= currently_at 'Contact'
 - content_for :title do
   Contact
 
@@ -5,10 +6,13 @@
   .container
     .contact-intro
       %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
+      .contact-info
+        = render :partial => 'shared/phone_number'
+        = render :partial => 'shared/social_links'
     .contact-form
       = render :partial => 'pages/contact_form'
-  %a{:href => '#email-us', :title => 'Scroll Down', :class => 'white-white autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+  %a{:href => '#email-us', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
 
 %section#email-us
@@ -18,8 +22,8 @@
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         = render :partial => 'shared/email'
-  %a{:href => '#in-person', :title => 'Scroll Down', :class => 'gray-gray autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x27f1;".html_safe}
+  %a{:href => '#in-person', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
 
 %section#in-person
@@ -27,8 +31,7 @@
   #map-overlay
     .container
       .map-overlay
-        %p ViewThought is a Ruby on Rails development shop located in West Palm Beach, Florida.
-  -# %a{:href => '#skrollr-body', :title => 'Scroll to top', :class => 'arrow-up-anchor autoblur'} top
-  %a{:href => '#skrollr-body', :title => 'Scroll Up', :class => 'white-white autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x27f0;".html_safe}
-    %span.screen-reader-text Scroll Up
+        %p Want to meet in person around West Palm Beach, Florida?
+    %a{:href => '#home', :title => 'Scroll Up', :class => 'white-white bottom-arrow scroll autoblur'}
+      %span{"aria-hidden" => "true", "data-icon" => "&#x25b4;".html_safe}
+      %span.screen-reader-text Scroll Up
