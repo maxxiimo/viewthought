@@ -1,0 +1,38 @@
+#our-goal
+  position: relative
+  padding: $padding-4 0
+  border-color: $navy-blue
+  background-color: $navy-blue
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.our-goal
+  p
+    margin-top: 0
+    font-size: 1em + .236
+    color: $white-smoke
+
+  +at-breakpoint($break6)
+    p
+      padding-bottom: 1em
+      font-size: 1em + .443
+
+  +at-breakpoint($break9)
+    +span-columns(7, $break9)
+    +squish(1, 1)
+    p
+      font-size: 1.618em
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    +squish(1, 1)
+    p
+      margin-bottom: 1em + .236
+      font-size: 1.618em + .274

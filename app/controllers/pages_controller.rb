@@ -3,13 +3,7 @@ class PagesController < ApplicationController
     @message = Message.new
   end
 
-  def work
-  end
-
-  def thoughts
-  end
-
-  def labs
+  def case_studies
   end
 
   def contact

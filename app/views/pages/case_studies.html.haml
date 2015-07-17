@@ -1,0 +1,76 @@
+= currently_at 'Case Studies'
+- content_for :title do
+  Case Studies
+
+%section#case-intro
+  .container
+    .case-intro
+      %p
+        Your business has a unique value proposition. Through design and interaction we can help communicate this.
+        %span.hide-text Through our unique experience in both web development and business&ndash;help to enhance it.
+  %a{:href => '#case-study-1', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#case-study-1
+  .container
+    .case-study-1
+      %h2 Northwest Arctic Borough School District
+      %p When the Northwest Arctic Borough School District approached ViewThought for a website redesign project, they were in the final stages of completing a fourteen million dollar overhaul of the Alaska Technical Center, and the launch of Star of the Northwest Magnet School. They needed new modern websites for both; the technical center’s website was antiquated, and the magnet school did not yet have a website.
+      #slidingDiv1
+        %p ViewThought was hired to help the school district craft and tell the story for both:
+        %ul
+          %li Who they were
+          %li What they offered
+          %li Who should go there and why
+          %li What are the steps necessary to attend
+        %p They wanted a site that was visually minimalist, complemented by videos, available on mobile devices, and in terms of look and feel conveyed a sense of sophistication, a modern feel, and something uniform between the two sites while distinct from each other.
+        %p Over the course of several months we worked with the district, and together crafted what we all feel are two beautiful works of art that accomplish what we set out to achieve.
+      %a.show_hide_2{:href => "#", "data-link" => "#slidingDiv1"}
+        Read More
+      %span.vertical-pipe
+      %a.visit_site{href: 'http://atcstar.com', title: 'ATC and Star Websites', target: '_blank'} Visit Site
+  %a{:href => '#case-study-2', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#atcstar
+  .container
+    .atcstar
+      = image_tag 'atcstar-900.png', alt: 'ATC/Star Website Screenshots', width: '90%'
+
+%section#case-study-2
+  .container
+    .case-study-2
+      %h2 NANA Development Corporation: Aqqaluk Trust
+      %p The stakeholders of Aqqaluk Trust felt that their old website was not serving the full purpose of their mission. They described their old website as feeling scattered, “not fluid”, and incoherent; that it had “lost its purpose.”
+      #slidingDiv2
+        %p ViewThought was brought on board to help Aqqaluk Trust re-craft their content, hone in on their message, and re-architect how information would be displayed. Certain questions needed to be answered, like:
+        %ul
+          %li What is Aqqaluk Trust?
+          %li What do they do and why was this important?
+          %li Why should people care?
+          %li How is its work coming into effect?
+        %p Most importantly, the look and feel needed to convey the very special cultural aspects of the region, a sense of excitement, and work on mobile devices – where a large percentage of their audience would access the website.
+        %p Working with the trust, we set out to develop a site that would answer all of these questions. A website that told a story – while generating excitement about what Aqqaluk Trust was doing – and invite and encourage participation. The result: a fantastic looking website that we, and all the stakeholders at Aqqaluk Trust, are proud of.
+      %a.show_hide_2{:href => "#", "data-link" => "#slidingDiv2"}
+        Read More
+      %span.vertical-pipe
+      %a.visit_site{href: 'http://www.aqqaluktrust.com', title: 'Aqqaluk Trust Website', target: '_blank'} Visit Site
+  %a{:href => '#our-goal', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#aqqaluktrust
+  .container
+    .aqqaluktrust
+      = image_tag 'case-studies-sprite.png', alt: 'Aqqaluk Trust Website Screenshots', width: '90%'
+
+%section#our-goal
+  .container
+    .our-goal
+      %p Our goal is to add value to the companies we serve. Give us a call or email us to learn more.
+      .email-button= render :partial => 'shared/email'
+  %a{:href => '#home', :title => 'Scroll Up', :class => 'blue-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25b4;".html_safe}
+    %span.screen-reader-text Scroll Up

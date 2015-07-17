@@ -1,0 +1,77 @@
+/* Case Study
+  ----------------------- */
+
+#case-study-1, #case-study-2
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.case-study-1, .case-study-2
+  p
+    margin-top: 0
+  ul
+    margin-bottom: 0
+
+  +at-breakpoint($break12)
+    +span-columns(6, $break12)
+    +prefix(6)
+    background: image-url("case-studies-sprite.png") 100px -528px no-repeat
+    ul
+      margin-bottom: 1em
+      padding-bottom: 0
+      background: none
+
+.case-study-2
+  +at-breakpoint($break12)
+    background: image-url("case-studies-sprite.png") 100px -880px no-repeat
+
+.atcstar, .aqqaluktrust
+  text-align: center
+
+  +at-breakpoint($break12)
+    text-align: right
+
+.aqqaluktrust
+  overflow: hidden
+  height: 150px
+
+  +at-breakpoint($break6)
+    height: 220px
+
+  +at-breakpoint($break9)
+    height: 330px
+
+  +at-breakpoint($break12)
+    height: 430px
+
+#slidingDiv1, #slidingDiv2
+  display: none
+
+.show_hide_2, .visit_site
+  font-family: $base-font-button
+  +link-colors($link-normal, $link-hover, $link-active, $link-visited, $link-focus)
+
+.vertical-pipe
+  display: inline-block
+  margin: 0 5px -2px
+  width: 1px
+  height: 16px
+  background-color: $black-3
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv1,
+.no-js #slidingDiv2
+  display: block
+
+.no-js .show_hide_2
+  +hidden
