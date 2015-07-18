@@ -68,4 +68,12 @@ $(document).ready(function(){
     hideText: 'Less is More'       // the button text to show when a div is open
   });
 
+  $('.show_hide_3').showHide({
+    speed: 1000,
+    easing: '',
+    changeText: 1,
+    showText: 'Learn More',
+    hideText: 'Close'
+  });
+
 });

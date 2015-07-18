@@ -1,4 +1,5 @@
 // Lettering
+// Show Hide
 // Magic Line
 // Anystretch
 // Adjust Arrow Location
@@ -8,7 +9,6 @@
 // Animations
 // Superscrollorama
 // Equal Heights
-// Show Hide
 
 
 // ===========================
@@ -17,6 +17,41 @@
 
 $(document).ready(function() {
   $(".logo").lettering();
+});
+
+
+// ===========================
+// Show Hide
+// ===========================
+
+// http://papermashup.com/jquery-show-hide-plugin/
+
+$(document).ready(function(){
+
+  $('.show_hide').showHide({
+    speed: 1000,                   // speed you want the toggle to happen
+    easing: '',                    // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+    changeText: 1,                 // if you dont want the button text to change, set this to 0
+    showText: 'Behind the scenes', // the button text to show when a div is closed
+    hideText: 'Less is More'       // the button text to show when a div is open
+  });
+
+  $('.show_hide_2').showHide({
+    speed: 1000,
+    easing: '',
+    changeText: 1,
+    showText: 'Read More',
+    hideText: 'Less is More'
+  });
+
+  $('.show_hide_3').showHide({
+    speed: 1000,
+    easing: '',
+    changeText: 1,
+    showText: 'Learn More',
+    hideText: 'Close'
+  });
+
 });
 
 
@@ -260,32 +295,5 @@ $(document).ready(function() {
 $(document).ready(function() {
 
   $('.our-mission ol').equalHeights();
-
-});
-
-
-// ===========================
-// Show Hide
-// ===========================
-
-// http://papermashup.com/jquery-show-hide-plugin/
-
-$(document).ready(function(){
-
-  $('.show_hide').showHide({
-    speed: 1000,                   // speed you want the toggle to happen
-    easing: '',                    // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-    changeText: 1,                 // if you dont want the button text to change, set this to 0
-    showText: 'Behind the scenes', // the button text to show when a div is closed
-    hideText: 'Less is More'       // the button text to show when a div is open
-  });
-
-  $('.show_hide_2').showHide({
-    speed: 1000,                   // speed you want the toggle to happen
-    easing: '',                    // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-    changeText: 1,                 // if you dont want the button text to change, set this to 0
-    showText: 'Read More',         // the button text to show when a div is closed
-    hideText: 'Less is More'       // the button text to show when a div is open
-  });
 
 });

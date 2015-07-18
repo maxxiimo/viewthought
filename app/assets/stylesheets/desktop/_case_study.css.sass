@@ -68,26 +68,3 @@
 
   +at-breakpoint($break12)
     height: 430px
-
-#slidingDiv1, #slidingDiv2
-  display: none
-
-.show_hide_2, .visit_site
-  font-family: $base-font-button
-  +link-colors($link-normal, $link-hover, $link-active, $link-visited, $link-focus)
-
-.vertical-pipe
-  display: inline-block
-  margin: 0 5px -2px
-  width: 1px
-  height: 16px
-  background-color: $black-3
-
-/* JavaScript fallback */
-
-.no-js #slidingDiv1,
-.no-js #slidingDiv2
-  display: block
-
-.no-js .show_hide_2
-  +hidden

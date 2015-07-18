@@ -63,7 +63,6 @@
       font-size: 1.618em + .274
 
 #slidingDiv
-  display: none
   li
     position: relative
     list-style: none
@@ -123,17 +122,5 @@
       background-position: -210px -500px
 
 .show_hide
-  font-family: $base-font-button
-  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-  display: none
-
   +at-breakpoint($break9)
     display: inline
-
-/* JavaScript fallback */
-
-.no-js #slidingDiv
-  display: block
-
-.no-js .show_hide
-  +hidden

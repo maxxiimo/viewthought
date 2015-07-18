@@ -66,11 +66,44 @@
 // .box-shadow-example-7 7
 
 
-/* Page Curls
+/* Show Hide
   ----------------------- */
 
-.curl
-  border-radius: 0 0 120px 120px / 0 0 6px 6px
+#slidingDiv,
+#slidingDiv1, #slidingDiv2,
+#slidingDiv3, #slidingDiv4
+  display: none
+
+.show_hide,
+.show_hide_2,
+.show_hide_3,
+.visit_site
+  font-family: $base-font-button
+  +link-colors($link-normal, $link-hover, $link-active, $link-visited, $link-focus)
+
+.show_hide,
+  +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+.vertical-pipe
+  display: inline-block
+  margin: 0 5px -2px
+  width: 1px
+  height: 16px
+  background-color: $black-3
+
+/* JavaScript fallback */
+
+.no-js #slidingDiv,
+.no-js #slidingDiv1,
+.no-js #slidingDiv2,
+.no-js #slidingDiv3,
+.no-js #slidingDiv4
+  display: block
+
+.no-js .show_hide,
+.no-js .show_hide_2,
+.no-js .show_hide_3
+  +hidden
 
 
 /* Highlighters
@@ -110,7 +143,7 @@
   +icon-arrow($white, darken($white, 20), 2.618em)
 
 .gray-gray
-  +icon-arrow(darken($gray, 20), $gray, 2.618em)
+  +icon-arrow(darken($gray, 20), darken($gray, 10), 2.618em)
 
 .bottom-arrow
   +at-breakpoint($break6)
@@ -175,15 +208,6 @@
   img
     float: left
     margin-right: 15px
-
-
-/* Avatars
-  ----------------------- */
-
-.avatar
-  padding: 5px
-  // border: 1px solid #999
-  +box-shadow(0 1px 3px #aaa)
 
 
 /* Other

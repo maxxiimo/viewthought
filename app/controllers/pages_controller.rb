@@ -6,6 +6,9 @@ class PagesController < ApplicationController
   def case_studies
   end
 
+  def government
+  end
+
   def contact
     @message = Message.new
   end

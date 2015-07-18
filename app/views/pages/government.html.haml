@@ -1,0 +1,138 @@
+= currently_at 'Government'
+- content_for :title do
+  Government
+
+%section#government
+  .container
+    .government
+      %p ViewThought provides mobile and web content strategy, design and development services.
+    .company-data
+      %p
+        Small Business
+        %br
+        8(a) Certified
+        %br
+        DUNS: 068636100
+        %br
+        CAGE Code:
+        %br
+        NAICS Codes: 541511, 541430, 541613, 541512, 541519, 518210
+        %br
+        We accept Government Credit and Purchase Cards.
+    .company-contact
+      %p
+        Chris Maxwell
+        %br
+        President
+        %br
+        = render 'shared/email_cmaxwell'
+      = render 'shared/phone_number'
+  %a{:href => '#capability', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#capability
+  .container
+    .capability
+      %h1
+        Capability Statement
+      .download-pdf
+        = link_to 'Download PDF', '/ViewThought Capability Statement.pdf', :title => 'Download our Capability Statement', :class => 'button'
+      %p We build solutions that enhance the value proposition of our customers. We can help your agency engage your end-users through intuitive artfully-designed websites that provide immediate value the moment they visit, from any device or browser used.
+      %p Our style of web development is similar to dancing. It's collaborative. Sometimes you lead, sometimes you follow–without stepping on your partner’s toes! We are nimble and quickly and gracefully adjust to changing end-user and business needs. This philosophy leads to better end results, and an enjoyable experience for you and your staff.
+  %a{:href => '#competencies', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#competencies
+  .container
+    .competencies
+      %h2 Core Competencies
+      = render 'shared/competency_list'
+  %a{:href => '#differentiators', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#differentiators
+  .container
+    .differentiators
+      %h2 Differentiators
+      %table{:summary => 'Insurance'}
+        %tbody
+          %colgroup
+            %col.column1
+            %col.column2
+            %col
+          %tr
+            %td
+              %strong Insured:
+            %td General Liability
+            %td $2,000,000
+          %tr
+            %td
+            %td Professional Liability
+            %td $2,000,000
+      %p
+        %strong Capacity:
+        Over the years we have developed an active pool of subcontractors from which we can draw additional resources to immediately satisfy the requirements of your project.
+      %p
+        %strong Fixed Price Solution:
+        Our proposal generation process is thorough enough to enable us to provide your agency with a fixed-priced solution and the ability to schedule and deliver in a timely manner.
+      %p
+        %strong MBAs Leading Your Project:
+        It takes more than just development or design "chops" to build a website. In addition to design and development skills our project leads are MBAs, and our lead designers hold bachelor degrees in marketing allowing us to think strategically about your agencies value proposition, key business requirements, aand your users needs.
+  %a{:href => '#performance1', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#performance1
+  .container
+    .performance
+      %h2 Past Performance
+
+      %h3 Northwest Arctic Borough School District
+      %p Provided website redesign, mobile development, site optimization, content creation, branding, information architecture, photography, website hosting, and site maintenance services.
+      = image_tag 'atcstar-900.png', alt: 'ATC/Star Website Screenshots', width: '90%'
+      %p Cheryl Edenshaw, Director, 907-442-1501, cedenshaw@nwarctic.org
+      #slidingDiv3
+        %p When the Northwest Arctic Borough School District approached ViewThought for a website redesign project, they were in the final stages of completing a fourteen million dollar overhaul of the Alaska Technical Center, and the launch of Star of the Northwest Magnet School. They needed new modern websites for both; the technical center’s website was antiquated, and the magnet school did not yet have a website.
+        %p ViewThought was hired to help the school district craft and tell the story for both:
+        %ul
+          %li Who they are
+          %li What they offer
+          %li Who should go there and why
+          %li What are the steps necessary to attend
+        %p They wanted a site that was visually minimalist, complemented by videos, available on mobile devices, and in terms of look and feel conveyed a sense of sophistication, a modern feel, and something uniform between the two sites while distinct from each other.
+        %p Over the course of several months we worked with the district, and together crafted what we all feel are two beautiful works of art that accomplish what we set out to achieve.
+      %a.show_hide_3{:href => "#", "data-link" => "#slidingDiv3"}
+        Read More
+      %span.vertical-pipe
+      %a.visit_site{href: 'http://atcstar.com', title: 'ATC and Star Websites', target: '_blank'} Visit Site
+  %a{:href => '#performance2', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#performance2
+  .container
+    .performance
+      %h3 NANA Development Corporation: Aqqaluk Trust
+      %p Provided website redesign, mobile development, content creation, information architecture, user statistics, website hosting services.
+      = image_tag 'aqqaluktrust-900.png', alt: 'Aqqaluk Trust Website Screenshots', width: '90%'
+      %p Sarah Hobart, Development Director, 907-441-9928, sarah.hobart@nana.com
+      #slidingDiv4
+        %p The stakeholders of Aqqaluk Trust felt that their old website was not serving the full purpose of their mission. They described their old website as feeling scattered, “not fluid”, and incoherent; that it had “lost its purpose.”
+        %p ViewThought was brought on board to help Aqqaluk Trust re-craft their content, hone in on their message, and re-architect how information would be displayed. Certain questions needed to be answered, like:
+        %ul
+          %li What is Aqqaluk Trust?
+          %li What do they do and why was this important?
+          %li Why should people care?
+          %li How is its work coming into effect?
+        %p Most importantly, the look and feel needed to convey the very special cultural aspects of the region, a sense of excitement, and work on mobile devices – where a large percentage of their audience would access the website.
+        %p Working with the trust, we set out to develop a site that would answer all of these questions. A website that told a story – while generating excitement about what Aqqaluk Trust was doing – and invite and encourage participation. The result: a fantastic looking website that we, and all the stakeholders at Aqqaluk Trust, are proud of.
+      %a.show_hide_3{:href => "#", "data-link" => "#slidingDiv4"}
+        Read More
+      %span.vertical-pipe
+      %a.visit_site{href: 'http://www.aqqaluktrust.com', title: 'Aqqaluk Trust Website', target: '_blank'} Visit Site
+  %a{:href => '#home', :title => 'Scroll Up', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25b4;".html_safe}
+    %span.screen-reader-text Scroll Up

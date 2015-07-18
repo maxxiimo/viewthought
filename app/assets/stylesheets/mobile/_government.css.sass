@@ -1,0 +1,77 @@
+/* Government
+  ----------------------- */
+#government
+  position: relative
+  padding: $padding-4 0
+  background-color: $navy-blue
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.government
+  p
+    font-size: 1em + .443
+    color: $dark-white
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1.618em
+
+.company-data, .company-contact
+  p
+    margin: 0
+    font-family: $base-font-header
+    color: $dark-white
+  a
+    +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
+
+.company-contact
+  p
+    margin-top: 1em
+
+#capability,
+#competencies,
+#differentiators,
+#performance1,
+#performance2
+  position: relative
+  padding: 0 0 $padding-4
+  h2
+    display: block
+    border-top: 3px solid $navy-blue
+
+  +at-breakpoint($break6)
+    padding: 0 0 $padding-6
+
+#capability
+  padding: $padding-4 0
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+.capability
+  h1
+    display: block
+
+.download-pdf
+  .button
+    +sassy-button
+    font-size: 1em
+
+  +at-breakpoint($break6)
+    +span-columns(6, $break6)
+    margin-bottom: 1em
+    .button
+      font-size: 1.159em
+
+.differentiators
+  td
+    vertical-align: top
+  .column1
+    width: 90px
+  .column2
+    width: 170px
+
+.performance
+  img
+    margin-top: 1em
