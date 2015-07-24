@@ -6,27 +6,6 @@
   .container
     .government
       %p ViewThought provides mobile and web design, development and content strategy services.
-    .company-data
-      %p
-        Small Business
-        %br
-        8(a) Certified
-        %br
-        DUNS: 068636100
-        %br
-        CAGE Code:
-        %br
-        NAICS Codes: 541511, 541430, 541613, 541512, 541519, 518210
-        %br
-        We accept Government Credit and Purchase Cards.
-    .company-contact
-      %p
-        Chris Maxwell
-        %br
-        President
-        %br
-        = render 'shared/email_cmaxwell'
-      = render 'shared/phone_number'
   %a{:href => '#capability', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -40,6 +19,37 @@
         = link_to 'Download PDF', '/ViewThought Capability Statement.pdf', :title => 'Download our Capability Statement', :class => 'button'
       %p We build solutions that enhance the value proposition of our customers. We can help your agency engage your end-users through intuitive artfully-designed websites that provide immediate value the moment they visit, from any device or browser used.
       %p.last Our style of web development is similar to dancing. It's collaborative. Sometimes you lead, sometimes you follow–without stepping on your partner’s toes! We are nimble and quickly and gracefully adjust to changing end-user and business needs. This philosophy leads to better end results, and an enjoyable experience for you and your staff.
+  %a{:href => '#company', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#company
+  .container
+    .company
+      %h2 Company Data
+      .company-data
+        %p
+          Small Business
+          %br
+          8(a) Certified
+          %br
+          DUNS: 068636100
+          %br
+          CAGE Code:
+          %br
+          NAICS Codes: 541511, 541430, 541613,
+          %br.desktop-hide
+          541512, 541519, 518210
+          %br
+          We accept Government Credit and Purchase Cards.
+      .company-contact
+        %p
+          Chris Maxwell
+          %br
+          President
+          %br
+          = render 'shared/email_cmaxwell'
+        = render 'shared/phone_number'
   %a{:href => '#competencies', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down

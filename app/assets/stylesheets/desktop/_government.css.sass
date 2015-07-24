@@ -16,7 +16,7 @@
 
 .government
   p
-    margin-top: 0
+    margin: 0
     font-size: 1em + .443
     color: $dark-white
 
@@ -25,45 +25,19 @@
       font-size: 1.618em
 
   +at-breakpoint($break9)
-    +span-columns(7, $break9)
+    +span-columns(7)
     +squish(1, 1)
     p
       font-size: 2em
 
   +at-breakpoint($break12)
-    +span-columns(10, $break12)
+    +span-columns(10)
     +squish(1, 1)
     p
       font-size: 1.875em + .443
 
-.company-data, .company-contact
-  p
-    margin: 0
-    font-family: $base-font-header
-    color: $dark-white
-  a
-    +link-colors($dark-white, $white, $dark-white, $dark-white, $dark-white)
-
-.company-data
-  +at-breakpoint($break9)
-    +span-columns(4, $break9)
-    +prefix(1)
-
-  +at-breakpoint($break12)
-    +span-columns(6, $break12)
-    +prefix(1)
-
-.company-contact
-  p
-    margin-top: 1em
-
-  +at-breakpoint($break9)
-    +span-columns(3 omega)
-
-  +at-breakpoint($break12)
-    +span-columns(5 omega)
-
 #capability,
+#company,
 #competencies,
 #differentiators,
 #performance1,
@@ -74,8 +48,7 @@
     margin-bottom: 0
   h2
     display: block
-    // color: $lime
-    // border-top: 3px solid $navy-blue
+    border-top: 1px solid $navy-blue
 
   +at-breakpoint($break6)
     padding: 0 0 $padding-6
@@ -101,7 +74,6 @@
 .capability
   h1
     display: block
-    // color: $lime
     font-size: 1em + .443
 
     +at-breakpoint($break6)
@@ -116,30 +88,62 @@
     font-size: 1em
 
   +at-breakpoint($break6)
-    +span-columns(6, $break6)
+    +span-columns(6)
     margin-bottom: 1em
     .button
       font-size: 1.159em
 
   +at-breakpoint($break9)
-    +span-columns(3, $break9)
+    +span-columns(39)
     margin-top: .443em
     text-align: center
     .button
       font-size: 1em + .274
 
   +at-breakpoint($break12)
-    +span-columns(3, $break12)
+    +span-columns(3)
     .button
       font-size: 1em + .443
 
-.competencies
+.company-data, .company-contact
+  p
+    margin: 0
 
+.company-data
+  +at-breakpoint($break9)
+    // +span-columns(5)
+    float: left
+    display: block
+    width: 50%
+    // margin-right: 10px
+
+  +at-breakpoint($break12)
+    // +span-columns(6)
+    width: 66%
+
+.company-contact
+  p
+    margin-top: 1em
+
+  +at-breakpoint($break9)
+    // +span-columns(4 omega)
+    float: left
+    display: block
+    width: 50%
+    p
+      margin-top: 0
+
+  +at-breakpoint($break12)
+    // +span-columns(6 omega)
+    width: 33%
+
+.competencies
   +at-breakpoint($break9)
     .col1, .col2, .col3
       float: left
       display: block
       width: 50%
+      // margin-right: 10px
 
   +at-breakpoint($break12)
     .col1, .col2, .col3
