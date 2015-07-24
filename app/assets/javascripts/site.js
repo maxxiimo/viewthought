@@ -262,8 +262,8 @@ $(document).ready(function() {
 
 // http://css-tricks.com/jquery-magicline-navigation/
 
-// $(document).ready(function() {
-setTimeout(function(){
+$(document).ready(function() {
+  setTimeout(function(){
 
     var $el, leftPos, newWidth,
         $mainNav = $("#nav"),
@@ -299,5 +299,5 @@ setTimeout(function(){
         });
     });
 
-},2000);
-// });
+  },1000);
+});
