@@ -1,0 +1,204 @@
+= currently_at 'Home'
+
+%section#photo-hero
+  .container
+    .tagline
+      .first
+        %h2
+          Mobile and Web Development
+          -# We Build Mobile and
+          -# %br.desktop-hide
+          -# Desktop Web Applications
+        %p
+          Think of us as the handshake
+          %br.mobile
+          between beautiful design
+          %br.mobile
+          and code.
+          %span.tablet Scroll down to learn why.
+      .second
+        %h2
+          Take Your Business Website Mobile
+        %p
+          Going mobile? Need to make your site responsive?
+          %span We can help your team migrate an existing website to mobile.
+    .start-project
+      %a{:href => '#contact-us', :title => '', :class => 'button scroll'} Lets Talk
+  %a{:href => '#about-us', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#about-us
+  .container
+    .about-us
+      %p
+        We help you engage your customers through intuitive artfully-designed websites that provide immediate value from any device or browser used.
+        -# build intuitive well-designed websites that provide your customers with immediate value the moment they visit&ndash;from any device or browser used.
+      .devices
+  %a{:href => '#the-point', :title => 'Scroll Down', :class => 'blue-blue scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#the-point
+  .container
+    .the-point
+      %blockquote
+        %span{"aria-hidden" => "true", "data-icon" => "&#x275d;".html_safe, :class => 'giant-quote'}
+        Working through the ViewThought process resulted in a clear focused picture of what we offer and enhanced all of our marketing and communications."
+      %em - Scott Warren, Northwest Arctic Borough School District
+  %a{:href => '#process', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#process
+  .container
+    .process
+      %h2#our-process Our Process
+    %ul
+      %li
+        .symbol
+          .circle
+            %span{"aria-hidden" => "true", "data-icon" => "&#x2691;".html_safe}
+        .step
+          %h3 1. Discovery
+          %p Through discovery we get to know you, your company, project, market, target audience, goals, key business requirements. We come to an understanding, a plan, and an agreement. From discovery we get to work!
+      %li
+        .symbol
+          .circle
+            %span{"aria-hidden" => "true", "data-icon" => "&#x2692;".html_safe}
+        .step
+          %h3 2. Development
+          %p We follow in an iterative approach to development. We like to deploy often and frequently, and test test test.
+      %li
+        .symbol
+          .circle
+            %span{"aria-hidden" => "true", "data-icon" => "&#x27f3;".html_safe}
+        .step
+          %h3 3. Repeat
+          %p The discovery process is ongoing and feeds into development. We value feedback: from you, your team, and most importantly your customers.
+    .hire-button
+      %a{:href => '#contact-us', :title => 'Send us a quick message.', :class => 'button scroll'} Hire Us
+  %a{:href => '#value', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#value
+  .container
+    .value
+      %p
+        Your customers expect an intuitive user experience, speed, and device responsiveness. We do this exceptionally well.
+      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
+  %a{:href => '#story', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#our-mission
+  .container
+    .our-mission#story
+      %p ViewThought.com is a great example of responsive web design...
+      %p.desktop
+        %span Resize your browser
+        and watch how it responds to display size changes. Try it on a tablet or smart phone. We can do this for your website. It's part of our mission!
+      .desktop-hide
+        %p.mobile-hide
+          %span Open this website on a desktop computer
+          and watch how it changes. Try it on a smart phone. We can do this for your website. It's part of our mission!
+      %p.mobile
+        %span Try it
+        on a different device!
+      %h2 Our Mission
+      %ol
+        %li
+          %span Build solutions that enhance the value proposition of our customers &ndash; add value to their business.
+        %li
+          %span Integrate beauty, design and optimal user experience in application development.
+        %li
+          %span Address device constraints and opportunities while delivering consistent visual design.
+  %a{:href => '#how', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#how
+  .container
+    .how
+      %h2 How we work.
+      %p Our style of web development is kind of like dancing. It's collaborative. Sometimes you lead, sometimes you follow&ndash;without stepping on your partner's toes! We are nimble and quickly and gracefully adjust to changing end-user and business needs. We have fun.
+      #slidingDiv
+        %ul
+          %li
+            .mobile-first
+            We start with a
+            %span mobile first approach
+            to ensure that what your users see on the smallest of devices looks like it was designed for that device, not as an afterthought.
+          %li
+            .rails
+            We use
+            %span Ruby on Rails
+            combined with a boatload of experience on best practices for
+            %span cross device
+            and
+            %span cross browser
+            development.
+          %li
+            .speed
+            We build for speed by
+            %span optimizing absolutely everything
+            &ndash; from images to JavaScript files, and we harness the power of well thought out caching strategies and Content Delivery Networks.
+          %li
+            .agile
+            Pulling all of this together is our
+            %span agile development process
+            that exemplifies the old adage; "
+            %span> measure twice
+            ,&nbsp;
+            %span> cut once
+            \."
+      %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
+        CLICK HERE to learn about what will go into the building of your site.
+  %a{:href => '#technologies', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#technologies
+  .container
+    .tech-icons
+      %p Technologies we use:
+      -# %span.ir.all Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
+      %span.ir.ruby Ruby
+      %span.ir.jquery jQuery
+      %span.ir.git Git
+      %span.ir.backbone Backbone.js
+      %br
+      %span.ir.html HTML
+      %span.ir.css CSS
+      %span.ir.haml Haml
+      %span.ir.sass Sass
+    -# .tech-blurb
+    -#   %p Ruby on Rails is the core of all of our projects, from marketing sites like this one to Ember applications consuming Rail's API's.
+  %a{:href => '#contact-us', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#contact-us
+  .container
+    .contact-intro
+      %p Let's talk about your project! Feel free to call, email, or complete the inquiry form and hit send.
+      .contact-info
+        = render :partial => 'shared/phone_number'
+        = render :partial => 'shared/social_links'
+    .contact-form
+      = render :partial => 'pages/contact_form'
+  %a{:href => '#email-us', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#email-us
+  .container
+    .email-us
+      %p Let's start the conversation!
+      .email-button
+        %span Email Us:&nbsp;&nbsp;&nbsp;
+        = render :partial => 'shared/email'
+  %a{:href => '#home', :title => 'Scroll Up', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25b4;".html_safe}
+    %span.screen-reader-text Scroll Up

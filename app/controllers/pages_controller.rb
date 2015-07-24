@@ -3,6 +3,10 @@ class PagesController < ApplicationController
     @message = Message.new
   end
 
+  def home_alt
+    @message = Message.new
+  end
+
   def case_studies
   end
 

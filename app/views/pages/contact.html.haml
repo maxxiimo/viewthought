@@ -5,12 +5,7 @@
 %section#contact-intro
   .container
     .contact-intro
-      %p We would love to speak with you about your project! Feel free to call, email, or complete the inquiry form and hit send.
-      .contact-info
-        = render :partial => 'shared/phone_number'
-        = render :partial => 'shared/social_links'
-    .contact-form
-      = render :partial => 'pages/contact_form'
+      %p Our style of web development is kind of like dancing. It's collaborative. Sometimes you lead, sometimes you follow&ndash;without stepping on your partner's toes!
   %a{:href => '#email-us', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
@@ -18,13 +13,44 @@
 %section#email-us
   .container
     .email-us
-      %p ViewThought specializes in mobile Web design and development, usability testing, and we can help your team migrate an existing website to mobile.
+      %p We are also nimble and quickly and gracefully adjust to changing end-user and business needs, and we  have fun.
       .email-button
         %span Email Us:&nbsp;&nbsp;&nbsp;
         = render :partial => 'shared/email'
-  %a{:href => '#in-person', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+  %a{:href => '#cKeatleycontact-intro', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
+
+%section#contact-intro
+  .container
+    .contact-intro
+      %p Let's build something amazing! Feel free to call, email, or complete the inquiry form and hit send.
+      .contact-info
+        = render :partial => 'shared/phone_number'
+        = render :partial => 'shared/social_links'
+    .contact-form
+      = render :partial => 'pages/contact_form'
+  %a{:href => '#snail-mail', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#snail-mail
+  .container
+    .snail-mail
+      %h3.fn.org
+        ViewThought
+      .adr
+        %p.street-address 9314 Forest Hill Blvd.
+        %p.extended-address Suite 73
+        %p
+          %span.locality> Wellington
+          ,
+          %span.region Florida
+          %span.postal-code 33414
+  %a{:href => '#cKeatleycontact-intro', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
 
 %section#in-person
   #map

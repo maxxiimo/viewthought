@@ -5,23 +5,15 @@
     .tagline
       .first
         %h2
-          Mobile and Web Development
-          -# We Build Mobile and
+          Design, Code. Mobile, Web apps.
           -# %br.desktop-hide
-          -# Desktop Web Applications
         %p
           Think of us as the handshake
           %br.mobile
           between beautiful design
           %br.mobile
-          and code.
+          and logic.
           %span.tablet Scroll down to learn why.
-      .second
-        %h2
-          Take Your Business Website Mobile
-        %p
-          Going mobile? Need to make your site responsive?
-          %span We can help your team migrate an existing website to mobile.
     .start-project
       %a{:href => '#contact-us', :title => '', :class => 'button scroll'} Lets Talk
   %a{:href => '#about-us', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
@@ -31,11 +23,106 @@
 %section#about-us
   .container
     .about-us
-      %p
-        We help you engage your customers through intuitive artfully-designed websites that provide immediate value from any device or browser used.
-        -# build intuitive well-designed websites that provide your customers with immediate value the moment they visit&ndash;from any device or browser used.
+      %p A website should provide immediate value, the moment people land on it&ndash;no matter what device they use to get there.
       .devices
-  %a{:href => '#the-point', :title => 'Scroll Down', :class => 'blue-blue scroll autoblur'}
+  %a{:href => '#how', :title => 'Scroll Down', :class => 'blue-blue scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#how
+  .container
+    .how
+      %h2 That's where we come in.
+      %p ViewThought designs and codes well thought out intuitive user experiences that look exceptional on any device. We can do this for you.
+      #slidingDiv
+        %ul
+          %li
+            .mobile-first
+            We start with a
+            %span mobile first approach
+            to ensure that what your users see on the smallest of devices looks like it was designed for that device, not as an afterthought.
+          %li
+            .rails
+            We use
+            %span Ruby on Rails
+            combined with a boatload of experience on best practices for
+            %span cross device
+            and
+            %span cross browser
+            development.
+          %li
+            .speed
+            We build for speed by
+            %span optimizing absolutely everything
+            &ndash; from images to JavaScript files, and we harness the power of well thought out caching strategies and Content Delivery Networks.
+          %li
+            .agile
+            Pulling all of this together is our
+            %span agile development process
+            that exemplifies the old adage; "
+            %span> measure twice
+            ,&nbsp;
+            %span> cut once
+            \."
+      %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
+        Learn More
+  %a{:href => '#technologies', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#technologies
+  .container
+    .tech-icons
+      %p Technologies we use:
+      -# %span.ir.all Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
+      %span.ir.ruby Ruby
+      %span.ir.jquery jQuery
+      %span.ir.git Git
+      %span.ir.backbone Backbone.js
+      %br
+      %span.ir.html HTML
+      %span.ir.css CSS
+      %span.ir.haml Haml
+      %span.ir.sass Sass
+    -# .tech-blurb
+    -#   %p Ruby on Rails is the core of all of our projects, from marketing sites like this one to Ember applications consuming Rail's API's.
+  %a{:href => '#value', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#value
+  .container
+    .value
+      %p
+        Your customers expect an intuitive user experience, speed, and device responsiveness. We do this exceptionally well.
+      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
+  %a{:href => '#our-mission', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
+    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
+    %span.screen-reader-text Scroll Down
+
+%section#our-mission
+  .container
+    .our-mission#story
+      %p ViewThought.com is a great example of responsive web design...
+      %p.desktop
+        %span Resize your browser
+        and watch how it responds to display size changes. Try it on a tablet or smart phone. We can do this for your website. It's part of our mission!
+      .desktop-hide
+        %p.mobile-hide
+          %span Open this website on a desktop computer
+          and watch how it changes. Try it on a smart phone. We can do this for your website. It's part of our mission!
+      %p.mobile
+        %span Try it
+        on a different device!
+      %h2 Our Mission
+      %ol
+        %li
+          %span Build solutions that enhance the value proposition of our customers &ndash; add value to their business.
+        %li
+          %span Integrate beauty, design and optimal user experience in application development.
+        %li
+          %span Address device constraints and opportunities while delivering consistent visual design.
+  %a{:href => '#the-point', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
 
@@ -76,105 +163,8 @@
         .step
           %h3 3. Repeat
           %p The discovery process is ongoing and feeds into development. We value feedback: from you, your team, and most importantly your customers.
-    .hire-button
-      %a{:href => '#contact-us', :title => 'Send us a quick message.', :class => 'button scroll'} Hire Us
-  %a{:href => '#value', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#value
-  .container
-    .value
-      %p
-        Your customers expect an intuitive user experience, speed, and device responsiveness. We do this exceptionally well.
-      %a{:href => 'https://github.com/maxxiimo/viewthought/tree/2-design-final', :title => 'ViewThought code base', :class => 'ipad'}
-  %a{:href => '#story', :title => 'Scroll Down', :class => 'white-white scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#our-mission
-  .container
-    .our-mission#story
-      %p ViewThought.com is a great example of responsive web design...
-      %p.desktop
-        %span Resize your browser
-        and watch how it responds to display size changes. Try it on a tablet or smart phone. We can do this for your website. It's part of our mission!
-      .desktop-hide
-        %p.mobile-hide
-          %span Open this website on a desktop computer
-          and watch how it changes. Try it on a smart phone. We can do this for your website. It's part of our mission!
-      %p.mobile
-        %span Try it
-        on a different device!
-      %h2 Our Mission
-      %ol
-        %li
-          %span Build solutions that enhance the value proposition of our customers &ndash; add value to their business.
-        %li
-          %span Integrate beauty, design and optimal user experience in application development.
-        %li
-          %span Address device constraints and opportunities while delivering consistent visual design.
-  %a{:href => '#how', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#how
-  .container
-    .how
-      %h2 How we work.
-      %p Our style of web development is kind of like dancing. It's collaborative. Sometimes you lead, sometimes you follow&ndash;without stepping on your partner's toes! We are nimble and quickly and gracefully adjust to changing end-user and business needs. We have fun.
-      #slidingDiv
-        %ul
-          %li
-            .mobile-first
-            We start with a
-            %span mobile first approach
-            to ensure that what your users see on the smallest of devices looks like it was designed for that device, not as an afterthought.
-          %li
-            .rails
-            We use
-            %span Ruby on Rails
-            combined with a boatload of experience on best practices for
-            %span cross device
-            and
-            %span cross browser
-            development.
-          %li
-            .speed
-            We build for speed by
-            %span optimizing absolutely everything
-            &ndash; from images to JavaScript files, and we harness the power of well thought out caching strategies and Content Delivery Networks.
-          %li
-            .agile
-            Pulling all of this together is our
-            %span agile development process
-            that exemplifies the old adage; "
-            %span> measure twice
-            ,&nbsp;
-            %span> cut once
-            \."
-      %a.show_hide{:href => "#", "data-link" => "#slidingDiv"}
-        CLICK HERE to learn about what will go into the building of your site.
-  %a{:href => '#technologies', :title => 'Scroll Down', :class => 'blue-white scroll autoblur'}
-    %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
-    %span.screen-reader-text Scroll Down
-
-%section#technologies
-  .container
-    .tech-icons
-      %p Technologies we use:
-      -# %span.ir.all Ruby, jQuery, Git, Backbone.js, HTML, CSS, Haml, Sass
-      %span.ir.ruby Ruby
-      %span.ir.jquery jQuery
-      %span.ir.git Git
-      %span.ir.backbone Backbone.js
-      %br
-      %span.ir.html HTML
-      %span.ir.css CSS
-      %span.ir.haml Haml
-      %span.ir.sass Sass
-    -# .tech-blurb
-    -#   %p Ruby on Rails is the core of all of our projects, from marketing sites like this one to Ember applications consuming Rail's API's.
+    -# .hire-button
+    -#   %a{:href => '#contact-us', :title => 'Send us a quick message.', :class => 'button scroll'} Hire Us
   %a{:href => '#contact-us', :title => 'Scroll Down', :class => 'gray-gray scroll autoblur'}
     %span{"aria-hidden" => "true", "data-icon" => "&#x25be;".html_safe}
     %span.screen-reader-text Scroll Down
