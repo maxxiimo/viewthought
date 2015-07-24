@@ -262,7 +262,7 @@ $(document).ready(function() {
 
 // http://css-tricks.com/jquery-magicline-navigation/
 
-$(function() {
+$(document).ready(function() {
 
     var $el, leftPos, newWidth,
         $mainNav = $("#nav"),
