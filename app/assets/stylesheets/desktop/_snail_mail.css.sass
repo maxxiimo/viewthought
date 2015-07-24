@@ -1,0 +1,36 @@
+/* Snail Mail
+  ----------------------- */
+
+#snail-mail
+  position: relative
+  padding: $padding-4 0
+  background-color: $white
+  &:before
+    +panel-shadow(.15)
+
+  +at-breakpoint($break6)
+    padding: $padding-6 0
+
+  +at-breakpoint($break9)
+    padding: $padding-9 0
+
+  +at-breakpoint($break12)
+    padding: $padding-12 0
+
+.snail-mail
+  p
+    margin: 0
+    font-size: 1em + .443
+
+  +at-breakpoint($break6)
+    p
+      font-size: 1em + .618
+
+  +at-breakpoint($break9)
+    +span-columns(8, $break9)
+    +squish(.5, .5)
+
+  +at-breakpoint($break12)
+    +span-columns(10, $break12)
+    p
+      font-size: 1.875em
