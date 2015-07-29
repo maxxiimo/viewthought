@@ -56,8 +56,8 @@ Viewthought::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  # config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
-  config.action_controller.asset_host = "http://d35c9j2nrzldis.cloudfront.net"
+  config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  # config.action_controller.asset_host = "http://d35c9j2nrzldis.cloudfront.net"
   # config.action_controller.asset_host = "http://cdn%d.ojalainc.com"
 
   # To set the origin domain that will get set in the Access-Control-Allow-Origin header.
