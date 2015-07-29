@@ -15,7 +15,7 @@ common: &default_settings
   # You must specify the license key associated with your New Relic
   # account.  This key binds your Agent's data to your account in the
   # New Relic service.
-  license_key: 'e037c6a8fdedbe5f21f03157faf0b6818789cf37'
+  license_key: 'a058696de5f523dbfc2512005178fdecaaf4bf3c'
 
   # Agent Enabled (Ruby/Rails Only)
   # Use this setting to force the agent to run or not run.
@@ -42,7 +42,7 @@ common: &default_settings
   #       - Ajax Service
   #       - All Services
   #
-  app_name: ViewThought
+  app_name: ojalainc
 
   # When "true", the agent collects performance data about your
   # application and reports this data to the New Relic service at

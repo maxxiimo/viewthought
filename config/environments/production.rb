@@ -13,7 +13,7 @@ Viewthought::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "mail.authsmtp.com",
     port: 26,
-    domain: "viewthought.com",
+    domain: "ojalainc.com",
     authentication: "login",
     enable_starttls_auto: true,
     user_name: ENV["SMTP_USERNAME"],
@@ -58,11 +58,11 @@ Viewthought::Application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
   # config.action_controller.asset_host = "http://dt1m8zdqb95uu.cloudfront.net"
-  config.action_controller.asset_host = "http://cdn%d.viewthought.com"
+  config.action_controller.asset_host = "http://cdn%d.ojalainc.com"
 
   # To set the origin domain that will get set in the Access-Control-Allow-Origin header.
   # https://github.com/rubymaverick/font_assets#usage
-  config.font_assets.origin = 'http://viewthought.com'
+  config.font_assets.origin = 'http://ojalainc.com'
 
   # http://work.stevegrossi.com/2013/05/28/set-far-future-expires-headers-for-assets-on-heroku/
   config.static_cache_control = "public, max-age=31536000"
