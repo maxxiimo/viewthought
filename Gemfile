@@ -30,7 +30,7 @@ group :assets do
   gem 'sass', '3.2.7'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
-  gem "fog", '~>1.20', require: "fog/aws/storage"
+  # gem "fog", '~>1.20', require: "fog/aws/storage"
   gem 'asset_sync'
   gem 'font_assets'
 
