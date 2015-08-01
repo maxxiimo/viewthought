@@ -1,4 +1,3 @@
-// Lettering
 // Show Hide
 // Anystretch
 // Adjust Arrow Location
@@ -9,15 +8,6 @@
 // Superscrollorama
 // Equal Heights
 // Magic Line
-
-
-// ===========================
-// Lettering
-// ===========================
-
-$(document).ready(function() {
-  $(".logo").lettering();
-});
 
 
 // ===========================

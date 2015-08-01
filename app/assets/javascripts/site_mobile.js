@@ -1,16 +1,7 @@
-// Lettering
 // Anystretch
 // Remove Anchor Outline
 // Smooth Scroll
 // Show Hide
-
-// ===========================
-// Lettering
-// ===========================
-
-$(document).ready(function() {
-  $(".logo").lettering();
-});
 
 
 // ===========================
