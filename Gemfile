@@ -30,8 +30,8 @@ group :assets do
   gem 'sass', '3.2.7'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
-  gem 'asset_sync'
-  gem 'font_assets'
+  gem 'asset_sync', '1.0.0'
+  gem 'font_assets', '0.1.10'
 
   # Compass specific gems.
   gem 'compass-rails'
